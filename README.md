@@ -1,0 +1,2 @@
+# sqncd
+midi sequence randomizer
