@@ -7,3 +7,4 @@ midi random sequence creator
 - select # of steps per bar
 - midi output
 - save midi file
+- gui (pygame?)
