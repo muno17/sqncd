@@ -8,4 +8,4 @@ midi random sequence creator
 - number of octaves
 - midi output
 - save midi file
-- gui (pysimplegui or tkinter)
+- web app
