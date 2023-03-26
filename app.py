@@ -11,5 +11,25 @@ def index():
 def sqncd():
     return render_template('sqncd.html')
 
+
+@app.route('/account')
+def account():
+    return render_template('accounts.html')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
