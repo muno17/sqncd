@@ -23,13 +23,7 @@ body {
 }
 
 .headerLeft {
-
-}
-
-.headerRight {
-    display:flex;
-    align-items: center;
-    justify-content: flex-end;
+    margin-left: 20px;
 }
 
 #muno {
@@ -39,6 +33,15 @@ body {
     margin: 0;
     text-align: center;
 }
+
+.headerRight {
+    display:flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
 
 .sqncdHouse {
     display: flex;
@@ -135,7 +138,7 @@ footer {
     box-shadow: 3px 3px 10px black;
     font-size: 20px;
     width: 100%;
-    height: 60px;
+    height: 50px;
     padding: 20px;
     margin-top: auto;
 }
