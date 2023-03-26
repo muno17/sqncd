@@ -13,9 +13,31 @@ body {
     min-height: 100vh;
 }
 
-.mainHeader {
-    font-size: 60px;
+.header {
+    background-color: #BC81BF;
+    box-shadow: 3px 3px 10px black;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLeft {
+
+}
+
+.headerRight {
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#muno {
+    color: #white;
+    font-size: 40px;
     text-shadow: 3px 3px 10px black;
+    margin: 0;
+    text-align: center;
 }
 
 .sqncdHouse {
@@ -45,22 +67,16 @@ body {
 
 .topInner {
     display: flex;
+
 }
 
-#muno {
-    color: #BC81BF;
-    font-size: 40px;
-    text-shadow: 3px 3px 10px black;
-    margin: 0;
-    text-align: center;
-}
 
 #logo {
     color: white;
     font-size: 60px;
     text-shadow: 3px 3px 10px black;
     margin: 0;
-    text-align: center;
+
 }
 
 .midInner {
@@ -116,7 +132,6 @@ footer {
     color: white;
     justify-content: center;
     align-items: flex-start;
-    text-shadow: 3px 3px 50px black;
     box-shadow: 3px 3px 10px black;
     font-size: 20px;
     width: 100%;
