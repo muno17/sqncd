@@ -28,10 +28,26 @@ body {
     width: 1000px;
     height: 500px;
     border-style: solid;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+    padding: 5px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 
-
+.sqncr {
+    background: #DBDBDB;
+    width: 800px;
+    height: 300px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    
+}
 
 
 
