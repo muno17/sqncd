@@ -12,9 +12,14 @@ def sqncd():
     return render_template('sqncd.html')
 
 
+@app.route('/manual')
+def manual():
+    return render_template('manual.html')
+
+
 @app.route('/account')
 def account():
-    return render_template('accounts.html')
+    return render_template('account.html')
 
 
 
