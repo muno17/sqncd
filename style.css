@@ -10,7 +10,6 @@ body {
     justify-content: space-between;
     gap: 30px;
     align-items: center;
-    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -19,7 +18,17 @@ body {
     text-shadow: 3px 3px 10px black;
 }
 
+.sqncdHouse {
+    display: flex;
+    flex: 1;
+}
 
+.sqncd {
+    background: #5F9F89;
+    width: 1000px;
+    height: 500px;
+    border-style: solid;
+}
 
 
 
