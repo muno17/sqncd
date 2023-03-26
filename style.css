@@ -38,6 +38,26 @@ body {
     justify-content: space-between;
 }
 
+.topBody {
+    margin-top: 100px;
+}
+
+.topInner {
+    display: flex;
+}
+
+#muno {
+    color: #BC81BF;
+    font-size: 40px;
+    text-shadow: 3px 3px 10px black;
+    margin: 0;
+    width: 350px;
+    text-align: center;
+}
+
+.midInner {
+
+}
 
 .sqncr {
     background: #DBDBDB;
