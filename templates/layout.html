@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
     <head>
+
         <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1", width="device-width">
+
         <script src="script.js" defer></script>
-        <link href="{{ url_for('static', filename='css/style.css') }}s" rel="stylesheet">
-        <title>sqncd</title>
+        <link href="/static/style.css" rel="stylesheet">
+
+        <title>sqncd {% block title %}{% endblock %}</title>
+
     </head>
+
     <body>
         <div class="header">
             <div class="headerLeft">
@@ -17,8 +24,14 @@
                 <a>profile</a>
             </div>
         </div>
+
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+
         <footer>
             <div>made by Danny Muñoz | <a href="https://github.com/muno17">https://github.com/muno17</a>></div>
         </footer>
     </body>
+
 </html>
