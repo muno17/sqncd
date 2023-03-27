@@ -82,6 +82,41 @@ a {
     font-size: 10px;    
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#midiChannelHouse {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+#midiChannelBox a {
+    color: black;
+    padding 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#midiButton:hover {
+    background: white;
+}
+
+#midiButton {
+    position: relative;
+    display: inline-block;
+    padding: 10px 22px;
+    height: 10px;
+    width: 140px;
+    font-size: 20px;
+    background-color: #DBDBDB;
+    color: white;
+    text-shadow: 3px 3px 10px black;
+} 
+
+
 .rightControls {
     display: flex;
     flex-direction: column;
@@ -95,7 +130,9 @@ a {
     width: 150px;
     border-radius: 10px;
     font-size: 30px;
+    background-color: #DBDBDB;
     color: #BC81BF;
+    box-shadow: 3px 3px 12px black;
 }
 
 #logo {
@@ -123,7 +160,7 @@ a {
     flex: 1;
 }
 
-button {
+#gridButton {
     background-color: #DBDBDB;
     width: 35px;
     height: 50px;
