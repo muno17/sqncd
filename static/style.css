@@ -71,32 +71,34 @@ a {
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
+    text-align: center;
 }
 
 .leftControls {
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 250px;
 }
 
 .midLeftControls {
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 250px;
 }
 
 .midRightControls {
     display: flex;
     flex-direction: column;
-    width: 100%
+    width: 250px;
 }
 
 .rightControls {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     text-align: right;
-    width: 100%
+    width: 200px;
+    margin-left: 30px;
 }
 
 
