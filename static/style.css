@@ -16,6 +16,9 @@ a {
     text-decoration: none;
 }
 
+
+/* header section */
+
 .header {
     background-color: #BC81BF;
     box-shadow: 3px 3px 10px black;
@@ -46,6 +49,8 @@ a {
 }
 
 
+/*   sqncd section             */
+
 .sqncd {
     background: #5F9F89;
     width: 1000px;
@@ -62,8 +67,31 @@ a {
     justify-content: space-between;
 }
 
+.controls {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
 
-.top {
+.leftControls {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.midLeftControls {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.midRightControls {
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.rightControls {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -80,6 +108,7 @@ a {
     margin-right: 20px;
 }
 
+/* sqncr */
 .sqncr {
     width: 800px;
     height: 300px;
@@ -131,8 +160,7 @@ button {
 
 
 
-
-
+/* footer section */
 
 footer {
     display: flex;

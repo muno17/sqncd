@@ -17,7 +17,6 @@ function gridCreator() {
             }
 
             gridRow.appendChild(gridButton);
-        console.log('all the way in')
         }
     }
 };
