@@ -21,7 +21,9 @@ def manual():
 def account():
     return render_template('account.html')
 
-
+@app.route ('/login')
+def login():
+    return render_template('login.html')
 
 
 
