@@ -7,18 +7,33 @@
 {% block main %}
 
     <div class="sqncd">
-        <div class="controls">
-            <div class="leftControls">
-                <h1>tempo</h1>
-                <h1>shuffle</h1>
-                <h1>midi channel</h1>
+        <div class="controlSection">
+            <div class="leftControls controls">
+                <div class="tempo">
+                    <p>display for tempo goes here</p>
+                    <h1>tempo</h1>
+                </div>
+                <div class="shuffle">
+                    <p>display for shuffle goes here</p>
+                    <h1>shuffle</h1>
+                </div>
+                <div class="midi">
+                    <p>dropdown for midi channel</p>
+                    <h1>midi channel</h1>
+                </div>
             </div>
-            <div class="midLeftControls">
-                <h1>scale</h1>
-                <h1>octave</h1>
-            </div>
-            <div class="midRightControls">
-                <h1>sqnc</h1>
+            <div class="midLeftControls controls">
+                <div class="scale">
+                    <p>dropdown for scale goes here</p>
+                    <h1>scale</h1>
+                </div>
+                <div class="octave">
+                    <p>octave section</p>
+                    <h1>octave</h1>
+                </div>
+                <div class="sqnc">
+                    <button id="sqnc"><em><strong>sqnc</strong></em></button>
+                </div>
             </div>
             <div class="rightControls">
                 <h1 id="logo">sqncd</h1>

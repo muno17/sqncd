@@ -67,29 +67,19 @@ a {
     justify-content: space-between;
 }
 
-.controls {
+.controlSection {
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
     text-align: center;
 }
 
-.leftControls {
+.controls {
     display: flex;
     flex-direction: column;
-    width: 250px;
-}
-
-.midLeftControls {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-}
-
-.midRightControls {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
+    justify-content: space-between;
+    width: 300px;
+    font-size: 10px;    
 }
 
 .rightControls {
@@ -97,10 +87,18 @@ a {
     flex-direction: column;
     justify-content: flex-start;
     text-align: right;
-    width: 200px;
-    margin-left: 30px;
+    width: 250px;
+    margin-left: 20px;
 }
 
+#sqnc {
+    width: 150px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 30px;
+    color: #BC81BF;
+}
 
 #logo {
     color: white;
