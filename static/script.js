@@ -31,7 +31,7 @@ midiButton.addEventListener('click', () => {
     if (midiClick.style.display === 'none') {
         midiClick.style.display = 'block';
     } else {
-        console.log('nonein')
+        midiClick.style.display = 'none';
     }
 })
 // COME BACK TO THIS

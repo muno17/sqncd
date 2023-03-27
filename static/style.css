@@ -97,9 +97,9 @@ a {
 } 
 
 #midiChannelHouse {
-    display: block;
+    display: none;
     position: relative;
-    background: blue;
+    background: white;
     width: 140px;
 }
 
@@ -108,7 +108,7 @@ a {
     padding: 10px;
     text-align: center;
     text-decoration: none;
-    display: none;
+    display: block;
     font-size: 15px;
 }
 
