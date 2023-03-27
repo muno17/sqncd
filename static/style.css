@@ -97,10 +97,10 @@ a {
 } 
 
 #midiChannelHouse {
-    display: none;
+    display: block;
     position: relative;
-    background: white;
-    width: 120px;
+    background: blue;
+    width: 140px;
 }
 
 #midiChannel {

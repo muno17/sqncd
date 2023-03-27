@@ -7,7 +7,6 @@ function gridCreator() {
         let gridRow = document.createElement('div');
         gridRow.setAttribute('id', 'gridRow');
         buttonContainer.appendChild(gridRow);
-        console.log('mid')
         for (let j = 1; j < 17; j++) {
             let gridButton = document.createElement('button');
             gridButton.setAttribute('id', 'gridButton');
@@ -23,3 +22,19 @@ function gridCreator() {
 
 // call gridCreator() when the page loads
 window.addEventListener('load', () => gridCreator())
+
+
+// add functionality to dropdown menu
+let midiButton = document.getElementById('midiButton')
+let midiClick = document.getElementById('midiChannelHouse');
+midiButton.addEventListener('click', () => {
+    if (midiClick.style.display === 'none') {
+        midiClick.style.display = 'block';
+    } else {
+        console.log('nonein')
+    }
+})
+// COME BACK TO THIS
+
+
+
