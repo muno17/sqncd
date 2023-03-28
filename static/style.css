@@ -78,9 +78,11 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 300px;
+    width: 230px;
     font-size: 10px;    
 }
+
+/* left controls */
 
 .dropdown {
     position: relative;
@@ -115,23 +117,41 @@ a {
 #midiButton:hover {
     background: white;
 }
+/* midleft controls */
 
+/* midright controls */
+.midRightControls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.midRightControls button {
+    width: 150px;
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 3px 3px 12px black;
+}
+
+#reset {
+    background-color: #BC81BF;
+    color: #DBDBDB;
+}
+
+#sqnc {
+    background-color: #DBDBDB;
+    color: #BC81BF;
+}
+
+
+
+/* right controls */
 .rightControls {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     text-align: right;
-    width: 250px;
-    margin-left: 20px;
-}
-
-#sqnc {
-    width: 150px;
-    border-radius: 10px;
-    font-size: 30px;
-    background-color: #DBDBDB;
-    color: #BC81BF;
-    box-shadow: 3px 3px 12px black;
+    width: 260px;
 }
 
 #logo {
@@ -139,7 +159,6 @@ a {
     font-size: 60px;
     text-shadow: 3px 3px 10px black;
     margin: 0;
-    margin-right: 20px;
 }
 
 /* sqncr */
