@@ -65,10 +65,15 @@ using the WEBMIDI API to handle MIDI interfacing
 
 - SQL
     - create database
-        - account table
+        - users table
+            - id AUTOINCREMENT, username TEXT, email TEXT, hash TEXT
         - scale note table
+            - possibly just create an array instead when scale is picked based on key
+            - ^ would figure out notes based on semitones
         - midi file table
             - store saved formats
+                - buttons on/off
+                - notes assigned to each button
 
 
 - Website
