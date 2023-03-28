@@ -13,7 +13,19 @@ function onEnabled() {
     } else {
     WebMidi.outputs.forEach((device, index) => {
         //console.log(`${index}: ${device.name}`);
-        devices.push(`${index}: ${device.name}`)
+        // add to devices array to be able to reference in dropdowns
+        devices.push(`${index}: ${device.name}`);
+
+        let outputDevice = WebMidi.getOutputByName(device['name']);
+        let channel = outputDevice.channels[1];
+        channel.playNote("C3", {duration: 1000});
+        //console.log(device['name'])
+
+
+
+
+        // add eventListener for notes function
+        //WebMidi.outputs[index].addEventListener
     });
     }
 
@@ -23,7 +35,7 @@ function onEnabled() {
 console.log(devices)
 
 
-// add functionality to midi dropdown menu
+// add functionality to midi dropdown menus
 let midiButton = document.getElementById('midiButton');
 let midiClick = document.getElementById('midiChannelHouse');
 midiButton.addEventListener('click', () => {
