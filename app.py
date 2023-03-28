@@ -32,6 +32,10 @@ def register():
     return render_template('register.html')
  
 
+@app.route ('/passwordChange')
+def passwordReset():
+    return render_template('passwordChange.html')
+
 @app.route ('/passwordReset')
 def passwordReset():
     return render_template('passwordReset.html')
