@@ -22,10 +22,7 @@ function onEnabled() {
         //console.log(device['name'])
 
 
-
-
         // add eventListener for notes function
-        //WebMidi.outputs[index].addEventListener
     });
     }
 
