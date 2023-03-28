@@ -1,11 +1,26 @@
-WebMidi.enable();
-console.log(WebMidi.inputs)
-console.log(WebMidi.outputs)
+WebMidi
+.enable()
+.then(onEnabled)
+.catch(err => alert(err));
 
-let output = WebMidi.outputs[0];
-let channel = output.channels[1];
-//channel.playNote('C3', {duration: 1000})
+let devices = []
 
+// Function triggered when WEBMIDI.js is ready
+function onEnabled() {
+// Display available MIDI input devices
+    if (WebMidi.outputs.length < 1) {
+    console.log("No device detected.");
+    } else {
+    WebMidi.outputs.forEach((device, index) => {
+        //console.log(`${index}: ${device.name}`);
+        devices.push(`${index}: ${device.name}`)
+    });
+    }
+
+    
+
+}
+console.log(devices)
 
 
 // add functionality to midi dropdown menu

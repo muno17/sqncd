@@ -91,6 +91,7 @@ using the WEBMIDI API to handle MIDI interfacing
     - add tempo display
     - add shuffle display
     - figure out how to display midi channel dropdown
+        - need dropdowns both for device and channel
     - add dropdown for scales
         - add another dropdown for key
     - figure out best way to implement octave section
