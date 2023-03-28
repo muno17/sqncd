@@ -21,23 +21,30 @@ def manual():
 def account():
     return render_template('account.html')
 
+
 @app.route ('/login')
 def login():
     return render_template('login.html')
 
+
 @app.route ('/register')
 def register():
     return render_template('register.html')
+ 
 
 @app.route ('/passwordReset')
 def passwordReset():
     return render_template('passwordReset.html')
 
 
+@app.route ('/news')
+def news():
+    return render_template('news.html')
 
 
-
-
+@app.route ('/donate')
+def donate():
+    return render_template('donate.html')
 
 
 

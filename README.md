@@ -42,6 +42,7 @@ using the WEBMIDI API to handle MIDI interfacing
     - reset button
         - toggles for what to reset
         - k, s, o, n
+        - resets reset options
     - display
         - show current note values
 
