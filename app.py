@@ -33,7 +33,7 @@ def register():
  
 
 @app.route ('/passwordChange')
-def passwordReset():
+def passwordChange():
     return render_template('passwordChange.html')
 
 @app.route ('/passwordReset')
