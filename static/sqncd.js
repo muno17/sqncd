@@ -7,6 +7,7 @@ function sqncr() {
         let gridRow = document.createElement('div');
         gridRow.setAttribute('class', 'gridRow');
         buttonContainer.appendChild(gridRow);
+        
         for (let j = 1; j < 17; j++) {
             let gridButton = document.createElement('button');
             gridButton.setAttribute('class', 'gridButton');
@@ -17,6 +18,7 @@ function sqncr() {
             if (altColor.includes(j)) {
                 gridButton.style.backgroundColor = '#BC81BF';
             }
+
             let onOff = false;
             // add eventListeners to each button
             gridButton.addEventListener('click', () => {
@@ -34,7 +36,6 @@ function sqncr() {
             });
 
 
-            
             gridRow.appendChild(gridButton);
         }
     }
