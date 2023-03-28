@@ -65,7 +65,7 @@ using the WEBMIDI API to handle MIDI interfacing
 
 - SQL
     - create database
-        - users table
+        - users table DONE
             - id AUTOINCREMENT, username TEXT, email TEXT, hash TEXT
         - scale note table
             - possibly just create an array instead when scale is picked based on key
