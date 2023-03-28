@@ -2,7 +2,7 @@
 let buttonContainer = document.getElementById('buttonContainer')
 let altColor = [5, 6, 7, 8, 13, 14, 15, 16]
 
-function gridCreator() {
+function sqncr() {
     for (let i = 1; i < 5; i++) {
         let gridRow = document.createElement('div');
         gridRow.setAttribute('class', 'gridRow');
@@ -37,7 +37,7 @@ function gridCreator() {
 };
 
 // call gridCreator() when the page loads
-window.addEventListener('load', () => gridCreator())
+window.addEventListener('load', () => sqncr())
 
 
 // add functionality to dropdown menu
