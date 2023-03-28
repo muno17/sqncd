@@ -17,7 +17,20 @@ function gridCreator() {
             if (altColor.includes(j)) {
                 gridButton.style.backgroundColor = "#BC81BF";
             }
+            let onOff = false;
+            // add eventListeners to each button
+            gridButton.addEventListener('click', () => {
+                if (onOff === false) {
+                    onOff = true;
+                    gridButton.style.background = 'black';
+                } else if (onOff === true) {
+                    gridButton.style.background = 'white';
+                    onOff = false;
+                }
+            });
 
+
+            
             gridRow.appendChild(gridButton);
         }
     }
@@ -39,5 +52,5 @@ midiButton.addEventListener('click', () => {
 })
 // COME BACK TO THIS
 
-
+ 
 

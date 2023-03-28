@@ -14,6 +14,22 @@ midi random sequence creator
 Built using Javascript, Python, SQLite, Flask, HTML, CSS
 using the WEBMIDI API to handle MIDI interfacing
 
+------------- sqncd NEXT STEPS -------------
+- assign a midi note to a button and send to output when clicked
+    - assign a midi channel to send to
+- assign a random note to a button
+- implement a tempo function to go through one measure
+- implement stop/play
+- assing a random note when a button in the measure is pressed and play through measure
+- loop through measure
+- reset notes
+
+
+
+
+
+
+
 ------------- TO DO -------------
 - sqncd 
     - add button functionality
