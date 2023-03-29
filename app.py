@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from werkzeug.wrappers import Request, Response
+from werkzeug.security import generate_password_hash, check_password_hash
 import sqlite3
 
 app = Flask(__name__)
@@ -32,7 +32,7 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
         
-        hashedPassword = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8 )
+        
         return render_template('login.html')
 
     return render_template('login.html')
@@ -41,15 +41,29 @@ def login():
 @app.route ('/register', methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+        connection = sqlite3.connect("sqncd.db")
+        cursor = connection.cursor()
+
         username = request.form.get('username')
         email = request.form.get('email')
         password = request.form.get('password')
         cpassword = request.form.get('cpassword') 
 
-        connection = sqlite3.connect("sqncd.db")
-        cursor = connection.cursor()
+        # error if password already in use
+
+        # error if username already in use
+
+        # error if passwods don't match
+        if password != cpassword:
+            return render_template('error.html')
+
+
+        # hash the password
+        hashedPassword = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8 )
+
+        # insert into users table if there are no errors
         cursor.execute("INSERT INTO users ('username', 'email', 'hash') VALUES (?, ?, ?)", 
-        [f'{username}', f'{email}', f'{password}'])
+        [f'{username}', f'{email}', f'{hashedPassword}'])
         connection.commit()
 
         return redirect('/')
