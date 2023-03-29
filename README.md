@@ -78,15 +78,15 @@ using the WEBMIDI API to handle MIDI interfacing
 
 - Website
     - write up manual page
-    - create login section
-    - create registration section DONE
+    - DONE - create login section
+    - DONE - create registration section
     - once logged in, add password reset option to 'account' page
     - add content to account page:
         - password reset
         - midi files
         - change email
         - change color scheme? think of options
-    - add news page - where updates will be stored
+    - DONE - add news page - where updates will be stored
     - add content to home page
     - add area to donate
         - find out how to connect donate feature
