@@ -1,7 +1,10 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, request, redirect
 from werkzeug.wrappers import Request, Response
+import sqlite3
 
 app = Flask(__name__)
+
+
 
 @app.route('/')
 def index():
@@ -38,15 +41,20 @@ def login():
 @app.route ('/register', methods=["GET", "POST"])
 def register():
     if request.method == "POST":
-            username = request.form.get('username')
-            email = request.form.get('email')
-            password = request.form.get('password')
-            cpassword = request.form.get('cpassword')
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        cpassword = request.form.get('cpassword') 
 
+        connection = sqlite3.connect("sqncd.db")
+        cursor = connection.cursor()
+        cursor.execute("INSERT INTO users ('username', 'email', 'hash') VALUES (?, ?, ?)", 
+        [f'{username}', f'{email}', f'{password}'])
+        connection.commit()
 
+        return redirect('/')
 
-            return render_template('register.html')
-
+    print('yea')
     return render_template('register.html')
  
 
@@ -73,7 +81,6 @@ def donate():
 @app.route ('/error')
 def error():
     return render_template('error.html')
-
 
 
 
