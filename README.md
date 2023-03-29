@@ -79,7 +79,7 @@ using the WEBMIDI API to handle MIDI interfacing
 - Website
     - write up manual page
     - create login section
-    - create registration section
+    - create registration section DONE
     - once logged in, add password reset option to 'account' page
     - add content to account page:
         - password reset

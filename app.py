@@ -34,12 +34,19 @@ def login():
         username = request.form.get('username')
         password = request.form.get('password')
         
+
+        usernameCheck = cursor.execute("SELECT * FROM users WHERE username = ?", [username]).fetchone()
+        if usernameCheck:
+            # error if password isn't correct
+            if not check_password_hash(usernameCheck[3], password):
+                return render_template('login.html', error="incorrect password")
+
+            else:
+                return redirect('/')
+
         # error if username doesn't exist
-        usernameCheck = cursor.execute("SELECT * FROM users WHERE username = ?", [username]).fetchall()
-        if usernameCheck == None:
-            return render_template('error.html')
-        
-        # error if password isn't correct
+        else:
+            return render_template('login.html', error="invalid username")
         
 
 
