@@ -49,9 +49,15 @@ def register():
         password = request.form.get('password')
         cpassword = request.form.get('cpassword') 
 
-        # error if password already in use
+        # error if email already in use
+        emailCheck = cursor.execute("SELECT * FROM users WHERE email = ?", [email]).fetchall()
+        if emailCheck != None:
+            return render_template('error.html')
 
         # error if username already in use
+        usernameCheck = cursor.execute("SELECT * FROM users WHERE username = ?", [username]).fetchall()
+        if usernameCheck != None:
+            return render_template('error.html')
 
         # error if passwods don't match
         if password != cpassword:
