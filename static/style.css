@@ -197,7 +197,11 @@ a {
 
 
 
-
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 
@@ -208,8 +212,6 @@ a {
 .error{
     color: #EE9ABD;
 }
-
-
 
 /* footer section */
 

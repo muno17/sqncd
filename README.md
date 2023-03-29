@@ -1,15 +1,15 @@
 # sqncd
-midi random sequence creator
+midi sequencer and randomizer webapp
 
 - clock
 - shuffle
+- key selection
 - scale selection
-- up to 128?? (at least 64)
+- 64 steps
 - ??select # of steps per bar??
 - number of octaves
 - midi output
 - save midi file
-- web app
 
 Built using Javascript, Python, SQLite, Flask, HTML, CSS
 using the WEBMIDI API to handle MIDI interfacing
