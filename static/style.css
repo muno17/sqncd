@@ -195,7 +195,7 @@ a {
 
 
 
-
+/* form pages */
 
 form {
     display: flex;
@@ -219,7 +219,7 @@ form {
     color: #EE9ABD;
 }
 
-/* footer section */
+/* footer */
 
 footer {
     display: flex;
