@@ -1,5 +1,7 @@
 
 
+
+
 // add functionality to midi dropdown menus
 let midiButton = document.getElementById('midiButton');
 let midiClick = document.getElementById('midiChannelHouse');
@@ -80,7 +82,6 @@ function sqncr() {
     }
 };
 
-
 function getRandomNote(x, y) {
     let min = x;
     let max = y;
@@ -88,7 +89,7 @@ function getRandomNote(x, y) {
 
 }
 
-
+//setInterval(() => console.log(Tone.now()), 100);
 
 
 
