@@ -2,7 +2,7 @@
 /*   sqncd section             */
 
 .sqncd {
-    background: #5F9F89;
+    background: #DBDBDB;
     width: 1000px;
     height: 550px;
     border-style: solid;
@@ -29,6 +29,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 230px;
+    height: 240px;
     font-size: 10px;    
 }
 
@@ -68,6 +69,23 @@
     background: white;
 }
 
+.tempo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#tempoDisplay {
+    width: 80px;
+    height: 30px;
+    background: black;
+}
+
+#tempoValue {
+    font-size: 25px;
+}
+
 .transport {
     display: flex;
     justify-content: space-evenly;
@@ -75,8 +93,8 @@
 }
 
 .transportButton {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
     font-size: 20px;
     box-shadow: 3px 3px 12px black;
@@ -148,7 +166,7 @@
 .innerOdd {
     width: 30px;
     height: 38px;
-    background-color: #DBDBDB;
+    background-color: #5F9F89;
     border-radius: 1px;
 }
 
@@ -156,7 +174,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DBDBDB
+    background-color: #5F9F89;
 
 }
 
@@ -177,7 +195,7 @@
 
 #reset {
     background-color: #BC81BF;
-    color: #DBDBDB;
+    color: white;
 }
 
 
@@ -221,8 +239,8 @@
 }
 
 #sqnc {
-    background-color: #DBDBDB;
-    color: #BC81BF;
+    background-color: #5F9F89;
+    color: white;
 }
 
 /* sqncr */
@@ -243,7 +261,7 @@
 }
 
 .gridButton {
-    background-color: #DBDBDB;
+    background-color: #5F9F89;
     width: 35px;
     height: 50px;
     margin-left: 5px;
