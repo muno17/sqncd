@@ -67,6 +67,36 @@
 #midiButton:hover {
     background: white;
 }
+
+.transport {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.transportButton {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 3px 3px 12px black;
+    color: white;
+}
+
+#stop {
+    background: #EE9ABD;
+}
+
+#play {
+    background: #C1E1B6;
+}
+
+
+
+
+
+
+
 /* midleft controls */
 
 /* midright controls */
@@ -150,12 +180,6 @@
     color: #DBDBDB;
 }
 
-#sqnc {
-    background-color: #DBDBDB;
-    color: #BC81BF;
-}
-
-
 
 /* right controls */
 .rightControls {
@@ -196,6 +220,10 @@
     color: #5F9F89;
 }
 
+#sqnc {
+    background-color: #DBDBDB;
+    color: #BC81BF;
+}
 
 /* sqncr */
 .sqncr {
