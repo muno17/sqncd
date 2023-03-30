@@ -110,6 +110,11 @@ def news():
     return render_template('news.html')
 
 
+@app.route ('/contact')
+def contact():
+    return render_template('contact.html')
+
+
 @app.route ('/donate')
 def donate():
     return render_template('donate.html')

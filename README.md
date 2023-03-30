@@ -48,7 +48,6 @@ using the WEBMIDI API to handle MIDI interfacing
     - figure out how to add tempo
         - add lights to show tempo on sequencer
     - start, stop, pause buttons
-    - figure out how to add shuffle
     - link midi channel selected to current button layout
         - make monophonic for now
         - only send to one output for now
@@ -70,6 +69,7 @@ using the WEBMIDI API to handle MIDI interfacing
         - resets reset options
     - display
         - show current note values
+    - ???figure out how to add shuffle???
 
 
 - SQL
@@ -87,6 +87,8 @@ using the WEBMIDI API to handle MIDI interfacing
 
 - Website
     - after logging in, how to make website recognize id on all pages
+        - change login link to logout
+        - add account link
     - write up manual page
         - add quickstart guide
     - DONE - create login section
@@ -106,7 +108,6 @@ using the WEBMIDI API to handle MIDI interfacing
 
 - GUI
     - add tempo display
-    - add shuffle display
     - figure out how to display midi channel dropdown
         - need dropdowns both for device and channel
     - add dropdown for scales
@@ -124,3 +125,4 @@ using the WEBMIDI API to handle MIDI interfacing
     - add display to show note data?
     - decide on final colors
     - add side panels - decide on colored or wooden
+    - add shuffle display
