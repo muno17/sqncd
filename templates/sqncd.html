@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+{% block head %}
+    <link href="/static/sqncd.css" rel="stylesheet">
+{% endblock %}
+
+
 {% block title %}
     sqncr
 {% endblock %}
@@ -42,29 +47,50 @@
                 </div>
             </div>
             <div class="midRightControls controls">
-                <div class="sqnc">
-                    <button id="reset">reset</button>
+                <div class="resetButtonArea">
+                    <h1>reset</h1>
+                    <div class="resetHouseArea">
+                        <div class="resetHouse">
+                            <button class="resetButton oddResetButton"><div class="innerOdd"></div></button>
+                            <h3>key</h3>
+                        </div>
+                        <div class="resetHouse">
+                            <button class="resetButton evenResetButton"><div class="innerEven"></div></button>
+                            <h3>scale</h3>
+                        </div>
+                        <div class="resetHouse">
+                            <button class="resetButton oddResetButton"><div class="innerOdd"></div></button>
+                            <h3>octave</h3>
+                        </div>
+                        <div class="resetHouse">
+                            <button class="resetButton evenResetButton"><div class="innerEven"></div></button>
+                            <h3>steps</h3>
+                        </div>
+                    </div>
                 </div>
                 <div class="sqnc">
-                    <button id="sqnc"><em><strong>sqnc</strong></em></button>
+                    <button id="reset">reset</button>
                 </div>
             </div>
             <div class="rightControls">
                 <h1 id="logo">sqncd</h1>
-                <div id="display">
+                <!--<div id="display">
                     <div id="topDisplay">
-                        <div class="displayText" id="display1">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
-                        <div class="displayText" id="display2">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
-                        <div class="displayText" id="display3">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
-                        <div class="displayText" id="display4">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                            <div class="displayText" id="display1">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                            <div class="displayText" id="display2">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                            <div class="displayText" id="display3">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                            <div class="displayText" id="display4">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                        </div>
+                        <div id="bottomDisplay">
+                            <div class="displayText">test test</div> 
+                            <div class="displayText">test test</div> 
+                            <div class="displayText">test test</div> 
+                            <div class="displayText">test test</div> 
+                        </div>
+                    </div>-->
+                    <div class="sqnc">
+                        <button id="sqnc"><em><strong>sqnc</strong></em></button>
                     </div>
-                    <div id="bottomDisplay">
-                        <div class="displayText">test test</div> 
-                        <div class="displayText">test test</div> 
-                        <div class="displayText">test test</div> 
-                        <div class="displayText">test test</div> 
-                    </div>
-                </div>
             </div>
         </div>
         <div class="sqncr">
