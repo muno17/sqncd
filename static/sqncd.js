@@ -1,35 +1,40 @@
+
+
 WebMidi
 .enable()
 .then(onEnabled)
-.catch(err => alert(err));
+.catch(err => console.log(''));
 
 let devices = []
 
 // Function triggered when WEBMIDI.js is ready
-function onEnabled() {
+function onEnabled(n) {
 // Display available MIDI input devices
     if (WebMidi.outputs.length < 1) {
     console.log("No device detected.");
+    // pass this into dropdown as only option, disable midi channels
     } else {
     WebMidi.outputs.forEach((device, index) => {
         //console.log(`${index}: ${device.name}`);
         // add to devices array to be able to reference in dropdowns
         devices.push(`${index}: ${device.name}`);
 
+        // pass in device and midi channel to send to
         let outputDevice = WebMidi.getOutputByName(device['name']);
         let channel = outputDevice.channels[1];
-        channel.playNote("C3", {duration: 1000});
+        
         //console.log(device['name'])
-
+        channel.playNote(n, {duration: 300})
 
         // add eventListener for notes function
+
+
     });
     }
 
-    
-
 }
-console.log(devices)
+
+
 
 
 // add functionality to midi dropdown menus
@@ -79,6 +84,7 @@ function sqncr() {
                 if (onOff === false) {
                     onOff = true;
                     gridButton.style.background = '#ECC987';
+                    onEnabled(60)
                 } else if (onOff === true) {
                     onOff = false;
                     if (altColor.includes(j)) {

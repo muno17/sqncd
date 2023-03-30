@@ -15,8 +15,8 @@ Built using Javascript, Python, SQLite, Flask, HTML, CSS
 using the WEBMIDI API to handle MIDI interfacing
 
 ------------- sqncd NEXT STEPS -------------
-- assign a midi note to a button and send to output when clicked
-    - assign a midi channel to send to
+- DONE assign a midi note to a button and send to output when clicked
+    - DONE assign a midi channel to send to
 - assign a random note to a button
 - implement a tempo function to go through one measure
 - implement stop/play
@@ -24,8 +24,11 @@ using the WEBMIDI API to handle MIDI interfacing
 - loop through measure
 - reset notes
 
-
-
+------------- website NEXT STEPS -------------
+- create password reset page
+- create forgot username page
+- create forgot password page
+- find way to add id to load on every page when logged in
 
 
 
@@ -77,15 +80,18 @@ using the WEBMIDI API to handle MIDI interfacing
 
 
 - Website
+    - after logging in, how to make website recognize id on all pages
     - write up manual page
+        - add quickstart guide
     - DONE - create login section
     - DONE - create registration section
     - once logged in, add password reset option to 'account' page
-    - add content to account page:
+    - add content to account page/dropdown:
         - password reset
         - midi files
         - change email
         - change color scheme? think of options
+        - opt in/out of emails
     - DONE - add news page - where updates will be stored
     - add content to home page
     - add area to donate
