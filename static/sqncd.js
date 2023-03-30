@@ -1,8 +1,5 @@
 
 
-
-
-
 // add functionality to midi dropdown menus
 let midiButton = document.getElementById('midiButton');
 let midiClick = document.getElementById('midiChannelHouse');
@@ -16,10 +13,17 @@ midiButton.addEventListener('click', () => {
 // COME BACK TO THIS
 
 
+//implement a tempo function to go through one measure
+// implement stop/play
+// assing a random note when a button in the measure is pressed and play through measure
+// loop through measure
+// reset notes
 
-
-
-
+// choose device
+// choose midi channel
+// choose octaves
+// choose key/scale
+// allow user to assign notes
 
 
 
@@ -45,7 +49,7 @@ function sqncr() {
             }
 
             let onOff = false;
-            let buttonNote = 0
+            let buttonNote = 130
             // add eventListeners to each button
             gridButton.addEventListener('click', () => {
                 if (onOff === false) {
@@ -53,8 +57,8 @@ function sqncr() {
                     gridButton.style.background = '#ECC987';
 
                     // randomly assign a 
-                    if (buttonNote === 0) {
-                        buttonNote = getRandomNote(48, 60)
+                    if (buttonNote === 130) {
+                        buttonNote = getRandomNote(36, 60)
                     }
                     sendMidi(buttonNote)
                 } else if (onOff === true) {
@@ -64,6 +68,9 @@ function sqncr() {
                     } else {
                         gridButton.style.background = '#DBDBDB';
                     }
+
+                    // reset the note
+                    buttonNote = 130
                 }
             });
 
