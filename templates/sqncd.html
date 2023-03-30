@@ -10,92 +10,95 @@
 {% endblock %}
 
 {% block main %}
-
-    <div class="sqncd">
-        <div class="controlSection">
-            <div class="leftControls controls">
-                <div class="midi">
-                    <h1>midi channel</h1>
-                    <div class="dropdown">
-                        <button id="midiButton">channel</button>
-                        <div id="midiChannelHouse">
-                            <div id="midiChannel">1</div>
-                            <div id="midiChannel">2</div>
-                            <div id="midiChannel">3</div>
+    <div class="sqncdBody">
+        <img class="wood" src="static/wood-pattern.png" alt="wooden side panels">
+        <div class="sqncd">
+            <div class="controlSection">
+                <div class="leftControls controls">
+                    <div class="midi">
+                        <h1>midi channel</h1>
+                        <div class="dropdown">
+                            <button id="midiButton">channel</button>
+                            <div id="midiChannelHouse">
+                                <div id="midiChannel">1</div>
+                                <div id="midiChannel">2</div>
+                                <div id="midiChannel">3</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tempo">
-                    <h1>tempo</h1>
-                    <div id="tempoDisplay">
-                        <div id="tempoValue">222</div>
-                    </div>
-                </div>
-                <div class="transport">
-                        <button class="transportButton" id="stop">stop</button>
-                        <button  class="transportButton" id="play">play</button>
-                </div>
-            </div>
-            <div class="midLeftControls controls">
-                <div class="scale">
-                    <p>dropdown for scale goes here</p>
-                    <h1>scale</h1>
-                </div>
-                <div class="octave">
-                    <p>octave section</p>
-                    <h1>octave</h1>
-                </div>
-            </div>
-            <div class="midRightControls controls">
-                <div class="resetButtonArea">
-                    <h1>reset</h1>
-                    <div class="resetHouseArea">
-                        <div class="resetHouse">
-                            <button class="resetButton oddResetButton"><div class="innerOdd"></div></button>
-                            <h3>key</h3>
-                        </div>
-                        <div class="resetHouse">
-                            <button class="resetButton evenResetButton"><div class="innerEven"></div></button>
-                            <h3>scale</h3>
-                        </div>
-                        <div class="resetHouse">
-                            <button class="resetButton oddResetButton"><div class="innerOdd"></div></button>
-                            <h3>octave</h3>
-                        </div>
-                        <div class="resetHouse">
-                            <button class="resetButton evenResetButton"><div class="innerEven"></div></button>
-                            <h3>steps</h3>
+                    <div class="tempo">
+                        <h1>tempo</h1>
+                        <div id="tempoDisplay">
+                            <div id="tempoValue">104</div>
                         </div>
                     </div>
+                    <div class="transport">
+                            <button class="transportButton" id="stop">stop</button>
+                            <button  class="transportButton" id="play">play</button>
+                    </div>
                 </div>
-                <div class="sqnc">
-                    <button id="reset">reset</button>
+                <div class="midLeftControls controls">
+                    <div class="scale">
+                        <p>dropdown for scale goes here</p>
+                        <h1>scale</h1>
+                    </div>
+                    <div class="octave">
+                        <p>octave section</p>
+                        <h1>octave</h1>
+                    </div>
                 </div>
-            </div>
-            <div class="rightControls">
-                <h1 id="logo">sqncd</h1>
-                <!--<div id="display">
-                    <div id="topDisplay">
-                            <div class="displayText" id="display1">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
-                            <div class="displayText" id="display2">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
-                            <div class="displayText" id="display3">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
-                            <div class="displayText" id="display4">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                <div class="midRightControls controls">
+                    <div class="resetButtonArea">
+                        <h1>reset</h1>
+                        <div class="resetHouseArea">
+                            <div class="resetHouse">
+                                <button class="resetButton oddResetButton"><div class="innerOdd"></div></button>
+                                <h3>key</h3>
+                            </div>
+                            <div class="resetHouse">
+                                <button class="resetButton evenResetButton"><div class="innerEven"></div></button>
+                                <h3>scale</h3>
+                            </div>
+                            <div class="resetHouse">
+                                <button class="resetButton oddResetButton"><div class="innerOdd"></div></button>
+                                <h3>octave</h3>
+                            </div>
+                            <div class="resetHouse">
+                                <button class="resetButton evenResetButton"><div class="innerEven"></div></button>
+                                <h3>steps</h3>
+                            </div>
                         </div>
-                        <div id="bottomDisplay">
-                            <div class="displayText">test test</div> 
-                            <div class="displayText">test test</div> 
-                            <div class="displayText">test test</div> 
-                            <div class="displayText">test test</div> 
-                        </div>
-                    </div>-->
+                    </div>
                     <div class="sqnc">
-                        <button id="sqnc"><em><strong>sqnc</strong></em></button>
+                        <button id="reset">reset</button>
                     </div>
+                </div>
+                <div class="rightControls">
+                    <h1 id="logo">sqncd</h1>
+                    <!--<div id="display">
+                        <div id="topDisplay">
+                                <div class="displayText" id="display1">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                                <div class="displayText" id="display2">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                                <div class="displayText" id="display3">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                                <div class="displayText" id="display4">C#C#C#C# | C#C#C#C# | C#C#C#C# | C#C#C#C#</div>
+                            </div>
+                            <div id="bottomDisplay">
+                                <div class="displayText">test test</div> 
+                                <div class="displayText">test test</div> 
+                                <div class="displayText">test test</div> 
+                                <div class="displayText">test test</div> 
+                            </div>
+                        </div>-->
+                        <div class="sqnc">
+                            <button id="sqnc"><em><strong>sqnc</strong></em></button>
+                        </div>
+                </div>
+            </div>
+            <div class="sqncr">
+                <div id="buttonContainer"></div>
             </div>
         </div>
-        <div class="sqncr">
-            <div id="buttonContainer"></div>
-        </div>
+        <img class="wood" src="static/wood-pattern.png" alt="wooden side panels">
     </div>
 
     <script src="/static/sqncd.js" defer></script>
