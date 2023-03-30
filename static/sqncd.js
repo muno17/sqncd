@@ -1,39 +1,5 @@
 
 
-WebMidi
-.enable()
-.then(onEnabled)
-.catch(err => console.log(''));
-
-let devices = []
-
-// Function triggered when WEBMIDI.js is ready
-function onEnabled(n) {
-// Display available MIDI input devices
-    if (WebMidi.outputs.length < 1) {
-    console.log("No device detected.");
-    // pass this into dropdown as only option, disable midi channels
-    } else {
-    WebMidi.outputs.forEach((device, index) => {
-        //console.log(`${index}: ${device.name}`);
-        // add to devices array to be able to reference in dropdowns
-        devices.push(`${index}: ${device.name}`);
-
-        // pass in device and midi channel to send to
-        let outputDevice = WebMidi.getOutputByName(device['name']);
-        let channel = outputDevice.channels[1];
-        
-        //console.log(device['name'])
-        channel.playNote(n, {duration: 300})
-
-        // add eventListener for notes function
-
-
-    });
-    }
-
-}
-
 
 
 
@@ -79,12 +45,18 @@ function sqncr() {
             }
 
             let onOff = false;
+            let buttonNote = 0
             // add eventListeners to each button
             gridButton.addEventListener('click', () => {
                 if (onOff === false) {
                     onOff = true;
                     gridButton.style.background = '#ECC987';
-                    onEnabled(60)
+
+                    // randomly assign a 
+                    if (buttonNote === 0) {
+                        buttonNote = getRandomNote(48, 60)
+                    }
+                    sendMidi(buttonNote)
                 } else if (onOff === true) {
                     onOff = false;
                     if (altColor.includes(j)) {
@@ -101,9 +73,59 @@ function sqncr() {
     }
 };
 
-// call gridCreator() when the page loads
+
+function getRandomNote(x, y) {
+    let min = x;
+    let max = y;
+    return Math.floor(Math.random() * (max - min + 1) + min);
+
+}
+
+
+
+
+
+
+// call sqncr() when the page loads
 window.addEventListener('load', () => sqncr())
 
 
- 
+// check if browser supports WebMIDI
+if (navigator.requestMIDIAccess) {
+    console.log('This browser supports WebMIDI');
+} else {
+    console.log('WebMIDI is not supported in this browser');
+}
 
+
+WebMidi.enable().then(sendMidi).catch(err => console.log(''));
+
+let devices = []
+
+// Function triggered when WEBMIDI.js is ready
+function sendMidi(n) {
+// Display available MIDI input devices
+    let note = n
+    if (WebMidi.outputs.length < 1) {
+    console.log("No device detected.");
+    // pass this into dropdown as only option, disable midi channels
+    } else {
+    WebMidi.outputs.forEach((device, index) => {
+        //console.log(`${index}: ${device.name}`);
+        // add to devices array to be able to reference in dropdowns
+        devices.push(`${index}: ${device.name}`);
+
+        // pass in device and midi channel to send to
+        let outputDevice = WebMidi.getOutputByName(device['name']);
+        let channel = outputDevice.channels[1];
+        
+        //console.log(device['name'])
+        channel.playNote(n, {duration: 300})
+
+        // add eventListener for notes function
+
+
+    });
+    }
+
+};
