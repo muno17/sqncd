@@ -7,22 +7,37 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('website/index.html')
 
 
 @app.route('/sqncd')
 def sqncd():
-    return render_template('sqncd.html')
+    return render_template('apps/sqncd.html')
 
 
 @app.route('/manual')
 def manual():
-    return render_template('manual.html')
+    return render_template('website/manual.html')
+
+
+@app.route ('/news')
+def news():
+    return render_template('website/news.html')
+
+
+@app.route ('/contact')
+def contact():
+    return render_template('website/contact.html')
+
+
+@app.route ('/donate')
+def donate():
+    return render_template('website/donate.html')
 
 
 @app.route('/account')
 def account():
-    return render_template('account.html')
+    return render_template('website/account.html')
 
 
 @app.route ('/login', methods=["GET", "POST"])
@@ -39,20 +54,20 @@ def login():
         if usernameCheck:
             # error if password isn't correct
             if not check_password_hash(usernameCheck[3], password):
-                return render_template('login.html', error="incorrect password")
+                return render_template('auth/login.html', error="incorrect password")
 
             else:
                 return redirect('/')
 
         # error if username doesn't exist
         else:
-            return render_template('login.html', error="invalid username")
+            return render_template('auth/login.html', error="invalid username")
         
 
 
         return redirect('/')
 
-    return render_template('login.html')
+    return render_template('auth/login.html')
 
 
 @app.route ('/register', methods=["GET", "POST"])
@@ -92,37 +107,27 @@ def register():
         return redirect('/')
 
     print('yea')
-    return render_template('register.html')
+    return render_template('auth/register.html')
  
 
 @app.route ('/passwordReset', methods=["GET", "POST"])
 def passwordReset():
-    return render_template('passwordReset.html')
+    return render_template('auth/passwordReset.html')
 
 
 @app.route ('/passwordChange', methods=["GET", "POST"])
 def passwordChange():
-    return render_template('passwordChange.html')
+    return render_template('auth/passwordChange.html')
 
 
-@app.route ('/news')
-def news():
-    return render_template('news.html')
-
-
-@app.route ('/contact')
-def contact():
-    return render_template('contact.html')
-
-
-@app.route ('/donate')
-def donate():
-    return render_template('donate.html')
+@app.route ('/forgotUsername', methods=["GET", "POST"])
+def passwordChange():
+    return render_template('auth/forgotUsername.html')
 
 
 @app.route ('/error')
 def error():
-    return render_template('error.html')
+    return render_template('website/error.html')
 
 
 
