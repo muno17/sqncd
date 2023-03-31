@@ -13,6 +13,7 @@ midi sequencer and randomizer webapp
 
 Built using Javascript, Python, SQLite, Flask, HTML, CSS
 using the WEBMIDI API to handle MIDI interfacing
+using the Tone.js API to handle tempo and transport
 
 ------------- sqncd NEXT STEPS -------------
 - DONE assign a midi note to a button and send to output when clicked

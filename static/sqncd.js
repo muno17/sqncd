@@ -1,16 +1,16 @@
 
-let displayTempo = document.getElementById('tempo');
-//tempo.addEventListener()
+let bpm = 120;
+
+let tempo = document.getElementById('tempo');
+tempo.addEventListener('input', (e) => {
+    bpm = e.target.value;
+    console.log(bpm)
+})
 
 
+// add functionality to midi, key and scale dropdown menus
 
-// add functionality to midi dropdown menus
-
-
-
-// implement a tempo function to go through one measure
-// implement stop/play
-// assing a random note when a button in the measure is pressed and play through measure
+// passing a random note when a button in the measure is pressed and play through measure
 // loop through measure
 // reset notes
 
@@ -26,13 +26,13 @@ play.addEventListener('click', () => {
     console.log('transport start')
 })
 
-let stop = document.getElementById('play')
+let stop = document.getElementById('stop')
 stop.addEventListener('click', () => {
     Tone.Transport.stop();
     console.log('transport stop')
 })
 
-
+// implement a tempo function to go through one measure
 
 //create 4x16 grid for buttons
 let buttonContainer = document.getElementById('buttonContainer')
