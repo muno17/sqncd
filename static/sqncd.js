@@ -1,12 +1,39 @@
+// define the defautl bpm of the transport
+Tone.Transport.bpm.value = 120;
 
-let bpm = 120;
-
+// bpm updates to the value entered into the tempo field
 let tempo = document.getElementById('tempo');
 tempo.addEventListener('input', (e) => {
-    bpm = e.target.value;
-    console.log(bpm)
+    Tone.Transport.bpm.value = e.target.value;
+    console.log(Tone.Transport.bpm.value)
 })
 
+// variable to store how many measure will play
+let length = '1m'
+
+Tone.Transport.timeSignature = 4;
+Tone.Transport.setLoopPoints(0, length);
+Tone.Transport.loop = true;
+
+
+let buttonNotes = document.getElementsByClassName(length)
+// return htmlcollection of all elements in the row corresponding to length
+console.log(buttonNotes) 
+
+
+// transport starts when the play button is pressed
+let play = document.getElementById('play')
+play.addEventListener('click', () => {
+    Tone.Transport.start();
+    console.log('transport start')
+})
+
+// transport stops when the stop button is pressed
+let stop = document.getElementById('stop')
+stop.addEventListener('click', () => {
+    Tone.Transport.stop();
+    console.log('transport stop')
+})
 
 // add functionality to midi, key and scale dropdown menus
 
@@ -20,17 +47,6 @@ tempo.addEventListener('input', (e) => {
 // choose key/scale
 // allow user to assign notes
 
-let play = document.getElementById('play')
-play.addEventListener('click', () => {
-    Tone.Transport.start();
-    console.log('transport start')
-})
-
-let stop = document.getElementById('stop')
-stop.addEventListener('click', () => {
-    Tone.Transport.stop();
-    console.log('transport stop')
-})
 
 // implement a tempo function to go through one measure
 
@@ -41,7 +57,7 @@ let altColor = [5, 6, 7, 8, 13, 14, 15, 16]
 function sqncr() {
     for (let i = 1; i < 5; i++) {
         let gridRow = document.createElement('div');
-        gridRow.setAttribute('class', 'gridRow');
+        gridRow.setAttribute('class', `${i}m`);
         buttonContainer.appendChild(gridRow);
 
         for (let j = 1; j < 17; j++) {
