@@ -121,7 +121,7 @@ def passwordChange():
 
 
 @app.route ('/forgotUsername', methods=["GET", "POST"])
-def passwordChange():
+def forgotUsername():
     return render_template('auth/forgotUsername.html')
 
 

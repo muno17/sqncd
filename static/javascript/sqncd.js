@@ -4,7 +4,14 @@ Tone.Transport.bpm.value = 120;
 // bpm updates to the value entered into the tempo field
 let tempo = document.getElementById('tempo');
 tempo.addEventListener('input', (e) => {
-    Tone.Transport.bpm.value = e.target.value;
+    // bpm min 1, max 300
+    if (e.target.value > 300) {
+        Tone.Transport.bpm.value = 300;
+    } else if (e.target.value < 1) {
+        Tone.Transport.bpm.value = 1;
+    } else {
+        Tone.Transport.bpm.value = e.target.value;
+    }
     console.log(Tone.Transport.bpm.value)
 })
 
