@@ -1,3 +1,4 @@
+let tempo = document.getElementById('tempo');
 
 
 

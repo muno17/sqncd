@@ -90,14 +90,13 @@
     margin-bottom: 5px;
 }
 
-#tempoDisplay {
+#tempo {
     width: 80px;
     height: 30px;
-    background: black;
-}
-
-#tempoValue {
     font-size: 25px;
+    background: black;
+    color: white;
+    text-align: center;
 }
 
 .transport {
