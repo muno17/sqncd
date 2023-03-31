@@ -181,43 +181,15 @@
 }
 
 .resetButton {
-    width: 35px;
-    height: 50px;
+    width: 20px;
+    height: 25px;
     margin-left: 5px;
     margin-right: 5px;
     box-shadow: 3px 3px 12px black;
     border-radius: 4px;
+    background: white;
 }
 
-.oddResetButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #BC81BF;
-}
-
-.innerOdd {
-    width: 30px;
-    height: 38px;
-    background-color: #5F9F89;
-    border-radius: 1px;
-}
-
-.evenResetButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #5F9F89;
-
-}
-
-.innerEven {
-    width: 30px;
-    height: 38px;
-    background-color: #BC81BF;
-    border-radius: 1px;
-    margin: 0;
-}
 
 #sqnc, #reset {
     width: 150px;
