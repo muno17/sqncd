@@ -61,7 +61,7 @@ function sqncr() {
                     if (altColor.includes(j)) {
                         gridButton.style.backgroundColor = '#BC81BF';
                     } else {
-                        gridButton.style.background = '#DBDBDB';
+                        gridButton.style.background = '#5F9F89';
                     }
 
                     // reset the note
