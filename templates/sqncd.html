@@ -16,14 +16,10 @@
             <div class="controlSection">
                 <div class="leftControls controls">
                     <div class="midi">
-                        <h1>midi channel</h1>
-                        <div class="dropdown">
-                            <button id="midiButton">channel</button>
-                            <div id="midiChannelHouse">
-                                <div id="midiChannel">1</div>
-                                <div id="midiChannel">2</div>
-                                <div id="midiChannel">3</div>
-                            </div>
+                        <h1>midi</h1>
+                        <div class="dropArea">
+                            <div class="dropdown" id="midiDevice">device</div>
+                            <div class="dropdown" id="midiChannel">channel</div>
                         </div>
                     </div>
                     <div class="tempo">
@@ -36,9 +32,12 @@
                     </div>
                 </div>
                 <div class="midLeftControls controls">
-                    <div class="scale">
-                        <h1>scale</h1>
-                        <p>dropdown for scale goes here</p>
+                    <div class="notes">
+                        <h1>notes</h1>
+                        <div class="dropArea">
+                            <div class="dropdown" id="key">key</div>
+                            <div class="dropdown" id="scale">scale</div>
+                        </div>
                     </div>
                     <div class="octave">
                         <h1>octave</h1>
@@ -73,6 +72,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="sqnc">
+                        <button id="sqnc"><em><strong>sqnc</strong></em></button>
+                    </div>
                 </div>
                 <div class="midRightControls controls">
                     <div class="resetButtonArea">
@@ -102,9 +104,6 @@
                 </div>
                 <div class="rightControls">
                     <h1 id="logo">sqncd</h1>
-                        <div class="sqnc">
-                            <button id="sqnc"><em><strong>sqnc</strong></em></button>
-                        </div>
                 </div>
             </div>
             <div class="sqncr">

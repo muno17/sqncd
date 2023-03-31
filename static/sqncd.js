@@ -1,19 +1,11 @@
 let tempo = document.getElementById('tempo');
+//tempo.addEventListener()
 
 
 
 
 // add functionality to midi dropdown menus
-let midiButton = document.getElementById('midiButton');
-let midiClick = document.getElementById('midiChannelHouse');
-midiButton.addEventListener('click', () => {
-    if (midiClick.style.display === 'none') {
-        midiClick.style.display = 'block';
-    } else {
-        midiClick.style.display = 'none';
-    }
-})
-// COME BACK TO THIS
+
 
 
 //implement a tempo function to go through one measure
