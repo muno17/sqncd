@@ -1,6 +1,6 @@
-let tempo = document.getElementById('tempo');
-//tempo.addEventListener()
 
+let displayTempo = document.getElementById('tempo');
+//tempo.addEventListener()
 
 
 
@@ -8,7 +8,7 @@ let tempo = document.getElementById('tempo');
 
 
 
-//implement a tempo function to go through one measure
+// implement a tempo function to go through one measure
 // implement stop/play
 // assing a random note when a button in the measure is pressed and play through measure
 // loop through measure
@@ -19,6 +19,18 @@ let tempo = document.getElementById('tempo');
 // choose octaves
 // choose key/scale
 // allow user to assign notes
+
+let play = document.getElementById('play')
+play.addEventListener('click', () => {
+    Tone.Transport.start();
+    console.log('transport start')
+})
+
+let stop = document.getElementById('play')
+stop.addEventListener('click', () => {
+    Tone.Transport.stop();
+    console.log('transport stop')
+})
 
 
 
