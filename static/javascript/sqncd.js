@@ -26,37 +26,65 @@ Tone.Transport.setLoopPoints(0, `${length}m`);
 Tone.Transport.loop = true;
 
 const looper = () => {
+    let beat = 0;
     let repeat = () => {
-        for (let i = 0; i < (16 * length); i++) {
-            if (!isNaN(gridButton[i].innerHTML)) {
-                
-                // change color to indicate current step
-                gridButton[i].style.backgroundColor = '#DBDBDB'
 
-                // change previous step back to it's original color
-                if (i === 0) {
-                    if (gridButton[15].classList.contains('oddGridButton')) {
-                        gridButton[i].style.backgroundColor = '#BC81BF';
-                    } else {
-                        gridButton[15].style.backgroundColor = '#5F9F89';
-                    }
+        if (!isNaN(gridButton[beat].innerHTML)) {
+            
+            // change color to indicate current step
+            gridButton[beat].style.backgroundColor = '#DBDBDB'
+
+            // change previous step back to it's original color
+            if (beat === 0) {
+                if (gridButton[15].classList.contains('oddGridButton')) {
+                    gridButton[i].style.backgroundColor = '#BC81BF';
                 } else {
-                    if (gridButton[i - 1].classList.contains('oddGridButton')) {
-                        gridButton[i - 1].style.backgroundColor = '#BC81BF';
-                    } else {
-                        gridButton[i - 1].style.backgroundColor = '#5F9F89';
-                    }
+                    gridButton[15].style.backgroundColor = '#5F9F89';
                 }
-
-
-                sendMidi(gridButton[i].innerHTML)
-                console.log(gridButton[i])
-                //console.log('in the midi loop')
+            } else {
+                if (gridButton[beat - 1].classList.contains('oddGridButton')) {
+                    gridButton[beat - 1].style.backgroundColor = '#BC81BF';
+                } else {
+                    gridButton[beat - 1].style.backgroundColor = '#5F9F89';
+                }
             }
-        }
+
+
+        sendMidi(gridButton[beat].innerHTML)
+        console.log(gridButton[beat])
+        beat = (beat + 1) % 16;
+        };
     }; 
-    Tone.Transport.scheduleRepeat(repeat, '4n');
+Tone.Transport.scheduleRepeat(repeat, `16n`);
 };
+
+        //for (let i = 0; i < (16 * length); i++) {
+            // if (!isNaN(gridButton[i].innerHTML)) {
+                
+            //     // change color to indicate current step
+            //     gridButton[i].style.backgroundColor = '#DBDBDB'
+
+            //     // change previous step back to it's original color
+            //     if (i === 0) {
+            //         if (gridButton[15].classList.contains('oddGridButton')) {
+            //             gridButton[i].style.backgroundColor = '#BC81BF';
+            //         } else {
+            //             gridButton[15].style.backgroundColor = '#5F9F89';
+            //         }
+            //     } else {
+            //         if (gridButton[i - 1].classList.contains('oddGridButton')) {
+            //             gridButton[i - 1].style.backgroundColor = '#BC81BF';
+            //         } else {
+            //             gridButton[i - 1].style.backgroundColor = '#5F9F89';
+            //         }
+            //     }
+
+
+            //     sendMidi(gridButton[i].innerHTML)
+            //     console.log(gridButton[i])
+            //     //console.log('in the midi loop')
+            // }
+
 
 // transport starts when the play button is pressed
 let play = document.getElementById('play');
