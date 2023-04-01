@@ -105,7 +105,7 @@ const looper = (step) => {
     })
 }
 
-
+// generate scale, use scale[0], scale[scale.length - 1] as min and max for randomNote
  
 
 // store the array of buttons so that they can be referenced individually
