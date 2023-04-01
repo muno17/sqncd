@@ -55,9 +55,9 @@ stop.addEventListener('click', () => {
 // loop through measure
 // implement a tempo function to go through one measure
 
-//create 4x16 grid for buttons
-let buttonContainer = document.getElementById('buttonContainer')
-let altColor = [5, 6, 7, 8, 13, 14, 15, 16]
+// //create 4x16 grid for buttons
+// let buttonContainer = document.getElementById('buttonContainer')
+// let altColor = [5, 6, 7, 8, 13, 14, 15, 16]
 
 // function sqncr() {
 //     for (let i = 1; i < 5; i++) {
