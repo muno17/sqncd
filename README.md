@@ -23,7 +23,10 @@ using the Tone.js API to handle tempo and transport
 - DONE implement stop/play
 - DONE assing a random note when a button in the measure is pressed and play through measure
 - DONE loop through measure
-- reset notes
+- DONE reset notes
+- generate a midiScale when either key or scale is changed
+- generate a midiScale when any octave button is pressed/unpressed
+- incorporate midiScale into randomNote
 
 - choose device
 - choose midi channel

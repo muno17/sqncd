@@ -27,7 +27,7 @@ selectedKey.addEventListener('change', () => {
 let scale = 'Major'
 let selectedScale = document.getElementById('scaleDropdown');
 selectedKey.addEventListener('change', () => {
-    key = selectedKey.value;
+    scale = selectedKey.value;
 })
 
 
@@ -58,7 +58,13 @@ const half_whole_diminished = [9,1,2,1,2,1,2,1,2]
 
 function scaleGenerator(base, scale) {
     
+    midiScale = [base]
     length = scale[0];
+
+    for (let i = 2; i < length + 1; i++) {
+        let midiNote = midiScale[i - 1] + scale[i - 1]
+        midiScale.push(midiNote)
+    }
 
 }
 

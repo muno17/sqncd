@@ -119,7 +119,7 @@ for (let i = 0; i < 64; i++) {
             gridButton[i].classList.remove('false');
     
             // randomly assign a note
-            let buttonNote = getRandomNote(36, 60);
+            let buttonNote = randomNote(36, 60);
             gridButton[i].innerHTML = buttonNote;
             gridButton[i].style.background = '#ECC987';
             gridButton[i].style.color = 'white';
@@ -141,7 +141,7 @@ for (let i = 0; i < 64; i++) {
 
 
 
-function getRandomNote(x, y) {
+function randomNote(x, y) {
     let min = x;
     let max = y;
     return Math.floor(Math.random() * (max - min + 1) + min);
