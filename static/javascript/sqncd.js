@@ -51,67 +51,48 @@ stop.addEventListener('click', () => {
 
 
 
+
 // passing a random note when a button in the measure is pressed and play through measure
 // loop through measure
 // implement a tempo function to go through one measure
 
-// //create 4x16 grid for buttons
-// let buttonContainer = document.getElementById('buttonContainer')
-// let altColor = [5, 6, 7, 8, 13, 14, 15, 16]
 
-// function sqncr() {
-//     for (let i = 1; i < 5; i++) {
-//         let gridRow = document.createElement('div');
-//         // set class name to #m - make it possible to reference measures
-//         gridRow.setAttribute('class', `${i}m`);
-//         buttonContainer.appendChild(gridRow);
 
-//         for (let j = 1; j < 17; j++) {
-//             let gridButton = document.createElement('button');
-//             gridButton.setAttribute('class', 'gridButton');
-//             gridButton.setAttribute('id', `button${i}${j}`);
-//             // buttons ids are 1-4 plus 1-16
-//             //let x = `button${i}${j}`
-//             //console.log(x)
+
+let gridButton = document.getElementsByClassName('gridButton')
+
+console.log(gridButton)
+console.log(gridButton.length)
+console.log(gridButton[0])
+
+// for (button in gridButton) {
+//     button.addEventListener('click', () => {
+//         let onOff = false;
+//         let buttonNote = 130;
+    
+//         if (onOff === false) {
+//             onOff = true;
+//             gridButton.style.background = '#ECC987';
+    
+//             // randomly assign a note if none assigned
+//             if (buttonNote === 130) {
+//                 buttonNote = getRandomNote(36, 60)
+//                 gridButton.innerHTML = buttonNote;
+//                 console.log(gridButton.innerHTML)
+//             }
+//             sendMidi(buttonNote)
+//         } else if (onOff === true) {
+//             onOff = false;
 //             if (altColor.includes(j)) {
 //                 gridButton.style.backgroundColor = '#BC81BF';
+//             } else {
+//                 gridButton.style.background = '#5F9F89';
 //             }
-
-//             let onOff = false;
-//             let buttonNote = 130
-//             gridButton.nodeValue = buttonNote;
-//             // add eventListeners to each button
-//             gridButton.addEventListener('click', () => {
-//                 if (onOff === false) {
-//                     onOff = true;
-//                     gridButton.style.background = '#ECC987';
-
-//                     // randomly assign a note if none assigned
-//                     if (buttonNote === 130) {
-//                         buttonNote = getRandomNote(36, 60)
-//                         gridButton.innerHTML = buttonNote;
-//                         console.log(gridButton.innerHTML)
-//                     }
-//                     sendMidi(buttonNote)
-//                 } else if (onOff === true) {
-//                     onOff = false;
-//                     if (altColor.includes(j)) {
-//                         gridButton.style.backgroundColor = '#BC81BF';
-//                     } else {
-//                         gridButton.style.background = '#5F9F89';
-//                     }
-
-//                     // reset the note
-//                     buttonNote = 130
-//                     gridButton.nodeValue = buttonNote;
-//                 }
-//             });
-
-
-//             gridRow.appendChild(gridButton);
+//             buttonNote = 130;
 //         }
-//     }
-// };
+//     });
+// }
+
 
 
 
@@ -126,9 +107,6 @@ function getRandomNote(x, y) {
 
 
 
-
-// call sqncr() when the page loads
-window.addEventListener('load', () => sqncr())
 
 
 // check if browser supports WebMIDI
