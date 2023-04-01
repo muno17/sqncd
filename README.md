@@ -52,6 +52,7 @@ using the Tone.js API to handle tempo and transport
     - link midi channel selected to current button layout
         - make monophonic for now
         - only send to one output for now
+        - scan for new midi devices
     - figure out how to link scales to note selection
         - when scale selected, query scale table
     - figure out how to implement octave section

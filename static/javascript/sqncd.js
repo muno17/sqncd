@@ -15,55 +15,57 @@ tempo.addEventListener('input', (e) => {
     } else {
         Tone.Transport.bpm.value = e.target.value;
     }
-    console.log(Tone.Transport.bpm.value)
-})
+    console.log(Tone.Transport.bpm.value);
+});
 
 // variable to store how many measure will play
-let length = '1m'
+let length = 1;
 
 Tone.Transport.timeSignature = 4;
-Tone.Transport.setLoopPoints(0, length);
+Tone.Transport.setLoopPoints(0, `${length}m`);
 Tone.Transport.loop = true;
 
-
-// let buttonNotes = document.getElementsByClassName(length)
-// let rowOne = buttonNotes[0]
-// // return htmlcollection of all elements in the row corresponding to length
-// console.log(buttonNotes) 
-
+const looper = () => {
+    let repeat = () => {
+        console.log('in the loop')
+        for (let i = 0; i < (16 * length); i++) {
+            console.log('in the for loop')
+            if (!isNaN(gridButton[i].innerHTML)) {
+                console.log('in the midi loop')
+                sendMidi(gridButton[i].innerHTML)
+                console.log(gridButton[i])
+            }
+        }
+    }; 
+    Tone.Transport.scheduleRepeat(repeat, '4n');
+};
 
 // transport starts when the play button is pressed
-let play = document.getElementById('play')
+let play = document.getElementById('play');
 play.addEventListener('click', () => {
-    Tone.Transport.start();
 
-    console.log('transport start')
-})
+    Tone.Transport.start()
+    looper()
+    console.log('transport start');
+});
 
 // transport stops when the stop button is pressed
 let stop = document.getElementById('stop')
 stop.addEventListener('click', () => {
     Tone.Transport.stop();
-    console.log('transport stop')
-})
+    console.log('transport stop');
+});
+ 
 
 
+// console.log(gridButton)
+// console.log(gridButton.length)
 
 
-
-// passing a random note when a button in the measure is pressed and play through measure
-// loop through measure
-// implement a tempo function to go through one measure
-
-
-
-
+// store the array of buttons so that they can be referenced individually
 let gridButton = document.getElementsByClassName('gridButton')
 
-console.log(gridButton)
-console.log(gridButton.length)
-console.log(gridButton[0])
-
+// assign event listener to each button that will turn on/off and assign a random note
 for (let i = 0; i < 64; i++) {
     gridButton[i].addEventListener('click', () => {
     
@@ -76,7 +78,7 @@ for (let i = 0; i < 64; i++) {
             gridButton[i].style.background = '#ECC987';
             gridButton[i].style.color = 'white';
 
-            sendMidi(buttonNote)
+            //sendMidi(buttonNote)
         } else {
             gridButton[i].classList.add('false');
             if (gridButton[i].classList.contains('oddGridButton')) {
@@ -100,10 +102,6 @@ function getRandomNote(x, y) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 
 }
-
-//setInterval(() => console.log(Tone.now()), 100);
-
-
 
 
 
@@ -140,7 +138,6 @@ function sendMidi(n) {
         channel.playNote(n, {duration: 300})
 
         // add eventListener for notes function
-
 
     });
     }
