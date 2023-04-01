@@ -13,7 +13,6 @@ tempo.addEventListener('input', (e) => {
     } else {
         Tone.Transport.bpm.value = e.target.value;
     }
-    console.log(Tone.Transport.bpm.value);
 })
 
 // variable to store how many measure will play
@@ -78,32 +77,32 @@ const looper = (step) => {
 
             step = (step + 1) % 16;
     }
-let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
+    let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
 
 
-// transport stops when the stop button is pressed
-let stop = document.getElementById('stop')
-stop.addEventListener('click', () => {
-    // reset colors back to their original colors
-    for (let i = 0; i < (16 * length); i++) {
-            // change previous step back to it's original color
-            if (gridButton[i].classList.contains('false')) {
-                if (gridButton[i].classList.contains('oddGridButton')) {
-                    gridButton[i].style.color = '#BC81BF';
-                    gridButton[i].style.backgroundColor = '#BC81BF';
+    // transport stops when the stop button is pressed
+    let stop = document.getElementById('stop')
+    stop.addEventListener('click', () => {
+        // reset colors back to their original colors
+        for (let i = 0; i < (16 * length); i++) {
+                // change previous step back to it's original color
+                if (gridButton[i].classList.contains('false')) {
+                    if (gridButton[i].classList.contains('oddGridButton')) {
+                        gridButton[i].style.color = '#BC81BF';
+                        gridButton[i].style.backgroundColor = '#BC81BF';
+                    } else {
+                        gridButton[i].style.color = '#5F9F89';
+                        gridButton[i].style.backgroundColor = '#5F9F89';
+                    }
                 } else {
-                    gridButton[i].style.color = '#5F9F89';
-                    gridButton[i].style.backgroundColor = '#5F9F89';
+                    gridButton[i].style.backgroundColor = '#ECC987';
                 }
-            } else {
-                gridButton[i].style.backgroundColor = '#ECC987';
             }
-        }
-    
-    Tone.Transport.stop();
-    Tone.Transport.clear(sequence)
-    console.log('transport stop');
-})
+        
+        Tone.Transport.stop();
+        Tone.Transport.clear(sequence)
+
+    })
 }
 
 

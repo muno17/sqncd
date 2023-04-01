@@ -66,17 +66,15 @@ h1 {
     width: 180px;
 }
 
-.dropdown {
-    background: black;
+select {
     width: 110px;
-    height: 15px;
-    color: white;
+    height: 25px;
+    border-radius: 4px;
+    padding: 5px;
     margin-left: 3px;
     margin-right: 3px;
-    border-radius: 4px;
-    font-size: 12px;
-    padding: 5px;
-
+    color: white;
+    background: black;
 }
 
 
