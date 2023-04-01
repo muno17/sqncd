@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "midi-note": "^1.0.0",
+    "tonal": "^4.14.0",
     "tone": "^14.8.49"
   }
 }

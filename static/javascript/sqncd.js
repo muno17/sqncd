@@ -1,4 +1,7 @@
-// define the defautl bpm of the transport
+
+// main sequencer functions - assign notes to buttons and transport
+
+// define the default bpm of the transport
 Tone.Transport.bpm.value = 120;
 
 // bpm updates to the value entered into the tempo field
@@ -24,6 +27,7 @@ Tone.Transport.loop = true;
 
 
 let buttonNotes = document.getElementsByClassName(length)
+let rowOne = buttonNotes[0]
 // return htmlcollection of all elements in the row corresponding to length
 console.log(buttonNotes) 
 
@@ -32,7 +36,9 @@ console.log(buttonNotes)
 let play = document.getElementById('play')
 play.addEventListener('click', () => {
     Tone.Transport.start();
+
     console.log('transport start')
+    console.log(rowOne[0])
 })
 
 // transport stops when the stop button is pressed
@@ -42,73 +48,72 @@ stop.addEventListener('click', () => {
     console.log('transport stop')
 })
 
-// add functionality to midi, key and scale dropdown menus
+
+
 
 // passing a random note when a button in the measure is pressed and play through measure
 // loop through measure
-// reset notes
-
-// choose device
-// choose midi channel
-// choose octaves
-// choose key/scale
-// allow user to assign notes
-
-
 // implement a tempo function to go through one measure
 
 //create 4x16 grid for buttons
 let buttonContainer = document.getElementById('buttonContainer')
 let altColor = [5, 6, 7, 8, 13, 14, 15, 16]
 
-function sqncr() {
-    for (let i = 1; i < 5; i++) {
-        let gridRow = document.createElement('div');
-        gridRow.setAttribute('class', `${i}m`);
-        buttonContainer.appendChild(gridRow);
+// function sqncr() {
+//     for (let i = 1; i < 5; i++) {
+//         let gridRow = document.createElement('div');
+//         // set class name to #m - make it possible to reference measures
+//         gridRow.setAttribute('class', `${i}m`);
+//         buttonContainer.appendChild(gridRow);
 
-        for (let j = 1; j < 17; j++) {
-            let gridButton = document.createElement('button');
-            gridButton.setAttribute('class', 'gridButton');
-            gridButton.setAttribute('id', `button${i}${j}`);
-            // buttons ids are 1-4 plus 1-16
-            //let x = `button${i}${j}`
-            //console.log(x)
-            if (altColor.includes(j)) {
-                gridButton.style.backgroundColor = '#BC81BF';
-            }
+//         for (let j = 1; j < 17; j++) {
+//             let gridButton = document.createElement('button');
+//             gridButton.setAttribute('class', 'gridButton');
+//             gridButton.setAttribute('id', `button${i}${j}`);
+//             // buttons ids are 1-4 plus 1-16
+//             //let x = `button${i}${j}`
+//             //console.log(x)
+//             if (altColor.includes(j)) {
+//                 gridButton.style.backgroundColor = '#BC81BF';
+//             }
 
-            let onOff = false;
-            let buttonNote = 130
-            // add eventListeners to each button
-            gridButton.addEventListener('click', () => {
-                if (onOff === false) {
-                    onOff = true;
-                    gridButton.style.background = '#ECC987';
+//             let onOff = false;
+//             let buttonNote = 130
+//             gridButton.nodeValue = buttonNote;
+//             // add eventListeners to each button
+//             gridButton.addEventListener('click', () => {
+//                 if (onOff === false) {
+//                     onOff = true;
+//                     gridButton.style.background = '#ECC987';
 
-                    // randomly assign a 
-                    if (buttonNote === 130) {
-                        buttonNote = getRandomNote(36, 60)
-                    }
-                    sendMidi(buttonNote)
-                } else if (onOff === true) {
-                    onOff = false;
-                    if (altColor.includes(j)) {
-                        gridButton.style.backgroundColor = '#BC81BF';
-                    } else {
-                        gridButton.style.background = '#5F9F89';
-                    }
+//                     // randomly assign a note if none assigned
+//                     if (buttonNote === 130) {
+//                         buttonNote = getRandomNote(36, 60)
+//                         gridButton.innerHTML = buttonNote;
+//                         console.log(gridButton.innerHTML)
+//                     }
+//                     sendMidi(buttonNote)
+//                 } else if (onOff === true) {
+//                     onOff = false;
+//                     if (altColor.includes(j)) {
+//                         gridButton.style.backgroundColor = '#BC81BF';
+//                     } else {
+//                         gridButton.style.background = '#5F9F89';
+//                     }
 
-                    // reset the note
-                    buttonNote = 130
-                }
-            });
+//                     // reset the note
+//                     buttonNote = 130
+//                     gridButton.nodeValue = buttonNote;
+//                 }
+//             });
 
 
-            gridRow.appendChild(gridButton);
-        }
-    }
-};
+//             gridRow.appendChild(gridButton);
+//         }
+//     }
+// };
+
+
 
 function getRandomNote(x, y) {
     let min = x;
