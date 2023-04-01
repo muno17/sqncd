@@ -74,15 +74,17 @@ for (let i = 0; i < 64; i++) {
             let buttonNote = getRandomNote(36, 60);
             gridButton[i].innerHTML = buttonNote;
             gridButton[i].style.background = '#ECC987';
-                // console.log(gridButton.innerHTML)
+            gridButton[i].style.color = 'white';
 
             sendMidi(buttonNote)
         } else {
             gridButton[i].classList.add('false');
             if (gridButton[i].classList.contains('oddGridButton')) {
+                gridButton[i].style.color = '#BC81BF';
                 gridButton[i].style.backgroundColor = '#BC81BF';
             } else {
-                gridButton[i].style.background = '#5F9F89';
+                gridButton[i].style.color = '#5F9F89';
+                gridButton[i].style.backgroundColor = '#5F9F89';
             }
             gridButton[i].innerHTML = 'm';
         }
