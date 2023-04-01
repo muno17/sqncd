@@ -26,50 +26,49 @@ Tone.Transport.setLoopPoints(0, `${length}m`);
 Tone.Transport.loop = true;
 
 
-const looper = () => {
-let beat = 0;
+const looper = (step) => {
     let repeat = () => {
-        //console.log(beat)
-                    // change color to indicate current step
-            gridButton[beat].style.backgroundColor = '#DBDBDB'
-        if (!isNaN(gridButton[beat].innerHTML)) {
-            
 
+            // change color to indicate current step
+            gridButton[step].style.backgroundColor = '#DBDBDB'
 
-            // change previous step back to it's original color
-            if (beat === 0) {
-                if (gridButton[15].classList.contains('oddGridButton')) {
-                    gridButton[15].style.backgroundColor = '#BC81BF';
+            // change previous steps back to their assigned colors
+            // if at step 1 then check 16th step
+            if (step === 0) {
+                if (!isNaN(gridButton[15].innerHTML)) {
+                    gridButton[15].style.backgroundColor = '#ECC987';
                 } else {
-                    gridButton[15].style.backgroundColor = '#5F9F89';
+                        gridButton[15].style.backgroundColor = '#BC81BF';
+                        gridButton[15].style.color = '#BC81BF';
                 }
             } else {
-                if (gridButton[beat - 1].classList.contains('oddGridButton')) {
-                    gridButton[beat - 1].style.backgroundColor = '#BC81BF';
+                if (!isNaN(gridButton[step - 1].innerHTML)) {
+                    gridButton[step - 1].style.backgroundColor = '#ECC987';
                 } else {
-                    gridButton[beat - 1].style.backgroundColor = '#5F9F89';
-                }
-            } 
-            sendMidi(gridButton[beat].innerHTML)
-            //console.log(gridButton[beat])
-            //beat = (beat + 1) % 16;
-        } else {
-            if (beat === 0) {
-                if (gridButton[15].classList.contains('oddGridButton')) {
-                    gridButton[15].style.backgroundColor = '#BC81BF';
-                } else {
-                    gridButton[15].style.backgroundColor = '#5F9F89';
-                }
+                        // change previous step back to yellow if it has a note assigned to it
+                        if (!isNaN(gridButton[step - 1].innerHTML)) {
+                            gridButton[step - 1].style.backgroundColor = '#ECC987';
+                        } else {
+                            // assign original color back to step
+                            if (gridButton[step - 1].classList.contains('oddGridButton')) {
+                                gridButton[step - 1].style.backgroundColor = '#BC81BF';
+                                gridButton[step - 1].style.color = '#BC81BF';
+                            } else {
+                                gridButton[step - 1].style.backgroundColor = '#5F9F89';
+                                gridButton[step - 1].style.color = '#5F9F89';
+                            }
+                        }
+                    } 
+            }
+
+            if (!isNaN(gridButton[step].innerHTML)) {
+                sendMidi(gridButton[step].innerHTML);
             } else {
-                if (gridButton[beat - 1].classList.contains('oddGridButton')) {
-                    gridButton[beat - 1].style.backgroundColor = '#BC81BF';
-                } else {
-                    gridButton[beat - 1].style.backgroundColor = '#5F9F89';
-                }
-            } 
-        }
-        beat = (beat + 1) % 16;
-        ;
+                gridButton[step].style.color = '#DBDBDB'
+            }
+
+            step = (step + 1) % 16;
+
     }; 
 Tone.Transport.scheduleRepeat(repeat, `16n`);
 };
@@ -107,7 +106,7 @@ let play = document.getElementById('play');
 play.addEventListener('click', () => {
 
     Tone.Transport.start()
-    looper()
+    looper(0)
     console.log('transport start');
 });
 

@@ -19,10 +19,10 @@ using the Tone.js API to handle tempo and transport
 - DONE assign a midi note to a button and send to output when clicked
     - DONE assign a midi channel to send to
 - DONE assign a random note to a button
-- implement a tempo function to go through one measure
-- implement stop/play
-- assing a random note when a button in the measure is pressed and play through measure
-- loop through measure
+- DONE implement a tempo function to go through one measure
+- DONE implement stop/play
+- DONE assing a random note when a button in the measure is pressed and play through measure
+- DONE loop through measure
 - reset notes
 
 - choose device
