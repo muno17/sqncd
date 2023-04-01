@@ -27,6 +27,9 @@ using the Tone.js API to handle tempo and transport
 - generate a midiScale when either key or scale is changed
 - generate a midiScale when any octave button is pressed/unpressed
 - incorporate midiScale into randomNote
+- check for correct length to run
+- run through correct length
+- reset button reacts to any of the selector buttons that are pressed
 
 - choose device
 - choose midi channel
