@@ -159,6 +159,13 @@ WebMidi.enable().then(sendMidi).catch(err => console.log(''));
 
 let devices = []
 
+// give channel base value, change when new channel is selected
+let channel = 1
+let selectedChannel = document.getElementById('channelDropdown');
+selectedChannel.addEventListener('change', () => {
+    channel = selectedChannel.value;
+})
+
 // Function triggered when WEBMIDI.js is ready
 function sendMidi(n) {
 // Display available MIDI input devices
