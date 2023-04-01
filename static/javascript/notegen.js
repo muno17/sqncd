@@ -24,18 +24,18 @@ selectedKey.addEventListener('change', () => {
 })
 
 // give scale base value, change when new scale is selected
-let scale = 'Major'
+let scale = 'major'
 let selectedScale = document.getElementById('scaleDropdown');
 selectedKey.addEventListener('change', () => {
     scale = selectedKey.value;
 })
 
 
-let base = document.getElement 
+let base = 60;
 // middle C is 60
 
 
-// first element in array is length of scale, base + rest of elements
+// first element in array is length of scale, rest of elements are semitones
 
 const major = [8,2,2,1,2,2,2,1]
 const minor = [8,2,1,2,2,1,2,2]
@@ -56,16 +56,16 @@ const major_blues = [7,2,1,1,3,2,3]
 const whole_half_diminished = [9,2,1,2,1,2,1,2,1]
 const half_whole_diminished = [9,1,2,1,2,1,2,1,2]
 
+
 function scaleGenerator(base, scale) {
-    
-    midiScale = [base]
-    length = scale[0];
+    midiScale = [base];
+    scaleLength = scale[0];
 
-    for (let i = 2; i < length + 1; i++) {
-        let midiNote = midiScale[i - 1] + scale[i - 1]
-        midiScale.push(midiNote)
+    for (let i = 2; i < scaleLength + 1; i++) {
+        let midiNote = midiScale[i - 1] + scale[i - 1];
+        midiScale.push(midiNote);
     }
-
+    return midiScale;
 }
 
 function octaveGenerator(generatedScale, octaveChoices) {

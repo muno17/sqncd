@@ -19,20 +19,19 @@
                         <h1>midi</h1>
                         <div class="dropArea">
                             <div class="dropHouse">
-                                <div>device</div>
-                                <select name="midiDevice" id="midiDevice">
-                                    <option value="1">test1</option>
-                                    <option value="2">test2</option>
-                                    <option value="3">test3</option>
-                                    <option value="4">test4</option>
-                                    <option value="5">test5</option>
-                                    <option value="6">test6</option>
-                                </select>
-                            </select>
-                        </div>
-                            <div class="dropHouse">
                                 <div>channel</div>
-                                <select  name="midiChannel" id="midiChannel">
+                                <select  name="midiChannel" id="channelDropdown">
+                                    <option value="1">16</option>
+                                    <option value="2">test2</option>
+                                    <option value="3">test3</option>
+                                    <option value="4">test4</option>
+                                    <option value="5">test5</option>
+                                    <option value="6">test6</option>
+                                </select>
+                            </div>
+                            <div class="dropHouse">
+                                <div>device</div>
+                                <select name="midiDevice" id="deviceDropdown">
                                     <option value="1">test1</option>
                                     <option value="2">test2</option>
                                     <option value="3">test3</option>
@@ -40,8 +39,7 @@
                                     <option value="5">test5</option>
                                     <option value="6">test6</option>
                                 </select>
-                            </select>
-                        </div>
+                            </div>
                         </div>
                     </div>
                     <div class="tempo">
@@ -77,12 +75,24 @@
                             <div class="dropHouse">
                                 <div>scale</div>    
                                 <select  name="scale" id="scaleDropdown">
-                                    <option value="1">test1</option>
-                                    <option value="2">test2</option>
-                                    <option value="3">test3</option>
-                                    <option value="4">test4</option>
-                                    <option value="5">test5</option>
-                                    <option value="6">test6</option>
+                                    <option class="scale" value="major">Major</option>
+                                    <option class="scale" value="minor">Minor</option>
+                                    <option value="sacle" value="harmonic_minor">Harmonic Minor</option>
+                                    <option value="scale" value="melodic_minor">Melodic Minor</option>
+                                    <option value="scale" value="dorian">Dorian</option>
+                                    <option value="scale" value="phrygian">Phrygian</option>
+                                    <option value="sacle" value="lydian">Lydian</option>
+                                    <option value="scale" value="mixolydian">Mixolydian</option>
+                                    <option value="scale" value="aeolian">Aeolian</option>
+                                    <option value="scale" value="locrian">Locrian</option>
+                                    <option value="sacle" value="lydian_dominant">Lydian Dominant</option>
+                                    <option value="scale" value="super_locrian">Super Locrian</option>
+                                    <option value="scale" value="minor_pentatonic">Minor Pentatonic</option>
+                                    <option value="scale" value="major_pentatonic">Major Pentatonic</option>
+                                    <option value="sacle" value="minor_blues">Minor Blues</option>
+                                    <option value="scale" value="major_blues">Major Blues</option>
+                                    <option value="scale" value="whole_half_diminished">Whole Half Diminished</option>
+                                    <option value="scale" value="half_whole_diminished">Half Whole Diminished</option>
                                 </select>
                             </select>
                         </div>
