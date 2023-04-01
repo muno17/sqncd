@@ -1,6 +1,4 @@
 
-// main sequencer functions - assign notes to buttons and transport
-
 // define the default bpm of the transport
 Tone.Transport.bpm.value = 120;
 
@@ -16,7 +14,7 @@ tempo.addEventListener('input', (e) => {
         Tone.Transport.bpm.value = e.target.value;
     }
     console.log(Tone.Transport.bpm.value);
-});
+})
 
 // variable to store how many measure will play
 let length = 1;
@@ -28,39 +26,41 @@ Tone.Transport.loop = true;
 
 const looper = (step) => {
     let repeat = () => {
-
             // change color to indicate current step
-            gridButton[step].style.backgroundColor = '#DBDBDB'
+            gridButton[step].style.backgroundColor = '#DBDBDB';
 
             // change previous steps back to their assigned colors
             // if at step 1 then check 16th step
             if (step === 0) {
+                // change previous step back to yellow if it has a note assigned to it
                 if (!isNaN(gridButton[15].innerHTML)) {
                     gridButton[15].style.backgroundColor = '#ECC987';
                 } else {
-                        gridButton[15].style.backgroundColor = '#BC81BF';
-                        gridButton[15].style.color = '#BC81BF';
+                    // assign original color back to step
+                    gridButton[15].style.backgroundColor = '#BC81BF';
+                    gridButton[15].style.color = '#BC81BF';
                 }
             } else {
                 if (!isNaN(gridButton[step - 1].innerHTML)) {
                     gridButton[step - 1].style.backgroundColor = '#ECC987';
                 } else {
-                        // change previous step back to yellow if it has a note assigned to it
-                        if (!isNaN(gridButton[step - 1].innerHTML)) {
-                            gridButton[step - 1].style.backgroundColor = '#ECC987';
+                    // change previous step back to yellow if it has a note assigned to it
+                    if (!isNaN(gridButton[step - 1].innerHTML)) {
+                        gridButton[step - 1].style.backgroundColor = '#ECC987';
+                    } else {
+                        // assign original color back to step
+                        if (gridButton[step - 1].classList.contains('oddGridButton')) {
+                            gridButton[step - 1].style.backgroundColor = '#BC81BF';
+                            gridButton[step - 1].style.color = '#BC81BF';
                         } else {
-                            // assign original color back to step
-                            if (gridButton[step - 1].classList.contains('oddGridButton')) {
-                                gridButton[step - 1].style.backgroundColor = '#BC81BF';
-                                gridButton[step - 1].style.color = '#BC81BF';
-                            } else {
-                                gridButton[step - 1].style.backgroundColor = '#5F9F89';
-                                gridButton[step - 1].style.color = '#5F9F89';
-                            }
+                            gridButton[step - 1].style.backgroundColor = '#5F9F89';
+                            gridButton[step - 1].style.color = '#5F9F89';
                         }
-                    } 
+                    }
+                } 
             }
 
+            // send note if current step has a note assigned to it
             if (!isNaN(gridButton[step].innerHTML)) {
                 sendMidi(gridButton[step].innerHTML);
             } else {
@@ -68,37 +68,9 @@ const looper = (step) => {
             }
 
             step = (step + 1) % 16;
-
-    }; 
+    }
 Tone.Transport.scheduleRepeat(repeat, `16n`);
-};
-
-        //for (let i = 0; i < (16 * length); i++) {
-            // if (!isNaN(gridButton[i].innerHTML)) {
-                
-            //     // change color to indicate current step
-            //     gridButton[i].style.backgroundColor = '#DBDBDB'
-
-            //     // change previous step back to it's original color
-            //     if (i === 0) {
-            //         if (gridButton[15].classList.contains('oddGridButton')) {
-            //             gridButton[i].style.backgroundColor = '#BC81BF';
-            //         } else {
-            //             gridButton[15].style.backgroundColor = '#5F9F89';
-            //         }
-            //     } else {
-            //         if (gridButton[i - 1].classList.contains('oddGridButton')) {
-            //             gridButton[i - 1].style.backgroundColor = '#BC81BF';
-            //         } else {
-            //             gridButton[i - 1].style.backgroundColor = '#5F9F89';
-            //         }
-            //     }
-
-
-            //     sendMidi(gridButton[i].innerHTML)
-            //     console.log(gridButton[i])
-            //     //console.log('in the midi loop')
-            // }
+}
 
 
 // transport starts when the play button is pressed
@@ -108,7 +80,7 @@ play.addEventListener('click', () => {
     Tone.Transport.start()
     looper(0)
     console.log('transport start');
-});
+})
 
 // transport stops when the stop button is pressed
 let stop = document.getElementById('stop')
@@ -132,13 +104,8 @@ stop.addEventListener('click', () => {
 
     Tone.Transport.stop();
     console.log('transport stop');
-});
+})
  
-
-
-// console.log(gridButton)
-// console.log(gridButton.length)
-
 
 // store the array of buttons so that they can be referenced individually
 let gridButton = document.getElementsByClassName('gridButton')
@@ -168,9 +135,8 @@ for (let i = 0; i < 64; i++) {
             }
             gridButton[i].innerHTML = 'm';
         }
-    });
-};
-
+    })
+}
 
 
 
@@ -181,15 +147,12 @@ function getRandomNote(x, y) {
 
 }
 
-
-
 // check if browser supports WebMIDI
 if (navigator.requestMIDIAccess) {
     console.log('This browser supports WebMIDI');
 } else {
     console.log('WebMIDI is not supported in this browser');
 }
-
 
 WebMidi.enable().then(sendMidi).catch(err => console.log(''));
 
@@ -217,7 +180,7 @@ function sendMidi(n) {
 
         // add eventListener for notes function
 
-    });
+    })
     }
 
-};
+}
