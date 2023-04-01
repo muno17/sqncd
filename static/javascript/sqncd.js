@@ -25,19 +25,21 @@ Tone.Transport.timeSignature = 4;
 Tone.Transport.setLoopPoints(0, `${length}m`);
 Tone.Transport.loop = true;
 
-const looper = () => {
-    let beat = 0;
-    let repeat = () => {
 
+const looper = () => {
+let beat = 0;
+    let repeat = () => {
+        //console.log(beat)
+                    // change color to indicate current step
+            gridButton[beat].style.backgroundColor = '#DBDBDB'
         if (!isNaN(gridButton[beat].innerHTML)) {
             
-            // change color to indicate current step
-            gridButton[beat].style.backgroundColor = '#DBDBDB'
+
 
             // change previous step back to it's original color
             if (beat === 0) {
                 if (gridButton[15].classList.contains('oddGridButton')) {
-                    gridButton[i].style.backgroundColor = '#BC81BF';
+                    gridButton[15].style.backgroundColor = '#BC81BF';
                 } else {
                     gridButton[15].style.backgroundColor = '#5F9F89';
                 }
@@ -47,13 +49,27 @@ const looper = () => {
                 } else {
                     gridButton[beat - 1].style.backgroundColor = '#5F9F89';
                 }
-            }
-
-
-        sendMidi(gridButton[beat].innerHTML)
-        console.log(gridButton[beat])
+            } 
+            sendMidi(gridButton[beat].innerHTML)
+            //console.log(gridButton[beat])
+            //beat = (beat + 1) % 16;
+        } else {
+            if (beat === 0) {
+                if (gridButton[15].classList.contains('oddGridButton')) {
+                    gridButton[15].style.backgroundColor = '#BC81BF';
+                } else {
+                    gridButton[15].style.backgroundColor = '#5F9F89';
+                }
+            } else {
+                if (gridButton[beat - 1].classList.contains('oddGridButton')) {
+                    gridButton[beat - 1].style.backgroundColor = '#BC81BF';
+                } else {
+                    gridButton[beat - 1].style.backgroundColor = '#5F9F89';
+                }
+            } 
+        }
         beat = (beat + 1) % 16;
-        };
+        ;
     }; 
 Tone.Transport.scheduleRepeat(repeat, `16n`);
 };
@@ -98,7 +114,6 @@ play.addEventListener('click', () => {
 // transport stops when the stop button is pressed
 let stop = document.getElementById('stop')
 stop.addEventListener('click', () => {
-
     // reset colors back to their original colors
     for (let i = 0; i < (16 * length); i++) {
 
