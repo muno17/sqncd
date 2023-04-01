@@ -64,33 +64,33 @@ console.log(gridButton)
 console.log(gridButton.length)
 console.log(gridButton[0])
 
-// for (button in gridButton) {
-//     button.addEventListener('click', () => {
-//         let onOff = false;
-//         let buttonNote = 130;
+for (let i = 0; i < 64; i++) {
+    gridButton[i].addEventListener('click', () => {
+        let onOff = false;
+        let buttonNote = 130;
     
-//         if (onOff === false) {
-//             onOff = true;
-//             gridButton.style.background = '#ECC987';
+        if (onOff === false) {
+            onOff = true;
+            gridButton[i].style.background = '#ECC987';
     
-//             // randomly assign a note if none assigned
-//             if (buttonNote === 130) {
-//                 buttonNote = getRandomNote(36, 60)
-//                 gridButton.innerHTML = buttonNote;
-//                 console.log(gridButton.innerHTML)
-//             }
-//             sendMidi(buttonNote)
-//         } else if (onOff === true) {
-//             onOff = false;
-//             if (altColor.includes(j)) {
-//                 gridButton.style.backgroundColor = '#BC81BF';
-//             } else {
-//                 gridButton.style.background = '#5F9F89';
-//             }
-//             buttonNote = 130;
-//         }
-//     });
-// }
+            // randomly assign a note if none assigned
+            if (buttonNote === 130) {
+                buttonNote = getRandomNote(36, 60)
+                gridButton[i].innerHTML = buttonNote;
+                // console.log(gridButton.innerHTML)
+            }
+            sendMidi(buttonNote)
+        } else if (onOff === true) {
+            onOff = false;
+            if (altColor.includes(j)) {
+                gridButton[i].style.backgroundColor = '#BC81BF';
+            } else {
+                gridButton[i].style.background = '#5F9F89';
+            }
+            buttonNote = 130;
+        }
+    });
+};
 
 
 
