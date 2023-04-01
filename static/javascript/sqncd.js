@@ -17,12 +17,21 @@ tempo.addEventListener('input', (e) => {
 })
 
 // variable to store how many measure will play
-let length = 1;
+let length = 2;
 
 Tone.Transport.timeSignature = 4;
 Tone.Transport.setLoopPoints(0, `${length}m`);
 Tone.Transport.loop = true;
 
+
+// transport starts when the play button is pressed
+let play = document.getElementById('play');
+play.addEventListener('click', () => {
+    
+    Tone.Transport.start()
+    looper(0)
+    console.log('transport start');
+})
 
 const looper = (step) => {
     let repeat = () => {
@@ -69,25 +78,14 @@ const looper = (step) => {
 
             step = (step + 1) % 16;
     }
-Tone.Transport.scheduleRepeat(repeat, `16n`);
-}
+let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
 
-
-// transport starts when the play button is pressed
-let play = document.getElementById('play');
-play.addEventListener('click', () => {
-
-    Tone.Transport.start()
-    looper(0)
-    console.log('transport start');
-})
 
 // transport stops when the stop button is pressed
 let stop = document.getElementById('stop')
 stop.addEventListener('click', () => {
     // reset colors back to their original colors
     for (let i = 0; i < (16 * length); i++) {
-
             // change previous step back to it's original color
             if (gridButton[i].classList.contains('false')) {
                 if (gridButton[i].classList.contains('oddGridButton')) {
@@ -101,10 +99,14 @@ stop.addEventListener('click', () => {
                 gridButton[i].style.backgroundColor = '#ECC987';
             }
         }
-
+    
     Tone.Transport.stop();
+    Tone.Transport.clear(sequence)
     console.log('transport stop');
 })
+}
+
+
  
 
 // store the array of buttons so that they can be referenced individually
