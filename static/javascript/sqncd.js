@@ -66,28 +66,25 @@ console.log(gridButton[0])
 
 for (let i = 0; i < 64; i++) {
     gridButton[i].addEventListener('click', () => {
-        let onOff = false;
-        let buttonNote = 130;
     
-        if (onOff === false) {
-            onOff = true;
+        if (gridButton[i].classList.contains('false')) {
+            gridButton[i].classList.remove('false');
+    
+            // randomly assign a note
+            let buttonNote = getRandomNote(36, 60);
+            gridButton[i].innerHTML = buttonNote;
             gridButton[i].style.background = '#ECC987';
-    
-            // randomly assign a note if none assigned
-            if (buttonNote === 130) {
-                buttonNote = getRandomNote(36, 60)
-                gridButton[i].innerHTML = buttonNote;
                 // console.log(gridButton.innerHTML)
-            }
+
             sendMidi(buttonNote)
-        } else if (onOff === true) {
-            onOff = false;
-            if (altColor.includes(j)) {
+        } else {
+            gridButton[i].classList.add('false');
+            if (gridButton[i].classList.contains('oddGridButton')) {
                 gridButton[i].style.backgroundColor = '#BC81BF';
             } else {
                 gridButton[i].style.background = '#5F9F89';
             }
-            buttonNote = 130;
+            gridButton[i].innerHTML = 'm';
         }
     });
 };
