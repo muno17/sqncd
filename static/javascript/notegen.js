@@ -3,7 +3,35 @@
 // choose key/scale
 // allow user to assign notes ???
 
+const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 
+let midiNotes = [];
+// create array with all midi notes and names
+for (let i = 1; i < 8; i++) {
+    for (let j = 0; j < 12; j++) {
+        midiNotes.push(keys[j] + i);
+    }
+}
+// console.log(midiNotes)
+// console.log(midiNotes.length)
+//console.log(document.getElementById('key').innerHTML)
+
+// give key base value, change when new key is selected
+let key = 'C'
+let selectedKey = document.getElementById('keyDropdown');
+selectedKey.addEventListener('change', () => {
+    key = selectedKey.value;
+})
+
+// give scale base value, change when new scale is selected
+let scale = 'Major'
+let selectedScale = document.getElementById('scaleDropdown');
+selectedKey.addEventListener('change', () => {
+    key = selectedKey.value;
+})
+
+
+let base = document.getElement 
 // middle C is 60
 
 
@@ -29,6 +57,8 @@ const whole_half_diminished = [9,2,1,2,1,2,1,2,1]
 const half_whole_diminished = [9,1,2,1,2,1,2,1,2]
 
 function scaleGenerator(base, scale) {
+    
+    length = scale[0];
 
 }
 
