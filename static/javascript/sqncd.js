@@ -26,10 +26,10 @@ Tone.Transport.setLoopPoints(0, length);
 Tone.Transport.loop = true;
 
 
-let buttonNotes = document.getElementsByClassName(length)
-let rowOne = buttonNotes[0]
-// return htmlcollection of all elements in the row corresponding to length
-console.log(buttonNotes) 
+// let buttonNotes = document.getElementsByClassName(length)
+// let rowOne = buttonNotes[0]
+// // return htmlcollection of all elements in the row corresponding to length
+// console.log(buttonNotes) 
 
 
 // transport starts when the play button is pressed
@@ -38,7 +38,6 @@ play.addEventListener('click', () => {
     Tone.Transport.start();
 
     console.log('transport start')
-    console.log(rowOne[0])
 })
 
 // transport stops when the stop button is pressed
