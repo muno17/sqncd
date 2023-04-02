@@ -19,7 +19,7 @@ tempo.addEventListener('input', (e) => {
 })
 
 // variable to store how many measure will play
-let length = 1;
+let length = 3;
 
 Tone.Transport.timeSignature = 4;
 Tone.Transport.setLoopPoints(0, `${length}m`);
@@ -31,11 +31,11 @@ let play = document.getElementById('play');
 play.addEventListener('click', () => {
     
     Tone.Transport.start()
-    looper(0)
+    looper(0, length)
     console.log('transport start');
 })
 
-const looper = (step) => {
+const looper = (step, length) => {
     let repeat = () => {
             // change color to indicate current step
             gridButton[step].style.backgroundColor = '#DBDBDB';
@@ -44,12 +44,12 @@ const looper = (step) => {
             // if at step 1 then check 16th step
             if (step === 0) {
                 // change previous step back to yellow if it has a note assigned to it
-                if (gridButton[15].innerHTML.length > 1) {
-                    gridButton[15].style.backgroundColor = '#ECC987';
+                if (gridButton[(16 * length) - 1].innerHTML.length > 1) {
+                    gridButton[(16 * length) - 1].style.backgroundColor = '#ECC987';
                 } else {
                     // assign original color back to step
-                    gridButton[15].style.backgroundColor = '#BC81BF';
-                    gridButton[15].style.color = '#BC81BF';
+                    gridButton[(16 * length) - 1].style.backgroundColor = '#BC81BF';
+                    gridButton[(16 * length) - 1].style.color = '#BC81BF';
                 }
             } else {
                 if (gridButton[step - 1].innerHTML.length > 1) {
@@ -109,7 +109,7 @@ const looper = (step) => {
                 gridButton[step].style.color = '#DBDBDB'
             }
 
-            step = (step + 1) % 32;
+            step = (step + 1) % (16 * length);
     }
     let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
 
