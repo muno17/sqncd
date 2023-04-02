@@ -144,15 +144,15 @@ for (let i = 0; i < 64; i++) {
 
 
 function randomNoteGenerator(key, scaleValue, scaleName) {
+    console.log(scaleValue)
     let scaleMidiNotes = scaleGenerator(key, scaleValue, scaleName);
-
     let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
-    console.log(randomNote)
+
     return midiNotes[randomNote]
 
 }
 
-// initiate default values if nothing is selected
+// initiate default note values if nothing is selected
 let scaleValue = 0;
 let scaleName = 'major';
 let key = 'C'

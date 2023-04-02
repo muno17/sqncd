@@ -24,9 +24,7 @@ using the Tone.js API to handle tempo and transport
 - DONE assing a random note when a button in the measure is pressed and play through measure
 - DONE loop through measure
 - DONE reset notes
-- generate a midiScale when either key or scale is changed
-- generate a midiScale when any octave button is pressed/unpressed
-- incorporate midiScale into randomNote
+- DONE incorporate scaleGenerator into randomNote
 - check for correct length to run
 - run through correct length
 - reset button reacts to any of the selector buttons that are pressed
@@ -51,19 +49,20 @@ using the Tone.js API to handle tempo and transport
 
 ------------- TO DO -------------
 - sqncd 
-    - add button functionality
-        - if button clicked, add random note when sqncd, else option to manually assign note
-        - remove note when button unclicked
-        - monophonic for now
-    - figure out how to add tempo
-        - add lights to show tempo on sequencer
-    - start, stop, pause buttons
+    - DONE add button functionality
+        - DONE if button clicked, add random note when sqncd, else option to manually assign note
+        - DONE remove note when button unclicked
+        - DONE monophonic for now
+    - DONE figure out how to add tempo
+        - DONE add lights to show tempo on sequencer
+    - DONE start, stop, pause buttons
     - link midi channel selected to current button layout
-        - make monophonic for now
         - only send to one output for now
         - scan for new midi devices
-    - figure out how to link scales to note selection
-        - when scale selected, query scale table
+    - DONE figure out how to link scales to note selection
+    - DONE scale note table
+    - DONE possibly just create an array instead when scale is picked based on key
+    - DONE ^ would figure out notes based on semitones
     - figure out how to implement octave section
         - default to middle C
         - choose 3 octaves up or down
@@ -78,18 +77,13 @@ using the Tone.js API to handle tempo and transport
         - toggles for what to reset
         - k, s, o, n
         - resets reset options
-    - display
-        - show current note values
     - ???figure out how to add shuffle???
 
 
 - SQL
     - create database
-        - users table DONE
+        - DONE users table
             - id AUTOINCREMENT, username TEXT, email TEXT, hash TEXT
-        - scale note table
-            - possibly just create an array instead when scale is picked based on key
-            - ^ would figure out notes based on semitones
         - midi file table
             - store saved formats
                 - buttons on/off
@@ -118,22 +112,18 @@ using the Tone.js API to handle tempo and transport
 
 
 - GUI
-    - add tempo display
-    - figure out how to display midi channel dropdown
-        - need dropdowns both for device and channel
-    - add dropdown for scales
-        - add another dropdown for key
+    - DONE add tempo display
+    - DONE figure out how to display midi channel dropdown
+        - DONE need dropdowns both for device and channel
+    - DONE add dropdown for scales
+        - DONE add another dropdown for key
     - figure out best way to implement octave section
     - move sqncd button over to new column
     - add reset button in sqncd button section
-        - add dropdown with options of what to reset
-    - add numbers to sequencer buttons
-    - add measure numbers?
-    - add method to tell which buttons are enabled
-        - change color
-        - have lights flashing
-        - have not displayed on button while flashing
-    - add display to show note data?
-    - decide on final colors
-    - add side panels - decide on colored or wooden
+        - DONE add dropdown with options of what to reset
+    - DONE add method to tell which buttons are enabled
+        - DONE change color
+        - DONE have lights flashing
+    - DONE decide on final colors
+    - DONE add side panels - decide on colored or wooden
     - add shuffle display

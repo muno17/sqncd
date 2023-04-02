@@ -52,6 +52,7 @@ export function scaleGenerator(key = 'C', scaleValue = 0, scaleName = 'major') {
         let midiNote = midiScale[i - 1] + scalePattern[i];
         midiScale.push(midiNote);
     }
+    
     return midiScale;
 }
 
