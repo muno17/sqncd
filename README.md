@@ -25,8 +25,8 @@ using the Tone.js API to handle tempo and transport
 - DONE loop through measure
 - DONE reset notes
 - DONE incorporate scaleGenerator into randomNote
-- check for correct length to run
-- run through correct length
+- DONE check for correct length to run
+- DONE run through correct length
 - reset button reacts to any of the selector buttons that are pressed
 
 - choose device

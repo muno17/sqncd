@@ -260,7 +260,7 @@ select {
 }
 
 .leftSqncr {
-    margin-top: 15px;
+    margin-top: 13px;
     height: 300px;
     width: 90px;
     display: flex;
@@ -270,9 +270,9 @@ select {
 
 .leftButtons {
     width: 80px;
-    height: 40px;
+    height: 35px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 17px;
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
 }

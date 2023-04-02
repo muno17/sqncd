@@ -1,6 +1,23 @@
 import { scaleGenerator, midiNotes } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 
+
+// initiate default note values if nothing is selected = C major
+let scaleValue = 0;
+let key = 'C'
+// variable to store how many measure will play
+let length = 1;
+
+let selectedScale = document.getElementById('scaleDropdown');
+selectedScale.addEventListener('change', () => {
+    scaleValue = selectedScale.value;
+})
+
+let selectedKey = document.getElementById('keyDropdown');
+selectedKey.addEventListener('change', () => {
+    key = selectedKey.value;
+})
+
 // store the array of buttons so that they can be referenced individually
 let gridButton = document.getElementsByClassName('gridButton')
 
@@ -93,22 +110,6 @@ function randomNoteGenerator(key, scaleValue) {
     return midiNotes[randomNote]
 }
 
-// initiate default note values if nothing is selected = C major
-let scaleValue = 0;
-let key = 'C'
-// variable to store how many measure will play
-let length = 1;
-
-let selectedScale = document.getElementById('scaleDropdown');
-selectedScale.addEventListener('change', () => {
-    scaleValue = selectedScale.value;
-})
-
-let selectedKey = document.getElementById('keyDropdown');
-selectedKey.addEventListener('change', () => {
-    key = selectedKey.value;
-})
-
 
 // define the default bpm of the transport if none is input
 Tone.Transport.bpm.value = 120;
@@ -141,7 +142,7 @@ play.addEventListener('click', () => {
     console.log('transport start');
 })
 
-const looper = (step, length) => {
+let looper = (step, length) => {
     let repeat = () => {
             // change color to indicate current step
             gridButton[step].style.backgroundColor = '#DBDBDB';
