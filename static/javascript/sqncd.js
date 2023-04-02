@@ -144,12 +144,9 @@ for (let i = 0; i < 64; i++) {
 
 
 function randomNoteGenerator(key, scaleValue) {
-
     let scaleMidiNotes = scaleGenerator(key, scaleValue);
     let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
-
     return midiNotes[randomNote]
-
 }
 
 // initiate default note values if nothing is selected
@@ -164,5 +161,4 @@ selectedScale.addEventListener('change', () => {
 let selectedKey = document.getElementById('keyDropdown');
 selectedKey.addEventListener('change', () => {
     key = selectedKey.value;
-    console.log('keyValue = ' + key)
 })

@@ -22,8 +22,7 @@ const scalesList = [
     {whole_half_diminished : [9,2,1,2,1,2,1,2,1]},
     {half_whole_diminished : [9,1,2,1,2,1,2,1,2]}
 ]
-// console.log(scalesList[5])
-// console.log(scalesList[5][0])
+
 const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 
 // create a list of all midi note values
@@ -43,6 +42,7 @@ export function scaleGenerator(key = 'C', scaleValue = 0) {
     // initialize a list to store the midi values of the scale, first element is the base
     let midiScale = [base];
 
+    // pull the name of the scale - needed to find the scalePattern
     let scaleNameGenerator = Object.keys(scalesList[scaleValue])
     let scaleName = scaleNameGenerator[0]
 
