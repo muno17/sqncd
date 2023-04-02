@@ -44,32 +44,28 @@ for (let i = 0; i < 64; i++) {
             }
             gridButton[i].innerHTML = 'm';
 
-            // check how many buttons are turned off in the row for the button being turned off
+            // check how many buttons are turned off in all the rows
             let rowCountTwo = 0
             let rowCountThree = 0
             let rowCountFour = 0
-            if (gridButton[i].classList.contains('rowTwo')) {
-                let rowTwo = document.getElementsByClassName('rowTwo')
-                for (let i = 0; i < 16; i++) {
-                    if (rowTwo[i].classList.contains('false')) {
-                        rowCountTwo ++;
-                    }
+
+            let rowTwo = document.getElementsByClassName('rowTwo')
+            let rowThree = document.getElementsByClassName('rowThree')
+            let rowFour = document.getElementsByClassName('rowFour')
+            for (let i = 0; i < 16; i++) {
+                if (rowTwo[i].classList.contains('false')) {
+                    rowCountTwo ++;
                 }
-            } else if (gridButton[i].classList.contains('rowThree')) {
-                let rowThree = document.getElementsByClassName('rowThree')
-                for (let i = 0; i < 16; i++) {
-                    if (rowThree[i].classList.contains('false')) {
-                        rowCountThree ++;
-                    }
+
+                if (rowThree[i].classList.contains('false')) {
+                    rowCountThree ++;
                 }
-            } else if (gridButton[i].classList.contains('rowFour')) {
-                let rowFour = document.getElementsByClassName('rowFour')
-                for (let i = 0; i < 16; i++) {
-                    if (rowFour[i].classList.contains('false')) {
-                        rowCountFour ++;
-                    }
+
+                if (rowFour[i].classList.contains('false')) {
+                    rowCountFour ++;
                 }
             }
+
             console.log("rowCountTwo = " + rowCountTwo)
             console.log("rowCountThree = " + rowCountThree)
             console.log("rowCountFour = " + rowCountFour)
@@ -112,9 +108,6 @@ let selectedKey = document.getElementById('keyDropdown');
 selectedKey.addEventListener('change', () => {
     key = selectedKey.value;
 })
-
-
-
 
 
 // define the default bpm of the transport if none is input
@@ -183,37 +176,6 @@ const looper = (step, length) => {
                     }
                 } 
             }
-
-            // if (step > 16 && step < 33) {
-            //     if (step === 17) {
-            //         // change previous step back to yellow if it has a note assigned to it
-            //         if (gridButton[15].innerHTML.length > 1) {
-            //             gridButton[15].style.backgroundColor = '#ECC987';
-            //         } else {
-            //             // assign original color back to step
-            //             gridButton[15].style.backgroundColor = '#BC81BF';
-            //             gridButton[15].style.color = '#BC81BF';
-            //         }
-            //     } else {
-            //         if (gridButton[step - 1].innerHTML.length > 1) {
-            //             gridButton[step - 1].style.backgroundColor = '#ECC987';
-            //         } else {
-            //             // change previous step back to yellow if it has a note assigned to it
-            //             if (gridButton[step - 1].innerHTML.length > 1) {
-            //                 gridButton[step - 1].style.backgroundColor = '#ECC987';
-            //             } else {
-            //                 // assign original color back to step
-            //                 if (gridButton[step - 1].classList.contains('oddGridButton')) {
-            //                     gridButton[step - 1].style.backgroundColor = '#BC81BF';
-            //                     gridButton[step - 1].style.color = '#BC81BF';
-            //                 } else {
-            //                     gridButton[step - 1].style.backgroundColor = '#5F9F89';
-            //                     gridButton[step - 1].style.color = '#5F9F89';
-            //                 }
-            //             }
-            //         } 
-            //     }
-            // }
 
             // send note if current step has a note assigned to it
             if (gridButton[step].innerHTML.length > 1) {
