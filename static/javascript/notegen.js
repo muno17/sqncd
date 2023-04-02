@@ -1,46 +1,8 @@
-// add functionality to midi, key and scale dropdown menus
 // choose octaves
-// choose key/scale
 // allow user to assign notes ???
 
-const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
-
-let midiNotes = [];
-// create array with all midi notes and names
-for (let i = 1; i < 8; i++) {
-    for (let j = 0; j < 12; j++) {
-        midiNotes.push(keys[j] + i);
-    }
-}
-// add 24 to the note's location in the array to get the corresponding midi note value
-
- console.log(midiNotes)
-// console.log(midiNotes.length)
-//console.log(document.getElementById('key').innerHTML)
-
-// give key base value, change when new key is selected
-let key = 'C'
-let selectedKey = document.getElementById('keyDropdown');
-selectedKey.addEventListener('change', () => {
-    key = selectedKey.value;
-})
-
-// give scale base value, change when new scale is selected
-let scaleValue = 0;
-let scaleName = 'major';
-
-let selectedScale = document.getElementById('scaleDropdown');
-selectedScale.addEventListener('change', () => {
-    scaleValue = selectedScale.value;
-})
-
-
-let base = 60;
-// middle C is 60
-
-
 // first element in array is length of scale, rest of elements are semitones
-let scalesList = [
+const scalesList = [
     {major : [8,2,2,1,2,2,2,1]},
     {minor: [8,2,1,2,2,1,2,2]},
     {harmonic_minor : [8,2,1,2,2,1,3,1]},
@@ -61,26 +23,44 @@ let scalesList = [
     {half_whole_diminished : [9,1,2,1,2,1,2,1,2]}
 ]
 
-// set default scale to major
-let scale = [8,2,2,1,2,2,2,1]
+const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 
-// how to pull a list from the scales array
-//console.log(scalesList[0]['major'])
-//console.log(scalesList[scaleValue][scaleName])
+let midiNotes = [];
+// create array with all midi notes and names
+for (let i = 1; i < 8; i++) {
+    for (let j = 0; j < 12; j++) {
+        midiNotes.push(keys[j] + i);
+    }
+}
+// add 24 to the note's location in the array to get the corresponding midi note value
 
+ //console.log(midiNotes)
+// console.log(midiNotes.length)
+//console.log(document.getElementById('key').innerHTML)
+let key = 'C'
+let selectedKey = document.getElementById('keyDropdown');
+selectedKey.addEventListener('change', () => {
+    key = selectedKey.value;
+})
 
+// give scale base value, change when new scale is selected
+let scaleValue = 0;
+let scaleName = 'major';
 
+let selectedScale = document.getElementById('scaleDropdown');
+selectedScale.addEventListener('change', () => {
+    scaleValue = selectedScale.value;
+})
 
-function baseGenerator (key, )
+function scaleGenerator(key = 'C', scaleValue = 0, scaleName = major) {
+    // find the base midi note
+    let base = 60 + keys.indexOf(key);
 
+    // initialize a list to store the midi values of the scale, first element is the base
+    let midiScale = [base];
 
-function scaleParser (scaleValue, scaleName) {
-    return scalesList[scaleValue][scaleName]
-} 
-
-
-function scaleGenerator(base, scale) {
-    midiScale = [base];
+    // pull the pattern corresponding to the scale
+    scale = [scaleValue][scaleName]
     scaleLength = scale[0];
 
     for (let i = 2; i < scaleLength + 1; i++) {
@@ -90,6 +70,37 @@ function scaleGenerator(base, scale) {
     return midiScale;
 }
 
+
 function octaveGenerator(generatedScale, octaveChoices) {
     
 }
+
+
+
+// how to pull a list from the scales array
+//console.log(scalesList[0]['major'])
+//console.log(scalesList[scaleValue][scaleName])
+
+// return the midi note number of the base
+// function baseGenerator (key) {
+//     relation = keys.indexOf(key)
+//     return 60 + relation
+// }
+
+// need to figure out how to get scale name
+// returns the list with the pattern for the selected scale
+// function scaleParser (scaleValue, scaleName) {
+//     return scalesList[scaleValue][scaleName]
+// } 
+
+
+
+// give key base value, change when new key is selected
+//let key = 'C'
+
+// let base = 60;
+// // middle C is 60
+
+
+// // set default scale to major
+// let scale = [8,2,2,1,2,2,2,1]
