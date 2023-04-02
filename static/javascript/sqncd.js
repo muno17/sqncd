@@ -25,8 +25,8 @@ let gridButton = document.getElementsByClassName('gridButton')
 for (let i = 0; i < 64; i++) {
     gridButton[i].addEventListener('click', () => {
         // events if the button is turned on
-        if (gridButton[i].classList.contains('false')) {
-            gridButton[i].classList.remove('false');
+        if (gridButton[i].classList.contains('off')) {
+            gridButton[i].classList.remove('off');
     
             // randomly assign a note
             let buttonNote = randomNoteGenerator(key, scaleValue);
@@ -51,7 +51,7 @@ for (let i = 0; i < 64; i++) {
 
         // events if the button is turned off
         } else {
-            gridButton[i].classList.add('false');
+            gridButton[i].classList.add('off');
             if (gridButton[i].classList.contains('oddGridButton')) {
                 gridButton[i].style.color = '#BC81BF';
                 gridButton[i].style.backgroundColor = '#BC81BF';
@@ -70,15 +70,15 @@ for (let i = 0; i < 64; i++) {
             let rowThree = document.getElementsByClassName('rowThree')
             let rowFour = document.getElementsByClassName('rowFour')
             for (let i = 0; i < 16; i++) {
-                if (rowTwo[i].classList.contains('false')) {
+                if (rowTwo[i].classList.contains('off')) {
                     rowCountTwo ++;
                 }
 
-                if (rowThree[i].classList.contains('false')) {
+                if (rowThree[i].classList.contains('off')) {
                     rowCountThree ++;
                 }
 
-                if (rowFour[i].classList.contains('false')) {
+                if (rowFour[i].classList.contains('off')) {
                     rowCountFour ++;
                 }
             }
@@ -105,7 +105,6 @@ function randomNoteGenerator(key, scaleValue) {
     return midiNotes[randomNote]
 }
 
-
 // define the default bpm of the transport if none is input
 Tone.Transport.bpm.value = 120;
 
@@ -127,10 +126,11 @@ Tone.Transport.timeSignature = 4;
 Tone.Transport.setLoopPoints(0, `${length}m`);
 Tone.Transport.loop = true;
 
-// transport starts when the play button is pressed
+
 let play = document.getElementById('play');
 let stop = document.getElementById('stop');
 
+// transport starts when the play button is pressed
 play.addEventListener('click', () => {
     if (play.classList.contains('off')) {
         play.classList.remove('off')
@@ -177,7 +177,6 @@ let looper = (step, length) => {
                     }
                 } 
             }
-
             // send note if current step has a note assigned to it
             if (gridButton[step].innerHTML.length > 1) {
                 sendMidi(gridButton[step].innerHTML);
@@ -186,7 +185,6 @@ let looper = (step, length) => {
             }
     }
     let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
-
 
     // transport stops when the stop button is pressed
     stop.addEventListener('click', () => {
@@ -205,12 +203,10 @@ let looper = (step, length) => {
                     gridButton[i].style.backgroundColor = '#ECC987';
                 }
             }
+        stop.classList.remove('off')
         play.classList.add('off')
         Tone.Transport.stop();
         Tone.Transport.clear(sequence)
         stop.classList.remove('off')
-
     })
 }
-
-
