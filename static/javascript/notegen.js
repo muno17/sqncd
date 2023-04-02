@@ -36,21 +36,6 @@ for (let i = -1; i < 9; i++) {
 }
 
 
-// initiate default values if nothing is selected
-let scaleValue = 0;
-let scaleName = 'major';
-let key = 'C'
-
-let selectedScale = document.getElementById('scaleDropdown');
-selectedScale.addEventListener('change', () => {
-    scaleValue = selectedScale.value;
-})
-
-let selectedKey = document.getElementById('keyDropdown');
-selectedKey.addEventListener('change', () => {
-    key = selectedKey.value;
-})
-
 export function scaleGenerator(key = 'C', scaleValue = 0, scaleName = 'major') {
     // find the base midi note
     let base = 60 + keys.indexOf(key);
@@ -67,7 +52,6 @@ export function scaleGenerator(key = 'C', scaleValue = 0, scaleName = 'major') {
         let midiNote = midiScale[i - 1] + scalePattern[i];
         midiScale.push(midiNote);
     }
-    console.log(midiScale)
     return midiScale;
 }
 
