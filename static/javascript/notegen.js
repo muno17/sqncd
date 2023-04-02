@@ -12,7 +12,9 @@ for (let i = 1; i < 8; i++) {
         midiNotes.push(keys[j] + i);
     }
 }
-// console.log(midiNotes)
+// add 24 to the note's location in the array to get the corresponding midi note value
+
+ console.log(midiNotes)
 // console.log(midiNotes.length)
 //console.log(document.getElementById('key').innerHTML)
 
@@ -24,10 +26,12 @@ selectedKey.addEventListener('change', () => {
 })
 
 // give scale base value, change when new scale is selected
-let scale = 'major'
+let scaleValue = 0;
+let scaleName = 'major';
+
 let selectedScale = document.getElementById('scaleDropdown');
-selectedKey.addEventListener('change', () => {
-    scale = selectedKey.value;
+selectedScale.addEventListener('change', () => {
+    scaleValue = selectedScale.value;
 })
 
 
@@ -36,7 +40,7 @@ let base = 60;
 
 
 // first element in array is length of scale, rest of elements are semitones
-let scales = [
+let scalesList = [
     {major : [8,2,2,1,2,2,2,1]},
     {minor: [8,2,1,2,2,1,2,2]},
     {harmonic_minor : [8,2,1,2,2,1,3,1]},
@@ -56,6 +60,23 @@ let scales = [
     {whole_half_diminished : [9,2,1,2,1,2,1,2,1]},
     {half_whole_diminished : [9,1,2,1,2,1,2,1,2]}
 ]
+
+// set default scale to major
+let scale = [8,2,2,1,2,2,2,1]
+
+// how to pull a list from the scales array
+//console.log(scalesList[0]['major'])
+//console.log(scalesList[scaleValue][scaleName])
+
+
+
+
+function baseGenerator (key, )
+
+
+function scaleParser (scaleValue, scaleName) {
+    return scalesList[scaleValue][scaleName]
+} 
 
 
 function scaleGenerator(base, scale) {

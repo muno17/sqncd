@@ -42,6 +42,9 @@ using the Tone.js API to handle tempo and transport
 - create forgot username page
 - create forgot password page
 - find way to add id to load on every page when logged in
+- create account page
+- create donate page 
+- add content to all other pages
 
 
 
