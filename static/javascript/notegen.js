@@ -35,25 +35,27 @@ for (let i = -1; i < 9; i++) {
 }
 // add 24 to the note's location in the array to get the corresponding midi note value
 
-console.log(midiNotes)
+//console.log(midiNotes)
 // console.log(midiNotes.length)
 //console.log(document.getElementById('key').innerHTML)
-let key = 'C'
-let selectedKey = document.getElementById('keyDropdown');
-selectedKey.addEventListener('change', () => {
-    key = selectedKey.value;
-})
 
-// give scale base value, change when new scale is selected
+
+// initiate default values if nothing is selected
 let scaleValue = 0;
 let scaleName = 'major';
+let key = 'C'
 
 let selectedScale = document.getElementById('scaleDropdown');
 selectedScale.addEventListener('change', () => {
     scaleValue = selectedScale.value;
 })
 
-function scaleGenerator(key = 'C', scaleValue = 0, scaleName = major) {
+let selectedKey = document.getElementById('keyDropdown');
+selectedKey.addEventListener('change', () => {
+    key = selectedKey.value;
+})
+
+export function scaleGenerator(key = 'C', scaleValue = 0, scaleName = 'major') {
     // find the base midi note
     let base = 60 + keys.indexOf(key);
 
@@ -61,14 +63,15 @@ function scaleGenerator(key = 'C', scaleValue = 0, scaleName = major) {
     let midiScale = [base];
 
     // pull the pattern corresponding to the scale
-    scalePattern = scalesList[scaleValue][scaleName]
-    scaleLength = scale[0];
+    let scalePattern = scalesList[scaleValue][scaleName]
+    let scaleLength = scalePattern[0];
 
     // loop through the scale, add the pattern amount to the previous midiScale element's value and push to midiScale
-    for (let i = 2; i < scaleLength + 1; i++) {
-        let midiNote = midiScale[i - 1] + scalePattern[i - 1];
+    for (let i = 1; i < scaleLength; i++) {
+        let midiNote = midiScale[i - 1] + scalePattern[i];
         midiScale.push(midiNote);
     }
+    //console.log(midiScale)
     return midiScale;
 }
 

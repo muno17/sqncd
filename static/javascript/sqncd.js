@@ -1,3 +1,5 @@
+import { scaleGenerator } from '/static/javascript/notegen.js'
+
 
 // define the default bpm of the transport
 Tone.Transport.bpm.value = 120;
@@ -119,7 +121,7 @@ for (let i = 0; i < 64; i++) {
             gridButton[i].classList.remove('false');
     
             // randomly assign a note
-            let buttonNote = randomNote(36, 60);
+            let buttonNote = randomNote();
             gridButton[i].innerHTML = buttonNote;
             gridButton[i].style.background = '#ECC987';
             gridButton[i].style.color = 'white';
@@ -141,9 +143,10 @@ for (let i = 0; i < 64; i++) {
 
 
 
-function randomNote(x, y) {
-    let min = x;
-    let max = y;
-    return Math.floor(Math.random() * (max - min + 1) + min);
+function randomNote() {
+    let scaleMidiNotes = scaleGenerator()
+
+    let random = Math.floor(Math.random() * scaleMidiNotes.length);
+    return scaleMidiNotes[random]
 
 }
