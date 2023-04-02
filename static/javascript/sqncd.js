@@ -1,4 +1,4 @@
-import { scaleGenerator } from '/static/javascript/notegen.js'
+import { scaleGenerator, midiNotes } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 
 
@@ -127,7 +127,6 @@ for (let i = 0; i < 64; i++) {
             gridButton[i].style.background = '#ECC987';
             gridButton[i].style.color = 'white';
 
-            //sendMidi(buttonNote)
         } else {
             gridButton[i].classList.add('false');
             if (gridButton[i].classList.contains('oddGridButton')) {
@@ -145,9 +144,10 @@ for (let i = 0; i < 64; i++) {
 
 
 function randomNoteGenerator() {
-    let scaleMidiNotes = scaleGenerator()
+    let scaleMidiNotes = scaleGenerator();
 
-    let random = Math.floor(Math.random() * scaleMidiNotes.length);
-    return scaleMidiNotes[random]
+    let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
+    console.log(randomNote)
+    return midiNotes[randomNote]
 
 }

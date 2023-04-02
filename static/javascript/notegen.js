@@ -26,11 +26,12 @@ const scalesList = [
 const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 
 // create a list of all midi note values
-let midiNotes = [];
+export let midiNotes = [];
+console.log(midiNotes)
 // create array with all midi notes and names
 for (let i = -1; i < 9; i++) {
     for (let j = 0; j < 12; j++) {
-        midiNotes.push(keys[j] + i);
+        midiNotes.push(`${keys[j]}${i}`);
     }
 }
 // add 24 to the note's location in the array to get the corresponding midi note value
@@ -71,7 +72,7 @@ export function scaleGenerator(key = 'C', scaleValue = 0, scaleName = 'major') {
         let midiNote = midiScale[i - 1] + scalePattern[i];
         midiScale.push(midiNote);
     }
-    //console.log(midiScale)
+    console.log(midiScale)
     return midiScale;
 }
 
