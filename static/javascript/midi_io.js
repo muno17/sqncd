@@ -18,7 +18,7 @@ selectedChannel.addEventListener('change', () => {
 })
 
 // Function triggered when WEBMIDI.js is ready
-function sendMidi(n) {
+export function sendMidi(n) {
 // Display available MIDI input devices
     let note = n
     if (WebMidi.outputs.length < 1) {

@@ -1,4 +1,5 @@
 import { scaleGenerator } from '/static/javascript/notegen.js'
+import { sendMidi } from '/static/javascript/midi_io.js'
 
 
 // define the default bpm of the transport
@@ -121,7 +122,7 @@ for (let i = 0; i < 64; i++) {
             gridButton[i].classList.remove('false');
     
             // randomly assign a note
-            let buttonNote = randomNote();
+            let buttonNote = randomNoteGenerator();
             gridButton[i].innerHTML = buttonNote;
             gridButton[i].style.background = '#ECC987';
             gridButton[i].style.color = 'white';
@@ -143,7 +144,7 @@ for (let i = 0; i < 64; i++) {
 
 
 
-function randomNote() {
+function randomNoteGenerator() {
     let scaleMidiNotes = scaleGenerator()
 
     let random = Math.floor(Math.random() * scaleMidiNotes.length);
