@@ -2,10 +2,10 @@ import { scaleGenerator, midiNotes } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 
 
-// initiate default note values if nothing is selected = C major
+// initiate default note values, if nothing is selected = C major
 let scaleValue = 0;
 let key = 'C'
-// variable to store how many measure will play
+// variable to store how many measure will play, default is 1 measure
 let length = 1;
 
 let selectedScale = document.getElementById('scaleDropdown');
@@ -83,9 +83,6 @@ for (let i = 0; i < 64; i++) {
                 }
             }
 
-            console.log("rowCountTwo = " + rowCountTwo)
-            console.log("rowCountThree = " + rowCountThree)
-            console.log("rowCountFour = " + rowCountFour)
             // adjust length if all buttons in a row and the rows preceding it are off
             if (rowCountFour === 16) {
                 length = 3;
@@ -98,8 +95,6 @@ for (let i = 0; i < 64; i++) {
             if (rowCountTwo === 16 && rowCountThree === 16 && rowCountFour === 16) {
                 length = 1;
             }
-
-            console.log(length)
         }
     })
 }
@@ -132,18 +127,23 @@ Tone.Transport.timeSignature = 4;
 Tone.Transport.setLoopPoints(0, `${length}m`);
 Tone.Transport.loop = true;
 
-
 // transport starts when the play button is pressed
 let play = document.getElementById('play');
+let stop = document.getElementById('stop');
+
 play.addEventListener('click', () => {
-    
-    Tone.Transport.start()
-    looper(0, length)
-    console.log('transport start');
+    if (play.classList.contains('off')) {
+        play.classList.remove('off')
+        stop.classList.add('off')
+        Tone.Transport.start()
+        looper(0, length)
+        console.log('transport start');
+    }
 })
 
 let looper = (step, length) => {
     let repeat = () => {
+            step = (step + 1) % (16 * length);
             // change color to indicate current step
             gridButton[step].style.backgroundColor = '#DBDBDB';
 
@@ -184,14 +184,11 @@ let looper = (step, length) => {
             } else {
                 gridButton[step].style.color = '#DBDBDB'
             }
-
-            step = (step + 1) % (16 * length);
     }
     let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
 
 
     // transport stops when the stop button is pressed
-    let stop = document.getElementById('stop')
     stop.addEventListener('click', () => {
         // reset colors back to their original colors
         for (let i = 0; i < (16 * length); i++) {
@@ -208,9 +205,10 @@ let looper = (step, length) => {
                     gridButton[i].style.backgroundColor = '#ECC987';
                 }
             }
-        
+        play.classList.add('off')
         Tone.Transport.stop();
         Tone.Transport.clear(sequence)
+        stop.classList.remove('off')
 
     })
 }
