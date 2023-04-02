@@ -1,6 +1,121 @@
 import { scaleGenerator, midiNotes } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 
+// store the array of buttons so that they can be referenced individually
+let gridButton = document.getElementsByClassName('gridButton')
+
+// assign event listener to each button that will turn on/off and assign a random note
+for (let i = 0; i < 64; i++) {
+    gridButton[i].addEventListener('click', () => {
+        // events if the button is turned on
+        if (gridButton[i].classList.contains('false')) {
+            gridButton[i].classList.remove('false');
+    
+            // randomly assign a note
+            let buttonNote = randomNoteGenerator(key, scaleValue);
+            gridButton[i].innerHTML = buttonNote;
+            gridButton[i].style.background = '#ECC987';
+            gridButton[i].style.color = 'white';
+
+            // adjust length according to button's position
+            if (gridButton[i].classList.contains('rowTwo')) {
+                let newLength = 2;
+                if (newLength > length) {
+                    length = newLength
+                }
+            } else if (gridButton[i].classList.contains('rowThree')) {
+                let newLength = 3;
+                if (newLength > length) {
+                    length = newLength
+                }
+            } else if (gridButton[i].classList.contains('rowFour')) {
+                length = 4;
+            }
+
+        // events if the button is turned off
+        } else {
+            gridButton[i].classList.add('false');
+            if (gridButton[i].classList.contains('oddGridButton')) {
+                gridButton[i].style.color = '#BC81BF';
+                gridButton[i].style.backgroundColor = '#BC81BF';
+            } else {
+                gridButton[i].style.color = '#5F9F89';
+                gridButton[i].style.backgroundColor = '#5F9F89';
+            }
+            gridButton[i].innerHTML = 'm';
+
+            // check how many buttons are turned off in the row for the button being turned off
+            let rowCountTwo = 0
+            let rowCountThree = 0
+            let rowCountFour = 0
+            if (gridButton[i].classList.contains('rowTwo')) {
+                let rowTwo = document.getElementsByClassName('rowTwo')
+                for (let i = 0; i < 16; i++) {
+                    if (rowTwo[i].classList.contains('false')) {
+                        rowCountTwo ++;
+                    }
+                }
+            } else if (gridButton[i].classList.contains('rowThree')) {
+                let rowThree = document.getElementsByClassName('rowThree')
+                for (let i = 0; i < 16; i++) {
+                    if (rowThree[i].classList.contains('false')) {
+                        rowCountThree ++;
+                    }
+                }
+            } else if (gridButton[i].classList.contains('rowFour')) {
+                let rowFour = document.getElementsByClassName('rowFour')
+                for (let i = 0; i < 16; i++) {
+                    if (rowFour[i].classList.contains('false')) {
+                        rowCountFour ++;
+                    }
+                }
+            }
+            console.log("rowCountTwo = " + rowCountTwo)
+            console.log("rowCountThree = " + rowCountThree)
+            console.log("rowCountFour = " + rowCountFour)
+            // adjust length if all buttons in a row and the rows preceding it are off
+            if (rowCountFour === 16) {
+                length = 3;
+            }
+
+            if (rowCountThree === 16 && rowCountFour === 16) {
+                length = 2;
+            }
+
+            if (rowCountTwo === 16 && rowCountThree === 16 && rowCountFour === 16) {
+                length = 1;
+            }
+
+            console.log(length)
+        }
+    })
+}
+
+function randomNoteGenerator(key, scaleValue) {
+    let scaleMidiNotes = scaleGenerator(key, scaleValue);
+    let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
+    return midiNotes[randomNote]
+}
+
+// initiate default note values if nothing is selected = C major
+let scaleValue = 0;
+let key = 'C'
+// variable to store how many measure will play
+let length = 1;
+
+let selectedScale = document.getElementById('scaleDropdown');
+selectedScale.addEventListener('change', () => {
+    scaleValue = selectedScale.value;
+})
+
+let selectedKey = document.getElementById('keyDropdown');
+selectedKey.addEventListener('change', () => {
+    key = selectedKey.value;
+})
+
+
+
+
 
 // define the default bpm of the transport if none is input
 Tone.Transport.bpm.value = 120;
@@ -18,8 +133,6 @@ tempo.addEventListener('input', (e) => {
     }
 })
 
-// variable to store how many measure will play
-let length = 3;
 
 Tone.Transport.timeSignature = 4;
 Tone.Transport.setLoopPoints(0, `${length}m`);
@@ -140,52 +253,3 @@ const looper = (step, length) => {
 }
 
 
-// store the array of buttons so that they can be referenced individually
-let gridButton = document.getElementsByClassName('gridButton')
-
-// assign event listener to each button that will turn on/off and assign a random note
-for (let i = 0; i < 64; i++) {
-    gridButton[i].addEventListener('click', () => {
-    
-        if (gridButton[i].classList.contains('false')) {
-            gridButton[i].classList.remove('false');
-    
-            // randomly assign a note
-            let buttonNote = randomNoteGenerator(key, scaleValue);
-            gridButton[i].innerHTML = buttonNote;
-            gridButton[i].style.background = '#ECC987';
-            gridButton[i].style.color = 'white';
-
-        } else {
-            gridButton[i].classList.add('false');
-            if (gridButton[i].classList.contains('oddGridButton')) {
-                gridButton[i].style.color = '#BC81BF';
-                gridButton[i].style.backgroundColor = '#BC81BF';
-            } else {
-                gridButton[i].style.color = '#5F9F89';
-                gridButton[i].style.backgroundColor = '#5F9F89';
-            }
-            gridButton[i].innerHTML = 'm';
-        }
-    })
-}
-
-function randomNoteGenerator(key, scaleValue) {
-    let scaleMidiNotes = scaleGenerator(key, scaleValue);
-    let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
-    return midiNotes[randomNote]
-}
-
-// initiate default note values if nothing is selected = C major
-let scaleValue = 0;
-let key = 'C'
-
-let selectedScale = document.getElementById('scaleDropdown');
-selectedScale.addEventListener('change', () => {
-    scaleValue = selectedScale.value;
-})
-
-let selectedKey = document.getElementById('keyDropdown');
-selectedKey.addEventListener('change', () => {
-    key = selectedKey.value;
-})
