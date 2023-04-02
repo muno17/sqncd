@@ -255,12 +255,14 @@ select {
 /* bottom controls */
 .bottom {
     display: flex;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .leftSqncr {
     margin-top: 15px;
     height: 300px;
-    width: 100px;
+    width: 90px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
