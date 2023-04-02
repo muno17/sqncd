@@ -121,6 +121,12 @@ tempo.addEventListener('input', (e) => {
     }
 })
 
+// swing updates to the value entered into the tempo field
+let swing = document.getElementById('swing');
+swing.addEventListener('input', (e) => {
+    Tone.Transport.swing = e.target.value / 100;
+})
+
 
 Tone.Transport.timeSignature = 4;
 Tone.Transport.setLoopPoints(0, `${length}m`);

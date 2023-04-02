@@ -1,28 +1,28 @@
-// reset notes
-
+// initiate an array where values that are waiting to be reset will be stored
 let resetValues = []
 
 let keyReset = document.getElementById('keyReset')
 keyReset.addEventListener('click', () => {
-    resetButton(keyReset)
+    resetValue(keyReset)
 })
 
 let scaleReset = document.getElementById('scaleReset')
 scaleReset.addEventListener('click', () => {
-    resetButton(scaleReset)
+    resetValue(scaleReset)
 })
 
 let octaveReset = document.getElementById('octaveReset')
 octaveReset.addEventListener('click', () => {
-    resetButton(octaveReset)
+    resetValue(octaveReset)
 })
 
 let stepsReset = document.getElementById('stepsReset')
 stepsReset.addEventListener('click', () => {
-    resetButton(stepsReset)
+    resetValue(stepsReset)
 })
 
-function resetButton (value) {
+// change color and add value to resetValues when value button is clicked
+function resetValue (value) {
         if (value.classList.contains('off')) {
             value.classList.remove('off');
             value.style.background = '#ECC987';
