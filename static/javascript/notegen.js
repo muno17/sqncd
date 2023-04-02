@@ -60,20 +60,21 @@ function scaleGenerator(key = 'C', scaleValue = 0, scaleName = major) {
     let midiScale = [base];
 
     // pull the pattern corresponding to the scale
-    scale = [scaleValue][scaleName]
+    scalePattern = scalesList[scaleValue][scaleName]
     scaleLength = scale[0];
 
+    // loop through the scale, add the pattern amount to the previous midiScale element's value and push to midiScale
     for (let i = 2; i < scaleLength + 1; i++) {
-        let midiNote = midiScale[i - 1] + scale[i - 1];
+        let midiNote = midiScale[i - 1] + scalePattern[i - 1];
         midiScale.push(midiNote);
     }
     return midiScale;
 }
 
 
-function octaveGenerator(generatedScale, octaveChoices) {
+// function octaveGenerator(generatedScale, octaveChoices) {
     
-}
+// }
 
 
 
