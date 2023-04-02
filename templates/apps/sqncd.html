@@ -15,46 +15,13 @@
         <div class="sqncd">
             <div class="controlSection">
                 <div class="leftControls controls">
-                    <div class="midi">
-                        <h1>midi</h1>
-                        <div class="dropArea">
-                            <div class="dropHouse">
-                                <div>channel</div>
-                                <select  name="midiChannel" id="channelDropdown">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                </select>
-                            </div>
-                            <div class="dropHouse">
-                                <div>device</div>
-                                <select name="midiDevice" id="deviceDropdown">
-                                    <option value="1">test device</option>
-                                    <option value="2">test2</option>
-                                    <option value="3">test3</option>
-                                    <option value="4">test4</option>
-                                    <option value="5">test5</option>
-                                    <option value="6">test6</option>
-                                </select>
-                            </div>
-                        </div>
+                    <div class="tempo swing">
+                        <h1>swing</h1>
+                        <form class="tempoDisplay"><input type="text" id="swing" maxlength="2" placeholder="0"></form>
                     </div>
                     <div class="tempo">
                         <h1>tempo</h1>
-                        <form id="tempoDisplay"><input type="text" id="tempo" maxlength="3" placeholder="120"></form>
+                        <form class="tempoDisplay"><input type="text" id="tempo" maxlength="3" placeholder="120"></form>
                     </div>
                     <div class="transport">
                             <button class="transportButton" id="stop">stop</button>
@@ -146,6 +113,43 @@
                     </div>
                 </div>
                 <div class="midRightControls controls">
+                    <div class="midi">
+                        <h1>midi</h1>
+                        <div class="dropArea">
+                            <div class="dropHouse">
+                                <div>channel</div>
+                                <select  name="midiChannel" id="channelDropdown">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                </select>
+                            </div>
+                            <div class="dropHouse">
+                                <div>device</div>
+                                <select name="midiDevice" id="deviceDropdown">
+                                    <option value="1">test device</option>
+                                    <option value="2">test2</option>
+                                    <option value="3">test3</option>
+                                    <option value="4">test4</option>
+                                    <option value="5">test5</option>
+                                    <option value="6">test6</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                     <div class="resetButtonArea">
                         <h1>reset</h1>
                         <div class="resetHouseArea">

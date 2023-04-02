@@ -103,7 +103,7 @@ select {
     margin-bottom: 5px;
 }
 
-#tempo {
+#tempo, #swing {
     width: 80px;
     height: 30px;
     font-size: 25px;
@@ -275,7 +275,6 @@ select {
     font-size: 20px;
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
-    gap: 5px;
 }
 
 /* sqncr */
