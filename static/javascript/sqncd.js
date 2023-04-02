@@ -2,7 +2,7 @@ import { scaleGenerator, midiNotes } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 
 
-// define the default bpm of the transport
+// define the default bpm of the transport if none is input
 Tone.Transport.bpm.value = 120;
 
 // bpm updates to the value entered into the tempo field
@@ -19,7 +19,7 @@ tempo.addEventListener('input', (e) => {
 })
 
 // variable to store how many measure will play
-let length = 2;
+let length = 1;
 
 Tone.Transport.timeSignature = 4;
 Tone.Transport.setLoopPoints(0, `${length}m`);
@@ -71,6 +71,37 @@ const looper = (step) => {
                 } 
             }
 
+            // if (step > 16 && step < 33) {
+            //     if (step === 17) {
+            //         // change previous step back to yellow if it has a note assigned to it
+            //         if (gridButton[15].innerHTML.length > 1) {
+            //             gridButton[15].style.backgroundColor = '#ECC987';
+            //         } else {
+            //             // assign original color back to step
+            //             gridButton[15].style.backgroundColor = '#BC81BF';
+            //             gridButton[15].style.color = '#BC81BF';
+            //         }
+            //     } else {
+            //         if (gridButton[step - 1].innerHTML.length > 1) {
+            //             gridButton[step - 1].style.backgroundColor = '#ECC987';
+            //         } else {
+            //             // change previous step back to yellow if it has a note assigned to it
+            //             if (gridButton[step - 1].innerHTML.length > 1) {
+            //                 gridButton[step - 1].style.backgroundColor = '#ECC987';
+            //             } else {
+            //                 // assign original color back to step
+            //                 if (gridButton[step - 1].classList.contains('oddGridButton')) {
+            //                     gridButton[step - 1].style.backgroundColor = '#BC81BF';
+            //                     gridButton[step - 1].style.color = '#BC81BF';
+            //                 } else {
+            //                     gridButton[step - 1].style.backgroundColor = '#5F9F89';
+            //                     gridButton[step - 1].style.color = '#5F9F89';
+            //                 }
+            //             }
+            //         } 
+            //     }
+            // }
+
             // send note if current step has a note assigned to it
             if (gridButton[step].innerHTML.length > 1) {
                 sendMidi(gridButton[step].innerHTML);
@@ -78,7 +109,7 @@ const looper = (step) => {
                 gridButton[step].style.color = '#DBDBDB'
             }
 
-            step = (step + 1) % 16;
+            step = (step + 1) % 32;
     }
     let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
 
@@ -108,8 +139,6 @@ const looper = (step) => {
     })
 }
 
-// generate scale, use scale[0], scale[scale.length - 1] as min and max for randomNote
- 
 
 // store the array of buttons so that they can be referenced individually
 let gridButton = document.getElementsByClassName('gridButton')
@@ -141,15 +170,13 @@ for (let i = 0; i < 64; i++) {
     })
 }
 
-
-
 function randomNoteGenerator(key, scaleValue) {
     let scaleMidiNotes = scaleGenerator(key, scaleValue);
     let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
     return midiNotes[randomNote]
 }
 
-// initiate default note values if nothing is selected
+// initiate default note values if nothing is selected = C major
 let scaleValue = 0;
 let key = 'C'
 
