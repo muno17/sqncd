@@ -34,11 +34,6 @@ for (let i = -1; i < 9; i++) {
         midiNotes.push(`${keys[j]}${i}`);
     }
 }
-// add 24 to the note's location in the array to get the corresponding midi note value
-
-//console.log(midiNotes)
-// console.log(midiNotes.length)
-//console.log(document.getElementById('key').innerHTML)
 
 
 // initiate default values if nothing is selected
@@ -80,33 +75,3 @@ export function scaleGenerator(key = 'C', scaleValue = 0, scaleName = 'major') {
 // function octaveGenerator(generatedScale, octaveChoices) {
     
 // }
-
-
-
-// how to pull a list from the scales array
-//console.log(scalesList[0]['major'])
-//console.log(scalesList[scaleValue][scaleName])
-
-// return the midi note number of the base
-// function baseGenerator (key) {
-//     relation = keys.indexOf(key)
-//     return 60 + relation
-// }
-
-// need to figure out how to get scale name
-// returns the list with the pattern for the selected scale
-// function scaleParser (scaleValue, scaleName) {
-//     return scalesList[scaleValue][scaleName]
-// } 
-
-
-
-// give key base value, change when new key is selected
-//let key = 'C'
-
-// let base = 60;
-// // middle C is 60
-
-
-// // set default scale to major
-// let scale = [8,2,2,1,2,2,2,1]

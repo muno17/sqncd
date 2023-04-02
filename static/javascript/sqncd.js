@@ -44,7 +44,7 @@ const looper = (step) => {
             // if at step 1 then check 16th step
             if (step === 0) {
                 // change previous step back to yellow if it has a note assigned to it
-                if (!isNaN(gridButton[15].innerHTML)) {
+                if (gridButton[15].innerHTML.length > 1) {
                     gridButton[15].style.backgroundColor = '#ECC987';
                 } else {
                     // assign original color back to step
@@ -52,11 +52,11 @@ const looper = (step) => {
                     gridButton[15].style.color = '#BC81BF';
                 }
             } else {
-                if (!isNaN(gridButton[step - 1].innerHTML)) {
+                if (gridButton[step - 1].innerHTML.length > 1) {
                     gridButton[step - 1].style.backgroundColor = '#ECC987';
                 } else {
                     // change previous step back to yellow if it has a note assigned to it
-                    if (!isNaN(gridButton[step - 1].innerHTML)) {
+                    if (gridButton[step - 1].innerHTML.length > 1) {
                         gridButton[step - 1].style.backgroundColor = '#ECC987';
                     } else {
                         // assign original color back to step
@@ -72,7 +72,7 @@ const looper = (step) => {
             }
 
             // send note if current step has a note assigned to it
-            if (!isNaN(gridButton[step].innerHTML)) {
+            if (gridButton[step].innerHTML.length > 1) {
                 sendMidi(gridButton[step].innerHTML);
             } else {
                 gridButton[step].style.color = '#DBDBDB'
