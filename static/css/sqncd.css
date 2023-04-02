@@ -272,6 +272,7 @@ select {
 
 .row {
     display: flex;
+    margin-top: 5px;
 }
 
 .gridButton {

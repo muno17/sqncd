@@ -122,7 +122,7 @@ for (let i = 0; i < 64; i++) {
             gridButton[i].classList.remove('false');
     
             // randomly assign a note
-            let buttonNote = randomNoteGenerator(key, scaleValue, scaleName);
+            let buttonNote = randomNoteGenerator(key, scaleValue);
             gridButton[i].innerHTML = buttonNote;
             gridButton[i].style.background = '#ECC987';
             gridButton[i].style.color = 'white';
@@ -143,9 +143,9 @@ for (let i = 0; i < 64; i++) {
 
 
 
-function randomNoteGenerator(key, scaleValue, scaleName) {
-    console.log(scaleValue)
-    let scaleMidiNotes = scaleGenerator(key, scaleValue, scaleName);
+function randomNoteGenerator(key, scaleValue) {
+
+    let scaleMidiNotes = scaleGenerator(key, scaleValue);
     let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
 
     return midiNotes[randomNote]
@@ -154,7 +154,6 @@ function randomNoteGenerator(key, scaleValue, scaleName) {
 
 // initiate default note values if nothing is selected
 let scaleValue = 0;
-let scaleName = 'major';
 let key = 'C'
 
 let selectedScale = document.getElementById('scaleDropdown');
@@ -165,4 +164,5 @@ selectedScale.addEventListener('change', () => {
 let selectedKey = document.getElementById('keyDropdown');
 selectedKey.addEventListener('change', () => {
     key = selectedKey.value;
+    console.log('keyValue = ' + key)
 })

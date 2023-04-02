@@ -22,12 +22,12 @@ const scalesList = [
     {whole_half_diminished : [9,2,1,2,1,2,1,2,1]},
     {half_whole_diminished : [9,1,2,1,2,1,2,1,2]}
 ]
-
+// console.log(scalesList[5])
+// console.log(scalesList[5][0])
 const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 
 // create a list of all midi note values
 export let midiNotes = [];
-console.log(midiNotes)
 // create array with all midi notes and names
 for (let i = -1; i < 9; i++) {
     for (let j = 0; j < 12; j++) {
@@ -36,12 +36,15 @@ for (let i = -1; i < 9; i++) {
 }
 
 
-export function scaleGenerator(key = 'C', scaleValue = 0, scaleName = 'major') {
+export function scaleGenerator(key = 'C', scaleValue = 0) {
     // find the base midi note
     let base = 60 + keys.indexOf(key);
 
     // initialize a list to store the midi values of the scale, first element is the base
     let midiScale = [base];
+
+    let scaleNameGenerator = Object.keys(scalesList[scaleValue])
+    let scaleName = scaleNameGenerator[0]
 
     // pull the pattern corresponding to the scale
     let scalePattern = scalesList[scaleValue][scaleName]
@@ -52,7 +55,7 @@ export function scaleGenerator(key = 'C', scaleValue = 0, scaleName = 'major') {
         let midiNote = midiScale[i - 1] + scalePattern[i];
         midiScale.push(midiNote);
     }
-    
+
     return midiScale;
 }
 
