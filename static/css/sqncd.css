@@ -183,6 +183,11 @@ select {
     background: #81A3BF;
 }
 
+#sqnc {
+    background-color: white;
+    color: #BC81BF;
+}
+
 /* midright controls */
 
 .resetButtonArea {
@@ -192,34 +197,6 @@ select {
     align-items: center;
 }
 
-.resetHouseArea {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 5px;
-}
-
-.resetHouse {
-    display: flex;
-    font-size: 13px;
-    justify-content: space-between;
-    gap: 5px;
-    align-items: center;
-    flex-direction: column;
-    color: #BC81BF;
-}
-
-.resetButton {
-    width: 20px;
-    height: 25px;
-    margin-left: 5px;
-    margin-right: 5px;
-    box-shadow: 3px 3px 5px black;
-    border-radius: 4px;
-    background: white;
-}
-
-
 #sqnc, #reset {
     width: 150px;
     border-radius: 10px;
@@ -228,8 +205,8 @@ select {
 }
 
 #reset {
-    background-color: #9281BF;
-    color: white;
+    background-color: white;
+    color: #9281BF;
 }
 
 
@@ -248,11 +225,6 @@ select {
     font-size: 60px;
     text-shadow: 3px 3px 10px black;
     margin: 0;
-}
-
-#sqnc {
-    background-color: #BC81BF;
-    color: white;
 }
 
 /* bottom controls */
@@ -311,22 +283,35 @@ select {
     margin-right: 5px;
     box-shadow: 3px 3px 12px black;
     border-radius: 4px;
-    color: #9281BF;
     text-align: center;
     font-weight: bold;
     font-size: 15px;
 }
 
-.oddGridButton {
+.columnOne {
+    background-color: #94D0FF;
+    color: #94D0FF;
+}
+
+.columnTwo {
+    background-color: #8795E8;
+    color: #8795E8;
+}
+
+.columnThree {
     background-color: #BC81BF;
     color: #BC81BF;
+}
+
+.columnFour {
+    background-color: #9281BF;
+    color: #9281BF;
 }
 
 .columnNumbers {
     width: 800px;
     justify-content: space-around;
     display: flex;
-    color: #BC81BF;
     font-weight: bold;
     font-size: 15px;
     gap: 10px;
