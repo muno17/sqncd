@@ -59,8 +59,6 @@ export function scaleGenerator(key = 'C', scaleValue = 0) {
     return midiScale;
 }
 
-// create an array to keep track of which arrays are activated
-let octaves = []
 
 let octaveNegThree = document.getElementById('octaveNegThree')
 octaveNegThree.addEventListener('click', () => {
@@ -97,7 +95,8 @@ octavePlusThree.addEventListener('click', () => {
     turnOn(octavePlusThree)
 })
 
-
+// create an array to keep track of which arrays are activated
+let octaves = [octaveMid]
 
 function turnOn(octaveButton) {
     if (octaveButton.classList.contains('off')) {
@@ -111,4 +110,8 @@ function turnOn(octaveButton) {
         let position = octaves.indexOf(octaveButton);
         octaves.splice(position, 1);
     }
+}
+
+function octavizer(octaves) {
+
 }
