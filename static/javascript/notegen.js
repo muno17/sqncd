@@ -59,7 +59,56 @@ export function scaleGenerator(key = 'C', scaleValue = 0) {
     return midiScale;
 }
 
+// create an array to keep track of which arrays are activated
+let octaves = []
 
-// function octaveGenerator(generatedScale, octaveChoices) {
-    
-// }
+let octaveNegThree = document.getElementById('octaveNegThree')
+octaveNegThree.addEventListener('click', () => {
+    turnOn(octaveNegThree)
+})
+
+let octaveNegTwo = document.getElementById('octaveNegTwo')
+octaveNegTwo.addEventListener('click', () => {
+    turnOn(octaveNegTwo)
+})
+
+let octaveNegOne = document.getElementById('octaveNegOne')
+octaveNegOne.addEventListener('click', () => {
+    turnOn(octaveNegOne)
+})
+
+let octaveMid = document.getElementById('octaveMid')
+octaveMid.addEventListener('click', () => {
+    turnOn(octaveMid)
+})
+
+let octavePlusOne = document.getElementById('octavePlusOne')
+octavePlusOne.addEventListener('click', () => {
+    turnOn(octavePlusOne)
+})
+
+let octavePlusTwo = document.getElementById('octavePlusTwo')
+octavePlusTwo.addEventListener('click', () => {
+    turnOn(octavePlusTwo)
+})
+
+let octavePlusThree = document.getElementById('octavePlusThree')
+octavePlusThree.addEventListener('click', () => {
+    turnOn(octavePlusThree)
+})
+
+
+
+function turnOn(octaveButton) {
+    if (octaveButton.classList.contains('off')) {
+        octaveButton.classList.remove('off');
+        octaveButton.style.background = '#81A3BF';
+        octaves.push(octaveButton);
+        console.log(octaves)
+    } else {
+        octaveButton.classList.add('off');
+        octaveButton.style.background = 'white';
+        let position = octaves.indexOf(octaveButton);
+        octaves.splice(position, 1);
+    }
+}

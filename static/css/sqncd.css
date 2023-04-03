@@ -225,7 +225,7 @@ select {
 }
 
 #reset {
-    background-color: #BC81BF;
+    background-color: #9281BF;
     color: white;
 }
 
@@ -248,7 +248,7 @@ select {
 }
 
 #sqnc {
-    background-color: #5F9F89;
+    background-color: #BC81BF;
     color: white;
 }
 
@@ -301,14 +301,14 @@ select {
 }
 
 .gridButton {
-    background-color: #5F9F89;
+    background-color: #9281BF;
     width: 40px;
     height: 60px;
     margin-left: 5px;
     margin-right: 5px;
     box-shadow: 3px 3px 12px black;
     border-radius: 4px;
-    color: #5F9F89;
+    color: #9281BF;
     text-align: center;
     font-weight: bold;
     font-size: 15px;

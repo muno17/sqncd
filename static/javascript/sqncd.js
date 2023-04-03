@@ -56,8 +56,8 @@ for (let i = 0; i < 64; i++) {
                 gridButton[i].style.color = '#BC81BF';
                 gridButton[i].style.backgroundColor = '#BC81BF';
             } else {
-                gridButton[i].style.color = '#5F9F89';
-                gridButton[i].style.backgroundColor = '#5F9F89';
+                gridButton[i].style.color = '#9281BF';
+                gridButton[i].style.backgroundColor = '#9281BF';
             }
             gridButton[i].innerHTML = 'm';
 
@@ -177,8 +177,8 @@ let looper = (step, length) => {
                             gridButton[step - 1].style.backgroundColor = '#BC81BF';
                             gridButton[step - 1].style.color = '#BC81BF';
                         } else {
-                            gridButton[step - 1].style.backgroundColor = '#5F9F89';
-                            gridButton[step - 1].style.color = '#5F9F89';
+                            gridButton[step - 1].style.backgroundColor = '#9281BF';
+                            gridButton[step - 1].style.color = '#9281BF';
                         }
                     }
                 } 
@@ -202,8 +202,8 @@ let looper = (step, length) => {
                         gridButton[i].style.color = '#BC81BF';
                         gridButton[i].style.backgroundColor = '#BC81BF';
                     } else {
-                        gridButton[i].style.color = '#5F9F89';
-                        gridButton[i].style.backgroundColor = '#5F9F89';
+                        gridButton[i].style.color = '#9281BF';
+                        gridButton[i].style.backgroundColor = '#9281BF';
                     }
                 } else {
                     gridButton[i].style.backgroundColor = '#ECC987';
@@ -226,8 +226,8 @@ reset.addEventListener('click', () => {
             gridButton[i].style.color = '#BC81BF';
             gridButton[i].style.backgroundColor = '#BC81BF';
         } else {
-            gridButton[i].style.color = '#5F9F89';
-            gridButton[i].style.backgroundColor = '#5F9F89';
+            gridButton[i].style.color = '#9281BF';
+            gridButton[i].style.backgroundColor = '#9281BF';
         }
         gridButton[i].innerHTML = 'm';
     }
