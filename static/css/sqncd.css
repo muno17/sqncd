@@ -234,7 +234,7 @@ select {
     gap: 15px;
 }
 
-.leftSqncr {
+.buttonFunctionsArea {
     margin-top: 13px;
     height: 300px;
     width: 90px;
@@ -243,13 +243,14 @@ select {
     justify-content: space-evenly;
 }
 
-.leftButtons {
+.buttonFunctions {
     width: 80px;
     height: 35px;
     border-radius: 10px;
     font-size: 17px;
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
+    background: white;
 }
 
 /* sqncr */
