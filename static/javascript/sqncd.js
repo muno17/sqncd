@@ -54,13 +54,7 @@ for (let i = 0; i < 64; i++) {
         // events if the button is turned off
         } else {
             gridButton[i].classList.add('off');
-            if (gridButton[i].classList.contains('oddGridButton')) {
-                gridButton[i].style.color = '#BC81BF';
-                gridButton[i].style.backgroundColor = '#BC81BF';
-            } else {
-                gridButton[i].style.color = '#9281BF';
-                gridButton[i].style.backgroundColor = '#9281BF';
-            }
+            colorChanger(i + 1)
             gridButton[i].innerHTML = 'm';
 
             // check how many buttons are turned off in all the rows
@@ -100,12 +94,6 @@ for (let i = 0; i < 64; i++) {
         }
     })
 }
-
-// function randomNoteGenerator(key, scaleValue) {
-//     let scaleMidiNotes = scaleGenerator(key, scaleValue);
-//     let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
-//     return midiNotes[randomNote]
-// }
 
 function randomNoteGenerator(key, scaleValue, octaves) {
     // push octaves through octavizer
@@ -184,8 +172,9 @@ let looper = (step, length) => {
                     gridButton[(16 * length) - 1].style.backgroundColor = '#ECC987';
                 } else {
                     // assign original color back to step
-                    gridButton[(16 * length) - 1].style.backgroundColor = '#BC81BF';
-                    gridButton[(16 * length) - 1].style.color = '#BC81BF';
+                    colorChanger((16 * length))
+                    // gridButton[(16 * length) - 1].style.backgroundColor = '#9281BF';
+                    // gridButton[(16 * length) - 1].style.color = '#9281BF';
                 }
             } else {
                 if (gridButton[step - 1].innerHTML.length > 1) {
@@ -196,13 +185,7 @@ let looper = (step, length) => {
                         gridButton[step - 1].style.backgroundColor = '#ECC987';
                     } else {
                         // assign original color back to step
-                        if (gridButton[step - 1].classList.contains('oddGridButton')) {
-                            gridButton[step - 1].style.backgroundColor = '#BC81BF';
-                            gridButton[step - 1].style.color = '#BC81BF';
-                        } else {
-                            gridButton[step - 1].style.backgroundColor = '#9281BF';
-                            gridButton[step - 1].style.color = '#9281BF';
-                        }
+                        colorChanger(step)
                     }
                 } 
             }
@@ -221,13 +204,7 @@ let looper = (step, length) => {
         for (let i = 0; i < (16 * length); i++) {
                 // change previous step back to it's original color
                 if (gridButton[i].classList.contains('off')) {
-                    if (gridButton[i].classList.contains('oddGridButton')) {
-                        gridButton[i].style.color = '#BC81BF';
-                        gridButton[i].style.backgroundColor = '#BC81BF';
-                    } else {
-                        gridButton[i].style.color = '#9281BF';
-                        gridButton[i].style.backgroundColor = '#9281BF';
-                    }
+                    colorChanger(i + 1)
                 } else {
                     gridButton[i].style.backgroundColor = '#ECC987';
                 }
@@ -245,13 +222,24 @@ let reset = document.getElementById('reset')
 reset.addEventListener('click', () => {
     for (let i = 0; i < 64; i++) {
         gridButton[i].classList.add('off');
-        if (gridButton[i].classList.contains('oddGridButton')) {
-            gridButton[i].style.color = '#BC81BF';
-            gridButton[i].style.backgroundColor = '#BC81BF';
-        } else {
-            gridButton[i].style.color = '#9281BF';
-            gridButton[i].style.backgroundColor = '#9281BF';
-        }
+        colorChanger(i + 1)
         gridButton[i].innerHTML = 'm';
     }
 } )
+
+
+// changes color back to it's original
+function colorChanger(step) {                       
+    if (gridButton[step - 1].classList.contains('columnOne')) {
+    gridButton[step - 1].style.backgroundColor = '#94D0FF';
+    gridButton[step - 1].style.color = '#94D0FF';
+} else if (gridButton[step - 1].classList.contains('columnTwo')) {
+    gridButton[step - 1].style.backgroundColor = '#8795E8';
+    gridButton[step - 1].style.color = '#8795E8';
+} else if (gridButton[step - 1].classList.contains('columnThree')) {
+    gridButton[step - 1].style.backgroundColor = '#BC81BF';
+    gridButton[step - 1].style.color = '#BC81BF';
+} else if (gridButton[step - 1].classList.contains('columnFour')) {
+    gridButton[step - 1].style.backgroundColor = '#9281BF';
+    gridButton[step - 1].style.color = '#9281BF';
+} }
