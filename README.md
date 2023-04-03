@@ -27,13 +27,13 @@ using the Tone.js API to handle tempo and transport
 - DONE incorporate scaleGenerator into randomNote
 - DONE check for correct length to run
 - DONE run through correct length
-- reset button reacts to any of the selector buttons that are pressed
+- DONE reset button reacts to any of the selector buttons that are pressed
 
 - choose device
 - choose midi channel
-- choose octaves
-- choose key/scale
-- allow user to assign notes
+- DONE choose octaves
+- DONE choose key/scale
+
 
 ------------- website NEXT STEPS -------------
 - create password reset page
@@ -63,20 +63,17 @@ using the Tone.js API to handle tempo and transport
     - DONE scale note table
     - DONE possibly just create an array instead when scale is picked based on key
     - DONE ^ would figure out notes based on semitones
-    - figure out how to implement octave section
-        - default to middle C
-        - choose 3 octaves up or down
-        - buttons -3 to +3, able to select as many as possible
-        - new selections don't apply to buttons already pressed
+    - DOEN figure out how to implement octave section
+        - DONE default to middle C
+        - DONE choose 3 octaves up or down
+        - DONE buttons -3 to +3, able to select as many as possible
+        - DONE new selections don't apply to buttons already pressed
     - implement sqnc button
         - choose random scale if none selected
         - choose random key if none selected
         - choose random octaves if all disabled
         - choose random notes if none selected
-    - reset button
-        - toggles for what to reset
-        - k, s, o, n
-        - resets reset options
+    - DONE reset button
     - ???figure out how to add shuffle???
 
 
