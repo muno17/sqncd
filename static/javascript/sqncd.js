@@ -197,7 +197,7 @@ let looper = (step, length) => {
         // reset colors back to their original colors
         for (let i = 0; i < (16 * length); i++) {
                 // change previous step back to it's original color
-                if (gridButton[i].classList.contains('false')) {
+                if (gridButton[i].classList.contains('off')) {
                     if (gridButton[i].classList.contains('oddGridButton')) {
                         gridButton[i].style.color = '#BC81BF';
                         gridButton[i].style.backgroundColor = '#BC81BF';
