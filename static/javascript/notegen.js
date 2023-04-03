@@ -88,6 +88,7 @@ octavePlusOne.addEventListener('click', () => {
 let octavePlusTwo = document.getElementById('octavePlusTwo')
 octavePlusTwo.addEventListener('click', () => {
     turnOn(octavePlusTwo)
+    console.log(octaves.indexOf(octavePlusTwo))
 })
 
 let octavePlusThree = document.getElementById('octavePlusThree')
@@ -96,14 +97,13 @@ octavePlusThree.addEventListener('click', () => {
 })
 
 // create an array to keep track of which arrays are activated
-let octaves = [octaveMid]
+export let octaves = [octaveMid]
 
 function turnOn(octaveButton) {
     if (octaveButton.classList.contains('off')) {
         octaveButton.classList.remove('off');
         octaveButton.style.background = '#81A3BF';
         octaves.push(octaveButton);
-        console.log(octaves)
     } else {
         octaveButton.classList.add('off');
         octaveButton.style.background = 'white';
@@ -116,35 +116,35 @@ function turnOn(octaveButton) {
 
 // check which octaves have been turned on, add corresponding values to octaveValues
 export function octavizer(octaves) {
-    let octaveValues = []
-    
-    if (octaves.indexOf(octaveNegThree)) {
+    let octaveValues = [];
+
+    if (octaves.includes(octaveNegThree)) {
         octaveValues.push(-36);
     }
 
-    if (octaves.indexOf(octaveNegTwo)) {
+    if (octaves.includes(octaveNegTwo)) {
         octaveValues.push(-24);
     } 
 
-    if (octaves.indexOf(octaveNegOne)) {
+    if (octaves.includes(octaveNegOne)) {
         octaveValues.push(-12);
     }
 
-    if (octaves.indexOf(octaveMid)) {
+    if (octaves.includes(octaveMid)) {
         octaveValues.push(0);
     }
 
-    if (octaves.indexOf(octavePlusOne)) {
+    if (octaves.includes(octavePlusOne)) {
         octaveValues.push(12);
     }
 
-    if (octaves.indexOf(octaveNegThree)) {
+    if (octaves.includes(octaveNegThree)) {
         octaveValues.push(24);
     }
 
-    if (octaves.indexOf(octaveNegThree)) {
+    if (octaves.includes(octaveNegThree)) {
         octaveValues.push(36);
     }
 
-    return octaveValues
+    return octaveValues;
 }

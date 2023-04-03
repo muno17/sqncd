@@ -1,4 +1,4 @@
-import { scaleGenerator, midiNotes, octavizer } from '/static/javascript/notegen.js'
+import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 
 
@@ -18,6 +18,8 @@ selectedKey.addEventListener('change', () => {
     key = selectedKey.value;
 })
 
+
+
 // store the array of buttons so that they can be referenced individually
 let gridButton = document.getElementsByClassName('gridButton')
 
@@ -29,7 +31,7 @@ for (let i = 0; i < 64; i++) {
             gridButton[i].classList.remove('off');
     
             // randomly assign a note
-            let buttonNote = randomNoteGenerator(key, scaleValue);
+            let buttonNote = randomNoteGenerator(key, scaleValue, octaves);
             gridButton[i].innerHTML = buttonNote;
             gridButton[i].style.background = '#ECC987';
             gridButton[i].style.color = 'white';
@@ -99,9 +101,30 @@ for (let i = 0; i < 64; i++) {
     })
 }
 
-function randomNoteGenerator(key, scaleValue) {
+// function randomNoteGenerator(key, scaleValue) {
+//     let scaleMidiNotes = scaleGenerator(key, scaleValue);
+//     let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
+//     return midiNotes[randomNote]
+// }
+
+function randomNoteGenerator(key, scaleValue, octaves) {
+    // push octaves through octavizer
+    let octaveValues = octavizer(octaves);
+
+    // get the base scale
     let scaleMidiNotes = scaleGenerator(key, scaleValue);
-    let randomNote = scaleMidiNotes[Math.floor(Math.random() * scaleMidiNotes.length)];
+
+    // loop through octaveValues and add to octavizedScale
+    let octavizedScale = []
+
+    for (let i = 0; i < octaveValues.length; i++) {
+        for (let j = 0; j < scaleMidiNotes.length; j++) {
+            let note = octaveValues[0] + scaleMidiNotes[0]
+            octavizedScale.push(note) 
+        }
+    }
+
+    let randomNote = octavizedScale[Math.floor(Math.random() * octavizedScale.length)];
     return midiNotes[randomNote]
 }
 
