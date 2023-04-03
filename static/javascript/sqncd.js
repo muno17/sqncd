@@ -216,3 +216,19 @@ let looper = (step, length) => {
         stop.classList.remove('off')
     })
 }
+
+// reset steps when the reset button is pressed
+let reset = document.getElementById('reset')
+reset.addEventListener('click', () => {
+    for (let i = 0; i < 64; i++) {
+        gridButton[i].classList.add('off');
+        if (gridButton[i].classList.contains('oddGridButton')) {
+            gridButton[i].style.color = '#BC81BF';
+            gridButton[i].style.backgroundColor = '#BC81BF';
+        } else {
+            gridButton[i].style.color = '#5F9F89';
+            gridButton[i].style.backgroundColor = '#5F9F89';
+        }
+        gridButton[i].innerHTML = 'm';
+    }
+} )
