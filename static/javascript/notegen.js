@@ -138,11 +138,11 @@ export function octavizer(octaves) {
         octaveValues.push(12);
     }
 
-    if (octaves.includes(octaveNegThree)) {
+    if (octaves.includes(octavePlusTwo)) {
         octaveValues.push(24);
     }
 
-    if (octaves.includes(octaveNegThree)) {
+    if (octaves.includes(octavePlusThree)) {
         octaveValues.push(36);
     }
 

@@ -119,7 +119,7 @@ function randomNoteGenerator(key, scaleValue, octaves) {
 
     for (let i = 0; i < octaveValues.length; i++) {
         for (let j = 0; j < scaleMidiNotes.length; j++) {
-            let note = octaveValues[0] + scaleMidiNotes[0]
+            let note = octaveValues[i] + scaleMidiNotes[j]
             octavizedScale.push(note) 
         }
     }
