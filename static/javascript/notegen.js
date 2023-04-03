@@ -88,7 +88,6 @@ octavePlusOne.addEventListener('click', () => {
 let octavePlusTwo = document.getElementById('octavePlusTwo')
 octavePlusTwo.addEventListener('click', () => {
     turnOn(octavePlusTwo)
-    console.log(octaves.indexOf(octavePlusTwo))
 })
 
 let octavePlusThree = document.getElementById('octavePlusThree')
@@ -102,7 +101,7 @@ export let octaves = [octaveMid]
 function turnOn(octaveButton) {
     if (octaveButton.classList.contains('off')) {
         octaveButton.classList.remove('off');
-        octaveButton.style.background = '#81A3BF';
+        octaveButton.style.background = '#ECC987';
         octaves.push(octaveButton);
     } else {
         octaveButton.classList.add('off');

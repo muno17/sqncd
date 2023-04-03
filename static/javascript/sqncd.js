@@ -40,12 +40,12 @@ for (let i = 0; i < 64; i++) {
             if (gridButton[i].classList.contains('rowTwo')) {
                 let newLength = 2;
                 if (newLength > length) {
-                    length = newLength
+                    length = newLength;
                 }
             } else if (gridButton[i].classList.contains('rowThree')) {
                 let newLength = 3;
                 if (newLength > length) {
-                    length = newLength
+                    length = newLength;
                 }
             } else if (gridButton[i].classList.contains('rowFour')) {
                 length = 4;
@@ -54,13 +54,13 @@ for (let i = 0; i < 64; i++) {
         // events if the button is turned off
         } else {
             gridButton[i].classList.add('off');
-            colorChanger(i + 1)
+            colorChanger(i + 1);
             gridButton[i].innerHTML = 'm';
 
             // check how many buttons are turned off in all the rows
-            let rowCountTwo = 0
-            let rowCountThree = 0
-            let rowCountFour = 0
+            let rowCountTwo = 0;
+            let rowCountThree = 0;
+            let rowCountFour = 0;
 
             let rowTwo = document.getElementsByClassName('rowTwo')
             let rowThree = document.getElementsByClassName('rowThree')
@@ -132,6 +132,8 @@ tempo.addEventListener('input', (e) => {
     }
 })
 
+Tone.Transport.swingSubdivision = '16n';
+Tone.Transport.swing = 0;
 // swing updates to the value entered into the tempo field
 let swing = document.getElementById('swing');
 swing.addEventListener('input', (e) => {
@@ -150,11 +152,10 @@ let stop = document.getElementById('stop');
 // transport starts when the play button is pressed
 play.addEventListener('click', () => {
     if (play.classList.contains('off')) {
-        play.classList.remove('off')
-        stop.classList.add('off')
-        Tone.Transport.start()
-        looper(0, length)
-        console.log('transport start');
+        play.classList.remove('off');
+        stop.classList.add('off');
+        Tone.Transport.start();
+        looper(0, length);
     }
 })
 
@@ -185,7 +186,7 @@ let looper = (step, length) => {
                         gridButton[step - 1].style.backgroundColor = '#ECC987';
                     } else {
                         // assign original color back to step
-                        colorChanger(step)
+                        colorChanger(step);
                     }
                 } 
             }
@@ -193,7 +194,7 @@ let looper = (step, length) => {
             if (gridButton[step].innerHTML.length > 1) {
                 sendMidi(gridButton[step].innerHTML);
             } else {
-                gridButton[step].style.color = '#DBDBDB'
+                gridButton[step].style.color = '#DBDBDB';
             }
     }
     let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
@@ -209,11 +210,11 @@ let looper = (step, length) => {
                     gridButton[i].style.backgroundColor = '#ECC987';
                 }
             }
-        stop.classList.remove('off')
-        play.classList.add('off')
+        stop.classList.remove('off');
+        play.classList.add('off');
         Tone.Transport.stop();
-        Tone.Transport.clear(sequence)
-        stop.classList.remove('off')
+        Tone.Transport.clear(sequence);
+        stop.classList.remove('off');
     })
 }
 
@@ -222,7 +223,7 @@ let reset = document.getElementById('reset')
 reset.addEventListener('click', () => {
     for (let i = 0; i < 64; i++) {
         gridButton[i].classList.add('off');
-        colorChanger(i + 1)
+        colorChanger(i + 1);
         gridButton[i].innerHTML = 'm';
     }
 } )
