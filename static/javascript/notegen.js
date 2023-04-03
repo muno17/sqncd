@@ -112,6 +112,39 @@ function turnOn(octaveButton) {
     }
 }
 
-function octavizer(octaves) {
+// create new array to store possible values to add or subtract
 
+// check which octaves have been turned on, add corresponding values to octaveValues
+export function octavizer(octaves) {
+    let octaveValues = []
+    
+    if (octaves.indexOf(octaveNegThree)) {
+        octaveValues.push(-36);
+    }
+
+    if (octaves.indexOf(octaveNegTwo)) {
+        octaveValues.push(-24);
+    } 
+
+    if (octaves.indexOf(octaveNegOne)) {
+        octaveValues.push(-12);
+    }
+
+    if (octaves.indexOf(octaveMid)) {
+        octaveValues.push(0);
+    }
+
+    if (octaves.indexOf(octavePlusOne)) {
+        octaveValues.push(12);
+    }
+
+    if (octaves.indexOf(octaveNegThree)) {
+        octaveValues.push(24);
+    }
+
+    if (octaves.indexOf(octaveNegThree)) {
+        octaveValues.push(36);
+    }
+
+    return octaveValues
 }

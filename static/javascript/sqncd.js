@@ -1,4 +1,4 @@
-import { scaleGenerator, midiNotes } from '/static/javascript/notegen.js'
+import { scaleGenerator, midiNotes, octavizer } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 
 
