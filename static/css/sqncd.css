@@ -124,17 +124,14 @@ select {
     border-radius: 10px;
     font-size: 20px;
     box-shadow: 3px 3px 12px black;
-    color: white;
+    color: #BC81BF;
+    background: white;
 }
 
 #stop {
     background: #EE9ABD;
+    color: white;
 }
-
-#play {
-    background: #C1E1B6;
-}
-
 
 /* midleft controls */
 

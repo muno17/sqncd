@@ -154,6 +154,10 @@ play.addEventListener('click', () => {
     if (play.classList.contains('off')) {
         play.classList.remove('off');
         stop.classList.add('off');
+        play.style.backgroundColor = '#C1E1B6';
+        play.style.color = 'white';
+        stop.style.backgroundColor = 'white';
+        stop.style.color = '#BC81BF'; 
         Tone.Transport.start();
         looper(0, length);
     }
@@ -215,6 +219,11 @@ let looper = (step, length) => {
         Tone.Transport.stop();
         Tone.Transport.clear(sequence);
         stop.classList.remove('off');
+        play.style.backgroundColor = 'white';
+        play.style.color = '#BC81BF';
+        stop.style.backgroundColor = '#EE9ABD';
+        stop.style.color = 'white'; 
+
     })
 }
 
