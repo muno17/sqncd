@@ -1,5 +1,6 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
+import { accent, ghost, accentizer, ghoster } from '/static/javascript/noteFunctions.js'
 
 
 // initiate default note values, if nothing is selected = C major
@@ -36,6 +37,13 @@ for (let i = 0; i < 64; i++) {
             gridButton[i].style.background = '#ECC987';
             gridButton[i].style.color = 'white';
 
+            // add accent or ghost if either is on
+            if (!accent.classList.contains('off')) {
+                accentizer(gridButton[i])
+            } else if (!ghost.classList.contains('off')) {
+                ghoster(gridButton[i])
+            }
+
             // adjust length according to button's position
             if (gridButton[i].classList.contains('rowTwo')) {
                 let newLength = 2;
@@ -51,47 +59,55 @@ for (let i = 0; i < 64; i++) {
                 length = 4;
             }
 
-        // events if the button is turned off
+        // events if the button is presed when it's on
         } else {
-            gridButton[i].classList.add('off');
-            colorChanger(i + 1);
-            gridButton[i].innerHTML = 'm';
+                // if accent or ghost is on, assign accent or ghost
+                if (!accent.classList.contains('off')) {
+                    accentizer(gridButton[i]);
+                } else if (!ghost.classList.contains('off')) {
+                    ghoster(gridButton[i]);
+                } else {
+                    // turn note off
+                    gridButton[i].classList.add('off');
+                    colorChanger(i + 1);
+                    gridButton[i].innerHTML = 'm';
 
-            // check how many buttons are turned off in all the rows
-            let rowCountTwo = 0;
-            let rowCountThree = 0;
-            let rowCountFour = 0;
+                    // check how many buttons are turned off in all the rows
+                    let rowCountTwo = 0;
+                    let rowCountThree = 0;
+                    let rowCountFour = 0;
 
-            let rowTwo = document.getElementsByClassName('rowTwo')
-            let rowThree = document.getElementsByClassName('rowThree')
-            let rowFour = document.getElementsByClassName('rowFour')
-            for (let i = 0; i < 16; i++) {
-                if (rowTwo[i].classList.contains('off')) {
-                    rowCountTwo ++;
+                    let rowTwo = document.getElementsByClassName('rowTwo')
+                    let rowThree = document.getElementsByClassName('rowThree')
+                    let rowFour = document.getElementsByClassName('rowFour')
+                    for (let i = 0; i < 16; i++) {
+                        if (rowTwo[i].classList.contains('off')) {
+                            rowCountTwo ++;
+                        }
+
+                        if (rowThree[i].classList.contains('off')) {
+                            rowCountThree ++;
+                        }
+
+                        if (rowFour[i].classList.contains('off')) {
+                            rowCountFour ++;
+                        }
+                    }
+
+                    // adjust length if all buttons in a row and the rows preceding it are off
+                    if (rowCountFour === 16) {
+                        length = 3;
+                    }
+
+                    if (rowCountThree === 16 && rowCountFour === 16) {
+                        length = 2;
+                    }
+
+                    if (rowCountTwo === 16 && rowCountThree === 16 && rowCountFour === 16) {
+                        length = 1;
+                    }
                 }
-
-                if (rowThree[i].classList.contains('off')) {
-                    rowCountThree ++;
-                }
-
-                if (rowFour[i].classList.contains('off')) {
-                    rowCountFour ++;
-                }
             }
-
-            // adjust length if all buttons in a row and the rows preceding it are off
-            if (rowCountFour === 16) {
-                length = 3;
-            }
-
-            if (rowCountThree === 16 && rowCountFour === 16) {
-                length = 2;
-            }
-
-            if (rowCountTwo === 16 && rowCountThree === 16 && rowCountFour === 16) {
-                length = 1;
-            }
-        }
     })
 }
 

@@ -1,11 +1,12 @@
-let accent = document.getElementById('accent')
+export let accent = document.getElementById('accent')
 accent.addEventListener('click', () => {
     if (ghost.classList.contains('off') && copy.classList.contains('off') 
         && lengthButton.classList.contains('off')) {
         if (accent.classList.contains('off')) {
             accent.classList.remove('off');
-            accent.style.backgroundColor = '#EC87A9';
+            accent.style.backgroundColor = '#F47951';
             accent.style.color = 'white';
+
         } else {
             accent.classList.add('off')
             accent.style.backgroundColor = 'white';
@@ -14,13 +15,13 @@ accent.addEventListener('click', () => {
     }
 })
 
-let ghost = document.getElementById('ghost')
+export let ghost = document.getElementById('ghost')
 ghost.addEventListener('click', () => {
     if (accent.classList.contains('off') && copy.classList.contains('off') 
         && lengthButton.classList.contains('off')) {
         if (ghost.classList.contains('off')) {
             ghost.classList.remove('off');
-            ghost.style.backgroundColor = '#87ECC9';
+            ghost.style.backgroundColor = '#ffff00';
             ghost.style.color = 'white';
         } else {
             ghost.classList.add('off')
@@ -72,3 +73,29 @@ lengthButton.addEventListener('click', () => {
         }
     }
 })
+
+// add accent if accent is on
+export function accentizer(step) {
+    if (!accent.classList.contains('off')) {
+        if (!ghost.classList.contains('off')) {
+            step.classList.remove('ghost')
+            step.style.background = '#ECC987';
+        } else {
+            step.classList.add('ghost')
+            step.style.background = '#F47951';
+        }
+    }
+}
+
+// add ghost if ghost is on
+export function ghoster(step) {
+    if (!ghost.classList.contains('off')) {
+        if (!accent.classList.contains('off')) {
+            step.classList.remove('accent');
+            step.style.background = '#ECC987';
+        } else {
+            step.classList.add('ghost');
+            step.classList.style.background = '#ffff00';
+        }
+    }
+}
