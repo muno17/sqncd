@@ -196,7 +196,19 @@ let looper = (step, length) => {
             }
             // send note if current step has a note assigned to it
             if (gridButton[step].innerHTML.length > 1) {
-                sendMidi(gridButton[step].innerHTML);
+                // create an array to store the note and velocity values
+                let n = []
+                n.push(gridButton[step].innerHTML);
+
+                let velocity = 64;
+                if (gridButton[step].classList.contains('accent')) {
+                    velocity = 127;
+                } else if (gridButton[step].classList.contains('ghost')) {
+                    velocity = 25;
+                }
+                n.push(velocity)
+
+                sendMidi(n);
             } else {
                 gridButton[step].style.color = '#DBDBDB';
             }
@@ -234,8 +246,15 @@ reset.addEventListener('click', () => {
         gridButton[i].classList.add('off');
         colorChanger(i + 1);
         gridButton[i].innerHTML = 'm';
+
+        // reset the velocity
+        if (gridButton[i].classList.contains('accent')) {
+            gridButton[i].classList.remove('accent');
+        } else if (gridButton[i].classList.contains('ghost')) {
+            gridButton[i].classList.remove('ghost');
+        }
     }
-} )
+})
 
 
 // changes color back to it's original

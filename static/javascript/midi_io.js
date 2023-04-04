@@ -20,7 +20,8 @@ selectedChannel.addEventListener('change', () => {
 // Function triggered when WEBMIDI.js is ready
 export function sendMidi(n) {
 // Display available MIDI input devices
-    let note = n
+    let note = n[0];
+    let velocity = n[1];
     if (WebMidi.outputs.length < 1) {
     console.log("No device detected.");
     // pass this into dropdown as only option, disable midi channels
@@ -35,7 +36,7 @@ export function sendMidi(n) {
         let channel = outputDevice.channels[1];
         
         //console.log(device['name'])
-        channel.playNote(n, {duration: 300})
+        channel.playNote(note, {duration: 300, rawAttack: velocity})
 
         // add eventListener for notes function
 
