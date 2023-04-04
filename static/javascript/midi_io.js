@@ -22,8 +22,6 @@ export function sendMidi(n) {
 // Display available MIDI input devices
     let note = n[0];
     let velocity = n[1];
-    console.log(note)
-    console.log(velocity)
     if (WebMidi.outputs.length < 1) {
     console.log("No device detected.");
     // pass this into dropdown as only option, disable midi channels

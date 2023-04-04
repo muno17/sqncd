@@ -31,8 +31,8 @@ for (let i = 0; i < 64; i++) {
         if (gridButton[i].classList.contains('off')) {
             // if length is on, only change the last step
             if (!lengthButton.classList.contains('off')) {
-                lastStep(gridButton[i])
-                length = i + 1
+                lastStep(gridButton[i]);
+                length = i + 1;
             } else if (!copy.classList.contains('off')) {
                 // if a copier exists, assign values to gridButton
                 let copier = document.getElementsByClassName('copier');
@@ -40,7 +40,7 @@ for (let i = 0; i < 64; i++) {
                     copyMaker(gridButton[i], i);
                 } else {
                     // assign button as copier 
-                    gridButton[i].classList.add('copier')
+                    gridButton[i].classList.add('copier');
                 }
             } else {
                 gridButton[i].classList.remove('off');
@@ -53,9 +53,9 @@ for (let i = 0; i < 64; i++) {
 
                 // add ghost or accent if their buttonFunction is on
                 if (!accent.classList.contains('off')) {
-                    accentizer(gridButton[i])
+                    accentizer(gridButton[i]);
                 } else if (!ghost.classList.contains('off')) {
-                    ghoster(gridButton[i])
+                    ghoster(gridButton[i]);
                 } 
 
                 // adjust length according to button's position
@@ -82,7 +82,7 @@ for (let i = 0; i < 64; i++) {
                     ghoster(gridButton[i]);
                 } else if (!lengthButton.classList.contains('off')) {
                         lastStep(gridButton[i])
-                        length = i + 1
+                        length = i + 1;
                 } else if (!copy.classList.contains('off')) {
                     // if a copier exists, assign values to gridButton
                     let copier = document.getElementsByClassName('copier');
@@ -90,7 +90,7 @@ for (let i = 0; i < 64; i++) {
                         copyMaker(gridButton[i], i);
                     } else {
                         // assign button as copier 
-                        gridButton[i].classList.add('copier')
+                        gridButton[i].classList.add('copier');
                     }
                 } else {
                     // turn note off if none of the buttonFunctions are on
@@ -103,9 +103,9 @@ for (let i = 0; i < 64; i++) {
                     let rowCountThree = 0;
                     let rowCountFour = 0;
 
-                    let rowTwo = document.getElementsByClassName('rowTwo')
-                    let rowThree = document.getElementsByClassName('rowThree')
-                    let rowFour = document.getElementsByClassName('rowFour')
+                    let rowTwo = document.getElementsByClassName('rowTwo');
+                    let rowThree = document.getElementsByClassName('rowThree');
+                    let rowFour = document.getElementsByClassName('rowFour');
                     for (let i = 0; i < 16; i++) {
                         if (rowTwo[i].classList.contains('off')) {
                             rowCountTwo ++;
@@ -231,7 +231,7 @@ let looper = (step, length) => {
                     }
                 } else {
                     // assign original color back to step
-                    colorChanger((length))
+                    colorChanger((length));
                 }
             } else {
                 if (gridButton[step - 1].innerHTML.length > 1) {

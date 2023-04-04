@@ -7,17 +7,17 @@ accent.addEventListener('click', () => {
         accent.style.backgroundColor = '#EC9687';
         accent.style.color = 'white';
 
-        lengthButton.classList.add('off')
+        lengthButton.classList.add('off');
         lengthButton.style.backgroundColor = 'white';
         lengthButton.style.color = '#BC81BF';
-        copy.classList.add('off')
+        copy.classList.add('off');
         copy.style.backgroundColor = 'white';
         copy.style.color = '#BC81BF';
-        ghost.classList.add('off')
+        ghost.classList.add('off');
         ghost.style.backgroundColor = 'white';
         ghost.style.color = '#BC81BF';
     } else {
-        accent.classList.add('off')
+        accent.classList.add('off');
         accent.style.backgroundColor = 'white';
         accent.style.color = '#BC81BF';
     }
@@ -33,10 +33,10 @@ ghost.addEventListener('click', () => {
         lengthButton.classList.add('off')
         lengthButton.style.backgroundColor = 'white';
         lengthButton.style.color = '#BC81BF';
-        copy.classList.add('off')
+        copy.classList.add('off');
         copy.style.backgroundColor = 'white';
         copy.style.color = '#BC81BF';
-        accent.classList.add('off')
+        accent.classList.add('off');
         accent.style.backgroundColor = 'white';
         accent.style.color = '#BC81BF';
     } else {
@@ -79,13 +79,13 @@ copy.addEventListener('click', () => {
         copy.style.backgroundColor = '#479682';
         copy.style.color = 'white';
 
-        lengthButton.classList.add('off')
+        lengthButton.classList.add('off');
         lengthButton.style.backgroundColor = 'white';
         lengthButton.style.color = '#BC81BF';
-        ghost.classList.add('off')
+        ghost.classList.add('off');
         ghost.style.backgroundColor = 'white';
         ghost.style.color = '#BC81BF';
-        accent.classList.add('off')
+        accent.classList.add('off');
         accent.style.backgroundColor = 'white';
         accent.style.color = '#BC81BF';
     } else {
@@ -114,12 +114,8 @@ export function copyMaker(step, stepNumber) {
         step.classList.add('accent');
         step.style.backgroundColor = '#EC9687';
     } else if (copier[0].innerHTML === 'm') {
-        console.log(copier[0].innerHTML)
-        console.log(copier[0])
-        console.log(stepNumber)
-        colorChanger(stepNumber +1)
-        console.log(step)
-        step.classList.add('off')
+        colorChanger(stepNumber +1);
+        step.classList.add('off');
     } else {
         step.style.background = '#ECC987';
         step.style.color = 'white';
@@ -137,17 +133,17 @@ lengthButton.addEventListener('click', () => {
         lengthButton.style.backgroundColor = '#1814f3';
         lengthButton.style.color = 'white';
 
-        copy.classList.add('off')
+        copy.classList.add('off');
         copy.style.backgroundColor = 'white';
         copy.style.color = '#BC81BF';
-        ghost.classList.add('off')
+        ghost.classList.add('off');
         ghost.style.backgroundColor = 'white';
         ghost.style.color = '#BC81BF';
-        accent.classList.add('off')
+        accent.classList.add('off');
         accent.style.backgroundColor = 'white';
         accent.style.color = '#BC81BF';
     } else {
-        lengthButton.classList.add('off')
+        lengthButton.classList.add('off');
         lengthButton.style.backgroundColor = 'white';
         lengthButton.style.color = '#BC81BF';
     }
@@ -157,7 +153,7 @@ export function lastStep(step) {
     let formerLast = document.getElementsByClassName('last');
     formerLast[0].classList.remove('last');
 
-    step.classList.add('last')
+    step.classList.add('last');
 }
 
 
@@ -168,7 +164,7 @@ undo.addEventListener('click', () => {
         undo.classList.remove('off');
 
     } else {
-        undo.classList.add('off')
+        undo.classList.add('off');
 
     }
 })
