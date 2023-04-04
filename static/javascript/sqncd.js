@@ -98,6 +98,13 @@ for (let i = 0; i < 64; i++) {
                     colorChanger(i + 1);
                     gridButton[i].innerHTML = 'm';
 
+                    // remove any accent or ghost values
+                    if (gridButton[i].classList.contains('accent')) {
+                        gridButton[i].classList.remove('accent');
+                    } else if (gridButton[i].classList.contains('ghost')) {
+                        gridButton[i].classList.remove('ghost');
+                    }
+
                     // check how many buttons are turned off in all the rows
                     let rowCountTwo = 0;
                     let rowCountThree = 0;
