@@ -33,9 +33,8 @@ using the Tone.js API to handle tempo and transport
 
 - choose device
 - choose midi channel
-- add copy function
-- add last function
-- add undo function
+- DONE add copy function
+- DONE add last function
 
 
 ------------- website NEXT STEPS -------------

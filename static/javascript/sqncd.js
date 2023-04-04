@@ -75,7 +75,7 @@ for (let i = 0; i < 64; i++) {
             }
         // events if the button is pressed when it's on
         } else {
-                // add buttonFunction is any are on
+                // add buttonFunction if any are on
                 if (!accent.classList.contains('off')) {
                     accentizer(gridButton[i]);
                 } else if (!ghost.classList.contains('off')) {

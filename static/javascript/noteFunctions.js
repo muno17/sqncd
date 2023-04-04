@@ -76,8 +76,8 @@ export let copy = document.getElementById('copy')
 copy.addEventListener('click', () => {
     if (copy.classList.contains('off')) {
         copy.classList.remove('off');
-        copy.style.backgroundColor = '#479682';
-        copy.style.color = 'white';
+        copy.style.backgroundColor = '#FDFA0E';
+        copy.style.color = 'black';
 
         lengthButton.classList.add('off');
         lengthButton.style.backgroundColor = 'white';
@@ -116,7 +116,7 @@ export function copyMaker(step, stepNumber) {
         step.style.backgroundColor = '#EC9687';
         step.style.color = 'white';
     } else if (copier[0].innerHTML === 'm') {
-        colorChanger(stepNumber +1);
+        colorChanger(stepNumber + 1);
         step.classList.add('off');
     } else {
         step.style.background = '#ECC987';
@@ -157,16 +157,3 @@ export function lastStep(step) {
 
     step.classList.add('last');
 }
-
-
-
-let undo = document.getElementById('undo')
-undo.addEventListener('click', () => {
-    if (undo.classList.contains('off')) {
-        undo.classList.remove('off');
-
-    } else {
-        undo.classList.add('off');
-
-    }
-})
