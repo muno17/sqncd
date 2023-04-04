@@ -190,7 +190,13 @@ let looper = (step, length) => {
             if (step === 0) {
                 // change previous step back to yellow if it has a note assigned to it
                 if (gridButton[(16 * length) - 1].innerHTML.length > 1) {
-                    gridButton[(16 * length) - 1].style.backgroundColor = '#ECC987';
+                    if (gridButton[(16 * length) - 1].classList.contains('accent')) {
+                        gridButton[(16 * length) - 1].style.backgroundColor = '#F47951';
+                    } else if (gridButton[(16 * length) - 1].classList.contains('ghost')) {
+                        gridButton[(16 * length) - 1].style.backgroundColor = '#ECE287';
+                    } else {
+                        gridButton[(16 * length) - 1].style.backgroundColor = '#ECC987';
+                    }
                 } else {
                     // assign original color back to step
                     colorChanger((16 * length))
@@ -198,17 +204,24 @@ let looper = (step, length) => {
                     // gridButton[(16 * length) - 1].style.color = '#9281BF';
                 }
             } else {
-                if (gridButton[step - 1].innerHTML.length > 1) {
-                    gridButton[step - 1].style.backgroundColor = '#ECC987';
-                } else {
+                // if (gridButton[step - 1].innerHTML.length > 1) {
+                //     gridButton[step - 1].style.backgroundColor = '#ECC987';
+                // } else {
                     // change previous step back to yellow if it has a note assigned to it
+                    // or to accent/ghost colors if they have a ghost or accent assigned
                     if (gridButton[step - 1].innerHTML.length > 1) {
+                        if (gridButton[step-1].classList.contains('accent')) {
+                            gridButton[step-1].style.backgroundColor = '#F47951';
+                        } else if (gridButton[step-1].classList.contains('ghost')) {
+                            gridButton[step-1].style.backgroundColor = '#ECE287';
+                        } else {
                         gridButton[step - 1].style.backgroundColor = '#ECC987';
+                        }
                     } else {
                         // assign original color back to step
                         colorChanger(step);
                     }
-                } 
+                
             }
             // send note if current step has a note assigned to it
             if (gridButton[step].innerHTML.length > 1) {
@@ -238,10 +251,15 @@ let looper = (step, length) => {
                 // change previous step back to it's original color
                 if (gridButton[i].classList.contains('off')) {
                     colorChanger(i + 1)
+                } else if (gridButton[i].classList.contains('accent')) {
+                    gridButton[i].style.backgroundColor = '#F47951';
+                } else if (gridButton[i].classList.contains('ghost')) {
+                    gridButton[i].style.backgroundColor = '#ECE287';
                 } else {
                     gridButton[i].style.backgroundColor = '#ECC987';
                 }
             }
+
         stop.classList.remove('off');
         play.classList.add('off');
         Tone.Transport.stop();
