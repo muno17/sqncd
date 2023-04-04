@@ -1,4 +1,4 @@
-import { colorChanger } from '/static/javascript/sqncd.js'
+import { colorChanger } from '/static/javascript/sequencer.js'
 
 export let accent = document.getElementById('accent')
 accent.addEventListener('click', () => {
@@ -122,7 +122,7 @@ export function copyMaker(step, stepNumber) {
         step.style.background = '#ECC987';
         step.style.color = 'white';
     }
-
+    step.classList.remove('off')
     // copy over note value and reset copy
     step.innerHTML = copier[0].innerHTML;
     copier[0].classList.remove('copier');
