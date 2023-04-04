@@ -165,6 +165,11 @@ Tone.Transport.loop = true;
 let play = document.getElementById('play');
 let stop = document.getElementById('stop');
 
+play.addEventListener('click', async () => {
+	await Tone.start()
+	console.log('audio is ready')
+})
+
 // transport starts when the play button is pressed
 play.addEventListener('click', () => {
     if (play.classList.contains('off')) {
@@ -174,8 +179,9 @@ play.addEventListener('click', () => {
         play.style.color = 'white';
         stop.style.backgroundColor = 'white';
         stop.style.color = '#BC81BF'; 
+        Tone.start();
         Tone.Transport.start();
-        looper(0, length);
+        looper(-1, length);
     }
 })
 

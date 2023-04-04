@@ -38,7 +38,7 @@ export function sendMidi(n) {
         let channel = outputDevice.channels[1];
         
         //console.log(device['name'])
-        channel.playNote(note, {duration: 300, rawAttack: velocity})
+        channel.playNote(note, {duration: 100, rawAttack: velocity})
 
         // add eventListener for notes function
 
