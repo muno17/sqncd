@@ -103,7 +103,7 @@ function turnOn(octaveButton) {
         octaveButton.classList.remove('off');
         octaveButton.style.background = '#ECC987';
         octaves.push(octaveButton);
-    } else {
+    } else if (octaves.length > 1) {
         octaveButton.classList.add('off');
         octaveButton.style.background = 'white';
         let position = octaves.indexOf(octaveButton);
