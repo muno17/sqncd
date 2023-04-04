@@ -2,7 +2,7 @@ export let accent = document.getElementById('accent')
 accent.addEventListener('click', () => {
     if (accent.classList.contains('off')) {
         accent.classList.remove('off');
-        accent.style.backgroundColor = '#F28D5F';
+        accent.style.backgroundColor = '#EC9687';
         accent.style.color = 'white';
 
         lengthButton.classList.add('off')
@@ -25,7 +25,7 @@ export let ghost = document.getElementById('ghost')
 ghost.addEventListener('click', () => {
     if (ghost.classList.contains('off')) {
         ghost.classList.remove('off');
-        ghost.style.backgroundColor = '#8EDFB7';
+        ghost.style.backgroundColor = '#DEC0DF';
         ghost.style.color = 'white';
 
         lengthButton.classList.add('off')
@@ -52,7 +52,7 @@ export function accentizer(step) {
             step.style.backgroundColor = '#ECC987';
         } else {
             step.classList.add('accent')
-            step.style.backgroundColor = '#F28D5F';
+            step.style.backgroundColor = '#EC9687';
         }
     }
 }
@@ -65,7 +65,7 @@ export function ghoster(step) {
             step.style.backgroundColor = '#ECC987';
         } else {
             step.classList.add('ghost');
-            step.style.backgroundColor = '#8EDFB7';
+            step.style.backgroundColor = '#DEC0DF';
         }
     }
 }

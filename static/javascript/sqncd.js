@@ -183,7 +183,7 @@ play.addEventListener('click', () => {
     if (play.classList.contains('off')) {
         play.classList.remove('off');
         stop.classList.add('off');
-        play.style.backgroundColor = '#C1E1B6';
+        play.style.backgroundColor = '#71b373';
         play.style.color = 'white';
         stop.style.backgroundColor = 'white';
         stop.style.color = '#BC81BF'; 
@@ -218,9 +218,9 @@ let looper = (step, length) => {
             } else {
                 if (gridButton[step - 1].innerHTML.length > 1) {
                     if (gridButton[step-1].classList.contains('accent')) {
-                        gridButton[step-1].style.backgroundColor = '#F28D5F';
+                        gridButton[step-1].style.backgroundColor = '#EC9687';
                     } else if (gridButton[step-1].classList.contains('ghost')) {
-                        gridButton[step-1].style.backgroundColor = '#8EDFB7';
+                        gridButton[step-1].style.backgroundColor = '#DEC0DF';
                     } else {
                     gridButton[step - 1].style.backgroundColor = '#ECC987';
                     }
@@ -259,9 +259,9 @@ let looper = (step, length) => {
                 if (gridButton[i].classList.contains('off')) {
                     colorChanger(i + 1)
                 } else if (gridButton[i].classList.contains('accent')) {
-                    gridButton[i].style.backgroundColor = '#F28D5F';
+                    gridButton[i].style.backgroundColor = '#EC9687';
                 } else if (gridButton[i].classList.contains('ghost')) {
-                    gridButton[i].style.backgroundColor = '#8EDFB7';
+                    gridButton[i].style.backgroundColor = '#DEC0DF';
                 } else {
                     gridButton[i].style.backgroundColor = '#ECC987';
                 }
@@ -274,7 +274,7 @@ let looper = (step, length) => {
         stop.classList.remove('off');
         play.style.backgroundColor = 'white';
         play.style.color = '#BC81BF';
-        stop.style.backgroundColor = '#EE9ABD';
+        stop.style.backgroundColor = '#d74d73';
         stop.style.color = 'white'; 
 
     })
@@ -310,6 +310,6 @@ function colorChanger(step) {
     gridButton[step - 1].style.backgroundColor = '#BC81BF';
     gridButton[step - 1].style.color = '#BC81BF';
 } else if (gridButton[step - 1].classList.contains('columnFour')) {
-    gridButton[step - 1].style.backgroundColor = '#9281BF';
-    gridButton[step - 1].style.color = '#9281BF';
+    gridButton[step - 1].style.backgroundColor = '#9D81BF';
+    gridButton[step - 1].style.color = '#9D81BF';
 } }

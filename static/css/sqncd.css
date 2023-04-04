@@ -129,7 +129,7 @@ select {
 }
 
 #stop {
-    background: #EE9ABD;
+    background: #d74d73;
     color: white;
 }
 
@@ -302,8 +302,8 @@ select {
 }
 
 .columnFour {
-    background-color: #9281BF;
-    color: #9281BF;
+    background-color: #9D81BF;
+    color: #9D81BF;
 }
 
 .columnNumbers {
