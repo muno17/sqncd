@@ -21,7 +21,7 @@ ghost.addEventListener('click', () => {
         && lengthButton.classList.contains('off')) {
         if (ghost.classList.contains('off')) {
             ghost.classList.remove('off');
-            ghost.style.backgroundColor = '#ffff00';
+            ghost.style.backgroundColor = '#ECE287';
             ghost.style.color = 'white';
         } else {
             ghost.classList.add('off')
@@ -79,10 +79,10 @@ export function accentizer(step) {
     if (!accent.classList.contains('off')) {
         if (!ghost.classList.contains('off')) {
             step.classList.remove('ghost')
-            step.style.background = '#ECC987';
+            step.style.backgroundColor = '#ECC987';
         } else {
-            step.classList.add('ghost')
-            step.style.background = '#F47951';
+            step.classList.add('accent')
+            step.style.backgroundColor = '#F47951';
         }
     }
 }
@@ -92,10 +92,10 @@ export function ghoster(step) {
     if (!ghost.classList.contains('off')) {
         if (!accent.classList.contains('off')) {
             step.classList.remove('accent');
-            step.style.background = '#ECC987';
+            step.style.backgroundColor = '#ECC987';
         } else {
             step.classList.add('ghost');
-            step.classList.style.background = '#ffff00';
+            step.style.backgroundColor = '#ECE287';
         }
     }
 }
