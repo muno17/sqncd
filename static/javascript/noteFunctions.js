@@ -1,3 +1,5 @@
+import { colorChanger } from '/static/javascript/sqncd.js'
+
 export let accent = document.getElementById('accent')
 accent.addEventListener('click', () => {
     if (accent.classList.contains('off')) {
@@ -92,18 +94,18 @@ copy.addEventListener('click', () => {
         if (copier[0]) {
             copier[0].classList.remove('copier');
         }
-
         copy.classList.add('off')
         copy.style.backgroundColor = 'white';
         copy.style.color = '#BC81BF';
     }
 })
 
-export function copyMaker(step) {
+// copy over a note's value if a note has already been assigned 'copier'
+export function copyMaker(step, stepNumber) {
     // if copy is pressed, give step class of copier
     // if a second button is pressed, copy the copier's values into it
     let copier = document.getElementsByClassName('copier');
-    console.log(copier[0])
+
     // add note value and ghost/accent
     if (copier[0].classList.contains('ghost')) {
         step.classList.add('ghost');
@@ -111,6 +113,16 @@ export function copyMaker(step) {
     } else if (copier[0].classList.contains('accent')) {
         step.classList.add('accent');
         step.style.backgroundColor = '#EC9687';
+    } else if (copier[0].innerHTML === 'm') {
+        console.log(copier[0].innerHTML)
+        console.log(copier[0])
+        console.log(stepNumber)
+        colorChanger(stepNumber +1)
+        console.log(step)
+        step.classList.add('off')
+    } else {
+        step.style.background = '#ECC987';
+        step.style.color = 'white';
     }
 
     // copy over note value and reset copy

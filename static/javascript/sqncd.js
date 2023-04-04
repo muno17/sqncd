@@ -37,7 +37,7 @@ for (let i = 0; i < 64; i++) {
                 // if a copier exists, assign values to gridButton
                 let copier = document.getElementsByClassName('copier');
                 if (copier[0]) {
-                    copyMaker(gridButton[i]);
+                    copyMaker(gridButton[i], i);
                 } else {
                     // assign button as copier 
                     gridButton[i].classList.add('copier')
@@ -87,7 +87,7 @@ for (let i = 0; i < 64; i++) {
                     // if a copier exists, assign values to gridButton
                     let copier = document.getElementsByClassName('copier');
                     if (copier[0]) {
-                        copyMaker(gridButton[i]);
+                        copyMaker(gridButton[i], i);
                     } else {
                         // assign button as copier 
                         gridButton[i].classList.add('copier')
@@ -317,7 +317,7 @@ reset.addEventListener('click', () => {
 
 
 // changes color back to it's original
-function colorChanger(step) {                       
+export function colorChanger(step) {                       
     if (gridButton[step - 1].classList.contains('columnOne')) {
     gridButton[step - 1].style.backgroundColor = '#94D0FF';
     gridButton[step - 1].style.color = '#94D0FF';
