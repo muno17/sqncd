@@ -100,11 +100,11 @@ copy.addEventListener('click', () => {
     }
 })
 
-let lengthButton = document.getElementById('length')
+export let lengthButton = document.getElementById('length')
 lengthButton.addEventListener('click', () => {
     if (lengthButton.classList.contains('off')) {
         lengthButton.classList.remove('off');
-        lengthButton.style.backgroundColor = '#ECE287';
+        lengthButton.style.backgroundColor = '#1814f3';
         lengthButton.style.color = 'white';
 
         copy.classList.add('off')
@@ -122,6 +122,14 @@ lengthButton.addEventListener('click', () => {
         lengthButton.style.color = '#BC81BF';
     }
 })
+
+export function lastStep(step) {
+    let formerLast = document.getElementsByClassName('last');
+    formerLast[0].classList.remove('last');
+
+    step.classList.add('last')
+}
+
 
 
 let undo = document.getElementById('undo')

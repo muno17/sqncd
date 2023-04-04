@@ -28,11 +28,14 @@ using the Tone.js API to handle tempo and transport
 - DONE check for correct length to run
 - DONE run through correct length
 - DONE reset button reacts to any of the selector buttons that are pressed
+- DONE choose octaves
+- DONE choose key/scale
 
 - choose device
 - choose midi channel
-- DONE choose octaves
-- DONE choose key/scale
+- add copy function
+- add last function
+- add undo function
 
 
 ------------- website NEXT STEPS -------------
@@ -74,7 +77,7 @@ using the Tone.js API to handle tempo and transport
         - choose random octaves if all disabled
         - choose random notes if none selected
     - DONE reset button
-    - ???figure out how to add shuffle???
+    - DONE ???figure out how to add shuffle???
 
 
 - SQL
@@ -114,13 +117,10 @@ using the Tone.js API to handle tempo and transport
         - DONE need dropdowns both for device and channel
     - DONE add dropdown for scales
         - DONE add another dropdown for key
-    - figure out best way to implement octave section
-    - move sqncd button over to new column
-    - add reset button in sqncd button section
-        - DONE add dropdown with options of what to reset
+    - DONE figure out best way to implement octave section
     - DONE add method to tell which buttons are enabled
         - DONE change color
         - DONE have lights flashing
     - DONE decide on final colors
     - DONE add side panels - decide on colored or wooden
-    - add shuffle display
+    - DONE add shuffle display

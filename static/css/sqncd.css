@@ -322,5 +322,8 @@ select {
     gap: 10px;
 }
 
-
+.last {
+    border-style: solid;
+    border-color: white;
+}
 

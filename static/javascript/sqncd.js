@@ -1,13 +1,13 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
-import { accent, ghost, accentizer, ghoster } from '/static/javascript/noteFunctions.js'
+import { accent, ghost, accentizer, ghoster, lengthButton, lastStep } from '/static/javascript/noteFunctions.js'
 
 
 // initiate default note values, if nothing is selected = C major
 let scaleValue = 0;
 let key = 'C'
 // variable to store how many measure will play, default is 1 measure
-let length = 1;
+let length = 16;
 
 let selectedScale = document.getElementById('scaleDropdown');
 selectedScale.addEventListener('change', () => {
@@ -29,45 +29,53 @@ for (let i = 0; i < 64; i++) {
     gridButton[i].addEventListener('click', () => {
         // events if the button is turned on
         if (gridButton[i].classList.contains('off')) {
-            gridButton[i].classList.remove('off');
-    
-            // randomly assign a note
-            let buttonNote = randomNoteGenerator(key, scaleValue, octaves);
-            gridButton[i].innerHTML = buttonNote;
-            gridButton[i].style.background = '#ECC987';
-            gridButton[i].style.color = 'white';
+            // if length is on, only change the last step
+            if (!lengthButton.classList.contains('off')) {
+                lastStep(gridButton[i])
+                length = i + 1
+            } else {
+                gridButton[i].classList.remove('off');
 
-            // add accent or ghost if either is on
-            if (!accent.classList.contains('off')) {
-                accentizer(gridButton[i])
-            } else if (!ghost.classList.contains('off')) {
-                ghoster(gridButton[i])
-            }
+                // randomly assign a note
+                let buttonNote = randomNoteGenerator(key, scaleValue, octaves);
+                gridButton[i].innerHTML = buttonNote;
+                gridButton[i].style.background = '#ECC987';
+                gridButton[i].style.color = 'white';
 
-            // adjust length according to button's position
-            if (gridButton[i].classList.contains('rowTwo')) {
-                let newLength = 2;
-                if (newLength > length) {
-                    length = newLength;
+                // add ghost or accent if their buttonFunction is on
+                if (!accent.classList.contains('off')) {
+                    accentizer(gridButton[i])
+                } else if (!ghost.classList.contains('off')) {
+                    ghoster(gridButton[i])
+                } 
+
+                // adjust length according to button's position
+                if (gridButton[i].classList.contains('rowTwo')) {
+                    let newLength = 2;
+                    if (newLength > length) {
+                        length = newLength;
+                    }
+                } else if (gridButton[i].classList.contains('rowThree')) {
+                    let newLength = 3;
+                    if (newLength > length) {
+                        length = newLength;
+                    }
+                } else if (gridButton[i].classList.contains('rowFour')) {
+                    length = 4;
                 }
-            } else if (gridButton[i].classList.contains('rowThree')) {
-                let newLength = 3;
-                if (newLength > length) {
-                    length = newLength;
-                }
-            } else if (gridButton[i].classList.contains('rowFour')) {
-                length = 4;
             }
-
-        // events if the button is presed when it's on
+        // events if the button is pressed when it's on
         } else {
-                // if accent or ghost is on, assign accent or ghost
+                // add buttonFunction is any are on
                 if (!accent.classList.contains('off')) {
                     accentizer(gridButton[i]);
                 } else if (!ghost.classList.contains('off')) {
                     ghoster(gridButton[i]);
+                } else if (!lengthButton.classList.contains('off')) {
+                        lastStep(gridButton[i])
+                        length = i + 1
                 } else {
-                    // turn note off
+                    // turn note off if none of the buttonFunctions are on
                     gridButton[i].classList.add('off');
                     colorChanger(i + 1);
                     gridButton[i].innerHTML = 'm';
@@ -96,15 +104,15 @@ for (let i = 0; i < 64; i++) {
 
                     // adjust length if all buttons in a row and the rows preceding it are off
                     if (rowCountFour === 16) {
-                        length = 3;
+                        length = 48;
                     }
 
                     if (rowCountThree === 16 && rowCountFour === 16) {
-                        length = 2;
+                        length = 32;
                     }
 
                     if (rowCountTwo === 16 && rowCountThree === 16 && rowCountFour === 16) {
-                        length = 1;
+                        length = 16;
                     }
                 }
             }
@@ -187,7 +195,7 @@ play.addEventListener('click', () => {
 
 let looper = (step, length) => {
     let repeat = () => {
-            step = (step + 1) % (16 * length);
+            step = (step + 1) % (length);
             // change color to indicate current step
             gridButton[step].style.backgroundColor = '#DBDBDB';
 
@@ -195,38 +203,31 @@ let looper = (step, length) => {
             // if at step 1 then check 16th step
             if (step === 0) {
                 // change previous step back to yellow if it has a note assigned to it
-                if (gridButton[(16 * length) - 1].innerHTML.length > 1) {
-                    if (gridButton[(16 * length) - 1].classList.contains('accent')) {
-                        gridButton[(16 * length) - 1].style.backgroundColor = '#F28D5F';
-                    } else if (gridButton[(16 * length) - 1].classList.contains('ghost')) {
-                        gridButton[(16 * length) - 1].style.backgroundColor = '#8EDFB7';
+                if (gridButton[(length) - 1].innerHTML.length > 1) {
+                    if (gridButton[(length) - 1].classList.contains('accent')) {
+                        gridButton[(length) - 1].style.backgroundColor = '#F28D5F';
+                    } else if (gridButton[(length) - 1].classList.contains('ghost')) {
+                        gridButton[(length) - 1].style.backgroundColor = '#8EDFB7';
                     } else {
-                        gridButton[(16 * length) - 1].style.backgroundColor = '#ECC987';
+                        gridButton[(length) - 1].style.backgroundColor = '#ECC987';
                     }
                 } else {
                     // assign original color back to step
-                    colorChanger((16 * length))
-                    // gridButton[(16 * length) - 1].style.backgroundColor = '#9281BF';
-                    // gridButton[(16 * length) - 1].style.color = '#9281BF';
+                    colorChanger((length))
                 }
             } else {
-                // if (gridButton[step - 1].innerHTML.length > 1) {
-                //     gridButton[step - 1].style.backgroundColor = '#ECC987';
-                // } else {
-                    // change previous step back to yellow if it has a note assigned to it
-                    // or to accent/ghost colors if they have a ghost or accent assigned
-                    if (gridButton[step - 1].innerHTML.length > 1) {
-                        if (gridButton[step-1].classList.contains('accent')) {
-                            gridButton[step-1].style.backgroundColor = '#F28D5F';
-                        } else if (gridButton[step-1].classList.contains('ghost')) {
-                            gridButton[step-1].style.backgroundColor = '#8EDFB7';
-                        } else {
-                        gridButton[step - 1].style.backgroundColor = '#ECC987';
-                        }
+                if (gridButton[step - 1].innerHTML.length > 1) {
+                    if (gridButton[step-1].classList.contains('accent')) {
+                        gridButton[step-1].style.backgroundColor = '#F28D5F';
+                    } else if (gridButton[step-1].classList.contains('ghost')) {
+                        gridButton[step-1].style.backgroundColor = '#8EDFB7';
                     } else {
-                        // assign original color back to step
-                        colorChanger(step);
+                    gridButton[step - 1].style.backgroundColor = '#ECC987';
                     }
+                } else {
+                    // assign original color back to step
+                    colorChanger(step);
+                }
                 
             }
             // send note if current step has a note assigned to it
@@ -253,7 +254,7 @@ let looper = (step, length) => {
     // transport stops when the stop button is pressed
     stop.addEventListener('click', () => {
         // reset colors back to their original colors
-        for (let i = 0; i < (16 * length); i++) {
+        for (let i = 0; i < length; i++) {
                 // change previous step back to it's original color
                 if (gridButton[i].classList.contains('off')) {
                     colorChanger(i + 1)
