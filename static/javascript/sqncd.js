@@ -1,6 +1,6 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
-import { accent, ghost, accentizer, ghoster, lengthButton, lastStep } from '/static/javascript/noteFunctions.js'
+import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/static/javascript/noteFunctions.js'
 
 
 // initiate default note values, if nothing is selected = C major
@@ -33,6 +33,15 @@ for (let i = 0; i < 64; i++) {
             if (!lengthButton.classList.contains('off')) {
                 lastStep(gridButton[i])
                 length = i + 1
+            } else if (!copy.classList.contains('off')) {
+                // if a copier exists, assign values to gridButton
+                let copier = document.getElementsByClassName('copier');
+                if (copier[0]) {
+                    copyMaker(gridButton[i]);
+                } else {
+                    // assign button as copier 
+                    gridButton[i].classList.add('copier')
+                }
             } else {
                 gridButton[i].classList.remove('off');
 
@@ -74,6 +83,15 @@ for (let i = 0; i < 64; i++) {
                 } else if (!lengthButton.classList.contains('off')) {
                         lastStep(gridButton[i])
                         length = i + 1
+                } else if (!copy.classList.contains('off')) {
+                    // if a copier exists, assign values to gridButton
+                    let copier = document.getElementsByClassName('copier');
+                    if (copier[0]) {
+                        copyMaker(gridButton[i]);
+                    } else {
+                        // assign button as copier 
+                        gridButton[i].classList.add('copier')
+                    }
                 } else {
                     // turn note off if none of the buttonFunctions are on
                     gridButton[i].classList.add('off');
