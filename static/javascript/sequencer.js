@@ -57,21 +57,6 @@ for (let i = 0; i < 64; i++) {
                 } else if (!ghost.classList.contains('off')) {
                     ghoster(gridButton[i]);
                 } 
-
-                // adjust length according to button's position
-                if (gridButton[i].classList.contains('rowTwo')) {
-                    let newLength = 2;
-                    if (newLength > length) {
-                        length = newLength;
-                    }
-                } else if (gridButton[i].classList.contains('rowThree')) {
-                    let newLength = 3;
-                    if (newLength > length) {
-                        length = newLength;
-                    }
-                } else if (gridButton[i].classList.contains('rowFour')) {
-                    length = 4;
-                }
             }
         // events if the button is pressed when it's on
         } else {
@@ -103,41 +88,6 @@ for (let i = 0; i < 64; i++) {
                         gridButton[i].classList.remove('accent');
                     } else if (gridButton[i].classList.contains('ghost')) {
                         gridButton[i].classList.remove('ghost');
-                    }
-
-                    // check how many buttons are turned off in all the rows
-                    let rowCountTwo = 0;
-                    let rowCountThree = 0;
-                    let rowCountFour = 0;
-
-                    let rowTwo = document.getElementsByClassName('rowTwo');
-                    let rowThree = document.getElementsByClassName('rowThree');
-                    let rowFour = document.getElementsByClassName('rowFour');
-                    for (let i = 0; i < 16; i++) {
-                        if (rowTwo[i].classList.contains('off')) {
-                            rowCountTwo ++;
-                        }
-
-                        if (rowThree[i].classList.contains('off')) {
-                            rowCountThree ++;
-                        }
-
-                        if (rowFour[i].classList.contains('off')) {
-                            rowCountFour ++;
-                        }
-                    }
-
-                    // adjust length if all buttons in a row and the rows preceding it are off
-                    if (rowCountFour === 16) {
-                        length = 48;
-                    }
-
-                    if (rowCountThree === 16 && rowCountFour === 16) {
-                        length = 32;
-                    }
-
-                    if (rowCountTwo === 16 && rowCountThree === 16 && rowCountFour === 16) {
-                        length = 16;
                     }
                 }
             }
@@ -182,7 +132,7 @@ tempo.addEventListener('input', (e) => {
 })
 
 Tone.Transport.swingSubdivision = '16n';
-Tone.Transport.swing = 0;
+Tone.Transport.swing = .50;
 // swing updates to the value entered into the tempo field
 let swing = document.getElementById('swing');
 swing.addEventListener('input', (e) => {
@@ -220,6 +170,8 @@ play.addEventListener('click', () => {
 
 let looper = (step, length) => {
     let repeat = () => {
+            let lastProto = document.getElementsByClassName('last');
+            
             step = (step + 1) % (length);
             // change color to indicate current step
             gridButton[step].style.backgroundColor = '#DBDBDB';

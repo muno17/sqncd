@@ -82,9 +82,12 @@ select {
     padding: 5px;
     margin-left: 3px;
     margin-right: 3px;
-    color: white;
-    background: black;
+    color: #BC81BF;
+    background: white;
     text-align: center;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #9D81BF;
 }
 
 #deviceDropdown {
@@ -107,9 +110,12 @@ select {
     width: 80px;
     height: 30px;
     font-size: 25px;
-    background: black;
-    color: white;
+    background: white;
+    color: #BC81BF;
     text-align: center;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #9D81BF;
 }
 
 .transport {
@@ -180,9 +186,13 @@ select {
     background: #ECC987;
 }
 
-#sqnc {
+#sqnc, #reset {
     background-color: white;
     color: #BC81BF;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 30px;
+    box-shadow: 3px 3px 12px black;
 }
 
 /* midright controls */
@@ -192,18 +202,6 @@ select {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-}
-
-#sqnc, #reset {
-    width: 150px;
-    border-radius: 10px;
-    font-size: 30px;
-    box-shadow: 3px 3px 12px black;
-}
-
-#reset {
-    background-color: white;
-    color: #9281BF;
 }
 
 
