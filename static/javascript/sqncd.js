@@ -191,9 +191,9 @@ let looper = (step, length) => {
                 // change previous step back to yellow if it has a note assigned to it
                 if (gridButton[(16 * length) - 1].innerHTML.length > 1) {
                     if (gridButton[(16 * length) - 1].classList.contains('accent')) {
-                        gridButton[(16 * length) - 1].style.backgroundColor = '#F47951';
+                        gridButton[(16 * length) - 1].style.backgroundColor = '#F28D5F';
                     } else if (gridButton[(16 * length) - 1].classList.contains('ghost')) {
-                        gridButton[(16 * length) - 1].style.backgroundColor = '#ECE287';
+                        gridButton[(16 * length) - 1].style.backgroundColor = '#8EDFB7';
                     } else {
                         gridButton[(16 * length) - 1].style.backgroundColor = '#ECC987';
                     }
@@ -211,9 +211,9 @@ let looper = (step, length) => {
                     // or to accent/ghost colors if they have a ghost or accent assigned
                     if (gridButton[step - 1].innerHTML.length > 1) {
                         if (gridButton[step-1].classList.contains('accent')) {
-                            gridButton[step-1].style.backgroundColor = '#F47951';
+                            gridButton[step-1].style.backgroundColor = '#F28D5F';
                         } else if (gridButton[step-1].classList.contains('ghost')) {
-                            gridButton[step-1].style.backgroundColor = '#ECE287';
+                            gridButton[step-1].style.backgroundColor = '#8EDFB7';
                         } else {
                         gridButton[step - 1].style.backgroundColor = '#ECC987';
                         }
@@ -233,7 +233,7 @@ let looper = (step, length) => {
                 if (gridButton[step].classList.contains('accent')) {
                     velocity = 127;
                 } else if (gridButton[step].classList.contains('ghost')) {
-                    velocity = 25;
+                    velocity = 20;
                 }
                 n.push(velocity)
 
@@ -252,9 +252,9 @@ let looper = (step, length) => {
                 if (gridButton[i].classList.contains('off')) {
                     colorChanger(i + 1)
                 } else if (gridButton[i].classList.contains('accent')) {
-                    gridButton[i].style.backgroundColor = '#F47951';
+                    gridButton[i].style.backgroundColor = '#F28D5F';
                 } else if (gridButton[i].classList.contains('ghost')) {
-                    gridButton[i].style.backgroundColor = '#ECE287';
+                    gridButton[i].style.backgroundColor = '#8EDFB7';
                 } else {
                     gridButton[i].style.backgroundColor = '#ECC987';
                 }

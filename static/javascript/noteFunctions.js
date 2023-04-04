@@ -4,7 +4,7 @@ accent.addEventListener('click', () => {
         && lengthButton.classList.contains('off')) {
         if (accent.classList.contains('off')) {
             accent.classList.remove('off');
-            accent.style.backgroundColor = '#F47951';
+            accent.style.backgroundColor = '#F28D5F';
             accent.style.color = 'white';
 
         } else {
@@ -21,7 +21,7 @@ ghost.addEventListener('click', () => {
         && lengthButton.classList.contains('off')) {
         if (ghost.classList.contains('off')) {
             ghost.classList.remove('off');
-            ghost.style.backgroundColor = '#ECE287';
+            ghost.style.backgroundColor = '#8EDFB7';
             ghost.style.color = 'white';
         } else {
             ghost.classList.add('off')
@@ -30,6 +30,39 @@ ghost.addEventListener('click', () => {
         }
     }
 })
+
+// add accent if accent is on
+export function accentizer(step) {
+    if (!accent.classList.contains('off')) {
+        if (step.classList.contains('ghost')) {
+            step.classList.remove('ghost')
+            step.style.backgroundColor = '#ECC987';
+        } else {
+            step.classList.add('accent')
+            step.style.backgroundColor = '#F28D5F';
+        }
+    }
+}
+
+// add ghost if ghost is on
+export function ghoster(step) {
+    if (!ghost.classList.contains('off')) {
+        if (step.classList.contains('accent')) {
+            step.classList.remove('accent');
+            step.style.backgroundColor = '#ECC987';
+        } else {
+            step.classList.add('ghost');
+            step.style.backgroundColor = '#8EDFB7';
+        }
+    }
+}
+
+
+
+
+
+
+
 
 let undo = document.getElementById('undo')
 undo.addEventListener('click', () => {
@@ -74,28 +107,3 @@ lengthButton.addEventListener('click', () => {
     }
 })
 
-// add accent if accent is on
-export function accentizer(step) {
-    if (!accent.classList.contains('off')) {
-        if (!ghost.classList.contains('off')) {
-            step.classList.remove('ghost')
-            step.style.backgroundColor = '#ECC987';
-        } else {
-            step.classList.add('accent')
-            step.style.backgroundColor = '#F47951';
-        }
-    }
-}
-
-// add ghost if ghost is on
-export function ghoster(step) {
-    if (!ghost.classList.contains('off')) {
-        if (!accent.classList.contains('off')) {
-            step.classList.remove('accent');
-            step.style.backgroundColor = '#ECC987';
-        } else {
-            step.classList.add('ghost');
-            step.style.backgroundColor = '#ECE287';
-        }
-    }
-}
