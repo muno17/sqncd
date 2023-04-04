@@ -110,9 +110,11 @@ export function copyMaker(step, stepNumber) {
     if (copier[0].classList.contains('ghost')) {
         step.classList.add('ghost');
         step.style.backgroundColor = '#DEC0DF';
+        step.style.color = 'white';
     } else if (copier[0].classList.contains('accent')) {
         step.classList.add('accent');
         step.style.backgroundColor = '#EC9687';
+        step.style.color = 'white';
     } else if (copier[0].innerHTML === 'm') {
         colorChanger(stepNumber +1);
         step.classList.add('off');
