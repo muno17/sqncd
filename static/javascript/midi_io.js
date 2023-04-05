@@ -6,7 +6,7 @@ if (navigator.requestMIDIAccess) {
 }
 
 
-WebMidi.enable().then(onEnabled).catch(err => console.log(''));
+WebMidi.enable().then(onEnabled, sendMidi).catch(err => console.log(''));
 
 let devices = []
 
@@ -18,24 +18,20 @@ selectedChannel.addEventListener('change', () => {
 })
 
 let deviceDropdown = document.getElementById('deviceDropdown');
-// deviceDropdown.addEventListener('change', () => {
-//     device = deviceDropdown.value;
-// })
-
-
-function onEnabled() {
-    WebMidi.outputs.forEach(output => {
-        console.log(output.manufacturer, output.name)
-        let manufacturer = output.manufacturer;
-        let name = output.name;
-
-
-
-
+deviceDropdown.addEventListener('change', () => {
 
 })
-}
 
+// add all devices to devices[]
+function onEnabled() {
+    WebMidi.outputs.forEach(output => {
+        let name = output.name;
+        // console.log(`${name}`)
+        let option = document.createElement('option');
+        option.text = `${name}`;
+        deviceDropdown.add(option);
+})
+}
 
 
 // Function triggered when WEBMIDI.js is ready
