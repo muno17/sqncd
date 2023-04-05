@@ -119,7 +119,7 @@ export function copyMaker(step, stepNumber) {
         step.classList.remove('off')
     } else if (copier[0].classList.contains('off')) {
         step.classList.add('off');
-        gridButton[i].style.backgroundColor = '#white';
+        step.style.backgroundColor = 'white';
         if (step.classList.contains('ghost')) {
             step.classList.remove('ghost')
         } else if (step.classList.contains('accent')) {
