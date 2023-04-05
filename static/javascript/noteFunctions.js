@@ -122,6 +122,12 @@ export function copyMaker(step, stepNumber) {
         colorChanger(stepNumber + 1);
         console.log(copier[0])
         console.log('inside')
+        if (step.classList.contains('ghost')) {
+            step.classList.remove('ghost')
+        } else if (step.classList.contains('accent')) {
+            step.classList.remove('accent')
+        }
+
     } else {
         step.style.background = '#ECC987';
         step.style.color = 'white';
