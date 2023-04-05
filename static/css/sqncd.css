@@ -101,9 +101,45 @@ select {
 .tempo {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 5px;
+} 
+
+displays {
+    margin: 0;
+}
+
+
+.slider {
+    -webkit-appearance: none;
+    width: 120px;
+    appearance: none;
+    height: 5px;
+    background: #5F9F89;
+    outline: none;
+    opacity: 0.7;
+    box-shadow: 3px 3px 8px black;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearanace: none;
+    appearance: none;
+    width: 13px;
+    height: 10px;
+    background: #BC81BF;
+    border: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 30px;
+    box-shadow: 3px 3px 8px black;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 13px;
+    height: 30px;
+    background: #BC81BF;
+    cursor: pointer;   
 }
 
 #tempo, #swing {
@@ -114,8 +150,9 @@ select {
     color: white;
     text-align: center;
     border-style: solid;
-    border-width: 5px;
+    border-width: 2px;
     border-color: #9D81BF;
+    margin-bottom: 15px;
 }
 
 .transport {
