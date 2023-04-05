@@ -4,11 +4,8 @@ if (navigator.requestMIDIAccess) {
 } else {
     console.log('WebMIDI is not supported in this browser');
 }
-
-
 WebMidi.enable().then(onEnabled, sendMidi).catch(err => console.log(''));
 
-let devices = []
 
 // give channel base value, change when new channel is selected
 let channel = 1
@@ -17,9 +14,11 @@ selectedChannel.addEventListener('change', () => {
     channel = selectedChannel.value;
 })
 
+let deviceValue = ''
 let deviceDropdown = document.getElementById('deviceDropdown');
 deviceDropdown.addEventListener('change', () => {
-
+    deviceValue = deviceDropdown.value;
+    console.log(deviceValue)
 })
 
 // add all devices to devices[]
@@ -30,9 +29,9 @@ function onEnabled() {
         let option = document.createElement('option');
         option.text = `${name}`;
         deviceDropdown.add(option);
+        console.log(output.name)
 })
 }
-
 
 // Function triggered when WEBMIDI.js is ready
 export function sendMidi(n) {
@@ -44,13 +43,11 @@ export function sendMidi(n) {
     // pass this into dropdown as only option, disable midi channels
     } else {
 
-    let device = devices[0]
-    console.log(devices[0])
 
-    let outputDevice = WebMidi.getOutputByName(devices[0]);
-    let channel = outputDevice.channels[1];
+    let outputDevice = WebMidi.getOutputByName(deviceValue);
+    let outputChannel = outputDevice.channels[channel];
     
-    channel.playNote(note, {duration: 100, rawAttack: velocity})
+    outputChannel.playNote(note, {duration: 100, rawAttack: velocity})
 
     }
 
