@@ -48,7 +48,7 @@ for (let i = 0; i < 64; i++) {
                 // randomly assign a note
                 let buttonNote = randomNoteGenerator(key, scaleValue, octaves);
                 gridButton[i].innerHTML = buttonNote;
-                gridButton[i].style.background = '#ECC987';
+                gridButton[i].style.background = '#94D0FF';
                 gridButton[i].style.color = 'white';
 
                 // add ghost or accent if their buttonFunction is on
@@ -192,7 +192,7 @@ let looper = (step, length) => {
 
         step = (step + 1) % (length);
         // change color to indicate current step
-        gridButton[step].style.backgroundColor = '#9AB7EE';
+        gridButton[step].style.backgroundColor = '#D7B373';
 
         // change previous steps back to their assigned colors
         // if at step 1 then check 16th step
@@ -200,11 +200,11 @@ let looper = (step, length) => {
             // change previous step back to yellow if it has a note assigned to it
             if (gridButton[(length) - 1].innerHTML.length > 1) {
                 if (gridButton[(length) - 1].classList.contains('accent')) {
-                    gridButton[(length) - 1].style.ckgrbaoundColor = '#EC9687';
+                    gridButton[(length) - 1].style.ckgrbaoundColor = '##8795E8';
                 } else if (gridButton[(length) - 1].classList.contains('ghost')) {
                     gridButton[(length) - 1].style.backgroundColor = '#DEC0DF';
                 } else {
-                    gridButton[(length) - 1].style.backgroundColor = '#ECC987';
+                    gridButton[(length) - 1].style.backgroundColor = '#94D0FF';
                 }
             } else {
                 // assign original color back to step
@@ -215,11 +215,11 @@ let looper = (step, length) => {
         } else {
             if (gridButton[step - 1].innerHTML.length > 1) {
                 if (gridButton[step-1].classList.contains('accent')) {
-                    gridButton[step-1].style.backgroundColor = '#EC9687';
+                    gridButton[step-1].style.backgroundColor = '#8795E8';
                 } else if (gridButton[step-1].classList.contains('ghost')) {
                     gridButton[step-1].style.backgroundColor = '#DEC0DF';
                 } else {
-                gridButton[step - 1].style.backgroundColor = '#ECC987';
+                gridButton[step - 1].style.backgroundColor = '#94D0FF';
                 }
             } else {
                 // assign original color back to step
@@ -245,7 +245,7 @@ let looper = (step, length) => {
 
             sendMidi(n);
         } else {
-            gridButton[step].style.color = '#9AB7EE';
+            gridButton[step].style.color = '#D7B373';
         }
 
         }
@@ -296,7 +296,7 @@ sqnc.addEventListener('click', () => {
         } else if (randomChooser === 1) {
             gridButton[i].classList.remove('off');
             gridButton[i].classList.add('accent')
-            gridButton[i].style.backgroundColor = '#EC9687';
+            gridButton[i].style.backgroundColor = '#8795E8';
             gridButton[i].style.color = 'white';
         } else if (randomChooser === 2) {
             gridButton[i].classList.remove('off');
@@ -305,7 +305,7 @@ sqnc.addEventListener('click', () => {
             gridButton[i].style.color = 'white';
         } else {
             gridButton[i].classList.remove('off');
-            gridButton[i].style.background = '#ECC987';
+            gridButton[i].style.background = '#94D0FF';
             gridButton[i].style.color = 'white';
         } 
     }
@@ -335,11 +335,11 @@ function buttonReset() {
             gridButton[i].style.backgroundColor = 'white';
             gridButton[i].style.color = 'white';
         } else if (gridButton[i].classList.contains('accent')) {
-            gridButton[i].style.backgroundColor = '#EC9687';
+            gridButton[i].style.backgroundColor = '#8795E8';
         } else if (gridButton[i].classList.contains('ghost')) {
             gridButton[i].style.backgroundColor = '#DEC0DF';
         } else {
-            gridButton[i].style.backgroundColor = '#ECC987';
+            gridButton[i].style.backgroundColor = '#94D0FF';
         }
     }
 }

@@ -4,7 +4,7 @@ export let accent = document.getElementById('accent')
 accent.addEventListener('click', () => {
     if (accent.classList.contains('off')) {
         accent.classList.remove('off');
-        accent.style.backgroundColor = '#EC9687';
+        accent.style.backgroundColor = '#8795E8';
         accent.style.color = 'white';
 
         lengthButton.classList.add('off');
@@ -51,10 +51,10 @@ export function accentizer(step) {
     if (!accent.classList.contains('off')) {
         if (step.classList.contains('ghost')) {
             step.classList.remove('ghost')
-            step.style.backgroundColor = '#ECC987';
+            step.style.backgroundColor = '94D0FF';
         } else {
             step.classList.add('accent')
-            step.style.backgroundColor = '#EC9687';
+            step.style.backgroundColor = '#8795E8';
         }
     }
 }
@@ -64,7 +64,7 @@ export function ghoster(step) {
     if (!ghost.classList.contains('off')) {
         if (step.classList.contains('accent')) {
             step.classList.remove('accent');
-            step.style.backgroundColor = '#ECC987';
+            step.style.backgroundColor = '#94D0FF';
         } else {
             step.classList.add('ghost');
             step.style.backgroundColor = '#DEC0DF';
@@ -114,7 +114,7 @@ export function copyMaker(step) {
         step.classList.remove('off')
     } else if (copier[0].classList.contains('accent')) {
         step.classList.add('accent');
-        step.style.backgroundColor = '#EC9687';
+        step.style.backgroundColor = '#8795E8';
         step.style.color = 'white';
         step.classList.remove('off')
     } else if (copier[0].classList.contains('off')) {
@@ -126,7 +126,7 @@ export function copyMaker(step) {
             step.classList.remove('accent')
         }
     } else {
-        step.style.background = '#ECC987';
+        step.style.background = '#94D0FF';
         step.style.color = 'white';
         step.classList.remove('off')
     }
