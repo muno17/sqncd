@@ -6,7 +6,7 @@ if (navigator.requestMIDIAccess) {
 }
 
 
-WebMidi.enable().then(sendMidi).catch(err => console.log(''));
+WebMidi.enable().then(onEnabled).catch(err => console.log(''));
 
 let devices = []
 
@@ -17,6 +17,27 @@ selectedChannel.addEventListener('change', () => {
     channel = selectedChannel.value;
 })
 
+let deviceDropdown = document.getElementById('deviceDropdown');
+// deviceDropdown.addEventListener('change', () => {
+//     device = deviceDropdown.value;
+// })
+
+
+function onEnabled() {
+    WebMidi.outputs.forEach(output => {
+        console.log(output.manufacturer, output.name)
+        let manufacturer = output.manufacturer;
+        let name = output.name;
+
+
+
+
+
+})
+}
+
+
+
 // Function triggered when WEBMIDI.js is ready
 export function sendMidi(n) {
 // Display available MIDI input devices
@@ -26,21 +47,15 @@ export function sendMidi(n) {
     console.log("No device detected.");
     // pass this into dropdown as only option, disable midi channels
     } else {
-    WebMidi.outputs.forEach((device, index) => {
-        //console.log(`${index}: ${device.name}`);
-        // add to devices array to be able to reference in dropdowns
-        devices.push(`${index}: ${device.name}`);
 
-        // pass in device and midi channel to send to
-        let outputDevice = WebMidi.getOutputByName(device['name']);
-        let channel = outputDevice.channels[1];
-        
-        //console.log(device['name'])
-        channel.playNote(note, {duration: 100, rawAttack: velocity})
+    let device = devices[0]
+    console.log(devices[0])
 
-        // add eventListener for notes function
+    let outputDevice = WebMidi.getOutputByName(devices[0]);
+    let channel = outputDevice.channels[1];
+    
+    channel.playNote(note, {duration: 100, rawAttack: velocity})
 
-    })
     }
 
 }
