@@ -166,7 +166,6 @@ export function lastStep(step) {
     currentLast[0].classList.add('formerLast')
     currentLast[0].classList.remove('last');
 
-
     step.classList.add('last');
     lengthButton.classList.add('off');
     lengthButton.style.backgroundColor = '#BC81BF';

@@ -101,7 +101,7 @@ export let octaves = [octaveMid]
 function turnOn(octaveButton) {
     if (octaveButton.classList.contains('off')) {
         octaveButton.classList.remove('off');
-        octaveButton.style.background = '#ECC987';
+        octaveButton.style.background = '#94D0FF';
         octaves.push(octaveButton);
     } else if (octaves.length > 1) {
         octaveButton.classList.add('off');
