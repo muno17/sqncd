@@ -303,7 +303,7 @@ select {
     border-radius: 4px;
     text-align: center;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     color: white;
     background: white;
 }
@@ -322,6 +322,8 @@ select {
     border-style: solid;
     border-color: #4b34e5;
     border-width: 5px;
+    width: 44px;
+    text-align: center;
 
 }
 
