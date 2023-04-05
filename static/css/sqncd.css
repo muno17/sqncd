@@ -285,48 +285,21 @@ select {
     background: white;
 }
 
-/* .columnOne {
-    background-color: #94D0FF;
-    color: #94D0FF;
-}
-
-.columnTwo {
-    background-color: #8795E8;
-    color: #8795E8;
-}
-
-.columnThree {
-    background-color: #BC81BF;
-    color: #BC81BF;
-}
-
-.columnFour {
-    background-color: #9D81BF;
-    color: #9D81BF;
-} */
-
-.columnNumbers {
-    width: 800px;
-    justify-content: space-around;
-    display: flex;
-    font-weight: bold;
-    font-size: 15px;
-    gap: 10px;
-    color: #BC81BF;
-}
-
 .rowFourColumn {
     display:flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     color: #9D81BF;
+    font-weight: bold;
+    font-size: 17px;
 }
 
 .last {
     border-style: solid;
     border-color: #4b34e5;
     border-width: 5px;
+
 }
 
 .copier {

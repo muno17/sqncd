@@ -101,7 +101,7 @@ copy.addEventListener('click', () => {
 })
 
 // copy over a note's value if a note has already been assigned 'copier'
-export function copyMaker(step, stepNumber) {
+export function copyMaker(step) {
     // if copy is pressed, give step class of copier
     // if a second button is pressed, copy the copier's values into it
     let copier = document.getElementsByClassName('copier');
