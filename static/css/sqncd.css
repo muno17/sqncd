@@ -135,7 +135,7 @@ select {
 }
 
 #stop {
-    background: #d74d73;
+    background: #EE9ABD;
     color: white;
 }
 
@@ -187,8 +187,8 @@ select {
 }
 
 #sqnc, #reset {
-    background-color: white;
-    color: #BC81BF;
+    background-color: #BC81BF;
+    color: white;
     width: 150px;
     border-radius: 10px;
     font-size: 30px;
@@ -244,8 +244,8 @@ select {
     border-radius: 10px;
     font-size: 17px;
     box-shadow: 3px 3px 12px black;
-    color: #BC81BF;
-    background: white;
+    color: white;
+    background: #BC81BF;
 }
 
 /* sqncr */
@@ -272,7 +272,6 @@ select {
 }
 
 .gridButton {
-    background-color: #9281BF;
     width: 42px;
     height: 60px;
     margin-left: 5px;
@@ -282,9 +281,11 @@ select {
     text-align: center;
     font-weight: bold;
     font-size: 15px;
+    color: white;
+    background: white;
 }
 
-.columnOne {
+/* .columnOne {
     background-color: #94D0FF;
     color: #94D0FF;
 }
@@ -302,7 +303,7 @@ select {
 .columnFour {
     background-color: #9D81BF;
     color: #9D81BF;
-}
+} */
 
 .columnNumbers {
     width: 800px;
@@ -311,6 +312,7 @@ select {
     font-weight: bold;
     font-size: 15px;
     gap: 10px;
+    color: #BC81BF;
 }
 
 .rowFourColumn {
@@ -318,12 +320,13 @@ select {
     flex-direction: column;
     align-items: center;
     gap: 10px;
+    color: #9D81BF;
 }
 
 .last {
     border-style: solid;
-    border-color: white;
-    border-width: 3px;
+    border-color: #BC81BF;
+    border-width: 5px;
 }
 
 .copier {

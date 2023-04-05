@@ -30,11 +30,13 @@ using the Tone.js API to handle tempo and transport
 - DONE reset button reacts to any of the selector buttons that are pressed
 - DONE choose octaves
 - DONE choose key/scale
+- DONE add copy function
+- DONE add last function
 
 - choose device
 - choose midi channel
-- DONE add copy function
-- DONE add last function
+- make tempo and swing draggable
+- save midi file
 
 
 ------------- website NEXT STEPS -------------
@@ -70,11 +72,7 @@ using the Tone.js API to handle tempo and transport
         - DONE choose 3 octaves up or down
         - DONE buttons -3 to +3, able to select as many as possible
         - DONE new selections don't apply to buttons already pressed
-    - implement sqnc button
-        - choose random scale if none selected
-        - choose random key if none selected
-        - choose random octaves if all disabled
-        - choose random notes if none selected
+    - DONE implement sqnc button
     - DONE reset button
     - DONE ???figure out how to add shuffle???
 

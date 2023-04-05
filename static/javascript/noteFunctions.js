@@ -1,4 +1,4 @@
-import { colorChanger } from '/static/javascript/sequencer.js'
+// import { colorChanger } from '/static/javascript/sequencer.js'
 
 export let accent = document.getElementById('accent')
 accent.addEventListener('click', () => {
@@ -8,18 +8,18 @@ accent.addEventListener('click', () => {
         accent.style.color = 'white';
 
         lengthButton.classList.add('off');
-        lengthButton.style.backgroundColor = 'white';
-        lengthButton.style.color = '#BC81BF';
+        lengthButton.style.backgroundColor = '#BC81BF';
+        lengthButton.style.color = 'white';
         copy.classList.add('off');
-        copy.style.backgroundColor = 'white';
-        copy.style.color = '#BC81BF';
+        copy.style.backgroundColor = '#BC81BF';
+        copy.style.color = 'white';
         ghost.classList.add('off');
-        ghost.style.backgroundColor = 'white';
-        ghost.style.color = '#BC81BF';
+        ghost.style.backgroundColor = '#BC81BF';
+        ghost.style.color = 'white';
     } else {
         accent.classList.add('off');
-        accent.style.backgroundColor = 'white';
-        accent.style.color = '#BC81BF';
+        accent.style.backgroundColor = '#BC81BF';
+        accent.style.color = 'white';
     }
 })
 
@@ -31,18 +31,18 @@ ghost.addEventListener('click', () => {
         ghost.style.color = 'white';
 
         lengthButton.classList.add('off')
-        lengthButton.style.backgroundColor = 'white';
-        lengthButton.style.color = '#BC81BF';
+        lengthButton.style.backgroundColor = '#BC81BF';
+        lengthButton.style.color = 'white';
         copy.classList.add('off');
-        copy.style.backgroundColor = 'white';
-        copy.style.color = '#BC81BF';
+        copy.style.backgroundColor = '#BC81BF';
+        copy.style.color = 'white';
         accent.classList.add('off');
-        accent.style.backgroundColor = 'white';
-        accent.style.color = '#BC81BF';
+        accent.style.backgroundColor = '#BC81BF';
+        accent.style.color = 'white';
     } else {
         ghost.classList.add('off')
-        ghost.style.backgroundColor = 'white';
-        ghost.style.color = '#BC81BF';
+        ghost.style.backgroundColor = '#BC81BF';
+        ghost.style.color = 'white';
     }
 })
 
@@ -80,14 +80,14 @@ copy.addEventListener('click', () => {
         copy.style.color = 'black';
 
         lengthButton.classList.add('off');
-        lengthButton.style.backgroundColor = 'white';
-        lengthButton.style.color = '#BC81BF';
+        lengthButton.style.backgroundColor = '#BC81BF';
+        lengthButton.style.color = 'white';
         ghost.classList.add('off');
-        ghost.style.backgroundColor = 'white';
-        ghost.style.color = '#BC81BF';
+        ghost.style.backgroundColor = '#BC81BF';
+        ghost.style.color = 'white';
         accent.classList.add('off');
-        accent.style.backgroundColor = 'white';
-        accent.style.color = '#BC81BF';
+        accent.style.backgroundColor = '#BC81BF';
+        accent.style.color = 'white';
     } else {
         // remove copier class from any button that may have it
         let copier = document.getElementsByClassName('copier');
@@ -95,8 +95,8 @@ copy.addEventListener('click', () => {
             copier[0].classList.remove('copier');
         }
         copy.classList.add('off')
-        copy.style.backgroundColor = 'white';
-        copy.style.color = '#BC81BF';
+        copy.style.backgroundColor = '#BC81BF';
+        copy.style.color = 'white';
     }
 })
 
@@ -119,7 +119,7 @@ export function copyMaker(step, stepNumber) {
         step.classList.remove('off')
     } else if (copier[0].classList.contains('off')) {
         step.classList.add('off');
-        colorChanger(stepNumber + 1);
+        gridButton[i].style.backgroundColor = '#white';
         if (step.classList.contains('ghost')) {
             step.classList.remove('ghost')
         } else if (step.classList.contains('accent')) {
@@ -144,18 +144,18 @@ lengthButton.addEventListener('click', () => {
         lengthButton.style.color = 'white';
 
         copy.classList.add('off');
-        copy.style.backgroundColor = 'white';
-        copy.style.color = '#BC81BF';
+        copy.style.backgroundColor = '#BC81BF';
+        copy.style.color = 'white';
         ghost.classList.add('off');
-        ghost.style.backgroundColor = 'white';
-        ghost.style.color = '#BC81BF';
+        ghost.style.backgroundColor = '#BC81BF';
+        ghost.style.color = 'white';
         accent.classList.add('off');
-        accent.style.backgroundColor = 'white';
-        accent.style.color = '#BC81BF';
+        accent.style.backgroundColor = '#BC81BF';
+        accent.style.color = 'white';
     } else {
         lengthButton.classList.add('off');
-        lengthButton.style.backgroundColor = 'white';
-        lengthButton.style.color = '#BC81BF';
+        lengthButton.style.backgroundColor = '#BC81BF';
+        lengthButton.style.color = 'white';
     }
 })
 
@@ -170,6 +170,6 @@ export function lastStep(step) {
 
     step.classList.add('last');
     lengthButton.classList.add('off');
-    lengthButton.style.backgroundColor = 'white';
-    lengthButton.style.color = '#BC81BF';
+    lengthButton.style.backgroundColor = '#BC81BF';
+    lengthButton.style.color = 'white';
 }
