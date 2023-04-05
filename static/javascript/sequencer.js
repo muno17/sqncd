@@ -173,17 +173,19 @@ let looper = (step, length) => {
         // check 'last', change length if a new one has been set
         let lastStep = document.getElementsByClassName('last');
         let lastStepId = lastStep[0].id;
+        //console.log(lastStepId)
         let lastStepArrLength = lastStepId.length;
         let newlength = lastStepId.slice(0,(lastStepArrLength - 1))
         
         if (lastStepId.includes('a')) {
             length = newlength;
         } else if (lastStepId.includes('b')) {
-            length = newlength + 16;
+            length = parseInt(newlength) + 16;
+            console.log(length)
         } else if (lastStepId.includes('c')) {
-            length = newlength + 32;
+            length = parseInt(newlength) + 32;
         } else {
-            length = newlength + 48 
+            length = parseInt(newlength) + 48 
         }
         buttonReset()
         
