@@ -82,8 +82,8 @@ select {
     padding: 5px;
     margin-left: 3px;
     margin-right: 3px;
-    color: #BC81BF;
-    background: white;
+    color: white;
+    background: black;
     text-align: center;
     border-style: solid;
     border-width: 3px;
@@ -110,8 +110,8 @@ select {
     width: 80px;
     height: 30px;
     font-size: 25px;
-    background: white;
-    color: #BC81BF;
+    background: black;
+    color: white;
     text-align: center;
     border-style: solid;
     border-width: 5px;
