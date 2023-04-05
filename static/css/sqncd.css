@@ -7,14 +7,14 @@
     box-shadow: 3px 3px 10px black;
     background-color: #363532;
     border-radius: 5px;
-    height: 600px;
+    height: 610px;
     padding: 1px;
 }
 
 .sqncd {
     background: #C7C6C6;
     width: 960px;
-    height: 545px;
+    height: 550px;
     border-style: solid;
     border-width: 1px;
     border-radius: 2px;
@@ -42,7 +42,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 230px;
-    height: 250px;
+    height: 255px;
     font-size: 10px;    
 }
 
@@ -52,61 +52,19 @@ h1 {
 
 
 /* left controls */
-.midi {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.dropArea {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 180px;
-}
-
-.dropHouse {
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
-    justify-content: space-evenly;
-
-    align-items: center;
-    color: #BC81BF;
-}
-
-select {
-    height: 30px;
-    border-radius: 4px;
-    padding: 5px;
-    margin-left: 3px;
-    margin-right: 3px;
-    color: white;
-    background: black;
-    text-align: center;
-    border-style: solid;
-    border-width: 3px;
-    border-color: #9D81BF;
-}
-
-#deviceDropdown {
-    width: 150px;
-}
-
-#channelDropdown {
-    width: 50px;
-}
-
-.tempo {
+.displays {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
 } 
 
-displays {
-    margin: 0;
+.tempoDisplay {
+    margin-top: 0px;
+}
+
+.displayHead {
+    margin-bottom: 5px;
 }
 
 
@@ -115,17 +73,18 @@ displays {
     width: 120px;
     appearance: none;
     height: 5px;
-    background: #5F9F89;
+    background: #9D81BF;;
     outline: none;
     opacity: 0.7;
     box-shadow: 3px 3px 8px black;
+    border-style: solid;
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearanace: none;
     appearance: none;
     width: 13px;
-    height: 10px;
+    height: 20px;
     background: #BC81BF;
     border: 2px;
     border-style: solid;
@@ -152,7 +111,7 @@ displays {
     border-style: solid;
     border-width: 2px;
     border-color: #9D81BF;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 }
 
 .transport {
@@ -177,6 +136,51 @@ displays {
 }
 
 /* midleft controls */
+.midi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dropArea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 180px;
+}
+
+.dropHouse {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    justify-content: space-evenly;
+
+    align-items: center;
+    color: #BC81BF;
+}
+
+#deviceDropdown {
+    width: 150px;
+}
+
+#channelDropdown {
+    width: 50px;
+}
+
+select {
+    height: 30px;
+    border-radius: 4px;
+    padding: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: white;
+    background: black;
+    text-align: center;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #9D81BF;
+}
 
 #keyDropdown {
     width: 50px;

@@ -15,17 +15,15 @@
         <div class="sqncd">
             <div class="controlSection">
                 <div class="leftControls controls">
-                    <div class="tempo swing displays">
-                        <h1>swing</h1>
-                        <!-- <form id="tempoDisplay"><input type="text" id="swing" maxlength="2" placeholder="50"></form> -->
+                    <div class="displays">
+                        <h1 class="displayHead">swing</h1>
                         <div id="swing">50</div>
-                        <input type="range" min="0" max="100" value="50" class="slider" id="sliderValue">
+                        <input type="range" min="0" max="100" value="50" class="slider" id="swingSlider">
                     </div>
-                    <div class="tempo displays">
-                        <h1>tempo</h1>
+                    <div class="displays tempoDisplay">
+                        <h1 class="displayHead">tempo</h1>
                         <div id="tempo">120</div>
-                        <input type="range" min="4" max="300" value="120" class="slider" id="sliderValue">
-                        <!-- <form class="tempoDisplay"><input type="text" id="tempo" maxlength="3" placeholder="120"></form> -->
+                        <input type="range" min="4" max="300" value="120" class="slider" id="tempoSlider">
                     </div>
                     <div class="transport">
                             <button class="transportButton off" id="stop">stop</button>

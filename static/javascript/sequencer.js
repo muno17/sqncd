@@ -119,24 +119,24 @@ function randomNoteGenerator(key, scaleValue, octaves) {
 Tone.Transport.bpm.value = 120;
 
 // bpm updates to the value entered into the tempo field
+let tempoSlider = document.getElementById('tempoSlider')
 let tempo = document.getElementById('tempo');
-tempo.addEventListener('input', (e) => {
-    // bpm min 1, max 300
-    if (e.target.value > 300) {
-        Tone.Transport.bpm.value = 300;
-    } else if (e.target.value < 1) {
-        Tone.Transport.bpm.value = 1;
-    } else {
-        Tone.Transport.bpm.value = e.target.value;
-    }
+
+tempoSlider.addEventListener('input', () => {
+    tempo.innerHTML = tempoSlider.value
+    Tone.Transport.bpm.value = tempo.innerHTML
 })
+
 
 Tone.Transport.swingSubdivision = '16n';
 Tone.Transport.swing = .50;
 // swing updates to the value entered into the tempo field
+let swingSlider = document.getElementById('swingSlider')
 let swing = document.getElementById('swing');
-swing.addEventListener('input', (e) => {
-    Tone.Transport.swing = e.target.value / 100;
+
+tempoSlider.addEventListener('input', () => {
+    swing.innerHTML = swingSlider.value
+    Tone.Transport.swing = swing.innerHTML / 100.0
 })
 
 
