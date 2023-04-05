@@ -29,8 +29,10 @@ function onEnabled() {
         let option = document.createElement('option');
         option.text = `${name}`;
         deviceDropdown.add(option);
-        console.log(output.name)
-})
+
+        // make sure the first device displayed is the dault on startup
+        deviceValue = deviceDropdown[0].value
+    })
 }
 
 // Function triggered when WEBMIDI.js is ready
@@ -42,13 +44,10 @@ export function sendMidi(n) {
     console.log("No device detected.");
     // pass this into dropdown as only option, disable midi channels
     } else {
-
-
-    let outputDevice = WebMidi.getOutputByName(deviceValue);
-    let outputChannel = outputDevice.channels[channel];
-    
-    outputChannel.playNote(note, {duration: 100, rawAttack: velocity})
-
-    }
-
+        // assign the selected channel to the selected device    
+        let outputDevice = WebMidi.getOutputByName(deviceValue);
+        let outputChannel = outputDevice.channels[channel];
+        
+        outputChannel.playNote(note, {duration: 100, rawAttack: velocity})
+        }
 }
