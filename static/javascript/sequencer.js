@@ -134,7 +134,7 @@ Tone.Transport.swing = .50;
 let swingSlider = document.getElementById('swingSlider')
 let swing = document.getElementById('swing');
 
-tempoSlider.addEventListener('input', () => {
+swingSlider.addEventListener('input', () => {
     swing.innerHTML = swingSlider.value
     Tone.Transport.swing = swing.innerHTML / 100.0
 })
