@@ -111,18 +111,22 @@ export function copyMaker(step, stepNumber) {
         step.classList.add('ghost');
         step.style.backgroundColor = '#DEC0DF';
         step.style.color = 'white';
+        step.classList.remove('off')
     } else if (copier[0].classList.contains('accent')) {
         step.classList.add('accent');
         step.style.backgroundColor = '#EC9687';
         step.style.color = 'white';
-    } else if (copier[0].innerHTML === 'm') {
-        colorChanger(stepNumber + 1);
+        step.classList.remove('off')
+    } else if (copier[0].classList.contains('off')) {
         step.classList.add('off');
+        colorChanger(stepNumber + 1);
+        console.log(copier[0])
+        console.log('inside')
     } else {
         step.style.background = '#ECC987';
         step.style.color = 'white';
+        step.classList.remove('off')
     }
-    step.classList.remove('off')
     // copy over note value and reset copy
     step.innerHTML = copier[0].innerHTML;
     copier[0].classList.remove('copier');

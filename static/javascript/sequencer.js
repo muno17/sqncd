@@ -37,10 +37,14 @@ for (let i = 0; i < 64; i++) {
                 // if a copier exists, assign values to gridButton
                 let copier = document.getElementsByClassName('copier');
                 if (copier[0]) {
+                    console.log(copier[0])
                     copyMaker(gridButton[i], i);
+                    console.log('then here')
+                    console.log(gridButton[i])
                 } else {
                     // assign button as copier 
                     gridButton[i].classList.add('copier');
+                    console.log('first here')
                 }
             } else {
                 gridButton[i].classList.remove('off');
@@ -280,9 +284,9 @@ sqnc.addEventListener('click', () => {
         gridButton[i].innerHTML = buttonNote;
 
         // randomly apply ghost, accent, or turn off
-        let randomChooser = Math.floor(Math.random() * 6)
+        let randomChooser = Math.floor(Math.random() * 7)
 
-        if (randomChooser === 0 || randomChooser === 5) {
+        if (randomChooser === 0 || randomChooser === 5 || randomChooser == 6) {
             colorChanger(i + 1);
             gridButton[i].innerHTML = 'm';
         } else if (randomChooser === 1) {
