@@ -160,11 +160,11 @@ h1 {
     color: #BC81BF;
 }
 
-#deviceDropdown {
+#deviceDropdown, #scaleDropdown {
     width: 150px;
 }
 
-#channelDropdown {
+#channelDropdown, #keyDropdown {
     width: 50px;
 }
 
@@ -180,14 +180,6 @@ select {
     border-style: solid;
     border-width: 3px;
     border-color: #9D81BF;
-}
-
-#keyDropdown {
-    width: 50px;
-}
-
-#scaleDropdown {
-    width: 150px;
 }
 
 .notes {
@@ -235,16 +227,6 @@ select {
     font-size: 30px;
     box-shadow: 3px 3px 12px black;
 }
-
-/* midright controls */
-
-.resetButtonArea {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
 
 /* right controls */
 .rightControls {
