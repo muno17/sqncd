@@ -173,7 +173,6 @@ let looper = (step, length) => {
         // check 'last', change length if a new one has been set
         let lastStep = document.getElementsByClassName('last');
         let lastStepId = lastStep[0].id;
-        //console.log(lastStepId)
         let lastStepArrLength = lastStepId.length;
         let newlength = lastStepId.slice(0,(lastStepArrLength - 1))
         
@@ -181,7 +180,6 @@ let looper = (step, length) => {
             length = newlength;
         } else if (lastStepId.includes('b')) {
             length = parseInt(newlength) + 16;
-            console.log(length)
         } else if (lastStepId.includes('c')) {
             length = parseInt(newlength) + 32;
         } else {
@@ -200,9 +198,9 @@ let looper = (step, length) => {
             // change previous step back to yellow if it has a note assigned to it
             if (gridButton[(length) - 1].innerHTML.length > 1) {
                 if (gridButton[(length) - 1].classList.contains('accent')) {
-                    gridButton[(length) - 1].style.backgroundColor = '#F28D5F';
+                    gridButton[(length) - 1].style.backgroundColor = '#EC9687';
                 } else if (gridButton[(length) - 1].classList.contains('ghost')) {
-                    gridButton[(length) - 1].style.backgroundColor = '#8EDFB7';
+                    gridButton[(length) - 1].style.backgroundColor = '#DEC0DF';
                 } else {
                     gridButton[(length) - 1].style.backgroundColor = '#ECC987';
                 }
@@ -268,17 +266,40 @@ let looper = (step, length) => {
 // reset steps when the reset button is pressed
 let reset = document.getElementById('reset')
 reset.addEventListener('click', () => {
-    for (let i = 0; i < 64; i++) {
-        gridButton[i].classList.add('off');
-        colorChanger(i + 1);
-        gridButton[i].innerHTML = 'm';
+    reseter();
+})
 
-        // reset the velocity
-        if (gridButton[i].classList.contains('accent')) {
-            gridButton[i].classList.remove('accent');
-        } else if (gridButton[i].classList.contains('ghost')) {
-            gridButton[i].classList.remove('ghost');
-        }
+// randomly create a pattern
+let sqnc = document.getElementById('sqnc')
+sqnc.addEventListener('click', () => {
+    // reset current buttons
+    reseter();
+    for (let i = 0; i < length; i++) {
+        // generate random note
+        let buttonNote = randomNoteGenerator(key, scaleValue, octaves);
+        gridButton[i].innerHTML = buttonNote;
+
+        // randomly apply ghost, accent, or turn off
+        let randomChooser = Math.floor(Math.random() * 6)
+
+        if (randomChooser === 0 || randomChooser === 5) {
+            colorChanger(i + 1);
+            gridButton[i].innerHTML = 'm';
+        } else if (randomChooser === 1) {
+            gridButton[i].classList.remove('off');
+            gridButton[i].classList.add('accent')
+            gridButton[i].style.backgroundColor = '#EC9687';
+            gridButton[i].style.color = 'white';
+        } else if (randomChooser === 2) {
+            gridButton[i].classList.remove('off');
+            gridButton[i].classList.add('ghost');
+            gridButton[i].style.backgroundColor = '#DEC0DF';
+            gridButton[i].style.color = 'white';
+        } else if (randomChooser === 3 || randomChooser === 4) {
+            gridButton[i].classList.remove('off');
+            gridButton[i].style.background = '#ECC987';
+            gridButton[i].style.color = 'white';
+        } 
     }
 })
 
@@ -302,13 +323,28 @@ export function colorChanger(step) {
 function buttonReset() {
     for (let i = 0; i < 64; i++) {
         if (gridButton[i].classList.contains('off')) {
-            colorChanger(i + 1)
+            colorChanger(i + 1);
         } else if (gridButton[i].classList.contains('accent')) {
             gridButton[i].style.backgroundColor = '#EC9687';
         } else if (gridButton[i].classList.contains('ghost')) {
             gridButton[i].style.backgroundColor = '#DEC0DF';
         } else {
             gridButton[i].style.backgroundColor = '#ECC987';
+        }
+    }
+}
+
+function reseter() {
+    for (let i = 0; i < 64; i++) {
+        gridButton[i].classList.add('off');
+        colorChanger(i + 1);
+        gridButton[i].innerHTML = 'm';
+
+        // reset the velocity
+        if (gridButton[i].classList.contains('accent')) {
+            gridButton[i].classList.remove('accent');
+        } else if (gridButton[i].classList.contains('ghost')) {
+            gridButton[i].classList.remove('ghost');
         }
     }
 }
