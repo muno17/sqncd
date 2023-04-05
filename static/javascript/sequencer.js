@@ -19,8 +19,6 @@ selectedKey.addEventListener('change', () => {
     key = selectedKey.value;
 })
 
-
-
 // store the array of buttons so that they can be referenced individually
 let gridButton = document.getElementsByClassName('gridButton')
 
@@ -310,23 +308,6 @@ sqnc.addEventListener('click', () => {
         } 
     }
 })
-
-
-// changes color back to it's original
-// export function colorChanger(step) {                   
-//     if (gridButton[step - 1].classList.contains('columnOne')) {
-//     gridButton[step - 1].style.backgroundColor = '#94D0FF';
-//     gridButton[step - 1].style.color = '#94D0FF';
-// } else if (gridButton[step - 1].classList.contains('columnTwo')) {
-//     gridButton[step - 1].style.backgroundColor = '#8795E8';
-//     gridButton[step - 1].style.color = '#8795E8';
-// } else if (gridButton[step - 1].classList.contains('columnThree')) {
-//     gridButton[step - 1].style.backgroundColor = '#BC81BF';
-//     gridButton[step - 1].style.color = '#BC81BF';
-// } else if (gridButton[step - 1].classList.contains('columnFour')) {
-//     gridButton[step - 1].style.backgroundColor = '#9D81BF';
-//     gridButton[step - 1].style.color = '#9D81BF';
-// } }
 
 function buttonReset() {
     for (let i = 0; i < 64; i++) {
