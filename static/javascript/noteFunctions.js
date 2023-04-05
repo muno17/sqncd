@@ -120,8 +120,6 @@ export function copyMaker(step, stepNumber) {
     } else if (copier[0].classList.contains('off')) {
         step.classList.add('off');
         colorChanger(stepNumber + 1);
-        console.log(copier[0])
-        console.log('inside')
         if (step.classList.contains('ghost')) {
             step.classList.remove('ghost')
         } else if (step.classList.contains('accent')) {
