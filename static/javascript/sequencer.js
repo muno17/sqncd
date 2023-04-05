@@ -172,15 +172,15 @@ let looper = (step, length) => {
     let repeat = () => {
         // check 'last', change length if a new one has been set
         let lastStep = document.getElementsByClassName('last');
-        let lastStepID = lastStep[0].id;
+        let lastStepId = lastStep[0].id;
         let lastStepArrLength = lastStepId.length;
-        let newlength = lastStepID.slice(0,(lastStepArrLength - 1))
+        let newlength = lastStepId.slice(0,(lastStepArrLength - 1))
         
-        if (proto2.includes('a')) {
+        if (lastStepId.includes('a')) {
             length = newlength;
-        } else if (proto2.includes('b')) {
+        } else if (lastStepId.includes('b')) {
             length = newlength + 16;
-        } else if (proto2.includes('c')) {
+        } else if (lastStepId.includes('c')) {
             length = newlength + 32;
         } else {
             length = newlength + 48 
