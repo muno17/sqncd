@@ -170,79 +170,85 @@ play.addEventListener('click', () => {
 
 let looper = (step, length) => {
     let repeat = () => {
-            let lastProto = document.getElementsByClassName('last');
+        // check 'last', change length if a new one has been set
+        let lastStep = document.getElementsByClassName('last');
+        let lastStepID = lastStep[0].id;
+        let lastStepArrLength = lastStepId.length;
+        let newlength = lastStepID.slice(0,(lastStepArrLength - 1))
+        
+        if (proto2.includes('a')) {
+            length = newlength;
+        } else if (proto2.includes('b')) {
+            length = newlength + 16;
+        } else if (proto2.includes('c')) {
+            length = newlength + 32;
+        } else {
+            length = newlength + 48 
+        }
+        buttonReset()
+        
+
+        step = (step + 1) % (length);
+        // change color to indicate current step
+        gridButton[step].style.backgroundColor = '#DBDBDB';
+
+        // change previous steps back to their assigned colors
+        // if at step 1 then check 16th step
+        if (step === 0) {
+            // change previous step back to yellow if it has a note assigned to it
+            if (gridButton[(length) - 1].innerHTML.length > 1) {
+                if (gridButton[(length) - 1].classList.contains('accent')) {
+                    gridButton[(length) - 1].style.backgroundColor = '#F28D5F';
+                } else if (gridButton[(length) - 1].classList.contains('ghost')) {
+                    gridButton[(length) - 1].style.backgroundColor = '#8EDFB7';
+                } else {
+                    gridButton[(length) - 1].style.backgroundColor = '#ECC987';
+                }
+            } else {
+                // assign original color back to step
+                colorChanger((length));
+            }
+        } else {
+            if (gridButton[step - 1].innerHTML.length > 1) {
+                if (gridButton[step-1].classList.contains('accent')) {
+                    gridButton[step-1].style.backgroundColor = '#EC9687';
+                } else if (gridButton[step-1].classList.contains('ghost')) {
+                    gridButton[step-1].style.backgroundColor = '#DEC0DF';
+                } else {
+                gridButton[step - 1].style.backgroundColor = '#ECC987';
+                }
+            } else {
+                // assign original color back to step
+                colorChanger(step);
+            }
             
-            step = (step + 1) % (length);
-            // change color to indicate current step
-            gridButton[step].style.backgroundColor = '#DBDBDB';
+        }
+        // send note if current step has a note assigned to it
+        if (gridButton[step].innerHTML.length > 1) {
+            // create an array to store the note and velocity values
+            let n = []
+            n.push(gridButton[step].innerHTML);
 
-            // change previous steps back to their assigned colors
-            // if at step 1 then check 16th step
-            if (step === 0) {
-                // change previous step back to yellow if it has a note assigned to it
-                if (gridButton[(length) - 1].innerHTML.length > 1) {
-                    if (gridButton[(length) - 1].classList.contains('accent')) {
-                        gridButton[(length) - 1].style.backgroundColor = '#F28D5F';
-                    } else if (gridButton[(length) - 1].classList.contains('ghost')) {
-                        gridButton[(length) - 1].style.backgroundColor = '#8EDFB7';
-                    } else {
-                        gridButton[(length) - 1].style.backgroundColor = '#ECC987';
-                    }
-                } else {
-                    // assign original color back to step
-                    colorChanger((length));
-                }
-            } else {
-                if (gridButton[step - 1].innerHTML.length > 1) {
-                    if (gridButton[step-1].classList.contains('accent')) {
-                        gridButton[step-1].style.backgroundColor = '#EC9687';
-                    } else if (gridButton[step-1].classList.contains('ghost')) {
-                        gridButton[step-1].style.backgroundColor = '#DEC0DF';
-                    } else {
-                    gridButton[step - 1].style.backgroundColor = '#ECC987';
-                    }
-                } else {
-                    // assign original color back to step
-                    colorChanger(step);
-                }
-                
+            let velocity = 64;
+            if (gridButton[step].classList.contains('accent')) {
+                velocity = 127;
+            } else if (gridButton[step].classList.contains('ghost')) {
+                velocity = 20;
             }
-            // send note if current step has a note assigned to it
-            if (gridButton[step].innerHTML.length > 1) {
-                // create an array to store the note and velocity values
-                let n = []
-                n.push(gridButton[step].innerHTML);
+            n.push(velocity)
 
-                let velocity = 64;
-                if (gridButton[step].classList.contains('accent')) {
-                    velocity = 127;
-                } else if (gridButton[step].classList.contains('ghost')) {
-                    velocity = 20;
-                }
-                n.push(velocity)
+            sendMidi(n);
+        } else {
+            gridButton[step].style.color = '#DBDBDB';
+        }
 
-                sendMidi(n);
-            } else {
-                gridButton[step].style.color = '#DBDBDB';
-            }
-    }
+        }
     let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
 
     // transport stops when the stop button is pressed
     stop.addEventListener('click', () => {
         // reset colors back to their original colors
-        for (let i = 0; i < length; i++) {
-                // change previous step back to it's original color
-                if (gridButton[i].classList.contains('off')) {
-                    colorChanger(i + 1)
-                } else if (gridButton[i].classList.contains('accent')) {
-                    gridButton[i].style.backgroundColor = '#EC9687';
-                } else if (gridButton[i].classList.contains('ghost')) {
-                    gridButton[i].style.backgroundColor = '#DEC0DF';
-                } else {
-                    gridButton[i].style.backgroundColor = '#ECC987';
-                }
-            }
+        buttonReset()
 
         stop.classList.remove('off');
         play.classList.add('off');
@@ -276,7 +282,7 @@ reset.addEventListener('click', () => {
 
 
 // changes color back to it's original
-export function colorChanger(step) {                       
+export function colorChanger(step) {                   
     if (gridButton[step - 1].classList.contains('columnOne')) {
     gridButton[step - 1].style.backgroundColor = '#94D0FF';
     gridButton[step - 1].style.color = '#94D0FF';
@@ -290,3 +296,17 @@ export function colorChanger(step) {
     gridButton[step - 1].style.backgroundColor = '#9D81BF';
     gridButton[step - 1].style.color = '#9D81BF';
 } }
+
+function buttonReset() {
+    for (let i = 0; i < 64; i++) {
+        if (gridButton[i].classList.contains('off')) {
+            colorChanger(i + 1)
+        } else if (gridButton[i].classList.contains('accent')) {
+            gridButton[i].style.backgroundColor = '#EC9687';
+        } else if (gridButton[i].classList.contains('ghost')) {
+            gridButton[i].style.backgroundColor = '#DEC0DF';
+        } else {
+            gridButton[i].style.backgroundColor = '#ECC987';
+        }
+    }
+}

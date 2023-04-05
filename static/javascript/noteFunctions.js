@@ -152,8 +152,13 @@ lengthButton.addEventListener('click', () => {
 })
 
 export function lastStep(step) {
-    let formerLast = document.getElementsByClassName('last');
-    formerLast[0].classList.remove('last');
+    let formerLast = document.getElementsByClassName('formerLast');
+    formerLast[0].classList.remove('formerLast')
+
+    let currentLast = document.getElementsByClassName('last');
+    currentLast[0].classList.add('formerLast')
+    currentLast[0].classList.remove('last');
+
 
     step.classList.add('last');
     lengthButton.classList.add('off');
