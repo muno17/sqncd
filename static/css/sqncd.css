@@ -325,12 +325,12 @@ select {
 
 .last {
     border-style: solid;
-    border-color: #BC81BF;
+    border-color: #4b34e5;
     border-width: 5px;
 }
 
 .copier {
     border-style: solid;
-    border-color: #fdfa0e;
-    border-width: 3px;
+    border-color: #922793;
+    border-width: 5px;
 }

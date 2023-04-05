@@ -76,8 +76,8 @@ export let copy = document.getElementById('copy')
 copy.addEventListener('click', () => {
     if (copy.classList.contains('off')) {
         copy.classList.remove('off');
-        copy.style.backgroundColor = '#FDFA0E';
-        copy.style.color = 'black';
+        copy.style.backgroundColor = '#922793';
+        copy.style.color = 'white';
 
         lengthButton.classList.add('off');
         lengthButton.style.backgroundColor = '#BC81BF';
@@ -125,7 +125,6 @@ export function copyMaker(step, stepNumber) {
         } else if (step.classList.contains('accent')) {
             step.classList.remove('accent')
         }
-
     } else {
         step.style.background = '#ECC987';
         step.style.color = 'white';
@@ -140,7 +139,7 @@ export let lengthButton = document.getElementById('length')
 lengthButton.addEventListener('click', () => {
     if (lengthButton.classList.contains('off')) {
         lengthButton.classList.remove('off');
-        lengthButton.style.backgroundColor = '#1814f3';
+        lengthButton.style.backgroundColor = '#4b34e5';
         lengthButton.style.color = 'white';
 
         copy.classList.add('off');
