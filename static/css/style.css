@@ -50,21 +50,37 @@ a {
 
 /* home page */
 #mainSqncdLogo {
-    font-size: 80px;
-    margin: 0;
+    font-size: 90px;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+#mainSubscript {
+    font-size: 30px;
+    margin-left: 20px;
 }
 
 #homeImage {
     position: relative;
     border-style: none;
-
+    margin: 0px;
 }
 
 .homeCopy {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
+    margin: 0px;
+}
+
+#introList {
+    font-size: 25px;
+}
+
+li {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 /* form pages */
