@@ -216,11 +216,30 @@ select {
     background: #94D0FF;
 }
 
-.midi {
+.pitchArea {
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    color: #BC81BF;
+}
+
+.pitchButtonHouse {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+}
+
+.pitchButton {
+    width: 10px;
+    height: 25px;
+    margin-left: 2px;
+    margin-right: 2px;
+    box-shadow: 3px 3px 4px black;
+    border-radius: 4px;
+    background: white;
 }
 
 .sqnc {
@@ -236,6 +255,13 @@ select {
     border-radius: 10px;
     font-size: 30px;
     box-shadow: 3px 3px 12px black;
+}
+
+.midi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 /* right controls */
