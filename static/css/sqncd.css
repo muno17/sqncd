@@ -135,12 +135,9 @@ h1 {
     color: white;
 }
 
-/* midleft controls */
-.midi {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+/* middle controls */
+.scale {
+    display: none;
 }
 
 .dropArea {
@@ -217,6 +214,19 @@ select {
 
 #octaveMid {
     background: #94D0FF;
+}
+
+.midi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sqnc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #sqnc, #reset {
@@ -331,3 +341,4 @@ select {
     border-color: #922793;
     border-width: 5px;
 }
+

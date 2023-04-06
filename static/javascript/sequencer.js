@@ -4,15 +4,32 @@ import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyM
 
 
 // initiate default note values, if nothing is selected = C major
-let scaleValue = 0;
+let scaleValue = 'user';
 let key = 'C'
 // variable to store how many measure will play, default is 1 measure
 let length = 16;
 
+// assign scale, show/hide elements if 'User' is selected
 let selectedScale = document.getElementById('scaleDropdown');
 selectedScale.addEventListener('change', () => {
     scaleValue = selectedScale.value;
+    if (scaleValue === 'user') {
+        // let keyHeader = document.getElementById('')
+        // selectedKey.style.display = 'none';
+        noteSection('none');
+    } else {
+        noteSection('block');
+    }
 })
+
+// show or hide items based on what value is entered
+function noteSection(displayValue) {
+    let keyHeader = document.getElementById('keyHeader')
+    keyHeader.style.display = displayValue;
+    selectedKey.style.display = displayValue;
+    sqnc.style.display = displayValue;
+}
+
 
 let selectedKey = document.getElementById('keyDropdown');
 selectedKey.addEventListener('change', () => {
