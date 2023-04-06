@@ -17,8 +17,10 @@ selectedScale.addEventListener('change', () => {
         // let keyHeader = document.getElementById('')
         // selectedKey.style.display = 'none';
         noteSection('none');
+        pitchSection('block');
     } else {
         noteSection('block');
+        pitchSection('none');
     }
 })
 
@@ -28,6 +30,16 @@ function noteSection(displayValue) {
     keyHeader.style.display = displayValue;
     selectedKey.style.display = displayValue;
     sqnc.style.display = displayValue;
+}
+
+function pitchSection(displayValue) {
+    // let pitchHeader = document.getElementById('pitchHeader')
+    // pitchHeader.style.display = displayValue;
+    let pitchElements = document.getElementsByClassName('pitchSection');
+    for (let i = 0; i < pitchElements.length; i++) {
+        pitchElements[i].style.display = displayValue;
+    }
+
 }
 
 

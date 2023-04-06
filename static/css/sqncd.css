@@ -31,6 +31,7 @@
 }
 
 .controlSection {
+    width: 955px;
     display: flex;
     justify-content: space-evenly;
     gap: 10px;
@@ -40,8 +41,7 @@
 .controls {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: 230px;
+    justify-content: space-between;
     height: 275px;
     font-size: 10px;
 }
@@ -52,6 +52,10 @@ h1 {
 
 
 /* left controls */
+.left {
+    width: 200px;
+}
+
 .displays {
     display: flex;
     flex-direction: column;
@@ -136,6 +140,10 @@ h1 {
 }
 
 /* middle controls */
+.midleft {
+    width: 320px;
+}
+
 .scale {
     display: none;
 }
@@ -217,25 +225,17 @@ select {
 
 .pitchArea {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 3px;
     align-items: center;
     color: #BC81BF;
 }
 
-.pitchButtonHouse {
-    display: flex;
-    flex-direction: column;
-    font-size: 15px;
-    justify-content: space-between;
-    gap: 5px;
-    align-items: center;
-}
-
 .pitchButton {
-    width: 10px;
-    height: 25px;
-    margin-left: 7px;
-    margin-right: 7px;
+    width: 20px;
+    height: 30px;
+    margin-left: 2px;
+    margin-right: 2px;
     box-shadow: 3px 3px 4px black;
     border-radius: 4px;
     background: white;
@@ -243,9 +243,7 @@ select {
 
 
 .flat {
-    margin-left: 2px;
-    margin-right: 2px;
-    margin-bottom: 2px;
+    margin-bottom: 30px;
     background: black;
 }
 
@@ -264,6 +262,10 @@ select {
     box-shadow: 3px 3px 12px black;
 }
 
+.midRight {
+    width: 200px;
+}
+
 .midi {
     display: flex;
     flex-direction: column;
@@ -272,12 +274,12 @@ select {
 }
 
 /* right controls */
-.rightControls {
+.right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-align: right;
-    width: 200px;
+    width: 170px;
 }
 
 #logo {

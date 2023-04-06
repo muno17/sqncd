@@ -14,7 +14,7 @@
         <img class="wood" src="static/css/wood-pattern.png" alt="wooden side panels">
         <div class="sqncd">
             <div class="controlSection">
-                <div class="controls">
+                <div class="controls left">
                     <div class="displays">
                         <h1 class="displayHead">swing</h1>
                         <div id="swing">50</div>
@@ -30,7 +30,7 @@
                             <button  class="transportButton off" id="play">play</button>
                     </div>
                 </div>
-                <div class="controls">
+                <div class="controls midleft">
                     <div class="notes">
                         <h1>notes</h1>
                         <div class="dropArea">
@@ -114,63 +114,25 @@
                     <div class="sqnc">
                         <button class="scale" id="sqnc"><em><strong>sqnc</strong></em></button>
                         <div>
-                            <h1>pitch</h1>
-                            <div class="pitchArea flats">
-                                <div class="pitchButtonHouse">
-                                    <div>Db</div>
-                                    <button class="pitchButton flat off" id="Db"></button>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <div>Eb</div>
-                                    <button class="pitchButton flat off" id="Eb"></button>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <div>Gb</div>
-                                    <button class="pitchButton flat off" id="Gb"></button>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <div>Ab</div>
-                                    <button class="pitchButton flat off" id="Ab"></button>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <div>Bb</div>
-                                    <button class="pitchButton flat off" id="Bb"></button>
-                                </div>
-                            </div>
-                            <div class="pitchArea notFlats">
-                                <div class="pitchButtonHouse">
-                                    <button class="pitchButton off" id="C"></button>
-                                    <div>C</div>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <button class="pitchButton off" id="D"></button>
-                                    <div>D</div>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <button class="pitchButton off" id="E"></button>
-                                    <div>E</div>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <button class="pitchButton off" id="F"></button>
-                                    <div>F</div>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <button class="pitchButton off" id="G"></button>
-                                    <div>G</div>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <button class="pitchButton off" id="A"></button>
-                                    <div>A</div>
-                                </div>
-                                <div class="pitchButtonHouse">
-                                    <button class="pitchButton off" id="B"></button>
-                                    <div>B</div>
-                                </div>
+                            <h1 class="pitchSection" id="pitchHeader">pitch</h1>
+                            <div class="pitchArea">
+                                <button class="pitchButton pitchSection off" id="C"></button>
+                                <button class="pitchButton pitchSection flat off" id="Db"></button>
+                                <button class="pitchButton pitchSection off" id="D"></button>
+                                <button class="pitchButton pitchSection flat off" id="Eb"></button>
+                                <button class="pitchButton pitchSection off" id="E"></button>
+                                <button class="pitchButton pitchSection off" id="F"></button>
+                                <button class="pitchButton pitchSection flat off" id="Gb"></button>
+                                <button class="pitchButton pitchSection off" id="G"></button>
+                                <button class="pitchButton pitchSection flat off" id="Ab"></button>
+                                <button class="pitchButton pitchSection off" id="A"></button>
+                                <button class="pitchButton pitchSection flat off" id="Bb"></button>
+                                <button class="pitchButton pitchSection off" id="B"></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="midRightControls controls">
+                <div class="midRight controls">
                     <div class="midi">
                         <h1>midi</h1>
                         <div class="dropArea">
@@ -206,7 +168,7 @@
                         <button id="reset">reset</button>
                     </div>
                 </div>
-                <div class="rightControls">
+                <div class="right">
                     <h1 id="logo">sqncd</h1>
                 </div>
             </div>
