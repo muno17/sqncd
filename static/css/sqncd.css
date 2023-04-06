@@ -225,6 +225,7 @@ select {
 
 .pitchArea {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     gap: 3px;
     align-items: center;
@@ -241,10 +242,20 @@ select {
     background: white;
 }
 
-
 .flat {
-    margin-bottom: 30px;
     background: black;
+}
+
+#Db {
+    /* margin-right: px; */
+}
+
+#Eb {
+    margin-right: 25px;
+}
+
+#Gb {
+    margin-left: 6px;
 }
 
 .sqnc {

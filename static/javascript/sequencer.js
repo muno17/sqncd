@@ -33,11 +33,11 @@ function noteSection(displayValue) {
 }
 
 function pitchSection(displayValue) {
-    // let pitchHeader = document.getElementById('pitchHeader')
-    // pitchHeader.style.display = displayValue;
-    let pitchElements = document.getElementsByClassName('pitchSection');
-    for (let i = 0; i < pitchElements.length; i++) {
-        pitchElements[i].style.display = displayValue;
+    let pitchHeader = document.getElementById('pitchHeader')
+    pitchHeader.style.display = displayValue;
+    let pitchButtons = document.getElementsByClassName('pitchButton');
+    for (let i = 0; i < pitchButtons.length; i++) {
+        pitchButtons[i].style.display = displayValue;
     }
 
 }
