@@ -40,7 +40,7 @@
 .controls {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 230px;
     height: 275px;
     font-size: 10px;
@@ -234,14 +234,18 @@ select {
 .pitchButton {
     width: 10px;
     height: 25px;
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 7px;
+    margin-right: 7px;
     box-shadow: 3px 3px 4px black;
     border-radius: 4px;
     background: white;
 }
 
+
 .flat {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 2px;
     background: black;
 }
 
