@@ -17,7 +17,7 @@ selectedScale.addEventListener('change', () => {
         // let keyHeader = document.getElementById('')
         // selectedKey.style.display = 'none';
         noteSection('none');
-        pitchSection('block');
+        pitchSection('inline');
     } else {
         noteSection('block');
         pitchSection('none');
@@ -33,13 +33,10 @@ function noteSection(displayValue) {
 }
 
 function pitchSection(displayValue) {
-    let pitchHeader = document.getElementById('pitchHeader')
-    pitchHeader.style.display = displayValue;
     let pitchButtons = document.getElementsByClassName('pitchButton');
     for (let i = 0; i < pitchButtons.length; i++) {
         pitchButtons[i].style.display = displayValue;
     }
-
 }
 
 
