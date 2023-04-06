@@ -23,7 +23,7 @@ const scalesList = [
     {half_whole_diminished : [9,1,2,1,2,1,2,1,2]}
 ]
 
-const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
+export const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 
 // create a list of all midi note values
 export let midiNotes = [];
