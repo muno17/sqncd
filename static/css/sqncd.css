@@ -68,6 +68,9 @@ h1 {
     margin-bottom: 5px;
 }
 
+.tempoDisplay {
+    margin-bottom: 35px;
+}
 
 .slider {
     -webkit-appearance: none;

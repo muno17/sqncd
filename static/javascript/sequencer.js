@@ -18,9 +18,11 @@ selectedScale.addEventListener('change', () => {
         // selectedKey.style.display = 'none';
         noteSection('none');
         pitchSection('inline');
+        sqnc.style.marginTop = '0px'
     } else {
         noteSection('block');
         pitchSection('none');
+        sqnc.style.marginTop = '30px'
     }
 })
 
