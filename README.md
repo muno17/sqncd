@@ -32,10 +32,9 @@ using the Tone.js API to handle tempo and transport
 - DONE choose key/scale
 - DONE add copy function
 - DONE add last function
-
-- choose device
-- choose midi channel
-- make tempo and swing draggable
+- DONE choose device
+- DONE choose midi channel
+- DONE make tempo and swing draggable
 - save midi file
 
 
@@ -60,9 +59,8 @@ using the Tone.js API to handle tempo and transport
     - DONE figure out how to add tempo
         - DONE add lights to show tempo on sequencer
     - DONE start, stop, pause buttons
-    - link midi channel selected to current button layout
-        - only send to one output for now
-        - scan for new midi devices
+    - DONE link midi channel selected to current button layout
+        - DONE only send to one output for now
     - DONE figure out how to link scales to note selection
     - DONE scale note table
     - DONE possibly just create an array instead when scale is picked based on key
