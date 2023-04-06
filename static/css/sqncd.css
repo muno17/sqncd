@@ -7,14 +7,14 @@
     box-shadow: 3px 3px 10px black;
     background-color: #363532;
     border-radius: 5px;
-    height: 610px;
+    height: 630px;
     padding: 1px;
 }
 
 .sqncd {
     background: #C7C6C6;
     width: 960px;
-    height: 550px;
+    height: 570px;
     border-style: solid;
     border-width: 1px;
     border-radius: 2px;
@@ -42,8 +42,8 @@
     flex-direction: column;
     justify-content: space-between;
     width: 230px;
-    height: 255px;
-    font-size: 10px;    
+    height: 275px;
+    font-size: 10px;
 }
 
 h1 {
@@ -151,8 +151,7 @@ h1 {
     display: flex;
     flex-direction: column;
     font-size: 15px;
-    justify-content: space-evenly;
-
+    justify-content: space-between;
     align-items: center;
     color: #BC81BF;
 }
@@ -242,6 +241,10 @@ select {
     background: white;
 }
 
+.flat {
+    background: black;
+}
+
 .sqnc {
     display: flex;
     justify-content: center;
@@ -271,7 +274,6 @@ select {
     justify-content: space-between;
     text-align: right;
     width: 200px;
-    gap: 40px;
 }
 
 #logo {
@@ -348,7 +350,6 @@ select {
     display:flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
     color: #9D81BF;
     font-weight: bold;
     font-size: 17px;
