@@ -23,7 +23,7 @@ const scalesList = [
     {half_whole_diminished : [9,1,2,1,2,1,2,1,2]}
 ]
 
-export const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
+const keys = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 
 // create a list of all midi note values
 export let midiNotes = [];
@@ -59,6 +59,7 @@ export function scaleGenerator(key = 'C', scaleValue = 1) {
     return midiScale;
 }
 
+// only allow one octave to be on at a time if the user scale is selected
 let octaveButton = document.getElementsByClassName('octaveButton')
 for (let i = 0; i < octaveButton.length; i++) {
     octaveButton[i].addEventListener('click', () => {
@@ -69,6 +70,8 @@ for (let i = 0; i < octaveButton.length; i++) {
 
             formerOctave[0].classList.add('off');
             formerOctave[0].style.backgroundColor = 'white';
+            let position = octaves.indexOf(octaveButton);
+            octaves.splice(position, 1);
             formerOctave[0].classList.remove('octaveOn');
 
             octaveButton[i].classList.add('octaveOn');
@@ -94,8 +97,6 @@ function turnOn(octaveButton) {
         octaves.splice(position, 1);
     }
 }
-
-// create new array to store possible values to add or subtract
 
 // check which octaves have been turned on, add corresponding values to octaveValues
 export function octavizer(octaves) {

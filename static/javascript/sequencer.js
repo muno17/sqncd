@@ -1,7 +1,7 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/static/javascript/noteFunctions.js'
-
+import { userNoteGenerator } from '/static/javascript/userPattern.js'
 
 // initiate default note values, if nothing is selected = C major
 let scaleValue = 'user';
@@ -19,14 +19,6 @@ selectedScale.addEventListener('change', () => {
         noteSection('none');
         pitchSection('inline');
         sqnc.style.marginTop = '0px'
-
-
-
-
-
-
-
-
     } else {
         noteSection('block');
         pitchSection('none');
@@ -82,12 +74,15 @@ for (let i = 0; i < 64; i++) {
                 // add note that user assigned if user scale is selected
                 if (scaleValue === 'user') {
                     // userPattern function
+                    if (selectedScale.value === 'user') {
+                        let userNote = userNoteGenerator(octaves);
+                        gridButton[i].innerHTML = userNote;
+                    }
                     // gridButton
                 } else {
                     // randomly assign a note
                     let buttonNote = randomNoteGenerator(key, scaleValue, octaves);
                     gridButton[i].innerHTML = buttonNote;
-                    console.log(gridButton[i].innerHTML)
                 }
 
                 // add ghost or accent if their buttonFunction is on
@@ -242,7 +237,7 @@ let looper = (step, length) => {
             // change previous step back to yellow if it has a note assigned to it
             if (gridButton[(length) - 1].innerHTML.length > 1) {
                 if (gridButton[(length) - 1].classList.contains('accent')) {
-                    gridButton[(length) - 1].style.ckgrbaoundColor = '##8795E8';
+                    gridButton[(length) - 1].style.backgroundColor = '##8795E8';
                 } else if (gridButton[(length) - 1].classList.contains('ghost')) {
                     gridButton[(length) - 1].style.backgroundColor = '#DEC0DF';
                 } else {

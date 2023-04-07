@@ -12,7 +12,9 @@ midi sequencer and randomizer webapp
 - save midi file
 
 Built using Javascript, Python, SQLite, Flask, HTML, CSS
+
 using the WEBMIDI API to handle MIDI interfacing
+
 using the Tone.js API to handle tempo and transport
 
 ------------- sqncd NEXT STEPS -------------
