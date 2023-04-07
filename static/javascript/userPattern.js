@@ -1,4 +1,4 @@
-import { octavizer, octaveReseter } from '/static/javascript/notegen.js'
+import { octavizer, octaveReseter, turnOn } from '/static/javascript/notegen.js'
 
 let Db = document.getElementById('Db')
 let Eb = document.getElementById('Eb')
@@ -70,18 +70,13 @@ export function userNoteGenerator(octaves) {
     return pitch + octaveValue;
 }
 
-export function resetOctaves(octaves) {
-
-    let lowestOctave = octaves[0]
-    for (let i = 1; i < octaves.length; i++) {
-        console.log(i)
-        console.log(octaves[i].value)
-        if (octaves[i].value < lowestOctave.value) {
-            octaveReseter(lowestOctave)
-            lowestOctave = octaves[i]
-        } else {
-            octaveReseter(octaves[i])
-        }
+// resets octaves so middle C is default
+export function resetUserOctaves(octaves) {
+    for (let i = octaves.length - 1; i >= 0; i--) {
+        octaveReseter(octaves[i]);
     }
-    lowestOctave.classList.add('octaveOn')
+
+    let newOctave = document.getElementById('octaveMid');
+    newOctave.classList.add('octaveOn');
+    turnOn(newOctave);
 }

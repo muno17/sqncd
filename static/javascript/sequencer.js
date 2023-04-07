@@ -1,7 +1,7 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
 import { sendMidi } from '/static/javascript/midi_io.js'
 import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/static/javascript/noteFunctions.js'
-import { userNoteGenerator, resetOctaves } from '/static/javascript/userPattern.js'
+import { userNoteGenerator, resetUserOctaves } from '/static/javascript/userPattern.js'
 
 // initiate default note values, if nothing is selected = C major
 let scaleValue = 'user';
@@ -19,7 +19,7 @@ selectedScale.addEventListener('change', () => {
         sqnc.style.marginTop = '0px';
 
         // make lowest octave the new octave
-        resetOctaves(octaves);
+        resetUserOctaves(octaves);
     } else {
         noteSection('block');
         pitchSection('none');
