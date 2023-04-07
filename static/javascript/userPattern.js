@@ -1,4 +1,5 @@
-import { keys, scaleValue } from '/static/javascript/notegen.js'
+import { keys, octavizer } from '/static/javascript/notegen.js'
+import { selectedScale } from '/static/javascript/sequencer.js'
 
 let pitchButton = document.getElementsByClassName('pitchButton')
 
@@ -6,7 +7,7 @@ let pitchButton = document.getElementsByClassName('pitchButton')
 for (let i = 0; i < 12; i++) {
     pitchButton[i].value = keys[i];
 
-
+    //console.log(pitchButton[i])
     pitchButton[i].addEventListener('click', () => {
         // get a reference to the currentPitch
         let currentPitch = document.getElementsByClassName('currentPitch')
@@ -35,3 +36,6 @@ for (let i = 0; i < 12; i++) {
     })
 }
 
+// if (scaleValue === 'user') {
+//     console.log('in here')
+// }

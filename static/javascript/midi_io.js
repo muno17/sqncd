@@ -6,7 +6,6 @@ if (navigator.requestMIDIAccess) {
 }
 WebMidi.enable().then(onEnabled, sendMidi).catch(err => console.log(''));
 
-
 // give channel base value, change when new channel is selected
 let channel = 1
 let selectedChannel = document.getElementById('channelDropdown');
@@ -28,7 +27,7 @@ function onEnabled() {
         let option = document.createElement('option');
         option.text = `${name}`;
         deviceDropdown.add(option);
-        console.log(name)
+
         // make sure the first device displayed is the dault on startup
         deviceValue = deviceDropdown[0].value
     })

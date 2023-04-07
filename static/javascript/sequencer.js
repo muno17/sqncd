@@ -4,13 +4,13 @@ import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyM
 
 
 // initiate default note values, if nothing is selected = C major
-export let scaleValue = 'user';
+let scaleValue = 'user';
 let key = 'C'
 // variable to store how many measure will play, default is 1 measure
 let length = 16;
 
 // assign scale, show/hide elements if 'User' is selected
-let selectedScale = document.getElementById('scaleDropdown');
+export let selectedScale = document.getElementById('scaleDropdown');
 selectedScale.addEventListener('change', () => {
     scaleValue = selectedScale.value;
     if (scaleValue === 'user') {
@@ -19,6 +19,14 @@ selectedScale.addEventListener('change', () => {
         noteSection('none');
         pitchSection('inline');
         sqnc.style.marginTop = '0px'
+
+
+
+
+
+
+
+
     } else {
         noteSection('block');
         pitchSection('none');

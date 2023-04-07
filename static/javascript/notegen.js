@@ -1,7 +1,5 @@
+import { selectedScale } from '/static/javascript/sequencer.js'
 
-
-// choose octaves
-// allow user to assign notes ???
 
 // first element in array is length of scale, rest of elements are semitones
 const scalesList = [
@@ -64,7 +62,20 @@ export function scaleGenerator(key = 'C', scaleValue = 1) {
 let octaveButton = document.getElementsByClassName('octaveButton')
 for (let i = 0; i < octaveButton.length; i++) {
     octaveButton[i].addEventListener('click', () => {
-        turnOn(octaveButton[i])
+        if (selectedScale.value === 'user') {
+            // get a reference to octaveButton that's on
+            let formerOctave = document.getElementsByClassName('octaveOn')
+            console.log(formerOctave[0])
+
+            formerOctave[0].classList.add('off');
+            formerOctave[0].style.backgroundColor = 'white';
+            formerOctave[0].classList.remove('octaveOn');
+
+            octaveButton[i].classList.add('octaveOn');
+            turnOn(octaveButton[i]);
+        } else {
+            turnOn(octaveButton[i])
+        }
     })
 }
 
