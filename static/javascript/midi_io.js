@@ -53,7 +53,6 @@ export function sendMidi(n) {
 
 
 // send start and stop messages
- 
 export function sendStartSignal() {
     let outputDevice = WebMidi.getOutputByName(deviceValue);
     outputDevice.sendStart()
@@ -69,3 +68,6 @@ export function sendClockSignal() {
     let outputDevice = WebMidi.getOutputByName(deviceValue);
     outputDevice.sendClock()
 }
+
+// let clockButton = document.getElementById('clock')
+// clockButton.addEventListener
