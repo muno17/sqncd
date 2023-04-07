@@ -1,5 +1,5 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
-import { sendMidi, sendStartSignal, sendStopSignal, sendClockSignal } from '/static/javascript/midi_io.js'
+import { sendMidi, sendStartSignal, sendStopSignal, sendClockSignal, clockDevices} from '/static/javascript/midi_io.js'
 import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/static/javascript/noteFunctions.js'
 import { userNoteGenerator, resetUserOctaves } from '/static/javascript/userPattern.js'
 
@@ -212,10 +212,18 @@ play.addEventListener('click', () => {
 let looper = (step, length) => {
 
     let repeat = () => {
-        // send a clock signal
-        for (let i = 0; i < 6; i++) {
-            sendClockSignal()
+        // send a clock signal if clock switch is on
+        if (!clockButton.classList.contains('off')) {
+            let sendClockTo = clockDevices()
+
+            // loop through devices and send clock
+            for (let i = 0; i < sendClockTo.length; i++) {
+                for (let j = 0; j < 6; j++) {
+                    sendClockSignal(sendClockTo[i])
+                }
+            }
         }
+
         // check 'last', change length if a new one has been set
         let lastStep = document.getElementsByClassName('last');
         let lastStepId = lastStep[0].id;

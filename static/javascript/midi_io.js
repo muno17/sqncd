@@ -23,12 +23,12 @@ deviceDropdown.addEventListener('change', () => {
 function onEnabled() {
     WebMidi.outputs.forEach(output => {
         let name = output.name;
-        // console.log(`${name}`)
+
         let option = document.createElement('option');
         option.text = `${name}`;
         deviceDropdown.add(option);
 
-        // make sure the first device displayed is the dault on startup
+        // make sure the first device displayed is the default on startup
         deviceValue = deviceDropdown[0].value
     })
 }
@@ -64,10 +64,23 @@ export function sendStopSignal() {
     outputDevice.sendStop()
 }
 
-export function sendClockSignal() {
-    let outputDevice = WebMidi.getOutputByName(deviceValue);
-    outputDevice.sendClock()
+export function sendClockSignal(device) {
+    let device = WebMidi.getOutputByName(device);
+    device.sendClock()
 }
 
-// let clockButton = document.getElementById('clock')
-// clockButton.addEventListener
+ 
+export let clockButton = document.getElementById('clockSwitch')
+clockButton.addEventListener('click', () => {
+    // let outputDevice = WebMidi.getOutputByName(deviceValue);
+    // console.log(outputDevice)
+    if (clockButton.classList.contains('off')) {
+        clockButton.classList.remove('off')
+    } else {
+        clockButton.classList.add('off')
+    }
+})
+
+function clockDevices() {
+    
+}

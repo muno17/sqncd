@@ -341,7 +341,6 @@ input:checked + .clockSlider:before {
 transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .clockSlider.round {
     border-radius: 34px;
 }
