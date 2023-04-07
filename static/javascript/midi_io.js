@@ -1,3 +1,6 @@
+// import { play, stop } from '/static/javascript/sequencer.js'
+
+
 // check if browser supports WebMIDI
 if (navigator.requestMIDIAccess) {
     console.log('This browser supports WebMIDI');
@@ -46,6 +49,25 @@ export function sendMidi(n) {
         let outputDevice = WebMidi.getOutputByName(deviceValue);
         let outputChannel = outputDevice.channels[channel];
 
+        outputChannel.sendStart()
         outputChannel.playNote(note, {duration: 100, rawAttack: velocity})
         }
 }
+
+let playButton = document.getElementById('play');
+playButton.addEventListener('click', () => {
+    let outputDevice = WebMidi.getOutputByName(deviceValue);
+    let outputChannel = outputDevice.channels[channel];
+    if (playButton.classList.contains('off')) {
+        outputDevice.sendStart()
+    }
+})
+let stopButton = document.getElementById('stop');
+stopButton.addEventListener('click', () => {
+    let outputDevice = WebMidi.getOutputByName(deviceValue);
+    let outputChannel = outputDevice.channels[channel];
+    if (stopButton.classList.contains('off')) {
+        outputDevice.sendStop()
+    }
+})
+ 

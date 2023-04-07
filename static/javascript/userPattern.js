@@ -21,27 +21,19 @@ for (let i = 0; i < 12; i++) {
         // get a reference to the currentPitch
         let currentPitch = document.getElementsByClassName('currentPitch')
         
-        // // if no pitch button has been selected yet, make it the currentPitch
-        // if (!currentPitch[0]) {
-        //     pitchButtons[i].classList.remove('off');
-        //     pitchButtons[i].classList.add('currentPitch')
-        //     pitchButtons[i].style.backgroundColor = '#ECC987';
-        // } else {
-            // turn off currentPitch and and reset color
-            let oldPitch = currentPitch[0];
-            oldPitch.classList.remove('currentPitch');
-            oldPitch.classList.add('off');
-            if (oldPitch.classList.contains('flat')) {
-                oldPitch.style.backgroundColor = 'black';
-            } else {
-                oldPitch.style.backgroundColor = 'white';
-            }
-            
-            // make pitchButton the new currentPitch
-            pitchButtons[i].classList.remove('off');
-            pitchButtons[i].style.backgroundColor = '#ECC987';
-            pitchButtons[i].classList.add('currentPitch')
-        // }
+        let oldPitch = currentPitch[0];
+        oldPitch.classList.remove('currentPitch');
+        oldPitch.classList.add('off');
+        if (oldPitch.classList.contains('flat')) {
+            oldPitch.style.backgroundColor = 'black';
+        } else {
+            oldPitch.style.backgroundColor = 'white';
+        }
+        
+        // make pitchButton the new currentPitch
+        pitchButtons[i].classList.remove('off');
+        pitchButtons[i].style.backgroundColor = '#ECC987';
+        pitchButtons[i].classList.add('currentPitch')
     })
 }
 
