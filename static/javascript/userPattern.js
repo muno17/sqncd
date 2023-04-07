@@ -21,12 +21,12 @@ for (let i = 0; i < 12; i++) {
         // get a reference to the currentPitch
         let currentPitch = document.getElementsByClassName('currentPitch')
         
-        // if no pitch button has been selected yet, make it the currentPitch
-        if (!currentPitch[0]) {
-            pitchButtons[i].classList.remove('off');
-            pitchButtons[i].classList.add('currentPitch')
-            pitchButtons[i].style.backgroundColor = '#ECC987';
-        } else {
+        // // if no pitch button has been selected yet, make it the currentPitch
+        // if (!currentPitch[0]) {
+        //     pitchButtons[i].classList.remove('off');
+        //     pitchButtons[i].classList.add('currentPitch')
+        //     pitchButtons[i].style.backgroundColor = '#ECC987';
+        // } else {
             // turn off currentPitch and and reset color
             let oldPitch = currentPitch[0];
             oldPitch.classList.remove('currentPitch');
@@ -41,7 +41,7 @@ for (let i = 0; i < 12; i++) {
             pitchButtons[i].classList.remove('off');
             pitchButtons[i].style.backgroundColor = '#ECC987';
             pitchButtons[i].classList.add('currentPitch')
-        }
+        // }
     })
 }
 
@@ -70,3 +70,5 @@ export function userNoteGenerator(octaves) {
     console.log(octaveValue)
     return pitch + octaveValue;
 }
+
+// function let 

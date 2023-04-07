@@ -222,6 +222,10 @@ select {
     background: #94D0FF;
 }
 
+#C {
+    background: #ECC987
+}
+
 .pitchArea {
     display: flex;
     flex-direction: column;
