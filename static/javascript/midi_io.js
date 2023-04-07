@@ -18,7 +18,6 @@ let deviceValue = ''
 let deviceDropdown = document.getElementById('deviceDropdown');
 deviceDropdown.addEventListener('change', () => {
     deviceValue = deviceDropdown.value;
-    console.log(deviceValue)
 })
 
 // add all devices to devices[]
@@ -29,7 +28,7 @@ function onEnabled() {
         let option = document.createElement('option');
         option.text = `${name}`;
         deviceDropdown.add(option);
-
+        console.log(name)
         // make sure the first device displayed is the dault on startup
         deviceValue = deviceDropdown[0].value
     })
@@ -47,7 +46,7 @@ export function sendMidi(n) {
         // assign the selected channel to the selected device    
         let outputDevice = WebMidi.getOutputByName(deviceValue);
         let outputChannel = outputDevice.channels[channel];
-        
+
         outputChannel.playNote(note, {duration: 100, rawAttack: velocity})
         }
 }

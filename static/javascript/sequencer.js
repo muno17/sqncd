@@ -4,7 +4,7 @@ import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyM
 
 
 // initiate default note values, if nothing is selected = C major
-let scaleValue = 'user';
+export let scaleValue = 'user';
 let key = 'C'
 // variable to store how many measure will play, default is 1 measure
 let length = 16;
@@ -70,19 +70,27 @@ for (let i = 0; i < 64; i++) {
                 }
             } else {
                 gridButton[i].classList.remove('off');
-
-                // randomly assign a note
-                let buttonNote = randomNoteGenerator(key, scaleValue, octaves);
-                gridButton[i].innerHTML = buttonNote;
-                gridButton[i].style.background = '#94D0FF';
-                gridButton[i].style.color = 'white';
+                
+                // add note that user assigned if user scale is selected
+                if (scaleValue === 'user') {
+                    // userPattern function
+                    // gridButton
+                } else {
+                    // randomly assign a note
+                    let buttonNote = randomNoteGenerator(key, scaleValue, octaves);
+                    gridButton[i].innerHTML = buttonNote;
+                    console.log(gridButton[i].innerHTML)
+                }
 
                 // add ghost or accent if their buttonFunction is on
                 if (!accent.classList.contains('off')) {
                     accentizer(gridButton[i]);
                 } else if (!ghost.classList.contains('off')) {
                     ghoster(gridButton[i]);
-                } 
+                } else {
+                    gridButton[i].style.background = '#94D0FF';
+                    gridButton[i].style.color = 'white';
+                }
             }
         // events if the button is pressed when it's on
         } else {

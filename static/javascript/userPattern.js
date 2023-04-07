@@ -1,4 +1,4 @@
-import { keys } from '/static/javascript/notegen.js'
+import { keys, scaleValue } from '/static/javascript/notegen.js'
 
 let pitchButton = document.getElementsByClassName('pitchButton')
 
@@ -34,3 +34,4 @@ for (let i = 0; i < 12; i++) {
         }
     })
 }
+

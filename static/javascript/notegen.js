@@ -1,3 +1,5 @@
+
+
 // choose octaves
 // allow user to assign notes ???
 
@@ -35,7 +37,7 @@ for (let i = -1; i < 9; i++) {
 }
 
 
-export function scaleGenerator(key = 'C', scaleValue = 0) {
+export function scaleGenerator(key = 'C', scaleValue = 1) {
     // find the base midi note
     let base = 60 + keys.indexOf(key);
 
@@ -59,41 +61,49 @@ export function scaleGenerator(key = 'C', scaleValue = 0) {
     return midiScale;
 }
 
+let octaveButton = document.getElementsByClassName('octaveButton')
+for (let i = 0; i < octaveButton.length; i+=) {
+    octaveButton[i].addEventListener('click', () => {
+        turnOn(octaveButton[i])
+    })
+}
 
-let octaveNegThree = document.getElementById('octaveNegThree')
-octaveNegThree.addEventListener('click', () => {
-    turnOn(octaveNegThree)
-})
 
-let octaveNegTwo = document.getElementById('octaveNegTwo')
-octaveNegTwo.addEventListener('click', () => {
-    turnOn(octaveNegTwo)
-})
 
-let octaveNegOne = document.getElementById('octaveNegOne')
-octaveNegOne.addEventListener('click', () => {
-    turnOn(octaveNegOne)
-})
+// let octaveNegThree = document.getElementById('octaveNegThree')
+// octaveNegThree.addEventListener('click', () => {
+//     turnOn(octaveNegThree)
+// })
 
-let octaveMid = document.getElementById('octaveMid')
-octaveMid.addEventListener('click', () => {
-    turnOn(octaveMid)
-})
+// let octaveNegTwo = document.getElementById('octaveNegTwo')
+// octaveNegTwo.addEventListener('click', () => {
+//     turnOn(octaveNegTwo)
+// })
 
-let octavePlusOne = document.getElementById('octavePlusOne')
-octavePlusOne.addEventListener('click', () => {
-    turnOn(octavePlusOne)
-})
+// let octaveNegOne = document.getElementById('octaveNegOne')
+// octaveNegOne.addEventListener('click', () => {
+//     turnOn(octaveNegOne)
+// })
 
-let octavePlusTwo = document.getElementById('octavePlusTwo')
-octavePlusTwo.addEventListener('click', () => {
-    turnOn(octavePlusTwo)
-})
+// let octaveMid = document.getElementById('octaveMid')
+// octaveMid.addEventListener('click', () => {
+//     turnOn(octaveMid)
+// })
 
-let octavePlusThree = document.getElementById('octavePlusThree')
-octavePlusThree.addEventListener('click', () => {
-    turnOn(octavePlusThree)
-})
+// let octavePlusOne = document.getElementById('octavePlusOne')
+// octavePlusOne.addEventListener('click', () => {
+//     turnOn(octavePlusOne)
+// })
+
+// let octavePlusTwo = document.getElementById('octavePlusTwo')
+// octavePlusTwo.addEventListener('click', () => {
+//     turnOn(octavePlusTwo)
+// })
+
+// let octavePlusThree = document.getElementById('octavePlusThree')
+// octavePlusThree.addEventListener('click', () => {
+//     turnOn(octavePlusThree)
+// })
 
 // create an array to keep track of which arrays are activated
 export let octaves = [octaveMid]
