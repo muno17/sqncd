@@ -1,5 +1,5 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
-import { sendMidi } from '/static/javascript/midi_io.js'
+import { sendMidi, sendStartSignal, sendStopSignal, sendClockSignal } from '/static/javascript/midi_io.js'
 import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/static/javascript/noteFunctions.js'
 import { userNoteGenerator, resetUserOctaves } from '/static/javascript/userPattern.js'
 
@@ -204,12 +204,18 @@ play.addEventListener('click', () => {
         stop.style.color = '#BC81BF'; 
         Tone.start();
         Tone.Transport.start();
+        sendStartSignal()
         looper(-1, length);
     }
 })
 
 let looper = (step, length) => {
+
     let repeat = () => {
+        // send a clock signal
+        for (let i = 0; i < 6; i++) {
+            sendClockSignal()
+        }
         // check 'last', change length if a new one has been set
         let lastStep = document.getElementsByClassName('last');
         let lastStepId = lastStep[0].id;
@@ -294,6 +300,7 @@ let looper = (step, length) => {
         // reset colors back to their original colors
         buttonReset()
 
+        sendStopSignal()
         stop.classList.remove('off');
         play.classList.add('off');
         Tone.Transport.stop();
@@ -303,7 +310,6 @@ let looper = (step, length) => {
         play.style.color = '#BC81BF';
         stop.style.backgroundColor = '#EE9ABD';
         stop.style.color = 'white'; 
-
     })
 }
 
