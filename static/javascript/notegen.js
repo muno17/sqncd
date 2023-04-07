@@ -66,13 +66,7 @@ for (let i = 0; i < octaveButton.length; i++) {
         if (selectedScale.value === 'user') {
             // get a reference to octaveButton that's on
             let formerOctave = document.getElementsByClassName('octaveOn')
-            console.log(formerOctave[0])
-
-            formerOctave[0].classList.add('off');
-            formerOctave[0].style.backgroundColor = 'white';
-            let position = octaves.indexOf(octaveButton);
-            octaves.splice(position, 1);
-            formerOctave[0].classList.remove('octaveOn');
+            reseter(formerOctave[0])
 
             octaveButton[i].classList.add('octaveOn');
             turnOn(octaveButton[i]);
@@ -91,10 +85,18 @@ function turnOn(octaveButton) {
         octaveButton.style.background = '#94D0FF';
         octaves.push(octaveButton);
     } else if (octaves.length > 1) {
-        octaveButton.classList.add('off');
-        octaveButton.style.background = 'white';
-        let position = octaves.indexOf(octaveButton);
-        octaves.splice(position, 1);
+        reseter(octaveButton)
+    }
+}
+
+export function octaveReseter(octaveButton) {
+    octaveButton.classList.add('off');
+    octaveButton.style.background = 'white';
+    let position = octaves.indexOf(octaveButton);
+    octaves.splice(position, 1);
+
+    if (octaveButton.classList.contains('octaveOn')) {
+        octaveButton.classList.remove('octaveOn')
     }
 }
 

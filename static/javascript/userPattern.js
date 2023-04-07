@@ -1,4 +1,4 @@
-import { octavizer } from '/static/javascript/notegen.js'
+import { octavizer, octaveReseter } from '/static/javascript/notegen.js'
 
 let Db = document.getElementById('Db')
 let Eb = document.getElementById('Eb')
@@ -49,7 +49,6 @@ export function userNoteGenerator(octaves) {
     let pitchButton = document.getElementsByClassName('currentPitch')
     let pitch = pitchButton[0].value
     let octave = octavizer(octaves)
-    console.log(octaves)
     let octaveValue
 
     if (octave[0] === -36) {
@@ -67,8 +66,22 @@ export function userNoteGenerator(octaves) {
     } else if (octave[0] === 36) {
         octaveValue = 7;
     }
-    console.log(octaveValue)
+
     return pitch + octaveValue;
 }
 
-// function let 
+export function resetOctaves(octaves) {
+
+    let lowestOctave = octaves[0]
+    for (let i = 1; i < octaves.length; i++) {
+        console.log(i)
+        console.log(octaves[i].value)
+        if (octaves[i].value < lowestOctave.value) {
+            octaveReseter(lowestOctave)
+            lowestOctave = octaves[i]
+        } else {
+            octaveReseter(octaves[i])
+        }
+    }
+    lowestOctave.classList.add('octaveOn')
+}
