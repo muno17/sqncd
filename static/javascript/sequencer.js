@@ -185,21 +185,21 @@ Tone.Transport.setLoopPoints(0, `${length}m`);
 Tone.Transport.loop = true;
 
 
-let play = document.getElementById('play');
+let start = document.getElementById('start');
 let stop = document.getElementById('stop');
 
-play.addEventListener('click', async () => {
+start.addEventListener('click', async () => {
 	await Tone.start()
 	console.log('audio is ready')
 })
 
-// transport starts when the play button is pressed
-play.addEventListener('click', () => {
-    if (play.classList.contains('off')) {
-        play.classList.remove('off');
+// transport starts when the start button is pressed
+start.addEventListener('click', () => {
+    if (start.classList.contains('off')) {
+        start.classList.remove('off');
         stop.classList.add('off');
-        play.style.backgroundColor = '#C1E1B6';
-        play.style.color = 'white';
+        start.style.backgroundColor = '#C1E1B6';
+        start.style.color = 'white';
         stop.style.backgroundColor = 'white';
         stop.style.color = '#BC81BF'; 
         Tone.start();
@@ -314,12 +314,12 @@ let looper = (step, length) => {
 
         sendStopSignal()
         stop.classList.remove('off');
-        play.classList.add('off');
+        start.classList.add('off');
         Tone.Transport.stop();
         Tone.Transport.clear(sequence);
         stop.classList.remove('off');
-        play.style.backgroundColor = 'white';
-        play.style.color = '#BC81BF';
+        start.style.backgroundColor = 'white';
+        start.style.color = '#BC81BF';
         stop.style.backgroundColor = '#EE9ABD';
         stop.style.color = 'white'; 
     })
