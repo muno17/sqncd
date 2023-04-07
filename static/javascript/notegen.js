@@ -62,48 +62,11 @@ export function scaleGenerator(key = 'C', scaleValue = 1) {
 }
 
 let octaveButton = document.getElementsByClassName('octaveButton')
-for (let i = 0; i < octaveButton.length; i+=) {
+for (let i = 0; i < octaveButton.length; i++) {
     octaveButton[i].addEventListener('click', () => {
         turnOn(octaveButton[i])
     })
 }
-
-
-
-// let octaveNegThree = document.getElementById('octaveNegThree')
-// octaveNegThree.addEventListener('click', () => {
-//     turnOn(octaveNegThree)
-// })
-
-// let octaveNegTwo = document.getElementById('octaveNegTwo')
-// octaveNegTwo.addEventListener('click', () => {
-//     turnOn(octaveNegTwo)
-// })
-
-// let octaveNegOne = document.getElementById('octaveNegOne')
-// octaveNegOne.addEventListener('click', () => {
-//     turnOn(octaveNegOne)
-// })
-
-// let octaveMid = document.getElementById('octaveMid')
-// octaveMid.addEventListener('click', () => {
-//     turnOn(octaveMid)
-// })
-
-// let octavePlusOne = document.getElementById('octavePlusOne')
-// octavePlusOne.addEventListener('click', () => {
-//     turnOn(octavePlusOne)
-// })
-
-// let octavePlusTwo = document.getElementById('octavePlusTwo')
-// octavePlusTwo.addEventListener('click', () => {
-//     turnOn(octavePlusTwo)
-// })
-
-// let octavePlusThree = document.getElementById('octavePlusThree')
-// octavePlusThree.addEventListener('click', () => {
-//     turnOn(octavePlusThree)
-// })
 
 // create an array to keep track of which arrays are activated
 export let octaves = [octaveMid]
