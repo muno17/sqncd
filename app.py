@@ -14,6 +14,10 @@ def index():
 def sqncd():
     return render_template('apps/sqncd.html')
 
+@app.route('/quickstart')
+def quickstart():
+    return render_template('website/quickstart.html')
+
 
 @app.route('/manual')
 def manual():

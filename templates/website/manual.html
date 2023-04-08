@@ -1,13 +1,12 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Account
+    Manual
 {% endblock %}
 
 {% block main %}
-    <div>
-        <h3>sqncd is <strong><em>not</em></strong> supported by Safari and Internet Explorer</h3>
-        <h5>For a comprehensive list of supported browers please click <a href="https://caniuse.com/midi" target="_blank">here</a></h5>
-    </div>
+
+    <iframe src="static/sqncd_user_manual.pdf" title="userManual" id="userManual" toolbar="1" width="900" height="900"  zoom="70%" 
+     frameborder="0" style="border:5px solid  #BC81BF;"></iframe>
 
 {% endblock %}

@@ -51,7 +51,6 @@ export function accentizer(step) {
     if (!accent.classList.contains('off')) {
         if (step.classList.contains('ghost')) {
             step.classList.remove('ghost')
-            console.log('here')
             step.style.backgroundColor = '#94D0FF';
         } else {
             step.classList.add('accent')
