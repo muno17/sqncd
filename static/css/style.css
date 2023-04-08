@@ -7,9 +7,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 30px;
     align-items: center;
-    min-height: 100vh;
+}
+
+@media screen and (min-width:62rem) {
+    body {
+        min-height: 100vh;
+        gap: 30px;
+    }
 }
 
 a {
@@ -21,18 +26,30 @@ a {
     background-color: #BC81BF;
     box-shadow: 3px 3px 10px black;
     width: 100%;
-    padding: 5px;
+    padding: .6rem;
     display: flex;
     justify-content: space-between;
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .header {
+        font-size: 2.5rem;
+    }
 }
 
 .headerLeft {
-    margin-left: 30px;
+    margin-left: 1rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .headerLeft {
+        margin-left: 2rem;
+    }
 }
 
 #muno {
     color: white;
-    font-size: 40px;
     text-shadow: 3px 3px 10px black;
     margin: 0;
     text-align: center;
@@ -41,37 +58,70 @@ a {
 .headerRight {
     display:flex;
     align-items: center;
-    gap: 20px;
-    margin-right: 30px;
-    font-size: 20px;
+    gap: .4rem;
+    margin-right: 1rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .headerRight {
+        margin-right: 2rem;
+        gap: 1.25rem;
+    }
 }
 
 
 /* home page */
 #mainSqncdLogo {
-    font-size: 90px;
+    font-size: 2rem;
     margin: 0px;
-    margin-left: 20px;
+    margin-left: 1rem;
+}
+
+@media screen and (min-width: 62rem) {
+    #mainSqncdLogo {
+        margin-left: 1.25rem;
+        font-size: 6rem;
+    }
 }
 
 #mainSubscript {
-    font-size: 30px;
-    margin-left: 20px;
+    font-size: .8rem;
+    margin-left: .25rem;
 }
 
-#homeImage {
-    position: relative;
-    border-style: none;
-    margin: 0px;
+@media screen and (min-width: 62rem) {
+    #mainSubscript {
+        font-size: 2rem;
+        margin-left: 1.25rem;
+    }
 }
+
 
 .homeCopy {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    gap: 1rem;
     margin: 0px;
 }
+
+@media screen and (min-width: 62rem) {
+    .homeCopy {
+        gap: 3rem;
+    }
+}
+
+
+#homeImage {
+    display: block;
+    position: relative;
+    border-style: none;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+}
+
 
 #introList {
     font-size: 25px;
@@ -80,6 +130,7 @@ a {
 li {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: 1rem;
 }
 
 .quickstartInfo {
@@ -88,7 +139,7 @@ li {
 }
 
 .warning {
-    font-size: 30px;
+    font-size: px;
     color: #EE9ABD;
 }
 
@@ -125,9 +176,17 @@ footer {
     justify-content: center;
     align-items: center;
     box-shadow: 3px 3px 10px black;
-    font-size: 20px;
+    font-size: .8rem;
     width: 100%;
-    height: 15px;
-    padding: 20px;
+    height: .2rem;
+    padding: .3rem;
     margin-top: auto;
+}
+
+@media screen and (min-width: 62rem) {
+    footer {
+        height: 1rem;
+        padding: 1.25rem;
+        font-size: 1.25rem;
+    }
 }
