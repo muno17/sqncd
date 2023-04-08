@@ -82,6 +82,15 @@ li {
     margin-bottom: 5px;
 }
 
+.quickstartInfo {
+    text-align: center;
+    font-size: 20px;
+}
+
+.warning {
+    font-size: 30px;
+    color: #EE9ABD;
+}
 
 /* form pages */
 form {

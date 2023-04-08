@@ -6,8 +6,17 @@
 
 {% block main %}
     <div>
-        <h3>sqncd is <strong><em>not</em></strong> supported by Safari and Internet Explorer</h3>
-        <h5>For a comprehensive list of supported browers please click <a href="https://caniuse.com/midi" target="_blank">here</a></h5>
+        <div class="quickstartInfo">
+            <h3 class="warning">sqncd is <strong><em>not</em></strong> supported by Safari or Internet Explorer</h3>
+            <h5> 
+                We recommend using Google Chrome or Mozilla Firefox
+                <br>
+                For a comprehensive list of supported browers please click <a href="https://caniuse.com/midi" target="_blank">here</a>
+            </h5>
+        </div>
+        <br>
+        <iframe src="static/manuals/sqncd_quickstart.pdf" title="userManual" id="userManual" toolbar="1" 
+        width="900" height="900"  zoom="70%" frameborder="0" style="border:5px solid  #BC81BF;"></iframe>
     </div>
 
 {% endblock %}
