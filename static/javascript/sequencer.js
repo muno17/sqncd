@@ -168,7 +168,7 @@ tempoSlider.addEventListener('input', () => {
 })
 
 
-Tone.Transport.swingSubdivision = '16n';
+Tone.Transport.swingSubdivision = '8n';
 Tone.Transport.swing = .50;
 // swing updates to the value entered into the tempo field
 let swingSlider = document.getElementById('swingSlider')
