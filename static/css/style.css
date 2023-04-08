@@ -5,14 +5,15 @@ body {
     height: 100%;
     color: white;
     display: flex;
+    flex: auto;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    min-height: 100vh;
 }
 
 @media screen and (min-width:62rem) {
     body {
-        min-height: 100vh;
         gap: 30px;
     }
 }
@@ -26,10 +27,11 @@ a {
     background-color: #BC81BF;
     box-shadow: 3px 3px 10px black;
     width: 100%;
-    padding: .6rem;
+    padding: .4rem;
     display: flex;
     justify-content: space-between;
     font-size: .8rem;
+    margin: 0;
 }
 
 @media screen and (min-width: 62rem) {
@@ -53,6 +55,7 @@ a {
     text-shadow: 3px 3px 10px black;
     margin: 0;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 .headerRight {
@@ -69,12 +72,16 @@ a {
     }
 }
 
+main {
+    flex: 1;
+    margin-top: 1rem;
 
+}
 /* home page */
 #mainSqncdLogo {
-    font-size: 2rem;
-    margin: 0px;
-    margin-left: 1rem;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-left: .8rem;
 }
 
 @media screen and (min-width: 62rem) {
@@ -85,8 +92,8 @@ a {
 }
 
 #mainSubscript {
-    font-size: .8rem;
-    margin-left: .25rem;
+    font-size: .9rem;
+    margin-left: .8rem;
 }
 
 @media screen and (min-width: 62rem) {
@@ -103,7 +110,7 @@ a {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    margin: 0px;
+    margin: 0;
 }
 
 @media screen and (min-width: 62rem) {
@@ -117,19 +124,14 @@ a {
     display: block;
     position: relative;
     border-style: none;
-    margin: 0px;
+    margin: 0;
     width: 100%;
     height: auto;
 }
 
-
-#introList {
-    font-size: 25px;
-}
-
 li {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
     font-size: 1rem;
 }
 
@@ -141,6 +143,11 @@ li {
 .warning {
     font-size: px;
     color: #EE9ABD;
+}
+
+iframe {
+    width: 100%;
+    height: auto;
 }
 
 /* form pages */
@@ -171,16 +178,15 @@ form {
 footer {
     display: flex;
     flex-direction: column;
-    background-color: #BC81BF;
-    color: white;
     justify-content: center;
     align-items: center;
+    background-color: #BC81BF;
+    color: white;
     box-shadow: 3px 3px 10px black;
-    font-size: .8rem;
+    font-size: .7rem;
     width: 100%;
-    height: .2rem;
     padding: .3rem;
-    margin-top: auto;
+    margin: auto;
 }
 
 @media screen and (min-width: 62rem) {
