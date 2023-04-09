@@ -26,7 +26,8 @@ a {
     background-color: #BC81BF;
     box-shadow: 3px 3px 10px black;
     width: 100%;
-    padding: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +46,8 @@ a {
     .header {
         font-size: 1.8rem;
         height: 3rem;
-        padding: .8rem;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
     }
 }
 
@@ -101,8 +103,8 @@ a {
 
 @media screen and (min-width: 62rem) {
     .headerRight {
-        margin-right: rem;
-        gap: 1.5rem;
+        margin-right: 2rem;
+        gap: 1.7rem;
     }
 }
 
@@ -270,19 +272,22 @@ footer {
     width: 100%;
     margin-bottom: 0;
     height: 1.5rem;
-    padding: .5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 @media screen and (min-width: 44rem) {
     footer {
-        padding: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
         font-size: 1rem;
     }
 }
 
 @media screen and (min-width: 62rem) {
     footer {
-        padding: 1.25rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
         font-size: 1.25rem;
     }
 }
