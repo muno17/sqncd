@@ -30,7 +30,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: .8rem;
+    font-size: .7rem;
     height: 1.5rem;
 }
 
@@ -88,21 +88,21 @@ a {
 .headerRight {
     display:flex;
     align-items: center;
-    gap: .4rem;
+    gap: .6rem;
     margin-right: 1rem;
 }
 
 @media screen and (min-width: 44rem) {
     .headerRight {
         margin-right: 1.5rem;
-        gap: .8rem;
+        gap: 1.2rem;
     }
 }
 
 @media screen and (min-width: 62rem) {
     .headerRight {
         margin-right: rem;
-        gap: 1.4rem;
+        gap: 1.5rem;
     }
 }
 
