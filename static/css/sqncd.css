@@ -1,5 +1,77 @@
+/* rotate mobile devices to be in landscape */
+@media screen and (max-width: 62rem) and (orientation: portrait) {
+    body {
+        transform: rotate(90deg);
+        transform-origin: right top;
+        width: 100vh;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
+
+.header {
+    font-size: .7rem;
+    height: .3rem;
+}
+
+@media screen and (min-width: 44rem) {
+    .header {
+        font-size: 1.5rem;
+        height: 2.8rem;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .header {
+        font-size: 1.8rem;
+        height: 3rem;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+    }
+}
+
+#muno {
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 44rem) {
+    #muno {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    #muno {
+        font-size: 4rem;
+    }
+}
+
+.headerRight {
+    gap: 2rem;
+}
+
+@media screen and (min-width: 44rem) {
+    .headerRight {
+        gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    .headerRight {
+        margin-right: 2rem;
+        gap: 1.7rem;
+    }
+}
+
+
+/* sqncd */
 .sqncdBody {
     display: flex;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (min-width: 62rem) {
@@ -10,31 +82,45 @@
 }
 
 .wood {
-    width: 35px;
+    width: 1rem;
     box-shadow: 3px 3px 10px black;
     background-color: #363532;
-    border-radius: 5px;
-    height: 630px;
-    padding: 1px;
+    border-radius: .3rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .wood {
+        width: 2rem;
+        height: 40rem;
+        padding: 1px;
+    }
 }
 
 .sqncd {
     background: #C7C6C6;
-    width: 960px;
-    height: 570px;
+    width: 100%;
+    height: 100%;
     border-style: solid;
     border-width: 1px;
     border-radius: 2px;
     box-shadow: 3px 3px 10px black;
     border-left: none;
     border-right: none; 
-    margin-top: 10px;
-    padding: 5px;
-    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    flex: 1;
+}
+
+@media screen and (min-width: 62rem) {
+    .sqncd {
+        margin-top: .7rem;
+        width: 60rem;
+        height: 35.6rem;
+        padding: .3rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .controlSection {
