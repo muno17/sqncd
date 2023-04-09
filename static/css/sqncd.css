@@ -256,8 +256,8 @@ h1 {
 
 #tempo, #swing {
     width: 3rem;
-    height: 1.5rem;
-    font-size: 1rem;
+    height: 1rem;
+    font-size: .8rem;
     background: black;
     color: white;
     text-align: center;
@@ -283,10 +283,10 @@ h1 {
 }
 
 .transportButton {
-    width: 4rem;
-    height: 2rem;
+    width: 3rem;
+    height: 1.6rem;
     border-radius: .6rem;
-    font-size: 1rem;
+    font-size: .8rem;
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
     background: white;
