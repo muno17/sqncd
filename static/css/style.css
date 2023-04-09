@@ -173,6 +173,7 @@ main {
 @media screen and (min-width: 62rem) {
     .homeCopy {
         gap: 3rem;
+        flex-wrap: nowrap;
     }
 }
 
@@ -184,6 +185,12 @@ main {
     margin: 0;
     width: 100%;
     height: auto;
+}
+
+@media screen and (min-width: 62rem) {
+    #homeImage {
+        width: 60%;
+    }  
 }
 
 li {
@@ -200,7 +207,7 @@ li {
 
 @media screen and (min-width: 62rem) {
     li {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
@@ -220,6 +227,13 @@ iframe {
     right: 0;
     left: 0;
     position: absolute;
+}
+
+@media screen and (min-width: 62rem) {
+    iframe {
+        padding-top: 0rem;
+        margin-top: 0;
+    }
 }
 
 /* form pages */
