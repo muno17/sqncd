@@ -456,10 +456,10 @@ select {
 }
 
 .pitchButton {
-    width: 23px;
-    height: 35px;
-    margin-left: 3px;
-    margin-right: 3px;
+    width: .7rem;
+    height: 1.3rem;
+    margin-left: .19rem;
+    margin-right: .19rem;
     box-shadow: 3px 3px 4px black;
     border-radius: .4rem;
     background: white;
