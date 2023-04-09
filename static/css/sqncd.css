@@ -2,6 +2,13 @@
     display: flex;
 }
 
+@media screen and (min-width: 62rem) {
+    .sqncdBody {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
 .wood {
     width: 35px;
     box-shadow: 3px 3px 10px black;

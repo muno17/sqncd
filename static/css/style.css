@@ -1,8 +1,13 @@
+main {
+    flex: 1;
+}
+
 body {
     font-family: ubuntu, sans-serif;
     background: #8E90A4;
     margin: 0;
     height: 100%;
+    width: 100%;
     color: white;
     display: flex;
     flex: auto;
@@ -10,12 +15,6 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-}
-
-@media screen and (min-width:62rem) {
-    body {
-        gap: 30px;
-    }
 }
 
 a {
@@ -45,7 +44,8 @@ a {
 @media screen and (min-width: 62rem) {
     .header {
         font-size: 1.8rem;
-        height: 3.5rem;
+        height: 3rem;
+        padding: .8rem;
     }
 }
 
@@ -101,15 +101,11 @@ a {
 
 @media screen and (min-width: 62rem) {
     .headerRight {
-        margin-right: 2rem;
+        margin-right: rem;
         gap: 1.4rem;
     }
 }
 
-main {
-    flex: 1;
-    /* margin-top: 1rem; */
-}
 /* home page */
 .homeBody {
     margin-top: 1rem;
@@ -150,7 +146,7 @@ main {
 @media screen and (min-width: 62rem) {
     #mainSubscript {
         font-size: 2rem;
-        margin-left: 1.25rem;
+        margin-left: 2rem;
     }
 }
 
@@ -172,8 +168,9 @@ main {
 
 @media screen and (min-width: 62rem) {
     .homeCopy {
-        gap: 3rem;
+        gap: 1rem;
         flex-wrap: nowrap;
+        margin-left: 2rem;
     }
 }
 
@@ -207,7 +204,7 @@ li {
 
 @media screen and (min-width: 62rem) {
     li {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 }
 
