@@ -18,8 +18,8 @@
 
 @media screen and (min-width: 44rem) {
     .header {
-        font-size: 1.5rem;
-        height: 2.8rem;
+        font-size: .9rem;
+        height: .5rem;
     }
 }
 
@@ -38,7 +38,7 @@
 
 @media screen and (min-width: 44rem) {
     #muno {
-        font-size: 2.8rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -124,30 +124,55 @@
 }
 
 .controlSection {
-    width: 955px;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
-    gap: 10px;
     text-align: center;
+}
+
+@media screen and (min-width: 62rem) {
+    .controlSection {
+        width: 60rem;
+        gap: .6rem;
+    }
 }
 
 .controls {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 275px;
-    font-size: 10px;
+    height: 30%;
+    font-size: .4rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .controls {
+        height: 17rem;
+        font-size: .6rem;
+    }
 }
 
 h1 {
     color: #BC81BF;
-    margin-bottom: 5px;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 62rem) {
+    h1 {
+        margin-bottom: .3rem;
+    }
 }
 
 
 /* left controls */
 .left {
-    width: 200px;
+    width: 24%;
+}
+
+@media screen and (min-width: 62rem) {
+    .left {
+        width: 12.5rem;
+    }
 }
 
 .displays {
@@ -157,19 +182,27 @@ h1 {
     align-items: center;
 } 
 
-.displayHead {
-    margin-bottom: 5px;
+@media screen and (min-width: 62rem) {
+    .displayHead {
+        margin-bottom: .31rem;
+    }
 }
 
 .tempoDisplay {
-    margin-bottom: 35px;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .tempoDisplay {
+        margin-bottom: 35px;
+    }
 }
 
 .slider {
     -webkit-appearance: none;
-    width: 120px;
+    width: 4rem;
     appearance: none;
-    height: 5px;
+    height: .1rem;
     background: white;
     outline: none;
     opacity: 0.7;
@@ -177,55 +210,94 @@ h1 {
     border-style: solid;
 }
 
+@media screen and (min-width: 62rem) {
+    .slider {
+        width: 7.5rem;
+        height: .3rem;
+    }
+}
+
 .slider::-webkit-slider-thumb {
     -webkit-appearanace: none;
     appearance: none;
-    width: 13px;
-    height: 20px;
+    width: .3rem;
+    height: .9rem;
     background: #BC81BF;
-    border: 2px;
+    border: .1rem;
     border-style: solid;
     border-color: black;
-    border-radius: 30px;
+    border-radius: 1.9rem;
     box-shadow: 3px 3px 8px black;
     cursor: pointer;
 }
 
+@media screen and (min-width: 62rem) {
+    .slider::-webkit-slider-thumb {
+        width: .8rem;
+        height: 1.25rem;
+        border: .125rem;
+    }
+}
+
 .slider::-moz-range-thumb {
-    width: 13px;
-    height: 30px;
+    width: .3rem;
+    height: .9rem;
     background: #BC81BF;
     cursor: pointer;   
 }
 
+@media screen and (min-width: 62rem) {
+    .slider::-moz-range-thumb {
+        width: .8rem;
+        height: 1.25rem;
+        border: .125rem;
+    }
+}
+
 #tempo, #swing {
-    width: 80px;
-    height: 30px;
-    font-size: 25px;
+    width: 3rem;
+    height: 1.5rem;
+    font-size: 1rem;
     background: black;
     color: white;
     text-align: center;
     border-style: solid;
-    border-width: 2px;
     border-color: #9D81BF;
-    margin-bottom: 7px;
+    margin-bottom: .2rem;
+}
+
+@media screen and (min-width: 62rem) {
+    #tempo, #swing {
+        width: 5rem;
+        height: 1.9rem;
+        font-size: 1.5rem;
+        border-width: .15rem;
+        margin-bottom: .4rem;
+    }
 }
 
 .transport {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 .transportButton {
-    width: 80px;
-    height: 40px;
-    border-radius: 10px;
-    font-size: 20px;
+    width: 4rem;
+    height: 2rem;
+    border-radius: .6rem;
+    font-size: 1rem;
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
     background: white;
+}
+
+@media screen and (min-width: 62rem) {
+    .transportButton {
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+    }
 }
 
 #stop {
@@ -235,7 +307,13 @@ h1 {
 
 /* middle controls */
 .midleft {
-    width: 250px;
+    width: 25%;
+}
+
+@media screen and (min-width: 62rem) {
+    .midLeft {
+        width: 15.6rem;
+    }
 }
 
 .scale {
@@ -246,38 +324,73 @@ h1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 180px;
+    width: 7rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .dropArea {
+        width: 11.25rem;
+    }
 }
 
 .dropHouse {
     display: flex;
     flex-direction: column;
-    font-size: 15px;
+    font-size: .7rem;
     justify-content: space-between;
     align-items: center;
     color: #BC81BF;
 }
 
+@media screen and (min-width: 62rem) {
+    .dropHouse{
+        font-size: .9rem;
+    }
+}
+
 #deviceDropdown, #scaleDropdown {
-    width: 150px;
+    width: 5rem;
+}
+
+@media screen and (min-width: 62rem) {
+    #deviceDropdown, #scaleDropdown {
+        width: 9.4rem;
+    }
 }
 
 #channelDropdown, #keyDropdown {
-    width: 50px;
+    width: 3rem;
+}
+
+@media screen and (min-width: 62rem) {
+    #channelDropdown, #keyDropdown {
+        width: 3.125rem;
+    }
 }
 
 select {
-    height: 33px;
-    border-radius: 4px;
-    padding: 5px;
-    margin-left: 3px;
-    margin-right: 3px;
+    height: 1.2rem;
+    border-radius: .25rem;
+    padding: .2px;
+    margin-left: .1rem;
+    margin-right: .1rem;
     color: white;
     background: black;
     text-align: center;
     border-style: solid;
-    border-width: 3px;
+    border-width: .2rem;
     border-color: #9D81BF;
+    font-size: .5rem;
+}
+
+@media screen and (min-width: 62rem) {
+    select {
+        height: 2rem;
+        padding: .3rem;
+        margin-left: .2rem;
+        margin-right: .2rem;
+        font-size: .8rem;
+    }
 }
 
 .notes {
@@ -297,18 +410,32 @@ select {
 .octaveButtonHouse {
     display: flex;
     flex-direction: column;
-    font-size: 15px;
+    font-size: .7rem;
     justify-content: space-between;
-    gap: 5px;
+    gap: .2rem;
     align-items: center;
 }
 
+@media screen and (min-width: 62rem) {
+    .octaveButtonHouse {
+        gap: .3rem;
+        font-size: .9rem
+    }
+}
+
 .octaveButton {
-    width: 20px;
-    height: 25px;
+    width: .7rem;
+    height: 1rem;
     box-shadow: 3px 3px 4px black;
-    border-radius: 4px;
+    border-radius: .25rem;
     background: white;
+}
+
+@media screen and (min-width: 62rem) {
+    .octaveButton {
+    width: 1.25rem;
+    height: 1.6rem;
+    }
 }
 
 #octaveMid {
@@ -326,7 +453,6 @@ select {
     gap: 3px;
     align-items: center;
     color: #BC81BF;
-    /* margin-top: 30px; */
 }
 
 .pitchButton {
@@ -335,8 +461,17 @@ select {
     margin-left: 3px;
     margin-right: 3px;
     box-shadow: 3px 3px 4px black;
-    border-radius: 4px;
+    border-radius: .4rem;
     background: white;
+}
+
+@media screen and (min-width: 62rem) {
+    .pitchButton {
+        width: 1.2rem;
+        height: 2.19rem;
+        margin-left: .19rem;
+        margin-right: .19rem;
+    }
 }
 
 .flat {
@@ -367,7 +502,13 @@ select {
 }
 
 .midRight {
-    width: 200px;
+    width: 25%;
+}
+
+@media screen and (min-width: 62rem) {
+    .midRight {
+        width: 12.5rem;
+    }
 }
 
 .midi {
@@ -448,7 +589,13 @@ border-radius: 50%;
     flex-direction: column;
     justify-content: space-between;
     text-align: right;
-    width: 170px;
+    width: 20%;
+}
+
+@media screen and (min-width: 62rem) {
+    .right {
+        width: 10.6rem;
+    }
 }
 
 #logo {
