@@ -27,23 +27,36 @@ a {
     background-color: #BC81BF;
     box-shadow: 3px 3px 10px black;
     width: 100%;
-    padding: .8rem;
+    padding: .5rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: .8rem;
-    margin: 0;
     height: 1.5rem;
+}
+
+@media screen and (min-width: 44rem) {
+    .header {
+        font-size: 1.5rem;
+        height: 2.8rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
     .header {
-        font-size: 2.5rem;
-        height: 2rem;
+        font-size: 1.8rem;
+        height: 3.5rem;
     }
 }
 
 .headerLeft {
     margin-left: 1rem;
+}
+
+@media screen and (min-width: 44rem) {
+    .headerLeft {
+        margin-left: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -57,7 +70,19 @@ a {
     text-shadow: 3px 3px 10px black;
     margin: 0;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+}
+
+@media screen and (min-width: 44rem) {
+    #muno {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    #muno {
+        font-size: 4rem;
+    }
 }
 
 .headerRight {
@@ -67,10 +92,17 @@ a {
     margin-right: 1rem;
 }
 
+@media screen and (min-width: 44rem) {
+    .headerRight {
+        margin-right: 1.5rem;
+        gap: .8rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .headerRight {
         margin-right: 2rem;
-        gap: 1.25rem;
+        gap: 1.4rem;
     }
 }
 
@@ -89,9 +121,16 @@ main {
     margin-left: .8rem;
 }
 
+@media screen and (min-width: 44rem) {
+    #mainSqncdLogo {
+        margin-left: 1.5rem;
+        font-size: 5rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     #mainSqncdLogo {
-        margin-left: 1.25rem;
+        margin-left: 2rem;
         font-size: 6rem;
     }
 }
@@ -99,6 +138,13 @@ main {
 #mainSubscript {
     font-size: .9rem;
     margin-left: .8rem;
+}
+
+@media screen and (min-width: 44rem) {
+    #mainSubscript {
+        font-size: 1.8rem;
+        margin-left: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -116,6 +162,12 @@ main {
     flex-wrap: wrap;
     gap: 1rem;
     margin: 0;
+}
+
+@media screen and (min-width: 44rem) {
+    .homeCopy {
+        gap: 1rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -138,6 +190,18 @@ li {
     margin-top: .25rem;
     margin-bottom: .25rem;
     font-size: 1rem;
+}
+
+@media screen and (min-width: 44rem) {
+    li {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 62rem) {
+    li {
+        font-size: 2rem;
+    }
 }
 
 .quickstartInfo {
@@ -195,7 +259,14 @@ footer {
     width: 100%;
     margin-bottom: 0;
     height: 1.5rem;
-    padding: 1rem;
+    padding: .5rem;
+}
+
+@media screen and (min-width: 44rem) {
+    footer {
+        padding: 1rem;
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
