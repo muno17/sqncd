@@ -276,6 +276,10 @@ footer {
     padding-bottom: .5rem;
 }
 
+.sqncdFooter {
+    display: none;
+}
+
 @media screen and (min-width: 44rem) {
     footer {
         padding-top: 1rem;
