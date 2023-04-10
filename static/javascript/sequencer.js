@@ -1,5 +1,5 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
-import { deviceValue, sendMidi, sendStartSignal, sendStopSignal, sendClockSignal, clockButton, clockDevices} from '/static/javascript/midi_io.js'
+import { deviceDropdown, sendMidi, sendStartSignal, sendStopSignal, sendClockSignal, clockButton, clockDevices} from '/static/javascript/midi_io.js'
 import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/static/javascript/noteFunctions.js'
 import { userNoteGenerator, resetUserOctaves } from '/static/javascript/userPattern.js'
 
@@ -195,7 +195,7 @@ start.addEventListener('click', async () => {
 // transport starts when the start button is pressed
 start.addEventListener('click', () => {
     // only start if a device is detected
-    if (deviceValue.value) {
+    if (deviceDropdown[0].value) {
         if (start.classList.contains('off')) {
             start.classList.remove('off');
             stop.classList.add('off');
