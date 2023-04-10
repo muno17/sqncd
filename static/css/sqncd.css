@@ -32,7 +32,7 @@ main {
     height: .3rem;
 }
 
-@media screen and (min-width: 44rem) {
+@media screen and (min-width: 54rem) {
     .header {
         font-size: .9rem;
         height: .5rem;
@@ -52,7 +52,7 @@ main {
     font-size: 1rem;
 }
 
-@media screen and (min-width: 44rem) {
+@media screen and (min-width: 54rem) {
     #muno {
         font-size: 1.5rem;
     }
@@ -66,12 +66,6 @@ main {
 
 .headerRight {
     gap: 2rem;
-}
-
-@media screen and (min-width: 44rem) {
-    .headerRight {
-        gap: 2rem;
-    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -226,6 +220,13 @@ h1 {
     border-style: solid;
 }
 
+@media screen and (min-width: 54rem) {
+    .slider {
+        width: 7rem;
+        height: .2rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .slider {
         width: 7.5rem;
@@ -247,6 +248,14 @@ h1 {
     cursor: pointer;
 }
 
+@media screen and (min-width: 54rem) {
+    .slider::-webkit-slider-thumb {
+        width: .6rem;
+        height: 1.2rem;
+        border: .2rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .slider::-webkit-slider-thumb {
         width: .8rem;
@@ -260,6 +269,14 @@ h1 {
     height: .9rem;
     background: #BC81BF;
     cursor: pointer;   
+}
+
+@media screen and (min-width: 54rem) {
+    .slider::-moz-range-thumb {
+        width: .6rem;
+        height: 1.2rem;
+        border: .2rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -280,6 +297,16 @@ h1 {
     border-style: solid;
     border-color: #9D81BF;
     margin-bottom: .2rem;
+}
+
+@media screen and (min-width: 54rem) {
+    #tempo, #swing {
+        width: 4rem;
+        height: 1.5rem;
+        font-size: 1.2rem;
+        border-width: .15rem;
+        margin-bottom: .4rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -306,6 +333,14 @@ h1 {
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
     background: white;
+}
+
+@media screen and (min-width: 54rem) {
+    .transportButton {
+        width: 4rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -366,6 +401,12 @@ h1 {
 
 #deviceDropdown, #scaleDropdown {
     width: 5rem;
+}
+
+@media screen and (min-width: 54rem) {
+    #deviceDropdown, #scaleDropdown {
+        width: 6.5rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -482,6 +523,16 @@ select {
     background: white;
 }
 
+@media screen and (min-width: 54rem) {
+    .pitchButton {
+        width: 1.1rem;
+        height: 1.6rem;
+        margin-left: .19rem;
+        margin-right: .19rem;
+        border-radius: .4rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .pitchButton {
         width: 1.2rem;
@@ -517,6 +568,14 @@ select {
     border-radius: .4rem;
     font-size: 1rem;
     box-shadow: 3px 3px 12px black;
+}
+
+@media screen and (min-width: 54rem) {
+    #sqnc, #reset, #clock {
+        width: 7rem;
+        border-radius: .625rem;
+        font-size: 1.4rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -651,6 +710,12 @@ border-radius: 50%;
     margin: 0;
 }
 
+@media screen and (min-width: 54rem) {
+    #logo {
+        font-size: 3.4rem
+    }
+}
+
 @media screen and (min-width: 62rem) {
     #logo {
         font-size: 3.75rem
@@ -670,12 +735,22 @@ border-radius: 50%;
     }
 }
 
+/* button functions */
+
 .buttonFunctionsArea {
     height: 9rem;
     width: 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+@media screen and (min-width: 54rem) {
+    .buttonFunctionsArea {
+        margin-top: .2rem;
+        height: 10rem;
+        width: 4rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -697,6 +772,15 @@ border-radius: 50%;
     background: #BC81BF;
 }
 
+@media screen and (min-width: 54rem) {
+    .buttonFunctions {
+        width: 4rem;
+        height: 1.8rem;
+        border-radius: .5rem;
+        font-size: .8rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .buttonFunctions {
         width: 5rem;
@@ -713,6 +797,13 @@ border-radius: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and (min-width: 54rem) {
+    .sqncr {
+        width: 41rem;
+        height: 11rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -756,6 +847,16 @@ border-radius: 50%;
     background: white;
 }
 
+@media screen and (min-width: 54rem) {
+    .gridButton {
+        width: 1.8rem;
+        height: 2.2rem;
+        margin-left: .3125rem;
+        margin-right: .3125rem;
+        font-size: .55rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .gridButton {
         width: 2.625rem;
@@ -776,6 +877,13 @@ border-radius: 50%;
     font-size: .8rem;
 }
 
+@media screen and (min-width: 54rem) {
+    .rowFourColumn {
+        gap: .25rem;
+        font-size: 1rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .rowFourColumn {
         gap: .3125rem;
@@ -790,6 +898,12 @@ border-radius: 50%;
     text-align: center;
 }
 
+@media screen and (min-width: 54) {
+    .last {
+        border-width: .25rem;
+    }
+}
+
 @media screen and (min-width: 62) {
     .last {
         border-width: .3rem;
@@ -800,6 +914,12 @@ border-radius: 50%;
     border-style: solid;
     border-color: #922793;
     border-width: .18rem;
+}
+
+@media screen and (min-width: 54) {
+    .copier {
+        border-width: .25rem;
+    }
 }
 
 @media screen and (min-width: 62) {
