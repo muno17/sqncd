@@ -1,10 +1,17 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 /* rotate mobile devices to be in landscape */
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     body {
         transform: rotate(90deg);
         transform-origin: right top;
-        width: 100%;
-        overflow-x: hidden;
+        width: 100vh;
+        overflow: hidden;
         position: absolute;
         top: 100%;
         left: 0;
@@ -15,6 +22,7 @@
         align-items: center;
     }
 }
+
 
 main {
     flex: 1;
@@ -28,7 +36,7 @@ main {
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     main {
-        width: 100vh;
+        min-width: 100vh;
         margin: 0;
         padding: 0;
     } 
