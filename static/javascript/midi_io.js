@@ -13,7 +13,7 @@ selectedChannel.addEventListener('change', () => {
     channel = selectedChannel.value;
 })
 
-let deviceValue = ''
+export let deviceValue = ''
 let deviceDropdown = document.getElementById('deviceDropdown');
 deviceDropdown.addEventListener('change', () => {
     deviceValue = deviceDropdown.value;

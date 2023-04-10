@@ -1,5 +1,5 @@
 import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
-import { sendMidi, sendStartSignal, sendStopSignal, sendClockSignal, clockButton, clockDevices} from '/static/javascript/midi_io.js'
+import { deviceValue, sendMidi, sendStartSignal, sendStopSignal, sendClockSignal, clockButton, clockDevices} from '/static/javascript/midi_io.js'
 import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/static/javascript/noteFunctions.js'
 import { userNoteGenerator, resetUserOctaves } from '/static/javascript/userPattern.js'
 
@@ -194,17 +194,20 @@ start.addEventListener('click', async () => {
 
 // transport starts when the start button is pressed
 start.addEventListener('click', () => {
-    if (start.classList.contains('off')) {
-        start.classList.remove('off');
-        stop.classList.add('off');
-        start.style.backgroundColor = '#C1E1B6';
-        start.style.color = 'white';
-        stop.style.backgroundColor = 'white';
-        stop.style.color = '#BC81BF'; 
-        Tone.start();
-        Tone.Transport.start();
-        sendStartSignal()
-        looper(-1, length);
+    // only start if a device is detected
+    if (deviceValue.value) {
+        if (start.classList.contains('off')) {
+            start.classList.remove('off');
+            stop.classList.add('off');
+            start.style.backgroundColor = '#C1E1B6';
+            start.style.color = 'white';
+            stop.style.backgroundColor = 'white';
+            stop.style.color = '#BC81BF'; 
+            Tone.start();
+            Tone.Transport.start();
+            sendStartSignal()
+            looper(-1, length);
+        }
     }
 })
 
