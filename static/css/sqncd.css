@@ -481,7 +481,7 @@ select {
 }
 
 .octaveButton {
-    width: .8rem;
+    width: .6rem;
     height: 1.2rem;
     box-shadow: 3px 3px 4px black;
     border-radius: .25rem;
@@ -514,7 +514,7 @@ select {
 }
 
 .pitchButton {
-    width: .8rem;
+    width: .5rem;
     height: 1.4rem;
     margin-left: .2rem;
     margin-right: .2rem;
