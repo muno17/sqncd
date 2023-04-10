@@ -1,6 +1,11 @@
 main {
     flex: 1;
-    width: 100%;
+}
+
+@media screen and (max-width: 62rem) {
+    main {
+        width: 100%;
+    }
 }
 
 /* rotate mobile devices to be in landscape */
@@ -293,9 +298,9 @@ h1 {
 }
 
 .transportButton {
-    width: 3rem;
+    width: 3.2rem;
     height: 1.6rem;
-    border-radius: .6rem;
+    border-radius: .5rem;
     font-size: .8rem;
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
@@ -379,7 +384,7 @@ h1 {
 }
 
 select {
-    height: 1.2rem;
+    height: 1.3rem;
     border-radius: .25rem;
     padding: .2px;
     margin-left: .1rem;
@@ -422,20 +427,19 @@ select {
     flex-direction: column;
     font-size: .7rem;
     justify-content: space-between;
-    gap: .2rem;
+    gap: .3rem;
     align-items: center;
 }
 
 @media screen and (min-width: 62rem) {
     .octaveButtonHouse {
-        gap: .3rem;
         font-size: .9rem
     }
 }
 
 .octaveButton {
-    width: .7rem;
-    height: 1rem;
+    width: 1rem;
+    height: 1.2rem;
     box-shadow: 3px 3px 4px black;
     border-radius: .25rem;
     background: white;
@@ -460,16 +464,16 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3px;
+    gap: .1875rem;
     align-items: center;
     color: #BC81BF;
 }
 
 .pitchButton {
-    width: .7rem;
-    height: 1.1rem;
-    margin-left: .19rem;
-    margin-right: .19rem;
+    width: .9rem;
+    height: 1.4rem;
+    margin-left: .2rem;
+    margin-right: .2rem;
     box-shadow: 3px 3px 4px black;
     border-radius: .2rem;
     background: white;
@@ -506,7 +510,7 @@ select {
 #sqnc, #reset, #clock {
     background-color: #BC81BF;
     color: white;
-    width: 5rem;
+    width: 5.5rem;
     border-radius: .4rem;
     font-size: 1rem;
     box-shadow: 3px 3px 12px black;
@@ -539,7 +543,7 @@ select {
 
 
 .clockHouse {
-    margin-top: .5rem;
+    margin-top: .8rem;
     gap: .1rem;
 }
 
@@ -664,7 +668,6 @@ border-radius: 50%;
 }
 
 .buttonFunctionsArea {
-    margin-top: .2rem;
     height: 9rem;
     width: 2.5rem;
     display: flex;
@@ -684,6 +687,7 @@ border-radius: 50%;
     width: 2.6rem;
     height: 1.5rem;
     border-radius: .4rem;
+    margin-bottom: .3rem;
     font-size: .5rem;
     box-shadow: 3px 3px 12px black;
     color: white;
@@ -763,10 +767,17 @@ border-radius: 50%;
     display:flex;
     flex-direction: column;
     align-items: center;
-    gap: .3125rem;
+    gap: .2rem;
     color: #9D81BF;
     font-weight: bold;
-    font-size: 1.0625rem;
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 62rem) {
+    .rowFourColumn {
+        gap: .3125rem;
+        font-size: 1.0625rem;
+    }
 }
 
 .last {
