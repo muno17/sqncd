@@ -1,3 +1,12 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
 main {
     flex: 1;
 }
@@ -5,9 +14,6 @@ main {
 body {
     font-family: ubuntu, sans-serif;
     background: #8E90A4;
-    margin: 0;
-    height: 100%;
-    width: 100%;
     color: white;
     display: flex;
     flex: auto;
