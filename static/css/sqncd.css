@@ -358,7 +358,7 @@ h1 {
 
 /* middle controls */
 .midleft {
-    width: 25%;
+    width: 30%;
 }
 
 @media screen and (min-width: 62rem) {
@@ -416,7 +416,7 @@ h1 {
 }
 
 #channelDropdown, #keyDropdown {
-    width: 3rem;
+    width: 2rem;
 }
 
 @media screen and (min-width: 62rem) {
@@ -470,7 +470,7 @@ select {
     flex-direction: column;
     font-size: .7rem;
     justify-content: space-between;
-    gap: .3rem;
+    gap: .4rem;
     align-items: center;
 }
 
@@ -481,7 +481,7 @@ select {
 }
 
 .octaveButton {
-    width: 1rem;
+    width: .8rem;
     height: 1.2rem;
     box-shadow: 3px 3px 4px black;
     border-radius: .25rem;
@@ -514,7 +514,7 @@ select {
 }
 
 .pitchButton {
-    width: .9rem;
+    width: .8rem;
     height: 1.4rem;
     margin-left: .2rem;
     margin-right: .2rem;
@@ -834,7 +834,7 @@ border-radius: 50%;
 }
 
 .gridButton {
-    width: 1.5rem;
+    width: 1.6rem;
     height: 1.8rem;
     margin-left: .3rem;
     margin-right: .3rem;
