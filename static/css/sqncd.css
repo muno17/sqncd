@@ -853,7 +853,7 @@ border-radius: 50%;
         height: 2.2rem;
         margin-left: .3125rem;
         margin-right: .3125rem;
-        font-size: .55rem;
+        font-size: .5rem;
     }
 }
 
@@ -898,13 +898,13 @@ border-radius: 50%;
     text-align: center;
 }
 
-@media screen and (min-width: 54) {
+@media screen and (min-width: 54rem) {
     .last {
-        border-width: .25rem;
+        border-width: .2rem;
     }
 }
 
-@media screen and (min-width: 62) {
+@media screen and (min-width: 62rem) {
     .last {
         border-width: .3rem;
     }
@@ -916,13 +916,13 @@ border-radius: 50%;
     border-width: .18rem;
 }
 
-@media screen and (min-width: 54) {
+@media screen and (min-width: 54rem) {
     .copier {
-        border-width: .25rem;
+        border-width: .2rem;
     }
 }
 
-@media screen and (min-width: 62) {
+@media screen and (min-width: 62rem) {
     .copier {
         border-width: .3rem;
     }
