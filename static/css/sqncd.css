@@ -14,7 +14,6 @@ html, body{
         overflow: hidden;
         position: absolute;
         top: 100%;
-        height: 50%;
         left: 0;
         display: flex;
         flex: auto;
@@ -105,6 +104,12 @@ main {
     margin: 0;
     width: 100%;
     height: 100vh;
+}
+
+@media screen and (max-width: 62rem) and (orientation: portrait) {
+    .sqncdBody {
+        height: 50%;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -787,7 +792,7 @@ border-radius: 50%;
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .buttonFunctionsArea {
-        height: 5rem;
+        height: 6rem;
         width: 2rem;
     }
 }
@@ -846,12 +851,6 @@ border-radius: 50%;
     align-items: center;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
-    .sqncr {
-        width: 30rem;
-        height: 5rem;
-    }
-
 @media screen and (min-width: 54rem) {
     .sqncr {
         width: 41rem;
@@ -902,10 +901,11 @@ border-radius: 50%;
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .gridButton {
-        width: 1rem;
-        height: 1.2rem;
+        width: 1.4rem;
+        height: 1.6rem;
         margin-left: .1rem;
         margin-right: .1rem;
+        font-size: .4rem;
     }
 }
 
