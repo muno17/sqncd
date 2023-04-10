@@ -21,9 +21,8 @@ selectedScale.addEventListener('change', () => {
         // make lowest octave the new octave
         resetUserOctaves(octaves);
     } else {
-        noteSection('block');
+        noteSection('inline');
         pitchSection('none');
-        sqnc.style.marginTop = '30px';
     }
 })
 
