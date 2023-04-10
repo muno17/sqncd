@@ -783,15 +783,26 @@ border-radius: 50%;
 .last {
     border-style: solid;
     border-color: #4b34e5;
-    border-width: .3125rem;
+    border-width: .18rem;
     text-align: center;
+}
 
+@media screen and (min-width: 62) {
+    .last{
+        border-width: .3125rem;
+    }
 }
 
 .copier {
     border-style: solid;
     border-color: #922793;
-    border-width: .3125rem;
+    border-width: .18rem;
+}
+
+@media screen and (min-width: 62) {
+    .copier {
+        border-width: .3125rem;
+    }
 }
 
 
