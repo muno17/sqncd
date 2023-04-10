@@ -176,7 +176,7 @@ h1 {
 
 /* left controls */
 .left {
-    width: 24%;
+    width: 20%;
 }
 
 @media screen and (min-width: 62rem) {
@@ -358,7 +358,7 @@ h1 {
 
 /* middle controls */
 .midleft {
-    width: 30%;
+    width: 35%;
 }
 
 @media screen and (min-width: 62rem) {
@@ -416,7 +416,7 @@ h1 {
 }
 
 #channelDropdown, #keyDropdown {
-    width: 2rem;
+    width: 2.5rem;
 }
 
 @media screen and (min-width: 62rem) {
@@ -481,7 +481,7 @@ select {
 }
 
 .octaveButton {
-    width: .6rem;
+    width: .4rem;
     height: 1.2rem;
     box-shadow: 3px 3px 4px black;
     border-radius: .25rem;
@@ -705,9 +705,10 @@ border-radius: 50%;
 
 #logo {
     color: white;
-    font-size: 3rem;
+    font-size: 2.6rem;
     text-shadow: 3px 3px 10px black;
     margin: 0;
+    margin-right: .5rem;
 }
 
 @media screen and (min-width: 54rem) {
