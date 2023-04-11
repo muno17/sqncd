@@ -108,6 +108,7 @@ main {
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .sqncdBody {
         height: 100%;
+        min-width: 100vh;
     }
 }
 
@@ -158,6 +159,7 @@ main {
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .sqncd {
         height: 100%;
+        min-width: 100vh;
     }
 }
 
