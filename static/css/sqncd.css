@@ -159,6 +159,19 @@ main {
     }
 }
 
+@media screen and (max-height: 25rem) and (orientation: landscape) {
+    .sqncd {
+        height: 23rem;
+    }
+}
+
+@media screen and (max-height: 60rem) and (orientation: landscape) {
+    .sqncd {
+        height: 30rem;
+    }
+}
+
+
 @media screen and (min-width: 70rem) {
     .sqncd {
         border-radius: .125rem;
@@ -958,7 +971,7 @@ border-radius: 50%;
 
 @media screen and (min-width: 70rem) {
     .bottom {
-        gap: .9rem;
+        gap: 2rem;
     }
 }
 
