@@ -120,6 +120,7 @@ a {
     font-size: 2.5rem;
     margin: 0;
     margin-left: .8rem;
+    text-shadow: 3px 3px 10px black;
 }
 
 @media screen and (min-width: 44rem) {
@@ -139,6 +140,7 @@ a {
 #mainSubscript {
     font-size: .9rem;
     margin-left: .8rem;
+    text-shadow: 3px 3px 10px black;
 }
 
 @media screen and (min-width: 44rem) {
