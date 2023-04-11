@@ -7,7 +7,7 @@ main {
 
 
 /* rotate mobile devices to be in landscape */
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     body {
         transform: rotate(90deg);
         transform-origin: right top;
@@ -31,7 +31,7 @@ main {
     }
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     main {
         min-width: 100vh;
         height: 100%;
@@ -50,7 +50,7 @@ main {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .header {
         font-size: 1.8rem;
         height: 3rem;
@@ -69,7 +69,7 @@ main {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     #muno {
         font-size: 4rem;
     }
@@ -79,7 +79,7 @@ main {
     gap: 2rem;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .headerRight {
         margin-right: 2rem;
         gap: 1.7rem;
@@ -95,19 +95,19 @@ main {
     margin: 0;
 }
 
-@media screen and (max-width: 62rem) {
+@media screen and (max-width: 70rem) {
     .sqncdBody {
         height: 100%;
     }
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .sqncdBody {
         min-width: 100vh;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .sqncdBody {
         min-height: 100vh;
         justify-content: center;
@@ -121,13 +121,13 @@ main {
     background-color: #363532;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .wood {
         height: 100%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .wood {
         width: 2rem;
         height: 41rem;
@@ -141,7 +141,7 @@ main {
     width: 100%;
     height: 100%;
     border-style: solid;
-    border-width: .0625rem;
+    border-width: .0705rem;
     box-shadow: 3px 3px 10px black;
     border-left: none;
     border-right: none; 
@@ -153,13 +153,13 @@ main {
     padding: 0;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .sqncd {
         min-width: 100vh;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .sqncd {
         border-radius: .125rem;
         box-shadow: 3px 3px 10px black;
@@ -179,14 +179,14 @@ main {
     margin: 0;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .controlSection {
         width: 60rem;
         gap: .6rem;
     }
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .controlSection {
         height: 50%;
         min-width: 100vh;
@@ -214,13 +214,13 @@ main {
     }
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .controls {
         height: 90%
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .controls {
         height: 17rem;
         font-size: .6rem;
@@ -232,7 +232,7 @@ h1 {
     margin-bottom: 0;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     h1 {
         margin-bottom: .3rem;
     }
@@ -244,7 +244,7 @@ h1 {
     width: 20%;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .left {
         width: 12.5rem;
     }
@@ -257,7 +257,7 @@ h1 {
     align-items: center;
 } 
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .displayHead {
         margin-bottom: .31rem;
     }
@@ -267,7 +267,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .tempoDisplay {
         margin-bottom: 35px;
     }
@@ -299,7 +299,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .slider {
         width: 7.5rem;
         height: .3rem;
@@ -336,7 +336,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .slider::-webkit-slider-thumb {
         width: .8rem;
         height: 1.25rem;
@@ -368,7 +368,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .slider::-moz-range-thumb {
         width: .8rem;
         height: 1.25rem;
@@ -408,7 +408,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     #tempo, #swing {
         width: 5rem;
         height: 1.9rem;
@@ -450,7 +450,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .transportButton {
         width: 5rem;
         height: 2.5rem;
@@ -468,7 +468,7 @@ h1 {
     width: 35%;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .midLeft {
         width: 13rem;
     }
@@ -491,7 +491,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .dropArea {
         width: 11.25rem;
     }
@@ -512,7 +512,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .dropHouse{
         font-size: .9rem;
     }
@@ -534,7 +534,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     #deviceDropdown, #scaleDropdown {
         width: 9.4rem;
     }
@@ -550,7 +550,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     #channelDropdown, #keyDropdown {
         width: 3.125rem;
     }
@@ -582,7 +582,7 @@ select {
 }
 
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     select {
         height: 2rem;
         padding: .3rem;
@@ -622,7 +622,7 @@ select {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .octaveButtonHouse {
         font-size: .9rem
     }
@@ -643,7 +643,7 @@ select {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .octaveButton {
     width: 1.25rem;
     height: 1.6rem;
@@ -668,7 +668,7 @@ select {
     margin-top: .2rem;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .pitchArea {
         height: 100%;
     }
@@ -684,7 +684,7 @@ select {
     background: white;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .pitchButton {
         width: .5rem;
         height: 1.2rem;
@@ -709,7 +709,7 @@ select {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .pitchButton {
         width: 1.2rem;
         height: 2.19rem;
@@ -749,7 +749,7 @@ select {
 @media screen and (min-width: 30rem) and (orientation: portrait) {
     #sqnc, #reset, #clock {
         width: 9.4rem;
-        border-radius: .625rem;
+        border-radius: .705rem;
         font-size: 1.9rem;
     }
 }
@@ -757,15 +757,15 @@ select {
 @media screen and (min-width: 54rem) {
     #sqnc, #reset, #clock {
         width: 7rem;
-        border-radius: .625rem;
+        border-radius: .705rem;
         font-size: 1.4rem;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     #sqnc, #reset, #clock {
         width: 9.4rem;
-        border-radius: .625rem;
+        border-radius: .705rem;
         font-size: 1.9rem;
     }
 }
@@ -775,7 +775,7 @@ select {
     width: 25%;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .midRight {
         width: 12.5rem;
     }
@@ -801,7 +801,7 @@ select {
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .clockHouse {
         margin-top: 1.25rem;
         gap: .3rem;
@@ -816,7 +816,7 @@ select {
 }
 
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .switch {
         width: 4rem;
         height: 2rem;
@@ -853,7 +853,7 @@ select {
     transition: .4s;
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .clockSlider:before {
         height: 1.5rem;
         width: 1.5rem;
@@ -890,13 +890,13 @@ border-radius: 50%;
     width: 20%;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .right {
         width: 15%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .right {
         width: 11rem;
     }
@@ -910,7 +910,7 @@ border-radius: 50%;
     margin-right: .5rem;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .logo {
         font-size: 1.5rem;
     }
@@ -929,7 +929,7 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     #logo {
         margin-right: 0;
         font-size: 3.75rem
@@ -943,7 +943,7 @@ border-radius: 50%;
     justify-content: space-between;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .bottom {
         height: 100%;
         margin-top: 1rem;
@@ -956,7 +956,7 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .bottom {
         gap: .9rem;
     }
@@ -972,7 +972,7 @@ border-radius: 50%;
     justify-content: space-evenly;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .buttonFunctionsArea {
         margin-top: .3rem;
         height: 8rem;
@@ -983,7 +983,7 @@ border-radius: 50%;
 @media screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctionsArea {
         height: 17.7rem;
-        width: 5.625rem;
+        width: 5.705rem;
     }
 }
 
@@ -995,11 +995,11 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .buttonFunctionsArea {
         margin-top: 1.3rem;
         height: 18.75rem;
-        width: 5.625rem;
+        width: 5.705rem;
     }
 }
 
@@ -1014,7 +1014,7 @@ border-radius: 50%;
     background: #BC81BF;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .buttonFunctions {
         width: 3rem;
     }
@@ -1024,8 +1024,8 @@ border-radius: 50%;
     .buttonFunctions {
         width: 5rem;
         height: 2.1875rem;
-        border-radius: .625rem;
-        font-size: 1.0625rem;
+        border-radius: .705rem;
+        font-size: 1.0705rem;
     }
 }
 
@@ -1038,12 +1038,12 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .buttonFunctions {
         width: 5rem;
         height: 2.1875rem;
-        border-radius: .625rem;
-        font-size: 1.0625rem;
+        border-radius: .705rem;
+        font-size: 1.0705rem;
     }
 }
 
@@ -1070,7 +1070,7 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .sqncr {
         width: 50rem;
         height: 18.75rem;
@@ -1086,7 +1086,7 @@ border-radius: 50%;
     /* margin-top: 2rem; */
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     #buttonContainer {
         margin-top: 1.875rem;
     }
@@ -1111,7 +1111,7 @@ border-radius: 50%;
     background: white;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+@media screen and (max-width: 70rem) and (orientation: portrait) {
     .gridButton {
         width: 1.6rem;
         height: 1.6rem;
@@ -1123,7 +1123,7 @@ border-radius: 50%;
 
 @media screen and (min-width: 30rem) and (orientation: portrait) {
     .gridButton {
-        width: 2.625rem;
+        width: 2.705rem;
         height: 3.9rem;
         margin-left: .3125rem;
         margin-right: .3125rem;
@@ -1141,9 +1141,9 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .gridButton {
-        width: 2.625rem;
+        width: 2.705rem;
         height: 3.9rem;
         margin-left: .3125rem;
         margin-right: .3125rem;
@@ -1164,7 +1164,7 @@ border-radius: 50%;
 @media screen and (min-width: 30rem) and (orientation: portrait) {
     .rowFourColumn {
         gap: .3125rem;
-        font-size: 1.0625rem;
+        font-size: 1.0705rem;
     }
 }
 
@@ -1175,10 +1175,10 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .rowFourColumn {
         gap: .3125rem;
-        font-size: 1.0625rem;
+        font-size: 1.0705rem;
     }
 }
 
@@ -1201,7 +1201,7 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .last {
         border-width: .3rem;
     }
@@ -1225,7 +1225,7 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 62rem) {
+@media screen and (min-width: 70rem) {
     .copier {
         border-width: .3rem;
     }
