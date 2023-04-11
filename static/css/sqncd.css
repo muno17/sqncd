@@ -422,11 +422,11 @@ h1 {
     width: 35%;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+/* @media screen and (max-width: 62rem) and (orientation: portrait) {
     .midLeft {
         width: 40%;
     }
-}
+} */
 
 
 
@@ -778,11 +778,11 @@ border-radius: 50%;
     width: 20%;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+/* @media screen and (max-width: 62rem) and (orientation: portrait) {
     .right {
         width: 15%;
     }
-}
+} */
 
 @media screen and (min-width: 62rem) {
     .right {
