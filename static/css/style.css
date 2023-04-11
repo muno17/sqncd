@@ -1,22 +1,12 @@
 html, body, main {
-    height: 100%;
-    width: 100%;
     margin: 0px;
     padding: 0px;
 }
 
 main {
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
-    main {
-        height: 50%;
-    }
-}
 
 body {
     font-family: ubuntu, sans-serif;
@@ -28,12 +18,6 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
-}
-
-@media screen and (max-width: 62rem) and (orientation: portrait) {
-    body {
-        min-height: 0;
-    }
 }
 
 a {
