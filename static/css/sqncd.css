@@ -39,11 +39,16 @@ main {
     width: 100%;
 } */
 
+@media screen and (max-width: 62rem) {
+    main {
+        height: 100%;
+    } 
+}
+
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     main {
         min-width: 100vh;
         width: 100%;
-        height: 100%;
     } 
 }
 
