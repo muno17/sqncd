@@ -159,7 +159,7 @@ main {
     }
 }
 
-@media screen and (max-height: 25rem) and (orientation: landscape) {
+@media screen and (max-height: 30rem) and (orientation: landscape) {
     .sqncd {
         height: 23rem;
     }
