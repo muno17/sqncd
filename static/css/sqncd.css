@@ -146,15 +146,8 @@ main {
     justify-content: space-between;
     margin: 0px;
     padding: 0px;
-    min-height: 100vh;
+    height: 100%;
 }
-
-@media screen and (max-width: 62rem) and (orientation: portrait) {
-    .sqncd {
-        height: 100%;
-    }
-}
-
 
 @media screen and (min-width: 62rem) {
     .sqncd {
