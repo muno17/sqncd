@@ -7,9 +7,15 @@ html, body, main {
 
 main {
     flex: 1;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+}
+
+@media screen and (max-width: 62rem) and (orientation: portrait) {
+    main {
+        height: 50%;
+    }
 }
 
 body {
@@ -22,6 +28,12 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 100vh;
+}
+
+@media screen and (max-width: 62rem) and (orientation: portrait) {
+    body {
+        min-height: 0;
+    }
 }
 
 a {
