@@ -156,7 +156,7 @@ main {
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .sqncd {
         height: 100%;
-        width: 100vh;
+        /* width: 100vh; */
     }
 }
 
