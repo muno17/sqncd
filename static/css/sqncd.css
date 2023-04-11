@@ -34,7 +34,6 @@ main {
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     main {
         min-width: 100vh;
-        width: 100%;
         height: 100%;
     } 
 }
@@ -194,12 +193,25 @@ main {
     }
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .controlSection {
+        height: 70%;
+        min-width: 100vh;
+    }
+}
+
 .controls {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     font-size: .4rem;
     height: 90%;
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .controls {
+        font-size: .6rem;
+    }
 }
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
@@ -273,6 +285,13 @@ h1 {
     border-style: solid;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .slider {
+        width: 7rem;
+        height: .3rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     .slider {
         width: 7rem;
@@ -301,6 +320,14 @@ h1 {
     cursor: pointer;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .slider::-webkit-slider-thumb {
+        width: .8rem;
+        height: 1.1rem;
+        border: .125rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     .slider::-webkit-slider-thumb {
         width: .6rem;
@@ -323,6 +350,15 @@ h1 {
     background: #BC81BF;
     cursor: pointer;   
 }
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .slider::-moz-range-thumb {
+        width: .8rem;
+        height: 1.25rem;
+        border: .125rem;
+    }
+}
+
 
 @media screen and (min-width: 54rem) {
     .slider::-moz-range-thumb {
@@ -350,6 +386,16 @@ h1 {
     border-style: solid;
     border-color: #9D81BF;
     margin-bottom: .2rem;
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    #tempo, #swing {
+        width: 5rem;
+        height: 1.9rem;
+        font-size: 1.5rem;
+        border-width: .15rem;
+        margin-bottom: .4rem;
+    }
 }
 
 @media screen and (min-width: 54rem) {
@@ -386,6 +432,14 @@ h1 {
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
     background: white;
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .transportButton {
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+    }
 }
 
 @media screen and (min-width: 54rem) {
@@ -431,6 +485,12 @@ h1 {
     width: 7rem;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .dropArea {
+        width: 10.5rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .dropArea {
         width: 11.25rem;
@@ -446,6 +506,12 @@ h1 {
     color: #BC81BF;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .dropHouse {
+        font-size: .9rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .dropHouse{
         font-size: .9rem;
@@ -454,6 +520,12 @@ h1 {
 
 #deviceDropdown, #scaleDropdown {
     width: 5rem;
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    #deviceDropdown, #scaleDropdown {
+        width: 9rem;
+    }
 }
 
 @media screen and (min-width: 54rem) {
@@ -470,6 +542,12 @@ h1 {
 
 #channelDropdown, #keyDropdown {
     width: 2.5rem;
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    #channelDropdown, #keyDropdown {
+        width: 3.12rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -492,6 +570,17 @@ select {
     border-color: #9D81BF;
     font-size: .5rem;
 }
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    select {
+        height: 2rem;
+        padding: .3rem;
+        margin-left: .2rem;
+        margin-right: .2rem;
+        font-size: .8rem;
+    }
+}
+
 
 @media screen and (min-width: 62rem) {
     select {
@@ -527,6 +616,12 @@ select {
     align-items: center;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .octaveButtonHouse {
+        font-size: .9rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .octaveButtonHouse {
         font-size: .9rem
@@ -539,6 +634,13 @@ select {
     box-shadow: 3px 3px 4px black;
     border-radius: .25rem;
     background: white;
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .octaveButton {
+        width: 1.2rem;
+        height: 1.6rem;
+    }
 }
 
 @media screen and (min-width: 62rem) {
@@ -589,6 +691,16 @@ select {
     }
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .pitchButton {
+        width: 1.2rem;
+        height: 2.19rem;
+        margin-left: .19rem;
+        margin-right: .19rem;
+        border-radius: .4rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     .pitchButton {
         width: 1.1rem;
@@ -634,6 +746,14 @@ select {
     box-shadow: 3px 3px 12px black;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    #sqnc, #reset, #clock {
+        width: 9.4rem;
+        border-radius: .625rem;
+        font-size: 1.9rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     #sqnc, #reset, #clock {
         width: 7rem;
@@ -674,6 +794,13 @@ select {
     gap: .1rem;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .clockHouse {
+        margin-top: 1.25rem;
+        gap: .3rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .clockHouse {
         margin-top: 1.25rem;
@@ -687,6 +814,7 @@ select {
     width: 3.7rem;
     height: 1.5rem;
 }
+
 
 @media screen and (min-width: 62rem) {
     .switch {
@@ -788,6 +916,13 @@ border-radius: 50%;
     }
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    #logo {
+        margin-right: 0;
+        font-size: 3.75rem
+    }
+}
+
 @media screen and (min-width: 54rem) {
     #logo {
         font-size: 3.4rem
@@ -815,6 +950,12 @@ border-radius: 50%;
     }
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .bottom {
+        gap: .9rem;
+    }
+}
+
 @media screen and (min-width: 62rem) {
     .bottom {
         gap: .9rem;
@@ -836,6 +977,13 @@ border-radius: 50%;
         margin-top: .3rem;
         height: 8rem;
         width: 2rem;
+    }
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .buttonFunctionsArea {
+        height: 17.7rem;
+        width: 5.625rem;
     }
 }
 
@@ -872,6 +1020,15 @@ border-radius: 50%;
     }
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .buttonFunctions {
+        width: 5rem;
+        height: 2.1875rem;
+        border-radius: .625rem;
+        font-size: 1.0625rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     .buttonFunctions {
         width: 4rem;
@@ -903,6 +1060,13 @@ border-radius: 50%;
     .sqncr {
         width: 41rem;
         height: 11rem;
+    }
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .sqncr {
+        width: 50rem;
+        height: 18.75rem;
     }
 }
 
@@ -957,6 +1121,16 @@ border-radius: 50%;
     }
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .gridButton {
+        width: 2.625rem;
+        height: 3.9rem;
+        margin-left: .3125rem;
+        margin-right: .3125rem;
+        font-size: .875rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     .gridButton {
         width: 1.8rem;
@@ -987,6 +1161,13 @@ border-radius: 50%;
     font-size: .8rem;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .rowFourColumn {
+        gap: .3125rem;
+        font-size: 1.0625rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     .rowFourColumn {
         gap: .25rem;
@@ -1008,6 +1189,12 @@ border-radius: 50%;
     text-align: center;
 }
 
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .last {
+        border-width: .3rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     .last {
         border-width: .2rem;
@@ -1024,6 +1211,12 @@ border-radius: 50%;
     border-style: solid;
     border-color: #922793;
     border-width: .18rem;
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .copier {
+        border-width: .3rem;
+    }
 }
 
 @media screen and (min-width: 54rem) {
