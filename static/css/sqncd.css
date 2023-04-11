@@ -28,6 +28,10 @@
     }
 } */
 
+main {
+    width: 100%;
+}
+
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     main {
         height: 100%;
@@ -39,13 +43,6 @@
     font-size: .7rem;
     height: .3rem;
 }
-
-/* @media screen and (max-width: 62rem) and (orientation: portrait) { 
-    .header {
-        width: 100vh;
-    }
-} */
-
 
 @media screen and (min-width: 54rem) {
     .header {
@@ -208,7 +205,7 @@
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .controls {
-        height: 20%
+        height: 90%
     }
 }
 
@@ -582,12 +579,17 @@ select {
     background: white;
 }
 
+@media screen and (max-width: 62rem) and (orientation: portrait) {
+    .pitchButton {
+        width: .8rem;
+        height: 1rem;
+    }
+}
+
 @media screen and (min-width: 54rem) {
     .pitchButton {
         width: 1.1rem;
         height: 1.6rem;
-        margin-left: .19rem;
-        margin-right: .19rem;
         border-radius: .4rem;
     }
 }
@@ -606,9 +608,9 @@ select {
     background: black;
 }
 
-    #Eb {
-        margin-right: 1.6rem;
-    }
+#Eb {
+    margin-right: 1.6rem;
+}
 
 #Gb {
     margin-left: .375rem;
