@@ -37,12 +37,12 @@ main {
     width: 100%;
 }
 
-@media screen and (max-width: 62rem) and (orientation: portrait) {
+/* @media screen and (max-width: 62rem) and (orientation: portrait) {
     main {
         min-width: 100vh;
         width: 100%;
     } 
-}
+} */
 
 .header {
     font-size: .7rem;
