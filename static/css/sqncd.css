@@ -581,8 +581,8 @@ select {
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .pitchButton {
-        width: .8rem;
-        height: 1rem;
+        width: .5rem;
+        height: 1.2rem;
     }
 }
 
