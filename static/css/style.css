@@ -215,7 +215,7 @@ li {
     }
 }
 
-/* @media screen and (max-width: 62rem) {
+@media screen and (max-width: 62rem) {
     .desktopManual, .manual {
         display: none;
     }
@@ -224,7 +224,7 @@ li {
 @media screen and (min-width: 62rem) {
     .mobileManual{
         display: none;
-    } */
+    }
 
     .manual {
         display: inline;
@@ -239,7 +239,7 @@ li {
         margin: 0;
         padding: 0px;
     }
-/* } */
+}
 
 /* form pages */
 form {
