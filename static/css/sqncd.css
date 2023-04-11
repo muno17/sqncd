@@ -1,3 +1,9 @@
+
+body {
+    width: 100%;
+}
+
+
 /* rotate mobile devices to be in landscape */
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     body {
@@ -21,12 +27,6 @@
         outline: 0;
     }
 }
-
-/* @media screen and (max-width: 62rem) {
-    main {
-        width: 100%;
-    }
-} */
 
 main {
     width: 100%;
@@ -816,7 +816,7 @@ border-radius: 50%;
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .buttonFunctionsArea {
-        height: 6rem;
+        height: 8rem;
         width: 2rem;
     }
 }
@@ -846,6 +846,13 @@ border-radius: 50%;
     box-shadow: 3px 3px 12px black;
     color: white;
     background: #BC81BF;
+}
+
+@media screen and (max-width: 62rem) and (orientation: portrait) {
+    .buttonFunctions {
+        width: 3rem;
+
+    }
 }
 
 @media screen and (min-width: 54rem) {
@@ -925,10 +932,10 @@ border-radius: 50%;
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .gridButton {
-        width: 1.4rem;
+        width: 1.6rem;
         height: 1.6rem;
-        margin-left: .1rem;
-        margin-right: .1rem;
+        margin-left: .2rem;
+        margin-right: .2rem;
         font-size: .4rem;
     }
 }
