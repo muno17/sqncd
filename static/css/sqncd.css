@@ -131,7 +131,7 @@ main {
 @media screen and (min-width: 62rem) {
     .wood {
         width: 2rem;
-        height: 40rem;
+        height: 41rem;
         padding: 1px;
         border-radius: .3rem;
     }
@@ -164,9 +164,8 @@ main {
     .sqncd {
         border-radius: .125rem;
         box-shadow: 3px 3px 10px black;
-        margin-top: .7rem;
-        width: 60rem;
-        height: 35.6rem;
+        width: 63rem;
+        height: 37rem;
         padding: .3rem;
         padding-bottom: 2rem;
     }
@@ -414,14 +413,6 @@ h1 {
 .midleft {
     width: 35%;
 }
-
-/* @media screen and (max-width: 62rem) and (orientation: portrait) {
-    .midLeft {
-        width: 40%;
-    }
-} */
-
-
 
 @media screen and (min-width: 62rem) {
     .midLeft {
@@ -779,7 +770,7 @@ border-radius: 50%;
 
 @media screen and (min-width: 62rem) {
     .right {
-        width: 10.6rem;
+        width: 11rem;
     }
 }
 
@@ -805,6 +796,7 @@ border-radius: 50%;
 
 @media screen and (min-width: 62rem) {
     #logo {
+        margin-right: 0;
         font-size: 3.75rem
     }
 }
@@ -857,7 +849,7 @@ border-radius: 50%;
 
 @media screen and (min-width: 62rem) {
     .buttonFunctionsArea {
-        margin-top: .8125rem;
+        margin-top: 1.3rem;
         height: 18.75rem;
         width: 5.625rem;
     }

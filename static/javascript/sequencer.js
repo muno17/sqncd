@@ -312,7 +312,7 @@ let looper = (step, length) => {
             gridButton[step].style.color = '#D7B373';
         }
 
-        }
+    }
     let sequence = Tone.Transport.scheduleRepeat(repeat, `16n`)
 
     // transport stops when the stop button is pressed
