@@ -55,18 +55,18 @@ a {
 }
 
 .headerLeft {
-    /* margin-left: 1rem; */
+    margin-left: 1rem;
 }
 
 @media screen and (min-width: 44rem) {
     .headerLeft {
-        /* margin-left: 1.5rem; */
+        margin-left: 1.5rem;
     }
 }
 
 @media screen and (min-width: 62rem) {
     .headerLeft {
-        /* margin-left: 2rem; */
+        margin-left: 2rem;
     }
 }
 
@@ -94,12 +94,12 @@ a {
     display:flex;
     align-items: center;
     gap: .6rem;
-    /* margin-right: 1rem; */
+    margin-right: 1rem;
 }
 
 @media screen and (min-width: 44rem) {
     .headerRight {
-        /* margin-right: 1.5rem; */
+        margin-right: 1.5rem;
         gap: 1.2rem;
     }
 }

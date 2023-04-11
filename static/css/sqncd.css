@@ -9,7 +9,8 @@ html {
     body {
         transform: rotate(90deg);
         transform-origin: right top;
-        width: 100vh;
+        min-width: 100vh;
+        width: 100%;
         overflow: hidden;
         position: absolute;
         height: 100%;
@@ -147,8 +148,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
@@ -588,8 +589,8 @@ select {
 .pitchButton {
     width: .5rem;
     height: 1.4rem;
-    margin-left: .2rem;
-    margin-right: .2rem;
+    margin-left: .1rem;
+    margin-right: .1rem;
     box-shadow: 3px 3px 4px black;
     border-radius: .2rem;
     background: white;
