@@ -213,37 +213,30 @@ li {
     }
 }
 
-object {
-    margin: 0;
-    padding: 0px;
-}
-
-embed {
+.mobileManual {
     width: 100%;
     height: 100%;
     right: 0;
     left: 0;
     position: absolute;
     margin: 0;
+    margin-bottom: 1px;
+    margin-top:1px;
     padding: 0px;
 }
 
 @media screen and (max-width: 62rem) {
-    iframe {
+    .desktopManual {
         display: none;
     }
 }
 
 @media screen and (min-width: 62rem) {
-    embed {
+    .mobileManual{
         display: none;
     }
 
-    object {
-        display: none;
-    }
-
-    iframe {
+    .desktopManual {
         width: 100%;
         height: 100%;
         right: 0;
