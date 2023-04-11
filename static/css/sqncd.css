@@ -424,7 +424,7 @@ h1 {
 
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .midLeft {
-        height: 40%;
+        width: 40%;
     }
 }
 
