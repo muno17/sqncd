@@ -15,7 +15,7 @@ main {
         width: 100%;
         overflow: hidden;
         position: absolute;
-        height: 80%;
+        height: 100%;
         min-height: 0;
         top: 100%;
         right: 0;
