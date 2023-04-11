@@ -195,7 +195,7 @@ start.addEventListener('click', async () => {
 // transport starts when the start button is pressed
 start.addEventListener('click', () => {
     // only start if a device is detected
-    if (deviceDropdown[0].value) {
+    // if (deviceDropdown.value) {
         if (start.classList.contains('off')) {
             start.classList.remove('off');
             stop.classList.add('off');
@@ -205,28 +205,34 @@ start.addEventListener('click', () => {
             stop.style.color = '#BC81BF'; 
             Tone.start();
             Tone.Transport.start();
-            sendStartSignal()
+            if (deviceDropdown.value) {
+                sendStartSignal();
+            }
             looper(-1, length);
         }
-    }
+    // }
 })
 
 let looper = (step, length) => {
 
     let repeat = () => {
-        let sendClockTo = clockDevices()
+        if (deviceDropdown.value) {
+            let sendClockTo = clockDevices();
+        }
 
-        // send a clock signal to all devices that are switched on
-        if (!clockButton.classList.contains('off')) {
-            // loop through devices and send clock
-            for (let i = 0; i < sendClockTo.length; i++) {
-                for (let j = 0; j < 6; j++) {
-                    sendClockSignal(sendClockTo[i])
+        if (deviceDropdown.value) {
+            // send a clock signal to all devices that are switched on
+            if (!clockButton.classList.contains('off')) {
+                // loop through devices and send clock
+                for (let i = 0; i < sendClockTo.length; i++) {
+                    for (let j = 0; j < 6; j++) {
+                        sendClockSignal(sendClockTo[i]);
+                    }
                 }
-            }
-        } else {
-            for (let j = 0; j < 6; j++) {
-                sendClockSignal(deviceDropdown.value)
+            } else {
+                for (let j = 0; j < 6; j++) {
+                    sendClockSignal(deviceDropdown.value);
+                }
             }
         }
 
@@ -314,7 +320,9 @@ let looper = (step, length) => {
         // reset colors back to their original colors
         buttonReset()
 
-        sendStopSignal()
+        if (deviceDropdown.value) {
+            sendStopSignal()
+        }
         stop.classList.remove('off');
         start.classList.add('off');
         Tone.Transport.stop();
