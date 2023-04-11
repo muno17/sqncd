@@ -105,7 +105,7 @@ main {
 @media screen and (max-width: 62rem) and (orientation: portrait) {
     .sqncdBody {
         height: 100%;
-        width: 100vh;
+        min-width: 100vh;
     }
 }
 
