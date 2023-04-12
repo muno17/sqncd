@@ -52,7 +52,7 @@ main {
 
 @media screen and (min-width: 70rem) {
     .header {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         height: 3rem;
         padding-top: .8rem;
         padding-bottom: .8rem;
@@ -82,7 +82,6 @@ main {
 @media screen and (min-width: 70rem) {
     .headerRight {
         margin-right: 2rem;
-        gap: 1.7rem;
     }
 }
 
