@@ -1135,11 +1135,11 @@ border-radius: 50%;
 
 @media screen and (min-width: 30rem) and (orientation: portrait) {
     .gridButton {
-        width: 2.705rem;
-        height: 3.9rem;
+        width: 1.8rem;
+        height: 2.2rem;
         margin-left: .3125rem;
         margin-right: .3125rem;
-        font-size: .875rem;
+        font-size: .5rem;
     }
 }
 
