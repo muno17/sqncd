@@ -29,10 +29,9 @@ def news():
     return render_template('website/news.html')
 
 
-@app.route ('/contact')
+@app.route ('/contact', methods = ['GET', 'POST'])
 def contact():
     return render_template('website/contact.html')
-
 
 @app.route ('/donate')
 def donate():

@@ -7,6 +7,15 @@
 {% block main %}
 
     <h1> Contact Us</h1>
-    <h2>if you have any questions, concerns or comments please reach out to munoaudio@gmail.com</h2>
+    <div class="contactPage">
+        <h2>If you have any questions, comments, suggestions, <br> love or hate please send it our way</h2>
+        <form class="contactForm" action="https://formsubmit.co/your@email.com" method="POST">
+            <input type="text" placeholder="name" name="name" class="contact" required>
+            <input type="email" placeholder="email" name="email" class="contact" required>
+            <input type="subject" placeholder="subject" name="subject" class="contact" required>
+            <input type="message" name="email" class="contact message" required>
+            <button type="submit" class="contactSubmit">Send</button>
+        </form>
+    </div>
 
 {% endblock %}
