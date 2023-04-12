@@ -166,7 +166,6 @@ a {
     flex-wrap: wrap;
     gap: 1rem;
     margin: 0;
-    margin-right: 2rem;
 }
 
 @media screen and (min-width: 44rem) {
