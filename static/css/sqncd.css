@@ -962,12 +962,6 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
-    .bottom {
-        gap: .9rem;
-    }
-}
-
 @media screen and (min-width: 70rem) {
     .bottom {
         gap: 2rem;
@@ -1077,7 +1071,7 @@ border-radius: 50%;
 
 @media screen and (min-width: 30rem) and (orientation: portrait) {
     .sqncr {
-        width: 50rem;
+        width: 41rem;
         height: 18.75rem;
     }
 }
