@@ -6,16 +6,16 @@
 
 {% block main %}
 
-    <h1> Contact Us</h1>
+    <h1 id="contactHeader"> Contact Us</h1>
     <div class="contactPage">
-        <h2>If you have any questions, comments, suggestions, <br> love or hate please send it our way</h2>
-        <form class="contactForm" action="https://formsubmit.co/your@email.com" method="POST">
+        <form class="contactForm" action="https://formsubmit.co/munoaudio@gmail.com" method="POST">
             <input type="text" placeholder="name" name="name" class="contact" required>
             <input type="email" placeholder="email" name="email" class="contact" required>
             <input type="subject" placeholder="subject" name="subject" class="contact" required>
-            <input type="message" name="email" class="contact message" required>
+            <input type="message" placeholder="message" name="message" class="contact message" required>
             <button type="submit" class="contactSubmit">Send</button>
         </form>
+        <h2>If you have any questions, comments, suggestions, <br> love or hate, please send it our way</h2>
     </div>
 
 {% endblock %}

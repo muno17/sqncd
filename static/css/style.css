@@ -264,11 +264,15 @@ form {
 }
 
 /* contact page */
+#contactHeader {
+    font-size: 4rem;
+}
+
 .contactPage {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
     gap: 4rem;
+    margin-top: 4rem;
 }
 
 .contactForm {
