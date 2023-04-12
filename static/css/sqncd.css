@@ -298,13 +298,6 @@ h1 {
     border-style: solid;
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .slider {
-        width: 7rem;
-        height: .2rem;
-    }
-} */
-
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
     .slider {
@@ -334,14 +327,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     cursor: pointer;
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .slider::-webkit-slider-thumb {
-        width: .6rem;
-        height: 1.2rem;
-        border: .2rem;
-    }
-} */
-
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
     .slider::-webkit-slider-thumb {
@@ -365,15 +350,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     background: #BC81BF;
     cursor: pointer;   
 }
-
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .slider::-moz-range-thumb {
-        width: .6rem;
-        height: 1.25rem;
-        border: .2rem;
-    }
-} */
-
 
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
@@ -403,16 +379,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     border-color: #9D81BF;
     margin-bottom: .2rem;
 }
-
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    #tempo, #swing {
-        width: 4rem;
-        height: 1.5rem;
-        font-size: 1.2rem;
-        border-width: .15rem;
-        margin-bottom: .4rem;
-    }
-} */
 
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
@@ -450,14 +416,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     color: #BC81BF;
     background: white;
 }
-
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .transportButton {
-        width: 5rem;
-        height: 2.5rem;
-        font-size: 1.25rem;
-    }
-} */
 
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
@@ -510,12 +468,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     width: 7rem;
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .dropArea {
-        width: 10.5rem;
-    }
-} */
-
 @media screen and (min-width: 70rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     .dropArea {
@@ -532,12 +484,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     color: #BC81BF;
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .dropHouse {
-        font-size: .9rem;
-    }
-} */
-
 @media screen and (min-width: 70rem) {
     .dropHouse{
         font-size: .9rem;
@@ -547,12 +493,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 #deviceDropdown, #scaleDropdown {
     width: 5rem;
 }
-
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    #deviceDropdown, #scaleDropdown {
-        width: 9rem;
-    }
-} */
 
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
@@ -608,7 +548,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
         font-size: .8rem;
     }
 }
-
 
 @media screen and (min-width: 70rem) {
     select {
@@ -721,16 +660,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .pitchButton {
-        width: 1.2rem;
-        height: 2.19rem;
-        margin-left: .19rem;
-        margin-right: .19rem;
-        border-radius: .4rem;
-    }
-} */
-
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
     .pitchButton {
@@ -834,7 +763,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     height: 1.5rem;
 }
 
-
 @media screen and (min-width: 70rem) {
     .switch {
         width: 4rem;
@@ -903,6 +831,7 @@ transform: translateX(2.2rem);
 border-radius: 50%;
 }
 
+
 /* right controls */
 .right {
     text-align: right;
@@ -948,6 +877,7 @@ border-radius: 50%;
     }
 }
 
+
 /* bottom controls */
 .bottom {
     display: flex;
@@ -992,12 +922,6 @@ border-radius: 50%;
     }
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .buttonFunctionsArea {
-        height: 10rem;
-    }
-} */
-
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctionsArea {
@@ -1032,15 +956,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .buttonFunctions {
-        width: 4rem;
-        height: 1.8rem;
-        border-radius: .5rem;
-        font-size: .8rem;
-    }
-} */
-
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctions {
@@ -1060,6 +975,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
+
 /* sqncr */
 .sqncr {
     width: 36rem;
@@ -1076,13 +992,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
         height: 11rem;
     }
 }
-/* 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
-    .sqncr {
-        width: 41rem;
-        height: 11rem;
-    }
-} */
 
 @media screen and (min-width: 70rem) {
     .sqncr {
@@ -1097,7 +1006,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     justify-content: space-evenly;
     align-items: center;
     flex: 1;
-    /* margin-top: 2rem; */
 }
 
 @media screen and (min-width: 70rem) {
@@ -1135,16 +1043,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .gridButton {
-        width: 1.8rem;
-        height: 2.2rem;
-        margin-left: .3125rem;
-        margin-right: .3125rem;
-        font-size: .5rem;
-    }
-} */
-
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     .gridButton {
@@ -1176,13 +1074,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     font-size: .8rem;
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .rowFourColumn {
-        gap: .3125rem;
-        font-size: 1.0705rem;
-    }
-} */
-
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     .rowFourColumn {
@@ -1205,18 +1096,6 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     text-align: center;
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .last {
-        border-width: .3rem;
-    }
-}
-
-@media screen and (min-width: 54rem) {
-    .last {
-        border-width: .3rem;
-    }
-} */
-
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait), 
 screen and (min-width: 70rem) {
@@ -1231,19 +1110,6 @@ screen and (min-width: 70rem) {
     border-width: .18rem;
 }
 
-/* @media screen and (min-width: 30rem) and (orientation: portrait) {
-    .copier {
-        border-width: .3rem;
-    }
-}
-
-@media screen and (min-width: 54rem) {
-    .copier {
-        border-width: .2rem;
-    }
-} */
-
-
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait), 
 screen and (min-width: 70rem) {
@@ -1255,6 +1121,12 @@ screen and (min-width: 70rem) {
 
 footer {
     height: .2rem;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    footer {
+        min-width: .5rem;
+    }
 }
 
 .sqncdHide {
