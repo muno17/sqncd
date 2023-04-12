@@ -9,6 +9,14 @@
     <h1 id="contactHeader"> Contact Us</h1>
     <div class="contactPage">
         <form class="contactForm" action="https://formsubmit.co/094c715ea4ea611b928004f561767669" method="POST">
+
+            <!-- Honeypot -->
+            <input type="text" name="_honey" style="display: none;">
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <input type="hidden" name="_next" value="https://www.sqncd.com/success">
+
             <input type="text" placeholder="name" name="name" class="contact" required>
             <input type="email" placeholder="email" name="email" class="contact" required>
             <input type="subject" placeholder="subject" name="subject" class="contact" required>

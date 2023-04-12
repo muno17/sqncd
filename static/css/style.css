@@ -280,14 +280,14 @@ form {
 }
 
 form label {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
     display: block;
     padding: 10px 0;
   }
 
   .contact {
-    width: 400px;
+    width: 18rem;
     background-color: #fafafa;
     -webkit-border-radius: 3px;
        -moz-border-radius: 3px;
@@ -298,14 +298,14 @@ form label {
   }
 
  .message{
-    width: 500px;
+    width: 31rem;
     height: 100px;
     background-color: #fafafa;
     -webkit-border-radius: 3px;
        -moz-border-radius: 3px;
             border-radius: 3px;
     border: .15rem solid #C7C6C6;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     padding: 5px;
     font-size: 1.1em;
   }
