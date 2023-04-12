@@ -31,16 +31,13 @@ def news():
 
 @app.route ('/contact', methods = ['GET', 'POST'])
 def contact():
-    # print('in here')
-    # if request.method == "POST":
-    #     print("what")
-    #     return redirect('/success.html', code=307)
-
     return render_template('website/contact.html')
+
 
 @app.route ('/success')
 def success():
     return render_template('website/success.html')
+
 
 @app.route ('/donate')
 def donate():
