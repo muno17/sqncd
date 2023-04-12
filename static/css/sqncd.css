@@ -43,7 +43,8 @@ main {
     height: .3rem;
 }
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
     .header {
         font-size: .9rem;
         height: .5rem;
@@ -102,7 +103,7 @@ main {
 
 @media screen and (max-width: 70rem) and (orientation: portrait) {
     .sqncdBody {
-        min-width: 100vh;
+        min-width: 70%;
     }
 }
 
@@ -154,7 +155,7 @@ main {
 
 @media screen and (max-width: 70rem) and (orientation: portrait) {
     .sqncd {
-        min-width: 100vh;
+        min-width: 50%;
     }
 }
 
@@ -201,14 +202,14 @@ main {
 @media screen and (max-width: 70rem) and (orientation: portrait) {
     .controlSection {
         height: 50%;
-        min-width: 100vh;
+        min-width: 50%;
     }
 }
 
 @media screen and (min-width: 30rem) and (orientation: portrait) {
     .controlSection {
         height: 70%;
-        min-width: 100vh;
+        min-width: 50%;
     }
 }
 
@@ -297,14 +298,15 @@ h1 {
     border-style: solid;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .slider {
         width: 7rem;
-        height: .3rem;
+        height: .2rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
     .slider {
         width: 7rem;
         height: .2rem;
@@ -332,15 +334,16 @@ h1 {
     cursor: pointer;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .slider::-webkit-slider-thumb {
-        width: .8rem;
-        height: 1.1rem;
-        border: .125rem;
+        width: .6rem;
+        height: 1.2rem;
+        border: .2rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
     .slider::-webkit-slider-thumb {
         width: .6rem;
         height: 1.2rem;
@@ -363,16 +366,17 @@ h1 {
     cursor: pointer;   
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .slider::-moz-range-thumb {
-        width: .8rem;
+        width: .6rem;
         height: 1.25rem;
-        border: .125rem;
+        border: .2rem;
     }
-}
+} */
 
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
     .slider::-moz-range-thumb {
         width: .6rem;
         height: 1.2rem;
@@ -400,17 +404,18 @@ h1 {
     margin-bottom: .2rem;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     #tempo, #swing {
-        width: 5rem;
-        height: 1.9rem;
-        font-size: 1.5rem;
+        width: 4rem;
+        height: 1.5rem;
+        font-size: 1.2rem;
         border-width: .15rem;
         margin-bottom: .4rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     #tempo, #swing {
         width: 4rem;
         height: 1.5rem;
@@ -446,15 +451,16 @@ h1 {
     background: white;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .transportButton {
         width: 5rem;
         height: 2.5rem;
         font-size: 1.25rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .transportButton {
         width: 4rem;
         height: 2rem;
@@ -480,6 +486,13 @@ h1 {
     width: 35%;
 }
 
+@media screen and (min-width: 70rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .midleft {
+        width: 28%;
+    }
+}
+
 @media screen and (min-width: 70rem) {
     .midLeft {
         width: 13rem;
@@ -497,13 +510,14 @@ h1 {
     width: 7rem;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .dropArea {
         width: 10.5rem;
     }
-}
+} */
 
-@media screen and (min-width: 70rem) {
+@media screen and (min-width: 70rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .dropArea {
         width: 11.25rem;
     }
@@ -518,11 +532,11 @@ h1 {
     color: #BC81BF;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .dropHouse {
         font-size: .9rem;
     }
-}
+} */
 
 @media screen and (min-width: 70rem) {
     .dropHouse{
@@ -534,15 +548,16 @@ h1 {
     width: 5rem;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     #deviceDropdown, #scaleDropdown {
         width: 9rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
     #deviceDropdown, #scaleDropdown {
-        width: 6.5rem;
+        width: 7rem;
     }
 }
 
@@ -583,7 +598,8 @@ select {
     font-size: .5rem;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     select {
         height: 2rem;
         padding: .3rem;
@@ -628,7 +644,8 @@ select {
     align-items: center;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .octaveButtonHouse {
         font-size: .9rem;
     }
@@ -648,7 +665,8 @@ select {
     background: white;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .octaveButton {
         width: 1.2rem;
         height: 1.6rem;
@@ -703,7 +721,7 @@ select {
     }
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .pitchButton {
         width: 1.2rem;
         height: 2.19rem;
@@ -711,9 +729,10 @@ select {
         margin-right: .19rem;
         border-radius: .4rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
     .pitchButton {
         width: 1.1rem;
         height: 1.6rem;
@@ -758,7 +777,9 @@ select {
     box-shadow: 3px 3px 12px black;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait), 
+screen and (min-width: 70rem) {
     #sqnc, #reset, #clock {
         width: 9.4rem;
         border-radius: .705rem;
@@ -766,21 +787,6 @@ select {
     }
 }
 
-@media screen and (min-width: 54rem) {
-    #sqnc, #reset, #clock {
-        width: 7rem;
-        border-radius: .705rem;
-        font-size: 1.4rem;
-    }
-}
-
-@media screen and (min-width: 70rem) {
-    #sqnc, #reset, #clock {
-        width: 9.4rem;
-        border-radius: .705rem;
-        font-size: 1.9rem;
-    }
-}
 
 /* midRight */
 .midRight {
@@ -806,7 +812,8 @@ select {
     gap: .1rem;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .clockHouse {
         margin-top: 1.25rem;
         gap: .3rem;
@@ -904,7 +911,7 @@ border-radius: 50%;
 
 @media screen and (max-width: 70rem) and (orientation: portrait) {
     .right {
-        width: 15%;
+        width: 10%;
     }
 }
 
@@ -923,15 +930,8 @@ border-radius: 50%;
 }
 
 @media screen and (max-width: 70rem) and (orientation: portrait) {
-    .logo {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (min-width: 30rem) and (orientation: portrait) {
     #logo {
-        margin-right: 0;
-        font-size: 3.75rem
+        font-size: 1.5rem;
     }
 }
 
@@ -992,13 +992,14 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctionsArea {
         height: 10rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctionsArea {
         margin-top: .2rem;
         height: 10rem;
@@ -1031,16 +1032,17 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctions {
         width: 4rem;
         height: 1.8rem;
         border-radius: .5rem;
         font-size: .8rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctions {
         width: 4rem;
         height: 1.8rem;
@@ -1067,19 +1069,20 @@ border-radius: 50%;
     align-items: center;
 }
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .sqncr {
         width: 41rem;
         height: 11rem;
     }
 }
-
+/* 
 @media screen and (min-width: 30rem) and (orientation: portrait) {
     .sqncr {
         width: 41rem;
         height: 11rem;
     }
-}
+} */
 
 @media screen and (min-width: 70rem) {
     .sqncr {
@@ -1132,7 +1135,7 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .gridButton {
         width: 1.8rem;
         height: 2.2rem;
@@ -1140,9 +1143,10 @@ border-radius: 50%;
         margin-right: .3125rem;
         font-size: .5rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .gridButton {
         width: 1.8rem;
         height: 2.2rem;
@@ -1172,16 +1176,17 @@ border-radius: 50%;
     font-size: .8rem;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .rowFourColumn {
         gap: .3125rem;
         font-size: 1.0705rem;
     }
-}
+} */
 
-@media screen and (min-width: 54rem) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .rowFourColumn {
-        gap: .25rem;
+        gap: .3rem;
         font-size: 1rem;
     }
 }
@@ -1200,7 +1205,7 @@ border-radius: 50%;
     text-align: center;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .last {
         border-width: .3rem;
     }
@@ -1208,11 +1213,13 @@ border-radius: 50%;
 
 @media screen and (min-width: 54rem) {
     .last {
-        border-width: .2rem;
+        border-width: .3rem;
     }
-}
+} */
 
-@media screen and (min-width: 70rem) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait), 
+screen and (min-width: 70rem) {
     .last {
         border-width: .3rem;
     }
@@ -1224,7 +1231,7 @@ border-radius: 50%;
     border-width: .18rem;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+/* @media screen and (min-width: 30rem) and (orientation: portrait) {
     .copier {
         border-width: .3rem;
     }
@@ -1234,9 +1241,12 @@ border-radius: 50%;
     .copier {
         border-width: .2rem;
     }
-}
+} */
 
-@media screen and (min-width: 70rem) {
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait), 
+screen and (min-width: 70rem) {
     .copier {
         border-width: .3rem;
     }
