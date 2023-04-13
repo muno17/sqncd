@@ -522,7 +522,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
     #deviceDropdown, #scaleDropdown {
-        width: 7rem;
+        width: 9rem;
     }
 }
 
@@ -539,13 +539,13 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     #channelDropdown, #keyDropdown {
-        width: 3.12rem;
+        width: 3.5rem;
     }
 }
 
 @media screen and (min-width: 70rem) {
     #channelDropdown, #keyDropdown {
-        width: 3.125rem;
+        width: 3.12rem;
     }
 }
 
