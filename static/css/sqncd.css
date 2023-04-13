@@ -1154,7 +1154,7 @@ footer {
 
 @media screen and (max-width: 70rem) and (orientation: portrait) {
     footer {
-        min-width: .5rem;
+        display: none;
     }
 }
 
