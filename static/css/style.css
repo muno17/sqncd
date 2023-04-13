@@ -272,6 +272,12 @@ form {
     flex-direction: column;
 }
 
+@media screen and (max-width: 54rem) {
+    .contactHouse {
+        width: 100%;
+    }
+}
+
 #contactHeader {
     font-size: 3rem;
 }
@@ -290,13 +296,18 @@ form {
 }
 
 @media screen and (max-width: 54rem) {
+    br {
+        display: none;
+    }
+    
     #contactCopy {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1rem;
+        /* word-break: normal; */
     }
 }
 
-@media screen and (max-width: 70rem) {
+@media screen and (min-width: 54rem) {
     #contactCopy {
         text-align: center;
         font-size: 1.5rem;
@@ -311,6 +322,7 @@ form {
 @media screen and (max-width: 70rem) {
     .contactPage {
         flex-direction: column;
+        gap: 1rem;
     }
 }
 
@@ -324,6 +336,15 @@ form {
     gap: .5em;
 }
 
+@media screen and (max-width: 54rem) {
+    .contactForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 form label {
     font-size: 1.2rem;
     font-weight: bold;
@@ -331,40 +352,48 @@ form label {
     padding: 10px 0;
   }
 
-  .contact {
-    width: 18rem;
-    background-color: #fafafa;
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
-            border: .15rem solid #C7C6C6;
-    padding: 5px;
-    font-size: 1.1em;
-  }
+.contact {
+width: 18rem;
+background-color: #fafafa;
+-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+        border-radius: 3px;
+        border: .15rem solid #C7C6C6;
+padding: 5px;
+font-size: 1.1em;
+}
 
- .message{
-    width: 31rem;
-    height: 100px;
-    background-color: #fafafa;
-    -webkit-border-radius: 3px;
-       -moz-border-radius: 3px;
-            border-radius: 3px;
-    border: .15rem solid #C7C6C6;
-    margin-bottom: 1rem;
-    padding: 5px;
-    font-size: 1.1em;
-  }
-  
-  .contactSubmit {
-    width: 9rem;
-    height: 3rem;
-    border-radius: .5rem;
-    font-size: 1.7rem;
-    font-weight: bold;
-    color: white;
-    box-shadow: 3px 3px 10px black;
-    background: #BC81BF;
-  }
+.message{
+width: 31rem;
+height: 100px;
+background-color: #fafafa;
+-webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+        border-radius: 3px;
+border: .15rem solid #C7C6C6;
+margin-bottom: 1rem;
+padding: 5px;
+font-size: 1.1em;
+}
+
+@media screen and (max-width: 54rem) {
+    .message {
+        width: 90%;
+        height: 10rem;
+        padding: 0;
+    }
+}
+
+.contactSubmit {
+width: 9rem;
+height: 3rem;
+border-radius: .5rem;
+font-size: 1.7rem;
+font-weight: bold;
+color: white;
+box-shadow: 3px 3px 10px black;
+background: #BC81BF;
+}
 
 
 /* footer */
