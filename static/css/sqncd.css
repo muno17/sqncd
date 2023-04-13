@@ -62,7 +62,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
     .headerleft {
-        padding-left: 7rem;
+        padding-left: 5rem;
     }
 }
 
@@ -74,7 +74,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 screen and (min-width: 30rem) and (orientation: portrait) {
     #muno {
         font-size: 1.5rem;
-        margin-left: 5rem;
+        margin-left: 7rem;
     }
 }
 
