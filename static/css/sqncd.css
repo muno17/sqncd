@@ -421,9 +421,9 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     .transportButton {
-        width: 4rem;
-        height: 2rem;
-        font-size: 1rem;
+        width: 4.6rem;
+        height: 2.3rem;
+        font-size: 1.25rem;
     }
 }
 
