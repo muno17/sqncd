@@ -665,8 +665,10 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
     .pitchButton {
-        width: 1.1rem;
-        height: 1.6rem;
+        width: 1.2rem;
+        height: 2.19rem;
+        margin-left: .19rem;
+        margin-right: .19rem;
         border-radius: .4rem;
     }
 }
