@@ -1147,6 +1147,7 @@ screen and (min-width: 70rem) {
     }
 }
 
+/* footer */
 
 footer {
     height: .2rem;
@@ -1164,4 +1165,14 @@ footer {
 
 .sqncdFooter {
     display: inline;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    footer {
+        display: none;
+    }
+
+    .sqncdFooter {
+        display: none;
+    }
 }
