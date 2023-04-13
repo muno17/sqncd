@@ -62,7 +62,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (min-width: 54rem),
 screen and (min-width: 30rem) and (orientation: portrait) {
     .headerleft {
-        padding-left: 5rem;
+        padding-left: 7rem;
     }
 }
 
