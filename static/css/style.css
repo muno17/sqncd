@@ -266,15 +266,58 @@ form {
 }
 
 /* contact page */
+
+.contactHouse {
+    display: flex;
+    flex-direction: column;
+}
+
 #contactHeader {
-    font-size: 4rem;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 70rem) {
+    #contactHeader {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    #contactHeader {
+        margin-left: 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 54rem) {
+    #contactCopy {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 70rem) {
+    #contactCopy {
+        text-align: center;
+        font-size: 1.5rem;
+    }
 }
 
 .contactPage {
     display: flex;
     justify-content: space-evenly;
-    gap: 4rem;
-    margin-top: 4rem;
+}
+
+@media screen and (max-width: 70rem) {
+    .contactPage {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .contactPage {
+        gap: 4rem;
+    }
 }
 
 .contactForm {
