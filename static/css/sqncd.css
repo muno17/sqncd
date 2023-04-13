@@ -894,7 +894,8 @@ border-radius: 50%;
     }
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
     .bottom {
         gap: 1.5rem;
     }
