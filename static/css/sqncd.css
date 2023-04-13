@@ -928,8 +928,8 @@ border-radius: 50%;
 screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctionsArea {
         margin-top: .2rem;
-        height: 10rem;
-        width: 4rem;
+        height: 12.7rem;
+        width: 5.7rem;
     }
 }
 
@@ -961,8 +961,8 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     .buttonFunctions {
-        width: 4rem;
-        height: 1.8rem;
+        width: 4.7rem;
+        height: 2.1rem;
         border-radius: .5rem;
         font-size: .8rem;
     }
@@ -1048,11 +1048,11 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (min-width: 54rem), 
 screen and (min-width: 30rem) and (orientation: portrait) {
     .gridButton {
-        width: 1.8rem;
-        height: 2.2rem;
+        width: 2.2rem;
+        height: 2.8rem;
         margin-left: .3125rem;
         margin-right: .3125rem;
-        font-size: .5rem;
+        font-size: .7rem;
     }
 }
 
