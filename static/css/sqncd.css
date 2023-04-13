@@ -31,6 +31,16 @@ main {
     }
 }
 
+@media screen and (min-width: 30rem) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+}
+
 @media screen and (max-width: 70rem) and (orientation: portrait) {
     main {
         min-width: 100vh;
