@@ -291,7 +291,6 @@ form {
 @media screen and (min-width: 70rem) {
     #contactHeader {
         margin-left: 1rem;
-        font-size: 1rem;
     }
 }
 
@@ -303,7 +302,6 @@ form {
     #contactCopy {
         text-align: center;
         font-size: 1rem;
-        /* word-break: normal; */
     }
 }
 
@@ -311,6 +309,12 @@ form {
     #contactCopy {
         text-align: center;
         font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    #contactCopy {
+        margin-top: 4rem;
     }
 }
 
