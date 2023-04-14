@@ -189,11 +189,11 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
-@media screen and (max-height: 30rem) and (orientation: landscape) {
+/* @media screen and (max-width: 54rem) and (orientation: landscape) {
     .sqncd {
         height: 23rem;
     }
-}
+} */
 
 @media screen and (max-height: 60rem) and (orientation: landscape) {
     .sqncd {
@@ -447,7 +447,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     width: 2.9rem;
     height: 1.6rem;
     border-radius: .5rem;
-    font-size: .8rem;
+    font-size: .7rem;
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
     background: white;
