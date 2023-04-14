@@ -93,6 +93,11 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    #muno {
+        margin-left: 5rem;
+    }
+}
 
 @media screen and (min-width: 70rem) {
     #muno {
@@ -904,9 +909,9 @@ screen and (max-width: 70rem) and (orientation: portrait) {
     }
 }
 
-@media screen and (max-width: 54rem) and (orientation: portrait) {
+@media screen and (max-width: 30rem) and (orientation: portrait) {
     #logo {
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 }
 
