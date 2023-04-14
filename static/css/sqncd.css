@@ -451,6 +451,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     box-shadow: 3px 3px 12px black;
     color: #BC81BF;
     background: white;
+    text-align: center;
 }
 
 @media screen and (min-width: 54rem), 
