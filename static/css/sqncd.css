@@ -968,6 +968,13 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    .bottom {
+        gap: 1.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
 /* button functions */
 
 .buttonFunctionsArea {
