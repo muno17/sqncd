@@ -80,7 +80,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     font-size: 1rem;
 }
 
-@media screen and (min-width: 30rem) and (orientation: portrait) {
+@media screen and (orientation: portrait) {
     #muno {
         font-size: 1.5rem;
         margin-left: 7rem;
@@ -897,15 +897,16 @@ border-radius: 50%;
     margin-right: .5rem;
 }
 
-@media screen and (max-width: 70rem) and (orientation: portrait) {
+@media screen and (min-width: 54rem), 
+screen and (max-width: 70rem) and (orientation: portrait) {
     #logo {
         font-size: 3.4rem;
     }
 }
 
-@media screen and (min-width: 54rem) {
+@media screen and (max-width: 54rem) and (orientation: portrait) {
     #logo {
-        font-size: 3.4rem
+        font-size: 2rem;
     }
 }
 
