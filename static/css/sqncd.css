@@ -95,7 +95,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 
 @media screen and (max-width: 30rem) and (orientation: portrait) {
     #muno {
-        margin-left: 5rem;
+        margin-left: 6rem;
     }
 }
 
@@ -293,6 +293,12 @@ h1 {
     }
 }
 
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    .left{
+        width: 28%;
+    }
+}
+
 .displays {
     display: flex;
     flex-direction: column;
@@ -478,6 +484,12 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 screen and (min-width: 30rem) and (orientation: portrait) {
     .midleft {
         width: 28%;
+    }
+}
+
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    .midleft {
+        width: 37%;
     }
 }
 
@@ -766,6 +778,12 @@ screen and (min-width: 70rem) {
     width: 25%;
 }
 
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    .midRight{
+        width: 20%;
+    }
+}
+
 @media screen and (min-width: 70rem) {
     .midRight {
         width: 12.5rem;
@@ -911,7 +929,7 @@ screen and (max-width: 70rem) and (orientation: portrait) {
 
 @media screen and (max-width: 30rem) and (orientation: portrait) {
     #logo {
-        font-size: 1.3rem;
+        font-size: 1.8rem;
     }
 }
 
