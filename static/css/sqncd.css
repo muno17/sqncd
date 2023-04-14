@@ -588,6 +588,11 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 @media screen and (max-width: 70rem) and (orientation: portrait) {
     option {
         transform: rotate(90deg);
+        transform-origin: right top;
+        min-width: 100vh;
+        width:100%;
+        overflow: hidden;
+        position: absolute;
     }
 }
 
