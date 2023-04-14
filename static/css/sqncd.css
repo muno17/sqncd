@@ -970,8 +970,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 
 @media screen and (max-width: 30rem) and (orientation: portrait) {
     .bottom {
-        gap: 1.2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.2rem;
     }
 }
 
@@ -1011,8 +1010,8 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 }
 
 .buttonFunctions {
-    width: 2.6rem;
-    height: 1.5rem;
+    width: 2.3rem;
+    height: 1.4rem;
     border-radius: .4rem;
     margin-bottom: .3rem;
     font-size: .5rem;
@@ -1046,10 +1045,9 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
-
 /* sqncr */
 .sqncr {
-    width: 36rem;
+    width: 35rem;
     height: 9rem;
     display: flex;
     flex-direction: column;
