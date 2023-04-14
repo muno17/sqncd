@@ -444,7 +444,7 @@ screen and (min-width: 30rem) and (orientation: portrait) {
 }
 
 .transportButton {
-    width: 3rem;
+    width: 2.8rem;
     height: 1.5rem;
     border-radius: .5rem;
     font-size: .8rem;
