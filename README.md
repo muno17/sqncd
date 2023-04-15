@@ -33,7 +33,7 @@ _________________________
 __sqncd__ is a free online web app that can be ran in the browser of computers and android devices (phones and tablets).  __sqncd__ is designed to be quick and easy to use and is a great sketchpad to aid musicians struggling with writer's block.  Through it's randomization features, __sqncd__ can be used as a tool to create musical ideas.  sqncd also features a 'user' mode which allows it to function as a typical sequencer, allowing the user to input their choice of note in any step.  Accents and ghost notes help add dynamism to patterns and can be applied on any step.
 
 
-By using the WEBMIDI API, __sqncd__ is able to detect MIDI devices connected to the user's device.  MIDI messages containing note values can be sent to one device at a time and clock can be configured to be sent to only the device receiving MIDI note messages or to all devices detected by WEBMIDI.
+By using the WEBMIDI API, __sqncd__ is able to detect MIDI devices connected to the user's device.  MIDI messages containing note values can be sent to one device at a time and clock can be configured to be sent to only the device receiving MIDI note messages or to all devices detected by WEBMIDI.  Clock to all is currently not supported on mobile browsers and can only be used on desktop browsers.
 
 
 A quickstart guide can be found at https://www.sqncd.com/quickstart
