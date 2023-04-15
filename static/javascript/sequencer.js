@@ -216,11 +216,12 @@ start.addEventListener('click', () => {
 let looper = (step, length) => {
 
     let repeat = () => {
-        if (deviceDropdown.value) {
-            let sendClockTo = clockDevices();
-        }
+        // if (deviceDropdown.value) {
+        //     let sendClockTo = clockDevices();
+        // }
 
         if (deviceDropdown.value) {
+            let sendClockTo = clockDevices();
             // send a clock signal to all devices that are switched on
             if (!clockButton.classList.contains('off')) {
                 // loop through devices and send clock
