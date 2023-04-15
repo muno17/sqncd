@@ -189,19 +189,19 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
-@media screen and (orientation: landscape) {
+/* @media screen and (orientation: landscape) {
     .sqncd {
         min-height: 100vh;
     }
-}
+} */
 
-/* @media screen and (max-height: 60rem) and (orientation: landscape) {
+@media screen and (orientation: landscape) {
     .sqncd {
         height: 30rem;
     }
 }
 
-@media screen and (max-height: 30rem) and (orientation: landscape) {
+/* @media screen and (max-height: 30rem) and (orientation: landscape) {
     .sqncd {
         height: 23rem;
     }
