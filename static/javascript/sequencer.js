@@ -194,8 +194,6 @@ start.addEventListener('click', async () => {
 
 // transport starts when the start button is pressed
 start.addEventListener('click', () => {
-    // only start if a device is detected
-    // if (deviceDropdown.value) {
         if (start.classList.contains('off')) {
             start.classList.remove('off');
             stop.classList.add('off');
@@ -210,16 +208,13 @@ start.addEventListener('click', () => {
             }
             looper(-1, length);
         }
-    // }
 })
 
 let looper = (step, length) => {
 
     let repeat = () => {
-        // if (deviceDropdown.value) {
-        //     let sendClockTo = clockDevices();
-        // }
 
+        //check which devices to send clock signal to
         if (deviceDropdown.value) {
             let sendClockTo = clockDevices();
             // send a clock signal to all devices that are switched on
