@@ -1,5 +1,6 @@
 # sqncd
 midi sequencer and random pattern generator webapp
+__sqncd__ can be found at __sqncd.com/__
 
 - 64 step sequencer
 - option to randomly assign notes based on key and scale selection
@@ -29,4 +30,8 @@ __sqncd__ is a free online web app that can be ran in the browser of computers a
 
 By using the WEBMIDI API, __sqncd__ is able to detect MIDI devices connected to the user's device.  MIDI messages containing note values can be sent to one device at a time and clock can be configured to be sent to only the device receiving MIDI note messages or to all devices detected by WEBMIDI.
 
+
+A quickstart guide can be found at https://www.sqncd.com/quickstart
+
+The full manual can be found at https://www.sqncd.com/manual
 
