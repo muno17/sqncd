@@ -201,11 +201,11 @@ screen and (min-width: 30rem) and (orientation: portrait) {
     }
 }
 
-/* @media screen and (max-height: 30rem) and (orientation: landscape) {
+@media screen and (max-height: 30rem) and (orientation: landscape) {
     .sqncd {
         height: 23rem;
     }
-} */
+}
 
 @media screen and (min-width: 70rem) {
     .sqncd {
