@@ -1,6 +1,11 @@
 # sqncd
 midi sequencer and random pattern generator webapp
-__sqncd__ can be found at __sqncd.com/__
+
+__sqncd__ can be found at https://www.sqncd.com/
+
+
+![sqncd](https://www.sqncd.com/static/css/sqncd-promo.png)
+
 
 - 64 step sequencer
 - option to randomly assign notes based on key and scale selection
