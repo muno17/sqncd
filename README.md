@@ -42,5 +42,7 @@ The full manual can be found at https://www.sqncd.com/manual
 Acknowledgments
 
 WEBMIDI.js, documentation: https://webmidijs.org/api/
+
 Tone.js - documentation: https://tonejs.github.io/docs/14.7.77/index.html
+
 Guitarland.com - idea for organizing midi scales- documentation: https://www.guitarland.com/Music10/FGA/LectureMIDIscales.html
