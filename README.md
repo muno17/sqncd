@@ -4,6 +4,8 @@ midi sequencer and random pattern generator webapp
 
 **sqncd** can be found at https://www.sqncd.com/
 
+#### Video Demo: https://www.youtube.com/watch?v=Z5jE9VJ-vAo
+
 ![sqncd](https://www.sqncd.com/static/css/sqncd-promo.png)
 
 -   64 step sequencer
