@@ -1,4 +1,4 @@
-import { selectedScale } from '/static/javascript/sequencer.js'
+import { selectedScale } from '/js/sequencer.js'
 
 
 // first element in array is length of scale, rest of elements are semitones

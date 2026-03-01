@@ -1,4 +1,4 @@
-import { octavizer, octaveReseter, turnOn } from '/static/javascript/notegen.js'
+import { octavizer, octaveReseter, turnOn } from '/js/notegen.js'
 
 let Db = document.getElementById('Db')
 let Eb = document.getElementById('Eb')

@@ -1,7 +1,7 @@
-import { scaleGenerator, midiNotes, octaves, octavizer } from '/static/javascript/notegen.js'
-import { deviceDropdown, sendMidi, sendStartSignal, sendStopSignal, sendClockSignal, clockButton, clockDevices} from '/static/javascript/midi_io.js'
-import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/static/javascript/noteFunctions.js'
-import { userNoteGenerator, resetUserOctaves } from '/static/javascript/userPattern.js'
+import { scaleGenerator, midiNotes, octaves, octavizer } from '/js/notegen.js'
+import { deviceDropdown, sendMidi, sendStartSignal, sendStopSignal, sendClockSignal, clockButton, clockDevices} from '/js/midi_io.js'
+import { accent, ghost, accentizer, ghoster, lengthButton, lastStep, copy, copyMaker } from '/js/noteFunctions.js'
+import { userNoteGenerator, resetUserOctaves } from '/js/userPattern.js'
 
 // initiate default note values, if nothing is selected = C major
 let scaleValue = 'user';
