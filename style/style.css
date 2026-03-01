@@ -1,17 +1,39 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./Ubuntu-Medium.ttf") format("truetype"); /* The ./ means "same folder" */
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./Ubuntu-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url("./Ubuntu-bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
 * {
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 body {
-    font-family: ubuntu, sans-serif;
-    background: #8E90A4;
+    font-family: "Ubuntu", sans-serif, serif;
+    background: #8e90a4;
     color: white;
     display: flex;
     flex-direction: column;
@@ -30,9 +52,9 @@ a:visited {
 
 /* 2. Header (Matching your other apps) */
 .header {
-    background-color: #BC81BF;
+    background-color: #bc81bf;
     flex-shrink: 0;
-    padding: 10px 0; 
+    padding: 10px 0;
     box-shadow: 1px 1px 1px black;
     display: flex;
     justify-content: space-between;
@@ -65,13 +87,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Vertical center */
-    align-items: center;     /* Horizontal center */
+    align-items: center; /* Horizontal center */
 
     width: 100%;
 }
 
 .homeBody {
-    width: fit-content;      /* Prevents the block from stretching to full width */
+    width: fit-content; /* Prevents the block from stretching to full width */
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -92,12 +114,12 @@ main {
 .homeCopy {
     display: flex;
     flex-direction: row;
-    align-items: center; 
+    align-items: center;
     gap: 60px;
 }
 
 #homeImage {
-    max-width: 550px;       /* Fixed size helps prevent the "shifting" look */
+    max-width: 550px; /* Fixed size helps prevent the "shifting" look */
     max-height: 60vh;
     width: auto;
     height: auto;
@@ -116,35 +138,34 @@ li {
     margin-bottom: 8px;
 }
 
-
 .desktopManual {
-    width: 100%;    /* Fills the full width of main */
-    height: 100%;   /* Fills the full height of main */
+    width: 100%; /* Fills the full width of main */
+    height: 100%; /* Fills the full height of main */
     border: none;
-    flex-grow: 1;   /* Ensures it takes up all available space */
+    flex-grow: 1; /* Ensures it takes up all available space */
 }
 
 /* Override for pages that contain the PDF */
 main:has(.desktopManual) {
-    align-items: stretch;    /* Prevents the PDF from shrinking to the center */
-    padding: 0;             /* Optional: removes padding to give the PDF more room */
+    align-items: stretch; /* Prevents the PDF from shrinking to the center */
+    padding: 0; /* Optional: removes padding to give the PDF more room */
 }
-
 
 /* 4. Footer */
 footer {
-    background-color: #BC81BF;
-    width: 100%;       /* Forces it to span the full width */
-    flex-shrink: 0;    /* Prevents the footer from collapsing to 0.2rem */
-    height: auto;      /* Let the content define the height, or use a set px */
-    min-height: 40px;  /* Gives it enough breathing room for the text */
+    background-color: #bc81bf;
+    width: 100%; /* Forces it to span the full width */
+    flex-shrink: 0; /* Prevents the footer from collapsing to 0.2rem */
+    height: auto; /* Let the content define the height, or use a set px */
+    min-height: 40px; /* Gives it enough breathing room for the text */
     padding: 10px 0;
-    background-color: #BC81BF;
+    background-color: #bc81bf;
     text-align: center;
     z-index: 10;
 }
 
 /* 5. Cleanup */
-.mobileManual, .sqncdHide {
+.mobileManual,
+.sqncdHide {
     display: none;
 }

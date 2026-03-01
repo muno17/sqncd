@@ -112,7 +112,8 @@ h1 {
     cursor: pointer;
 }
 
-#tempo, #swing {
+#tempo,
+#swing {
     width: 80px;
     height: 30px;
     font-size: 24px;
@@ -165,8 +166,14 @@ h1 {
     color: #bc81bf;
 }
 
-#deviceDropdown, #scaleDropdown { width: 150px; }
-#channelDropdown, #keyDropdown { width: 50px; }
+#deviceDropdown,
+#scaleDropdown {
+    width: 150px;
+}
+#channelDropdown,
+#keyDropdown {
+    width: 50px;
+}
 
 select {
     height: 32px;
@@ -225,11 +232,19 @@ select {
     border: none;
 }
 
-.flat { background: black; }
-#octaveMid { background: #94d0ff; }
-#C { background: #ecc987; }
+.flat {
+    background: black;
+}
+#octaveMid {
+    background: #94d0ff;
+}
+#C {
+    background: #ecc987;
+}
 
-#sqnc, #reset, #clock {
+#sqnc,
+#reset,
+#clock {
     background-color: #bc81bf;
     color: white;
     width: 150px;
@@ -259,7 +274,10 @@ select {
 .clockSlider {
     position: absolute;
     cursor: pointer;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: #7b8183;
     transition: 0.4s;
     border-radius: 34px;
@@ -367,9 +385,9 @@ input:checked + .clockSlider:before {
     font-weight: bold;
 }
 
-.last { 
-    border: 5px solid #4b34e5; 
+.last {
+    border: 5px solid #4b34e5;
 }
-.copier { 
-    border: 5px solid #922793; 
+.copier {
+    border: 5px solid #922793;
 }
