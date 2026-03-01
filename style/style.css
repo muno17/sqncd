@@ -134,10 +134,14 @@ main:has(.desktopManual) {
 /* 4. Footer */
 footer {
     background-color: #BC81BF;
-    flex-shrink: 0;
-    padding: 15px;
+    width: 100%;       /* Forces it to span the full width */
+    flex-shrink: 0;    /* Prevents the footer from collapsing to 0.2rem */
+    height: auto;      /* Let the content define the height, or use a set px */
+    min-height: 40px;  /* Gives it enough breathing room for the text */
+    padding: 10px 0;
+    background-color: #BC81BF;
     text-align: center;
-    color: white;
+    z-index: 10;
 }
 
 /* 5. Cleanup */
