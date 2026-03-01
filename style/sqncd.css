@@ -255,6 +255,10 @@ select {
     border: none;
 }
 
+#sqnc {
+    display: none;
+}
+
 .midRight {
     width: 200px;
 }
