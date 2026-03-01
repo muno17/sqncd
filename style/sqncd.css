@@ -5,6 +5,16 @@ main {
     padding: 0px;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
 
 /* rotate mobile devices to be in landscape */
 @media screen and (max-width: 70rem) and (orientation: portrait) {
