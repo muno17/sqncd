@@ -1,0 +1,1218 @@
+main {
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* rotate mobile devices to be in landscape */
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    body {
+        transform: rotate(90deg);
+        transform-origin: right top;
+        min-width: 100vh;
+        width:100%;
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+        min-height: 0;
+        top: 100%;
+        right: 0;
+        display: flex;
+        flex: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+    }
+}
+
+@media screen and (min-width: 30rem) {
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    main {
+        min-width: 100vh;
+        height: 100%;
+    } 
+}
+
+.header {
+    font-size: .7rem;
+    height: .3rem;
+}
+
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .header {
+        font-size: .9rem;
+        height: .5rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .header {
+        font-size: 1.5rem;
+        height: 3rem;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+    }
+}
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .headerleft {
+        padding-left: 5rem;
+    }
+}
+
+#muno {
+    font-size: 1rem;
+}
+
+@media screen and (orientation: portrait) {
+    #muno {
+        font-size: 1.5rem;
+        margin-left: 7rem;
+    }
+}
+
+@media screen and (min-width: 54rem) {
+    #muno {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    #muno {
+        margin-left: 6rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    #muno {
+        font-size: 4rem;
+    }
+}
+
+.headerRight {
+    gap: 2rem;
+}
+
+@media screen and (min-width: 70rem) {
+    .headerRight {
+        margin-right: 2rem;
+    }
+}
+
+
+/* sqncd */
+.sqncdBody {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 70rem) {
+    .sqncdBody {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .sqncdBody {
+        min-width: 70%;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .sqncdBody {
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.wood {
+    width: 1rem;
+    box-shadow: 3px 3px 10px black;
+    background-color: #363532;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .wood {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .wood {
+        width: 2rem;
+        height: 41rem;
+        padding: 1px;
+        border-radius: .3rem;
+    }
+}
+
+.sqncd {
+    background: #C7C6C6;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-width: .0705rem;
+    box-shadow: 3px 3px 10px black;
+    border-left: none;
+    border-right: none; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .sqncd {
+        min-width: 50%;
+        padding-left: 5rem;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .sqncd {
+        height: 30rem;
+    }
+}
+
+@media screen and (max-height: 25rem) and (orientation: landscape) {
+    .sqncd {
+        height: 23rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .sqncd {
+        border-radius: .125rem;
+        box-shadow: 3px 3px 10px black;
+        width: 63rem;
+        height: 37rem;
+        padding: .3rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.controlSection {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 0;
+}
+
+@media screen and (min-width: 70rem) {
+    .controlSection {
+        width: 60rem;
+        gap: .6rem;
+    }
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .controlSection {
+        height: 50%;
+        min-width: 50%;
+    }
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .controlSection {
+        height: 70%;
+        min-width: 50%;
+    }
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: .4rem;
+    height: 90%;
+}
+
+@media screen and (min-width: 30rem) and (orientation: portrait) {
+    .controls {
+        font-size: .6rem;
+    }
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .controls {
+        height: 90%
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .controls {
+        height: 17rem;
+        font-size: .6rem;
+    }
+}
+
+h1 {
+    color: #BC81BF;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width: 70rem) {
+    h1 {
+        margin-bottom: .3rem;
+    }
+}
+
+
+/* left controls */
+.left {
+    width: 20%;
+}
+
+@media screen and (min-width: 70rem) {
+    .left {
+        width: 12.5rem;
+    }
+}
+
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    .left{
+        width: 28%;
+    }
+}
+
+.displays {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+
+@media screen and (min-width: 70rem) {
+    .displayHead {
+        margin-bottom: .31rem;
+    }
+}
+
+.tempoDisplay {
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 70rem) {
+    .tempoDisplay {
+        margin-bottom: 35px;
+    }
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 5rem;
+    appearance: none;
+    height: .1rem;
+    background: white;
+    outline: none;
+    opacity: 0.7;
+    box-shadow: 3px 3px 8px black;
+    border-style: solid;
+}
+
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .slider {
+        width: 7rem;
+        height: .2rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .slider {
+        width: 7.5rem;
+        height: .3rem;
+    }
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearanace: none;
+    appearance: none;
+    width: .5rem;
+    height: .9rem;
+    background: #BC81BF;
+    border: .1rem;
+    border-style: solid;
+    border-color: black;
+    border-radius: 1.9rem;
+    box-shadow: 3px 3px 8px black;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .slider::-webkit-slider-thumb {
+        width: .6rem;
+        height: 1.2rem;
+        border: .2rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .slider::-webkit-slider-thumb {
+        width: .8rem;
+        height: 1.25rem;
+        border: .125rem;
+    }
+}
+
+.slider::-moz-range-thumb {
+    width: .5rem;
+    height: .9rem;
+    background: #BC81BF;
+    cursor: pointer;   
+}
+
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .slider::-moz-range-thumb {
+        width: .6rem;
+        height: 1.2rem;
+        border: .2rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .slider::-moz-range-thumb {
+        width: .8rem;
+        height: 1.25rem;
+        border: .125rem;
+    }
+}
+
+#tempo, #swing {
+    width: 3rem;
+    height: 1rem;
+    font-size: .8rem;
+    background: black;
+    color: white;
+    text-align: center;
+    border-style: solid;
+    border-color: #9D81BF;
+    margin-bottom: .2rem;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    #tempo, #swing {
+        width: 4rem;
+        height: 1.5rem;
+        font-size: 1.2rem;
+        border-width: .15rem;
+        margin-bottom: .4rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    #tempo, #swing {
+        width: 5rem;
+        height: 1.9rem;
+        font-size: 1.5rem;
+        border-width: .15rem;
+        margin-bottom: .4rem;
+    }
+}
+
+.transport {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.transportButton {
+    width: 2.9rem;
+    height: 1.6rem;
+    border-radius: .5rem;
+    font-size: .7rem;
+    box-shadow: 3px 3px 12px black;
+    color: #BC81BF;
+    background: white;
+    text-align: center;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .transportButton {
+        width: 4.6rem;
+        height: 2.3rem;
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .transportButton {
+        width: 5rem;
+        height: 2.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+#stop {
+    background: #EE9ABD;
+    color: white;
+}
+
+/* midleft controls */
+.midleft {
+    width: 35%;
+}
+
+@media screen and (min-width: 70rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .midleft {
+        width: 28%;
+    }
+}
+
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    .midleft {
+        width: 37%;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .midLeft {
+        width: 13rem;
+    }
+}
+
+.scale {
+    display: none;
+}
+
+.dropArea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 7rem;
+}
+
+@media screen and (min-width: 70rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .dropArea {
+        width: 11.25rem;
+    }
+}
+
+.dropHouse {
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    justify-content: space-between;
+    align-items: center;
+    color: #BC81BF;
+}
+
+@media screen and (min-width: 70rem) {
+    .dropHouse{
+        font-size: .9rem;
+    }
+}
+
+#deviceDropdown, #scaleDropdown {
+    width: 5rem;
+}
+
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
+    #deviceDropdown, #scaleDropdown {
+        width: 9rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    #deviceDropdown, #scaleDropdown {
+        width: 9.4rem;
+    }
+}
+
+#channelDropdown, #keyDropdown {
+    width: 2.5rem;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    #channelDropdown, #keyDropdown {
+        width: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    #channelDropdown, #keyDropdown {
+        width: 3.12rem;
+    }
+}
+
+select {
+    height: 1.3rem;
+    border-radius: .25rem;
+    padding: .2px;
+    margin-left: .1rem;
+    margin-right: .1rem;
+    color: white;
+    background: black;
+    text-align: center;
+    border-style: solid;
+    border-width: .2rem;
+    border-color: #9D81BF;
+    font-size: .5rem;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    select {
+        height: 2rem;
+        padding: .3rem;
+        margin-left: .2rem;
+        margin-right: .2rem;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    select {
+        height: 2rem;
+        padding: .3rem;
+        margin-left: .2rem;
+        margin-right: .2rem;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    option {
+        transform: rotate(90deg);
+        transform-origin: right top;
+        min-width: 100vh;
+        width:100%;
+        overflow: hidden;
+        position: absolute;
+    }
+}
+
+.notes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.octaveArea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #BC81BF;
+    margin-top: .2rem;
+}
+
+.octaveButtonHouse {
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    justify-content: space-between;
+    gap: .4rem;
+    align-items: center;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .octaveButtonHouse {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .octaveButtonHouse {
+        font-size: .9rem
+    }
+}
+
+.octaveButton {
+    width: .4rem;
+    height: 1.2rem;
+    box-shadow: 3px 3px 4px black;
+    border-radius: .25rem;
+    background: white;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .octaveButton {
+        width: 1.2rem;
+        height: 1.6rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .octaveButton {
+    width: 1.25rem;
+    height: 1.6rem;
+    }
+}
+
+#octaveMid {
+    background: #94D0FF;
+}
+
+#C {
+    background: #ECC987
+}
+
+.pitchArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .1875rem;
+    align-items: center;
+    color: #BC81BF;
+    margin-top: .2rem;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .pitchArea {
+        height: 100%;
+    }
+}
+
+.pitchButton {
+    width: .5rem;
+    height: 1.4rem;
+    margin-left: .1rem;
+    margin-right: .1rem;
+    box-shadow: 3px 3px 4px black;
+    border-radius: .2rem;
+    background: white;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .pitchButton {
+        width: .5rem;
+        height: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 54rem),
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .pitchButton {
+        width: 1.2rem;
+        height: 2.19rem;
+        margin-left: .19rem;
+        margin-right: .19rem;
+        border-radius: .4rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .pitchButton {
+        width: 1.2rem;
+        height: 2.19rem;
+        margin-left: .19rem;
+        margin-right: .19rem;
+        border-radius: .4rem;
+    }
+}
+
+.flat {
+    background: black;
+}
+
+#Eb {
+    margin-right: 1.6rem;
+}
+
+#Gb {
+    margin-left: .375rem;
+}
+
+.sqnc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#sqnc, #reset, #clock {
+    background-color: #BC81BF;
+    color: white;
+    width: 5.5rem;
+    border-radius: .4rem;
+    font-size: 1rem;
+    box-shadow: 3px 3px 12px black;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait), 
+screen and (min-width: 70rem) {
+    #sqnc, #reset, #clock {
+        width: 9.4rem;
+        border-radius: .705rem;
+        font-size: 1.9rem;
+    }
+}
+
+
+/* midRight */
+.midRight {
+    width: 25%;
+}
+
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    .midRight{
+        width: 20%;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .midRight {
+        width: 12.5rem;
+    }
+}
+
+.midi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.clockHouse {
+    margin-top: .8rem;
+    gap: .1rem;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .clockHouse {
+        margin-top: 1.25rem;
+        gap: .3rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .clockHouse {
+        margin-top: 1.25rem;
+        gap: .3rem;
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.7rem;
+    height: 1.5rem;
+}
+
+@media screen and (min-width: 70rem) {
+    .switch {
+        width: 4rem;
+        height: 2rem;
+    }
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.clockSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #7B8183;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.clockSlider:before {
+    position: absolute;
+    content: "";
+    height: 1.2rem;
+    width: 1.2rem;
+    left: .1rem;
+    bottom: .15rem;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+@media screen and (min-width: 70rem) {
+    .clockSlider:before {
+        height: 1.5rem;
+        width: 1.5rem;
+        left: .1rem;
+        bottom: .25rem;
+    }
+}
+
+input:checked + .clockSlider {
+    background-color: #BC81BF;
+  }
+
+input:focus + .clockSlider {
+box-shadow: 0 0 1px #BC81BF;
+}
+
+input:checked + .clockSlider:before {
+-webkit-transform: translateX(2.2rem);
+-ms-transform: translateX(2.2rem);
+transform: translateX(2.2rem);
+}
+
+.clockSlider.round {
+    border-radius: 2.1rem;
+}
+  
+.clockSlider.round:before {
+border-radius: 50%;
+}
+
+
+/* right controls */
+.right {
+    text-align: right;
+    width: 20%;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .right {
+        width: 15%;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .right {
+        width: 11rem;
+    }
+}
+
+#logo {
+    color: white;
+    font-size: 2.6rem;
+    text-shadow: 3px 3px 10px black;
+    margin: 0;
+    margin-right: .5rem;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (max-width: 70rem) and (orientation: portrait) {
+    #logo {
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    #logo {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    #logo {
+        margin-right: 0;
+        font-size: 3.75rem
+    }
+}
+
+
+/* bottom controls */
+.bottom {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .bottom {
+        height: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .bottom {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .bottom {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 30rem) and (orientation: portrait) {
+    .bottom {
+        margin-bottom: 1.2rem;
+    }
+}
+
+/* button functions */
+
+.buttonFunctionsArea {
+    height: 9rem;
+    width: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .buttonFunctionsArea {
+        margin-top: .3rem;
+        height: 8rem;
+        width: 2rem;
+    }
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .buttonFunctionsArea {
+        margin-top: .2rem;
+        height: 12.7rem;
+        width: 5.7rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .buttonFunctionsArea {
+        margin-top: 1.3rem;
+        height: 18.75rem;
+        width: 5.705rem;
+    }
+}
+
+.buttonFunctions {
+    width: 2.3rem;
+    height: 1.4rem;
+    border-radius: .4rem;
+    margin-bottom: .3rem;
+    font-size: .5rem;
+    box-shadow: 3px 3px 12px black;
+    color: white;
+    background: #BC81BF;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .buttonFunctions {
+        width: 3rem;
+    }
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .buttonFunctions {
+        width: 4.7rem;
+        height: 2.1rem;
+        border-radius: .5rem;
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .buttonFunctions {
+        width: 5rem;
+        height: 2.1875rem;
+        border-radius: .705rem;
+        font-size: 1.0705rem;
+    }
+}
+
+/* sqncr */
+.sqncr {
+    width: 35rem;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .sqncr {
+        width: 41rem;
+        height: 11rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .sqncr {
+        width: 50rem;
+        height: 18.75rem;
+    }
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: 1;
+}
+
+@media screen and (min-width: 70rem) {
+    #buttonContainer {
+        margin-top: 1.875rem;
+    }
+}
+
+.row {
+    display: flex;
+    margin-top: .3125rem;
+}
+
+.gridButton {
+    width: 1.6rem;
+    height: 1.8rem;
+    margin-left: .3rem;
+    margin-right: .3rem;
+    box-shadow: 3px 3px 12px black;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-size: .5rem;
+    color: white;
+    background: white;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    .gridButton {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: .2rem;
+        margin-right: .2rem;
+        font-size: .4rem;
+    }
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .gridButton {
+        width: 2.2rem;
+        height: 2.8rem;
+        margin-left: .3125rem;
+        margin-right: .3125rem;
+        font-size: .7rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .gridButton {
+        width: 2.705rem;
+        height: 3.9rem;
+        margin-left: .3125rem;
+        margin-right: .3125rem;
+        font-size: .875rem;
+    }
+}
+
+.rowFourColumn {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;
+    color: #9D81BF;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait) {
+    .rowFourColumn {
+        gap: .3rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 70rem) {
+    .rowFourColumn {
+        gap: .3125rem;
+        font-size: 1.0705rem;
+    }
+}
+
+.last {
+    border-style: solid;
+    border-color: #4b34e5;
+    border-width: .18rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait), 
+screen and (min-width: 70rem) {
+    .last {
+        border-width: .3rem;
+    }
+}
+
+.copier {
+    border-style: solid;
+    border-color: #922793;
+    border-width: .18rem;
+}
+
+@media screen and (min-width: 54rem), 
+screen and (min-width: 30rem) and (orientation: portrait), 
+screen and (min-width: 70rem) {
+    .copier {
+        border-width: .3rem;
+    }
+}
+
+/* footer */
+
+footer {
+    height: .2rem;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    footer {
+        display: none;
+    }
+}
+
+.sqncdHide {
+    display: none;
+}
+
+.sqncdFooter {
+    display: inline;
+}
+
+@media screen and (max-width: 70rem) and (orientation: portrait) {
+    footer {
+        display: none;
+    }
+
+    .sqncdFooter {
+        display: none;
+    }
+}

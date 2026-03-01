@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="Free online midi sequencer and random pattern generator">
+        <link href="/static/css/style.css" rel="stylesheet">
+        <link href="/static/css/sqncd.css" rel="stylesheet">
+    <title>sqncd</title>
+
+</head>
+<body>
+            <div class="header">
+            <div class="headerLeft">
+                <a href="/"><h2 id="muno">muno</h2></a>
+            </div>
+            <div class="headerRight">
+                <a href="/sqncd">sqncd</a>
+                <a class="manual" href="/quickstart">quickstart guide</a>
+                <a href="static/manuals/sqncd_quickstart.pdf"
+                class="mobileManual" target="_blank">quick start guide</a>
+                <a class="manual" href="/manual">manual</a>
+                <a href="static/manuals/sqncd_user_manual.pdf"
+                class="mobileManual" target="_blank">manual</a>
+            </div>
+        </div>
+<main>
+    <div class="sqncdBody">
+        <img class="wood" src="static/css/wood-pattern.png" alt="wooden side panels">
+        <div class="sqncd">
+            <div class="controlSection">
+                <div class="controls left">
+                    <div class="displays swingDisplay">
+                        <h1 class="displayHead">swing</h1>
+                        <div id="swing">50</div>
+                        <input type="range" min="0" max="100" value="50" class="slider" id="swingSlider">
+                    </div>
+                    <div class="displays tempoDisplay">
+                        <h1 class="displayHead">tempo</h1>
+                        <div id="tempo">120</div>
+                        <input type="range" min="4" max="300" value="120" class="slider" id="tempoSlider">
+                    </div>
+                    <div class="transport">
+                            <button class="transportButton off" id="stop">stop</button>
+                            <button  class="transportButton off" id="start">start</button>
+                    </div>
+                </div>
+                <div class="controls midleft">
+                    <div class="notes">
+                        <h1>notes</h1>
+                        <div class="dropArea">
+                            <div class="dropHouse">
+                                <div class="scale" id="keyHeader">key</div>
+                                <select class="scale" name="key" id="keyDropdown">
+                                    <option class="key" value="C">C</option>
+                                    <option class="key" value="Db">Db</option>
+                                    <option class="key" value="D">D</option>
+                                    <option class="key" value="Eb">Eb</option>
+                                    <option class="key" value="E">E</option>
+                                    <option class="key" value="F">F</option>
+                                    <option class="key" value="Gb">Gb</option>
+                                    <option class="key" value="G">G</option>
+                                    <option class="key" value="Ab">Ab</option>
+                                    <option class="key" value="A">A</option>
+                                    <option class="key" value="Bb">Bb</option>
+                                    <option class="key" value="B">B</option>
+                                </select>
+                            </div>
+                            <div class="dropHouse">
+                                <div>scale</div>    
+                                <select name="scale" id="scaleDropdown">
+                                    <option class="user" value="user">User</option>
+                                    <option value="0">Major</option>
+                                    <option value="1">Minor</option>
+                                    <option value="2">Harmonic Minor</option>
+                                    <option value="3">Melodic Minor</option>
+                                    <option value="4">Dorian</option>
+                                    <option value="5">Phrygian</option>
+                                    <option value="6">Lydian</option>
+                                    <option value="7">Mixolydian</option>
+                                    <option value="8">Aeolian</option>
+                                    <option value="9">Locrian</option>
+                                    <option value="10">Lydian Dominant</option>
+                                    <option value="11">Super Locrian</option>
+                                    <option value="12">Minor Pentatonic</option>
+                                    <option value="13">Major Pentatonic</option>
+                                    <option value="14">Minor Blues</option>
+                                    <option value="15">Major Blues</option>
+                                    <option value="16">Whole Half Diminished</option>
+                                    <option value="17">Half Whole Diminished</option>
+                                </select>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>octave</h1>
+                        <div class="octaveArea">
+                            <div class="octaveButtonHouse">
+                                <button class="octaveButton off" value="-3" id="octaveNegThree"></button>
+                                <div>-3</div>
+                            </div>
+                            <div class="octaveButtonHouse">
+                                <button class="octaveButton off" value="-2" id="octaveNegTwo"></button>
+                                <div>-2</div>
+                            </div>
+                            <div class="octaveButtonHouse">
+                                <button class="octaveButton off" value="-1"  id="octaveNegOne"></button>
+                                <div>-1</div>
+                            </div>
+                            <div class="octaveButtonHouse">
+                                <button class="octaveButton octaveOn" value="0" id="octaveMid"></button>
+                                <div>0</div>
+                            </div>
+                            <div class="octaveButtonHouse">
+                                <button class="octaveButton off" value="1" id="octavePlusOne"></button>
+                                <div>1</div>
+                            </div>
+                            <div class="octaveButtonHouse">
+                                <button class="octaveButton off" value="2" id="octavePlusTwo"></button>
+                                <div>2</div>
+                            </div>
+                            <div class="octaveButtonHouse">
+                                <button class="octaveButton off" value="3" id="octavePlusThree"></button>
+                                <div>3</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sqnc">
+                        <button class="scale" id="sqnc"><em><strong>sqnc</strong></em></button>
+                        <div>
+                            <div class="pitchArea">
+                                <div class="topPitch">
+                                    <button class="pitchButton flat off" value="Db" id="Db"></button>
+                                    <button class="pitchButton flat off" value="Eb" id="Eb"></button>
+                                    <button class="pitchButton flat off" value="Gb" id="Gb"></button>
+                                    <button class="pitchButton flat off" value="Ab" id="Ab"></button>
+                                    <button class="pitchButton flat off" value="Bb" id="Bb"></button>
+                                </div>
+                                <div class="bottomPitch">
+                                    <button class="pitchButton off currentPitch" value="C" id="C"></button>
+                                    <button class="pitchButton off" value="D" id="D"></button>
+                                    <button class="pitchButton off" value="E" id="E"></button>
+                                    <button class="pitchButton off" value="F" id="F"></button>
+                                    <button class="pitchButton off" value="G" id="G"></button>
+                                    <button class="pitchButton off" value="A" id="A"></button>
+                                    <button class="pitchButton off" value="B" id="B"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="midRight controls">
+                    <div class="midi">
+                        <h1>midi</h1>
+                        <div class="dropArea">
+                            <div class="dropHouse">
+                                <div>channel</div>
+                                <select  name="midiChannel" id="channelDropdown">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                </select>
+                            </div>
+                            <div class="dropHouse">
+                                <div>device</div>
+                                <select name="midiDevice" id="deviceDropdown">
+                                </select>
+                            </div>
+                        </div>
+                        <div class="dropHouse clockHouse">
+                            <label class="switch">
+                                <input class="off" id="clockSwitch" type="checkbox">
+                                <span class="clockSlider round"></span>
+                            </label>
+                            <div>send clock to all devices</div>                      
+                        </div>
+                    </div>
+                    <div class="sqnc">
+                        <button id="reset">reset</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1 id="logo">sqncd</h1>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="buttonFunctionsArea">
+                    <button class="buttonFunctions off" id="length">length</button>
+                    <button class="buttonFunctions off" id="copy">copy</button>
+                    <button class="buttonFunctions off" id="accent">accent</button>
+                    <button class="buttonFunctions off" id="ghost">ghost</button>
+                </div>
+                <div class="sqncr">
+                    <div id="buttonContainer">
+                        <div class="row" id="a">
+                            <button class="gridButton rowOne off" id="1a">m</button>
+                            <button class="gridButton rowOne off" id="2a">m</button>
+                            <button class="gridButton rowOne off" id="3a">m</button>
+                            <button class="gridButton rowOne off" id="4a">m</button>
+                            <button class="gridButton rowOne off" id="5a">m</button>
+                            <button class="gridButton rowOne off" id="6a">m</button>
+                            <button class="gridButton rowOne off" id="7a">m</button>
+                            <button class="gridButton rowOne off" id="8a">m</button>
+                            <button class="gridButton rowOne off" id="9a">m</button>
+                            <button class="gridButton rowOne off" id="10a">m</button>
+                            <button class="gridButton rowOne off" id="11a">m</button>
+                            <button class="gridButton rowOne off" id="12a">m</button>
+                            <button class="gridButton rowOne off" id="13a">m</button>
+                            <button class="gridButton rowOne off" id="14a">m</button>
+                            <button class="gridButton rowOne off" id="15a">m</button>
+                            <button class="gridButton rowOne off formerLast last" id="16a">m</button>
+                        </div>
+                        <div class="row" id="b">
+                            <button class="gridButton rowTwo off" id="1b">m</button>
+                            <button class="gridButton rowTwo off" id="2b">m</button>
+                            <button class="gridButton rowTwo off" id="3b">m</button>
+                            <button class="gridButton rowTwo off" id="4b">m</button>
+                            <button class="gridButton rowTwo off" id="5b">m</button>
+                            <button class="gridButton rowTwo off" id="6b">m</button>
+                            <button class="gridButton rowTwo off" id="7b">m</button>
+                            <button class="gridButton rowTwo off" id="8b">m</button>
+                            <button class="gridButton rowTwo off" id="9b">m</button>
+                            <button class="gridButton rowTwo off" id="10b">m</button>
+                            <button class="gridButton rowTwo off" id="11b">m</button>
+                            <button class="gridButton rowTwo off" id="12b">m</button>
+                            <button class="gridButton rowTwo off" id="13b">m</button>
+                            <button class="gridButton rowTwo off" id="14b">m</button>
+                            <button class="gridButton rowTwo off" id="15b">m</button>
+                            <button class="gridButton rowTwo off" id="16b">m</button>
+                        </div>                    
+                        <div class="row" id="c">
+                            <button class="gridButton rowThree off" id="1c">m</button>
+                            <button class="gridButton rowThree off" id="2c">m</button>
+                            <button class="gridButton rowThree off" id="3c">m</button>
+                            <button class="gridButton rowThree off" id="4c">m</button>
+                            <button class="gridButton rowThree off" id="5c">m</button>
+                            <button class="gridButton rowThree off" id="6c">m</button>
+                            <button class="gridButton rowThree off" id="7c">m</button>
+                            <button class="gridButton rowThree off" id="8c">m</button>
+                            <button class="gridButton rowThree off" id="9c">m</button>
+                            <button class="gridButton rowThree off" id="10c">m</button>
+                            <button class="gridButton rowThree off" id="11c">m</button>
+                            <button class="gridButton rowThree off" id="12c">m</button>
+                            <button class="gridButton rowThree off" id="13c">m</button>
+                            <button class="gridButton rowThree off" id="14c">m</button>
+                            <button class="gridButton rowThree off" id="15c">m</button>
+                            <button class="gridButton rowThree off" id="16c">m</button>
+                        </div>                    
+                        <div class="row" id="d">
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="1d">m</button><div>1</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="2d">m</button><div>2</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="3d">m</button><div>3</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="4d">m</button><div>4</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="5d">m</button><div>5</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="6d">m</button><div>6</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="7d">m</button><div>7</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="8d">m</button><div>8</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="9d">m</button><div>9</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="10d">m</button><div>10</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="11d">m</button><div>11</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="12d">m</button><div>12</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="13d">m</button><div>13</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="14d">m</button><div>14</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="15d">m</button><div>15</div></div>
+                            <div class="rowFourColumn"><button class="gridButton rowFour off" id="16d">m</button><div>16</div></div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <img class="wood" src="static/css/wood-pattern.png" alt="wooden side panels">
+    </div>
+
+    <script src="static/javascript/sequencer.js" type="module" defer></script>
+    <script src="static/javascript/notegen.js" type="module" defer></script>
+    <script src="static/javascript/noteFunctions.js" type="module" defer></script>
+    <script src="static/javascript/userPattern.js" type="module" defer></script>
+    <script src="static/javascript/midi_io.js" type="module" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/webmidi@latest/dist/iife/webmidi.iife.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.37/Tone.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+        <footer>
+            <div>created by Danny Muñoz | <a href="https://github.com/muno17/sqncd">https://github.com/muno17/sqncd</a><div class="sqncdFooter"> | © 2023 muno audio</div></div>
+            <div class="sqncdHide">© 2026 muno audio</div>
+        </footer>
+    </main>
+</body>
+
+</html>
