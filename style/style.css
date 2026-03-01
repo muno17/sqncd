@@ -119,7 +119,7 @@ main {
 }
 
 #homeImage {
-    max-width: 550px; /* Fixed size helps prevent the "shifting" look */
+    max-width: 700px;
     max-height: 60vh;
     width: auto;
     height: auto;
@@ -135,7 +135,7 @@ main {
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .desktopManual {
